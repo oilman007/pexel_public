@@ -1,0 +1,974 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Obfuscar.2.2.30\build\obfuscar.props" Condition="Exists('..\packages\Obfuscar.2.2.30\build\obfuscar.props')" />
+  <Import Project="..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.3.3.0\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.3.3.0\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
+  <Import Project="..\packages\Microsoft.NetFramework.Analyzers.3.3.0\build\Microsoft.NetFramework.Analyzers.props" Condition="Exists('..\packages\Microsoft.NetFramework.Analyzers.3.3.0\build\Microsoft.NetFramework.Analyzers.props')" />
+  <Import Project="..\packages\Microsoft.NetCore.Analyzers.3.3.0\build\Microsoft.NetCore.Analyzers.props" Condition="Exists('..\packages\Microsoft.NetCore.Analyzers.3.3.0\build\Microsoft.NetCore.Analyzers.props')" />
+  <Import Project="..\packages\Microsoft.CodeQuality.Analyzers.3.3.0\build\Microsoft.CodeQuality.Analyzers.props" Condition="Exists('..\packages\Microsoft.CodeQuality.Analyzers.3.3.0\build\Microsoft.CodeQuality.Analyzers.props')" />
+  <Import Project="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.3.0\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.3.0\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" />
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EFF3D9B3-FF41-41E6-ACAE-DC399F686A0D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pexel</RootNamespace>
+    <AssemblyName>PEXEL</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>bin\x64\Debug\PEXEL.XML</DocumentationFile>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <Optimize>true</Optimize>
+    <DocumentationFile>bin\x64\Release\PEXEL.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>DDFBA575A988E765E44E7CA6FCE1F56FCDD5CCCA</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GeoEditSharpGL_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LOGO-02%281%29_fix.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AeroWizard, Version=2.3.1.0, Culture=neutral, PublicKeyToken=915e74f5d64b8f37, processorArchitecture=MSIL">
+      <HintPath>..\packages\AeroWizard.2.3.1\lib\net45\AeroWizard.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="DynamicExpresso.Core, Version=2.13.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamicExpresso.Core.2.13.0\lib\netstandard2.0\DynamicExpresso.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FSharp.Core, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FSharp.Core.6.0.2\lib\netstandard2.0\FSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.11.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.11.4\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.1.11\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.1.11\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="ManagedCuda, Version=9.1.300.0, Culture=neutral, PublicKeyToken=242d898828717aa0, processorArchitecture=AMD64">
+      <HintPath>..\packages\ManagedCuda.NETStandard.9.1.300\lib\netstandard2.0\ManagedCuda.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.Signed.5.0.0\lib\net48\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.0\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Sqlite, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Sqlite.Core.Backport.2.0.0.26\lib\net45\Microsoft.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bundle.Microsoft.Office.Interop.15.0.4569\lib\Microsoft.Office.Interop.Outlook.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.PowerPoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bundle.Microsoft.Office.Interop.15.0.4569\lib\Microsoft.Office.Interop.PowerPoint.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bundle.Microsoft.Office.Interop.15.0.4569\lib\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bundle.Microsoft.Office.Interop.15.0.4569\lib\Microsoft.Vbe.Interop.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop.Forms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bundle.Microsoft.Office.Interop.15.0.4569\lib\Microsoft.Vbe.Interop.Forms.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.22\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Bson, Version=1.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.Bson.1.0.2\lib\net45\Newtonsoft.Json.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="NVRTC, Version=9.1.300.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\ManagedCuda-NVRTC.NETStandard.9.1.300\lib\netstandard2.0\NVRTC.dll</HintPath>
+    </Reference>
+    <Reference Include="OFFICE, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bundle.Microsoft.Office.Interop.15.0.4569\lib\OFFICE.DLL</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PexelControlsLibrary2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpGL, Version=3.1.1.0, Culture=neutral, PublicKeyToken=27fc851303210b27, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpGL.3.1.1\lib\net40\SharpGL.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpGL.SceneGraph, Version=1.0.0.0, Culture=neutral, PublicKeyToken=27fc851303210b27, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\SharpGL.SceneGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpGL.WinForms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=27fc851303210b27, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\SharpGL.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2, Version=2.1.2.1721, Culture=neutral, PublicKeyToken=8226ea5df37bcae9, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_e_sqlite3.2.1.2\lib\net461\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core, Version=2.0.4.976, Culture=neutral, PublicKeyToken=1488e028ca7ab535, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.core.2.0.4\lib\netstandard2.0\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.dynamic_cdecl, Version=2.0.4.976, Culture=neutral, PublicKeyToken=b68184102cba0b3b, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.provider.dynamic_cdecl.2.0.4\lib\netstandard2.0\SQLitePCLRaw.provider.dynamic_cdecl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.7.0.1\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TranspControl, Version=1.0.1225.32524, Culture=neutral" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.22\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Abstractions, Version=5.11.7.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.11.10\lib\net48\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.11.11.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.11.10\lib\net48\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="ZedGraph, Version=5.1.7.430, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZedGraph.5.1.7\lib\net35-Client\ZedGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.22\lib\net452\Zstandard.Net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileIO\Eclipse.cs" />
+    <Compile Include="FileIO\Helper.cs" />
+    <Compile Include="Geometry2D\Point2I.cs" />
+    <Compile Include="Geometry2D\WellsLink.cs" />
+    <Compile Include="Geometry3D\Actnum.cs" />
+    <Compile Include="Geometry3D\GridPlaneOpt.cs" />
+    <Compile Include="HM\WellTable.cs" />
+    <Compile Include="HM\WellTablePeriod.cs" />
+    <Compile Include="HM\WellTableStep.cs" />
+    <Compile Include="private\HM\Aquifer\AquiferAnalyzer.cs" />
+    <Compile Include="HM\Aquifer\AquiferCellsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HM\Aquifer\AquiferCellsForm.Designer.cs">
+      <DependentUpon>AquiferCellsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="private\HM\Aquifer\AquiferInit.cs" />
+    <Compile Include="private\HM\Aquifer\DrainPoint.cs" />
+    <Compile Include="private\HM\Aquifer\DrainPointLink.cs" />
+    <Compile Include="private\HM\ControlTable.cs" />
+    <Compile Include="HM\CreateDataTreeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HM\CreateDataTreeForm.designer.cs">
+      <DependentUpon>CreateDataTreeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HM\HistMatchingCriteria.cs" />
+    <Compile Include="HM\HistMatchingCriteriaTable.cs" />
+    <Compile Include="HM\CrossPlotTag.cs" />
+    <Compile Include="private\HM\FR\FRRegion.cs" />
+    <Compile Include="private\HM\HistMatching.cs" />
+    <Compile Include="HM\HistMatchingKeyValues.cs" />
+    <Compile Include="HM\HistMatchingProject.cs" />
+    <Compile Include="private\HM\FR\FRCase.cs" />
+    <Compile Include="private\HM\FR\FRProject.cs" />
+    <Compile Include="HM\FR\FRForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HM\FR\FRForm.designer.cs">
+      <DependentUpon>FRForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="private\HM\FR\InjeGroup.cs" />
+    <Compile Include="HM\FR\NewFRForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HM\FR\NewFRForm.Designer.cs">
+      <DependentUpon>NewFRForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HM\FR\WellsStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HM\FR\WellsStatusForm.designer.cs">
+      <DependentUpon>WellsStatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="private\HM\Iteration.cs" />
+    <Compile Include="private\HM\IterationSet.cs" />
+    <Compile Include="private\HM\MatchingRequestTable.cs" />
+    <Compile Include="HM\MsgLine.cs" />
+    <Compile Include="Geometry3D\PointValue.cs" />
+    <Compile Include="HM\QueueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HM\QueueForm.Designer.cs">
+      <DependentUpon>QueueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="private\HM\ResultsViewDataOpt.cs" />
+    <Compile Include="private\HM\ResultsViewDatum.cs" />
+    <Compile Include="HM\ResultsViewSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HM\ResultsViewSettingsForm.Designer.cs">
+      <DependentUpon>ResultsViewSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HM\ResultsViewSettings.cs" />
+    <Compile Include="HM\ResultsViewTreeDataDownloader.cs" />
+    <Compile Include="HM\ResultsViewTreeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HM\ResultsViewTreeForm.designer.cs">
+      <DependentUpon>ResultsViewTreeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HM\RunForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HM\RunForm.Designer.cs">
+      <DependentUpon>RunForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HM\RunInfo.cs" />
+    <Compile Include="HM\HMRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HMRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="HM\FileCombinerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HM\FileCombinerForm.Designer.cs">
+      <DependentUpon>FileCombinerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="private\UnlockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="private\UnlockForm.Designer.cs">
+      <DependentUpon>UnlockForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HM\UparamExpression.cs" />
+    <Compile Include="private\HM\WellDataAnalyzerInput.cs" />
+    <Compile Include="private\HM\WellDataAnalyzer.cs" />
+    <Compile Include="private\HM\WellDataAnalyzerSettings.cs" />
+    <Compile Include="private\HM\WellModifiers.cs" />
+    <Compile Include="private\HM\WellPerfPeriod.cs" />
+    <Compile Include="private\HM\WellDataPeriod.cs" />
+    <Compile Include="private\HM\WellDataStep.cs" />
+    <Compile Include="HM\WizardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HM\WizardForm.Designer.cs">
+      <DependentUpon>WizardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HM\LauncherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HM\LauncherForm.Designer.cs">
+      <DependentUpon>LauncherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Property\ActProp.cs" />
+    <Compile Include="Property\ActProps.cs" />
+    <Compile Include="RandomAlphanumericString.cs" />
+    <Compile Include="RSM\RsmVector.cs" />
+    <Compile Include="RSM\SummaryVector.cs" />
+    <Compile Include="private\HM\RP\ChartSettings.cs" />
+    <Compile Include="private\HM\RP\CoreyDBViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="private\HM\RP\CoreyDBViewForm.Designer.cs">
+      <DependentUpon>CoreyDBViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HM\RP\CoreySet.cs" />
+    <Compile Include="HM\RP\CoreySetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HM\RP\CoreySetForm.designer.cs">
+      <DependentUpon>CoreySetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="private\HM\RP\DBGenerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="private\HM\RP\DBGenerForm.Designer.cs">
+      <DependentUpon>DBGenerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="private\HM\RP\ExportPicDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="private\HM\RP\ExportPicDialogForm.Designer.cs">
+      <DependentUpon>ExportPicDialogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HM\RP\ExportSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HM\RP\ExportSetForm.Designer.cs">
+      <DependentUpon>ExportSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="private\HM\RP\PicTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="private\HM\RP\PicTest.Designer.cs">
+      <DependentUpon>PicTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="private\HM\RP\RelPermAnalyzer.cs" />
+    <Compile Include="private\HM\RP\RelPermAnalyzerBase.cs" />
+    <Compile Include="private\HM\RP\RelPermAnalyzerBaseFile.cs" />
+    <Compile Include="private\HM\RP\RelPermAnalyzerBaseItem.cs" />
+    <Compile Include="private\HM\RP\RelPermAnalyzerBaseFileItem.cs" />
+    <Compile Include="private\HM\RP\RelPermAnalyzerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="private\HM\RP\RelPermAnalyzerForm.Designer.cs">
+      <DependentUpon>RelPermAnalyzerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="private\HM\RP\RelPermAnalyzerResults.cs" />
+    <Compile Include="Simulator\EclipseRunner.cs" />
+    <Compile Include="Simulator\SimulatorRunner.cs" />
+    <Compile Include="Simulator\TempestRunner.cs" />
+    <Compile Include="Simulator\tNavigatorRunner.cs" />
+    <Compile Include="TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreeNode2.cs" />
+    <Compile Include="View\PropView2DControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\PropView2DControl.Designer.cs">
+      <DependentUpon>PropView2DControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Well\Compdat.cs" />
+    <Compile Include="FileIO\CSVReader.cs" />
+    <Compile Include="private\HM\RP\NeuroSCALForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="private\HM\RP\NeuroSCALForm.Designer.cs">
+      <DependentUpon>NeuroSCALForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="private\HM\RP\NSPredict.cs" />
+    <Compile Include="private\HM\RP\NSTrain.cs" />
+    <Compile Include="HM\RP\CoreyTable.cs" />
+    <Compile Include="HM\RP\CoreyInput.cs" />
+    <Compile Include="Geometry2D\Line2D.cs" />
+    <Compile Include="Geometry2D\Polygon2D.cs" />
+    <Compile Include="Geometry2D\Quad2D.cs" />
+    <Compile Include="Geometry2D\Triangle2D.cs" />
+    <Compile Include="Geometry2D\WellFace2D.cs" />
+    <Compile Include="Geometry2D\WellsPlane2D.cs" />
+    <Compile Include="Well\WellStatus.cs" />
+    <Compile Include="DelaunayVoronoi\Delaunay.cs" />
+    <Compile Include="DelaunayVoronoi\Edge.cs" />
+    <Compile Include="DelaunayVoronoi\MainWindow.xaml.cs" />
+    <Compile Include="DelaunayVoronoi\Point.cs" />
+    <Compile Include="DelaunayVoronoi\Triangle.cs" />
+    <Compile Include="DelaunayVoronoi\Voronoi.cs" />
+    <Compile Include="FileIO\EclFile.cs" />
+    <Compile Include="private\CUDA\CudaTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="private\CUDA\CudaTestForm.Designer.cs">
+      <DependentUpon>CudaTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geometry2D\GridMap.cs" />
+    <Compile Include="HFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HFileForm.Designer.cs">
+      <DependentUpon>HFileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HMTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMTableForm.Designer.cs">
+      <DependentUpon>HMTableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HM\HistMatchingInput.cs" />
+    <Compile Include="Geometry3D\CoordSys.cs" />
+    <Compile Include="private\ML\Functions\ActivationFunction.cs" />
+    <Compile Include="private\ML\IActivationFunction.cs" />
+    <Compile Include="private\ML\Perceptron\Layer.cs" />
+    <Compile Include="private\ML\Perceptron\LayerConfig.cs" />
+    <Compile Include="private\ML\Functions\LeakyReLU.cs" />
+    <Compile Include="private\ML\MLTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="private\ML\MLTestForm.Designer.cs">
+      <DependentUpon>MLTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="private\ML\Perceptron\Neuron.cs" />
+    <Compile Include="private\ML\Perceptron\Perceptron.cs" />
+    <Compile Include="private\ML\Functions\Sigmoid.cs" />
+    <Compile Include="private\ML\Functions\SoftPlus.cs" />
+    <Compile Include="private\ML\Functions\Tanh.cs" />
+    <Compile Include="private\ML\LinearAlgebra\Vector.cs" />
+    <Compile Include="private\HM\RP\NSGener.cs" />
+    <Compile Include="private\NN\NeuralNetwork.cs" />
+    <Compile Include="Poly\PolyFuncForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Poly\PolyFuncForm.Designer.cs">
+      <DependentUpon>PolyFuncForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Poly\PolyFunctions.cs" />
+    <Compile Include="View\View2D.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\View2D_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\View3D.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Well\WellsCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Well\WellsCreateForm.Designer.cs">
+      <DependentUpon>WellsCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modifiers\IModifier.cs" />
+    <Compile Include="Modifiers\Modifier.cs" />
+    <Compile Include="Modifiers\RadiusModifier.cs" />
+    <Compile Include="Property\PropExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property\PropExportForm.Designer.cs">
+      <DependentUpon>PropExportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="private\HM\HMDeviations.cs" />
+    <Compile Include="Geometry3D\CellValue.cs" />
+    <Compile Include="HM\DataTable.cs" />
+    <Compile Include="private\HM\IterationResult.cs" />
+    <Compile Include="private\HM\IterationTask.cs" />
+    <Compile Include="Property\IndexValue.cs" />
+    <Compile Include="Geometry3D\GridCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geometry3D\GridCreateForm.designer.cs">
+      <DependentUpon>GridCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Property\PropCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property\PropCreateForm.designer.cs">
+      <DependentUpon>PropCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geometry3D\Cell.cs" />
+    <Compile Include="Geometry3D\CellFace.cs" />
+    <Compile Include="Geometry3D\GridPlane.cs" />
+    <Compile Include="Property\Modifier.cs" />
+    <Compile Include="Property\ModifiersGroup.cs" />
+    <Compile Include="Property\ModifierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property\ModifierForm.Designer.cs">
+      <DependentUpon>ModifierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geometry2D\Point2D.cs" />
+    <Compile Include="Property\PropEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property\PropEditForm.Designer.cs">
+      <DependentUpon>PropEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Property\PropFace.cs" />
+    <Compile Include="Property\PropModifier.cs" />
+    <Compile Include="Geometry2D\PropPlane.cs" />
+    <Compile Include="RSM\Rsm.cs" />
+    <Compile Include="Property\PropScaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property\PropScaleForm.Designer.cs">
+      <DependentUpon>PropScaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetCheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetCheckForm.Designer.cs">
+      <DependentUpon>SetCheckForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetNameForm.Designer.cs">
+      <DependentUpon>SetNameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="SetValueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetValueForm.Designer.cs">
+      <DependentUpon>SetValueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Well\WellEvent.cs" />
+    <Compile Include="Well\WellFace.cs" />
+    <Compile Include="Well\WellImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Well\WellImportForm.Designer.cs">
+      <DependentUpon>WellImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Well\WellsPlane.cs" />
+    <Compile Include="Geometry3D\ZcornItem.cs" />
+    <Compile Include="FileIO\CMGReader.cs" />
+    <Compile Include="Geometry3D\Coord.cs" />
+    <Compile Include="Geometry3D\Grid.cs" />
+    <Compile Include="Geometry3D\GridInfo.cs" />
+    <Compile Include="Property\PropImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property\PropImportForm.Designer.cs">
+      <DependentUpon>PropImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Well\InclPoint.cs" />
+    <Compile Include="Property\Index3D.cs" />
+    <Compile Include="Geometry3D\MapAxes.cs" />
+    <Compile Include="Geometry3D\Pillar.cs" />
+    <Compile Include="Geometry3D\Point3D.cs" />
+    <Compile Include="Property\Prop.cs" />
+    <Compile Include="Property\PropScale.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Well\SimpleWell.cs" />
+    <Compile Include="Geometry3D\SpecGrid.cs" />
+    <Compile Include="Well\Well.cs" />
+    <Compile Include="Geometry3D\Zcorn.cs" />
+    <Compile Include="private\ZipLocker.cs" />
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HM\Aquifer\AquiferCellsForm.resx">
+      <DependentUpon>AquiferCellsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HM\CreateDataTreeForm.resx">
+      <DependentUpon>CreateDataTreeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HM\FR\FRForm.resx">
+      <DependentUpon>FRForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HM\FR\NewFRForm.resx">
+      <DependentUpon>NewFRForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HM\FR\WellsStatusForm.resx">
+      <DependentUpon>WellsStatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HM\QueueForm.resx">
+      <DependentUpon>QueueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HM\ResultsViewSettingsForm.resx">
+      <DependentUpon>ResultsViewSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HM\ResultsViewTreeForm.resx">
+      <DependentUpon>ResultsViewTreeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HM\RunForm.resx">
+      <DependentUpon>RunForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HM\HMRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HMRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HM\FileCombinerForm.resx">
+      <DependentUpon>FileCombinerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="private\UnlockForm.resx">
+      <DependentUpon>UnlockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HM\WizardForm.en.resx">
+      <DependentUpon>WizardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HM\WizardForm.resx">
+      <DependentUpon>WizardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HM\LauncherForm.resx">
+      <DependentUpon>LauncherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="private\HM\RP\CoreyDBViewForm.resx">
+      <DependentUpon>CoreyDBViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HM\RP\CoreySetForm.resx">
+      <DependentUpon>CoreySetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="private\HM\RP\DBGenerForm.resx">
+      <DependentUpon>DBGenerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="private\HM\RP\ExportPicDialogForm.resx">
+      <DependentUpon>ExportPicDialogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HM\RP\ExportSetForm.resx">
+      <DependentUpon>ExportSetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="private\HM\RP\PicTest.resx">
+      <DependentUpon>PicTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="private\HM\RP\RelPermAnalyzerForm.resx">
+      <DependentUpon>RelPermAnalyzerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PropView2DControl.resx">
+      <DependentUpon>PropView2DControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="private\CUDA\CudaTestForm.resx">
+      <DependentUpon>CudaTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geometry3D\GridCreateForm.resx">
+      <DependentUpon>GridCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HFileForm.resx">
+      <DependentUpon>HFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMTableForm.resx">
+      <DependentUpon>HMTableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="private\ML\MLTestForm.resx">
+      <DependentUpon>MLTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="private\HM\RP\NeuroSCALForm.resx">
+      <DependentUpon>NeuroSCALForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Poly\PolyFuncForm.resx">
+      <DependentUpon>PolyFuncForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property\PropCreateForm.resx">
+      <DependentUpon>PropCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property\PropExportForm.resx">
+      <DependentUpon>PropExportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property\PropImportForm.resx">
+      <DependentUpon>PropImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property\ModifierForm.resx">
+      <DependentUpon>ModifierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property\PropEditForm.resx">
+      <DependentUpon>PropEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property\PropScaleForm.resx">
+      <DependentUpon>PropScaleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetCheckForm.resx">
+      <DependentUpon>SetCheckForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetNameForm.resx">
+      <DependentUpon>SetNameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetValueForm.resx">
+      <DependentUpon>SetValueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\View2D_Control.resx">
+      <DependentUpon>View2D_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\View3D.resx">
+      <DependentUpon>View3D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Well\WellImportForm.resx">
+      <DependentUpon>WellImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Well\WellsCreateForm.resx">
+      <DependentUpon>WellsCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Установщик Windows 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dependencies\SharpGL.dll" />
+    <None Include="Dependencies\SharpGL.SceneGraph.dll" />
+    <None Include="Dependencies\SharpGL.WinForms.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="android-icon-144x144.png" />
+    <Content Include="apple-icon-57x57_fix%281%29.ico" />
+    <Content Include="apple-icon-57x57_fix.ico" />
+    <Content Include="LOGO-02%281%29_fix.ico" />
+    <None Include="Resources\android-icon-144x144.png" />
+    <Content Include="PexelControlsLibrary.dll" />
+    <Content Include="PexelControlsLibrary2.dll" />
+    <None Include="Resources\Icon1.ico" />
+    <None Include="Resources\down.png" />
+    <None Include="Resources\down.jpg" />
+    <None Include="Resources\down-arrow.png" />
+    <Content Include="Логотип-01%282%29.ico" />
+    <Content Include="Логотип-02%281%29.ico" />
+    <None Include="Resources\sine-wave.png" />
+    <None Include="Resources\2d.png" />
+    <None Include="Resources\cosine_sinusoid_wave_curve_math-512.png" />
+    <None Include="Resources\map3.png" />
+    <None Include="Resources\map2.jpg" />
+    <None Include="Resources\206741-200.png" />
+    <None Include="Resources\IDB_PROPERTY_MATRIX.PNG" />
+    <None Include="Resources\grid256.png" />
+    <Content Include="01.ico" />
+    <Content Include="2.ico" />
+    <Content Include="apple-icon-57x57.ico" />
+    <Content Include="apple-icon-57x57_edit.ico" />
+    <Content Include="favicon.ico" />
+    <Content Include="License-LGPL.txt" />
+    <None Include="Resources\REGULAR.PNG" />
+    <None Include="Resources\external-content.duckduckgo.com.jpg" />
+    <Content Include="private\obfuscar.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="logo.ico" />
+    <EmbeddedResource Include="Resources\minus.bmp" />
+    <EmbeddedResource Include="Resources\plus.bmp" />
+    <None Include="Resources\eye-with-a-diagonal-line-interface-symbol-for-invisibility.png" />
+    <None Include="Resources\eye-open.png" />
+    <None Include="Resources\interpolation.jpg" />
+    <None Include="Resources\ttt.png" />
+    <None Include="Resources\tic-tac-toe.jpg" />
+    <None Include="Resources\Rename-icon.png" />
+    <None Include="Resources\rename1600.png" />
+    <None Include="Resources\rename-512.png" />
+    <None Include="Resources\visart.png" />
+    <None Include="Resources\Import_A-512.png" />
+    <None Include="Resources\scale.png" />
+    <None Include="Resources\Add.png" />
+    <None Include="Resources\Folder Add-01.png" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\settings.ico" />
+    <None Include="Resources\deletered.png" />
+    <None Include="Resources\circles.png" />
+    <None Include="Resources\237009-file_document__arrow_move_export-128.png" />
+    <None Include="Resources\edit-document-icon-69718.png" />
+    <None Include="Resources\modify grid icon.jpg" />
+    <None Include="Resources\Target-512 %281%29.png" />
+    <None Include="Resources\58-grid-lines-streamline.png" />
+    <None Include="Resources\3x3_grid.png" />
+    <None Include="Resources\Target-512%281%29.png" />
+    <None Include="Resources\well256.png" />
+    <None Include="Resources\model256.png" />
+    <None Include="Resources\20737-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.3.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.3.0\analyzers\dotnet\Microsoft.CodeAnalysis.VersionCheckAnalyzer.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeQuality.Analyzers.3.3.0\analyzers\dotnet\cs\Humanizer.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeQuality.Analyzers.3.3.0\analyzers\dotnet\cs\Microsoft.CodeQuality.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeQuality.Analyzers.3.3.0\analyzers\dotnet\cs\Microsoft.CodeQuality.CSharp.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetCore.Analyzers.3.3.0\analyzers\dotnet\cs\Microsoft.NetCore.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetCore.Analyzers.3.3.0\analyzers\dotnet\cs\Microsoft.NetCore.CSharp.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.3.3.0\analyzers\dotnet\cs\Microsoft.NetFramework.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.3.3.0\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.3.0\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.3.0\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeQuality.Analyzers.3.3.0\build\Microsoft.CodeQuality.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeQuality.Analyzers.3.3.0\build\Microsoft.CodeQuality.Analyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.NetCore.Analyzers.3.3.0\build\Microsoft.NetCore.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NetCore.Analyzers.3.3.0\build\Microsoft.NetCore.Analyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.NetFramework.Analyzers.3.3.0\build\Microsoft.NetFramework.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NetFramework.Analyzers.3.3.0\build\Microsoft.NetFramework.Analyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.3.3.0\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.3.3.0\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Obfuscar.2.2.30\build\obfuscar.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Obfuscar.2.2.30\build\obfuscar.props'))" />
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>"$(Obfuscar)" private/obfuscar.xml</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

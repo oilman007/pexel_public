@@ -1,0 +1,3 @@
+[submodule "GeoEditSharpGL/private"]
+	path = GeoEditSharpGL/private
+	url = https://github.com/oilman007/pexel_private.git
