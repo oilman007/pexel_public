@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,7 +38,8 @@ namespace Pexel.SCAL
             zedGraphControl_sgof.GraphPane.YAxis.Scale.Max = 1;
             //
             listBox_tables_SelectedIndexChanged_1(null, null);
-
+            //
+            this.propertyGrid_set.SelectedObject = new CoreySet();
         }
 
 
@@ -126,6 +128,7 @@ namespace Pexel.SCAL
             List<string> swof_titles = new List<string>();
             List<double[]> swof_y = new List<double[]>();
             List<Color> swof_colors = new List<Color>();
+            List<DashStyle> swof_dashes = new List<DashStyle>();
             List<CoordType> swof_axes = new List<CoordType>();
 
             if (this.checkBox_kr.Checked)
@@ -133,6 +136,7 @@ namespace Pexel.SCAL
                 swof_titles.AddRange(new List<string> { "Krw", "Kro" });
                 swof_y.AddRange(new List<double[]> { swof[1], swof[2] });
                 swof_colors.AddRange(new List<Color> { Color.Blue, Color.Red });
+                swof_dashes.AddRange(new List<DashStyle> { DashStyle.Solid, DashStyle.Solid });
                 swof_axes.AddRange(new List<CoordType> { CoordType.AxisXYScale, CoordType.AxisXYScale });
             }
 
@@ -141,6 +145,7 @@ namespace Pexel.SCAL
                 swof_titles.Add("Pcow");
                 swof_y.Add(swof[3]);
                 swof_colors.Add(Color.Green);
+                swof_dashes.Add(DashStyle.Solid);
                 swof_axes.Add(CoordType.AxisXY2Scale);
             }
 
@@ -161,11 +166,13 @@ namespace Pexel.SCAL
                     swof_titles.Add("NOWmin");
                     swof_y.Add(swof_min[2]);
                     swof_colors.Add(Color.Red);
+                    swof_dashes.Add(DashStyle.DashDot);
                     swof_axes.Add(CoordType.AxisXYScale);
                     //
                     swof_titles.Add("NOWmin");
                     swof_y.Add(swof_max[2]);
                     swof_colors.Add(Color.Red);
+                    swof_dashes.Add(DashStyle.DashDotDot);
                     swof_axes.Add(CoordType.AxisXYScale);
                 }
 
@@ -174,17 +181,20 @@ namespace Pexel.SCAL
                     swof_titles.Add("NOWmin");
                     swof_y.Add(swof_min[1]);
                     swof_colors.Add(Color.Blue);
+                    swof_dashes.Add(DashStyle.DashDot);
                     swof_axes.Add(CoordType.AxisXYScale);
                     //
                     swof_titles.Add("NWmin");
                     swof_y.Add(swof_max[1]);
                     swof_colors.Add(Color.Blue);
+                    swof_dashes.Add(DashStyle.DashDotDot);
                     swof_axes.Add(CoordType.AxisXYScale);
                 }
             }
 
             UpdateGraph(this.zedGraphControl_swof,
-                        swof_titles.ToArray(), swof[0], swof_y.ToArray(), swof_colors.ToArray(), swof_axes.ToArray(), symbol,
+                        swof_titles.ToArray(), swof[0], swof_y.ToArray(), swof_colors.ToArray(), swof_dashes.ToArray(),
+                        swof_axes.ToArray(), symbol,
                         swof_points_names, swof_points, swof_points_aH, swof_points_aV, swof_points_axes);
 
             UpdateTable(dataGridView_swof, swof, ncol_swof, nrow_swof);
@@ -208,6 +218,7 @@ namespace Pexel.SCAL
             List<string> sgof_titles = new List<string>();
             List<double[]> sgof_y = new List<double[]>();
             List<Color> sgof_colors = new List<Color>();
+            List<DashStyle> sgof_dashes = new List<DashStyle>();
             List<CoordType> sgof_axes = new List<CoordType>();
 
             if (this.checkBox_kr.Checked)
@@ -215,6 +226,7 @@ namespace Pexel.SCAL
                 sgof_titles.AddRange(new List<string> { "Krg", "Kro" });
                 sgof_y.AddRange(new List<double[]> { sgof[1], sgof[2] });
                 sgof_colors.AddRange(new List<Color> { Color.Yellow, Color.Red });
+                sgof_dashes.AddRange(new List<DashStyle> { DashStyle.Solid, DashStyle.Solid });
                 sgof_axes.AddRange(new List<CoordType> { CoordType.AxisXYScale, CoordType.AxisXYScale });
             }
 
@@ -223,11 +235,13 @@ namespace Pexel.SCAL
                 sgof_titles.Add("Pcog");
                 sgof_y.Add(sgof[3]);
                 sgof_colors.Add(Color.Green);
+                sgof_dashes.Add(DashStyle.Solid);
                 sgof_axes.Add(CoordType.AxisXY2Scale);
             }
 
             UpdateGraph(this.zedGraphControl_sgof, 
-                        sgof_titles.ToArray(), sgof[0], sgof_y.ToArray(), sgof_colors.ToArray(), sgof_axes.ToArray(), symbol,
+                        sgof_titles.ToArray(), sgof[0], sgof_y.ToArray(), sgof_colors.ToArray(), sgof_dashes.ToArray(),
+                        sgof_axes.ToArray(), symbol,
                         sgof_points_names, sgof_points, sgof_points_aH, sgof_points_aV, sgof_points_axes);
 
             UpdateTable(dataGridView_sgof, sgof, ncol_sgof, nrow_sgof);
@@ -237,7 +251,8 @@ namespace Pexel.SCAL
 
 
         static void UpdateGraph(ZedGraphControl graph, 
-                                string[] titles, double[] x, double[][] y, Color[] colors, CoordType[] t_axes, SymbolType symbol,
+                                string[] titles, double[] x, double[][] y, Color[] colors, DashStyle[] dashes, 
+                                CoordType[] t_axes, SymbolType symbol,
                                 string[] names, Point2D[] points, AlignH[] aH, AlignV[] aV, CoordType[] p_axes)
         {
             graph.GraphPane.CurveList.Clear();
@@ -250,6 +265,10 @@ namespace Pexel.SCAL
             for (int t = 0; t < titles.Length; ++t)
             {
                 LineItem curve = graph.GraphPane.AddCurve(titles[t], x, y[t], colors[t], symbol);
+                curve.Line.Style = dashes[t];
+                //curve.Line.Width = 3;
+                //curve.Line.DashOn = 50;
+                //curve.Line.DashOff = 100;
                 curve.YAxisIndex = t_axes[t] == CoordType.AxisXYScale ? 0 : 1;
             }
 
