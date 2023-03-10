@@ -349,7 +349,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.richTextBox_log);
             this.splitContainer1.Size = new System.Drawing.Size(1203, 824);
-            this.splitContainer1.SplitterDistance = 664;
+            this.splitContainer1.SplitterDistance = 663;
             this.splitContainer1.TabIndex = 10;
             // 
             // tabControl
@@ -369,7 +369,7 @@
             this.tabControl.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1203, 664);
+            this.tabControl.Size = new System.Drawing.Size(1203, 663);
             this.tabControl.TabIndex = 3;
             this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -379,7 +379,7 @@
             this.tabPage_info.Location = new System.Drawing.Point(4, 25);
             this.tabPage_info.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage_info.Name = "tabPage_info";
-            this.tabPage_info.Size = new System.Drawing.Size(1195, 635);
+            this.tabPage_info.Size = new System.Drawing.Size(1195, 634);
             this.tabPage_info.TabIndex = 9;
             this.tabPage_info.Text = "info";
             this.tabPage_info.UseVisualStyleBackColor = true;
@@ -390,7 +390,7 @@
             this.propertyGrid_info.Location = new System.Drawing.Point(0, 0);
             this.propertyGrid_info.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.propertyGrid_info.Name = "propertyGrid_info";
-            this.propertyGrid_info.Size = new System.Drawing.Size(1195, 635);
+            this.propertyGrid_info.Size = new System.Drawing.Size(1195, 634);
             this.propertyGrid_info.TabIndex = 0;
             // 
             // tabPage_well_graphs
@@ -399,7 +399,7 @@
             this.tabPage_well_graphs.Location = new System.Drawing.Point(4, 25);
             this.tabPage_well_graphs.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_well_graphs.Name = "tabPage_well_graphs";
-            this.tabPage_well_graphs.Size = new System.Drawing.Size(1195, 635);
+            this.tabPage_well_graphs.Size = new System.Drawing.Size(1195, 634);
             this.tabPage_well_graphs.TabIndex = 0;
             this.tabPage_well_graphs.Text = "well graphs";
             this.tabPage_well_graphs.UseVisualStyleBackColor = true;
@@ -418,7 +418,7 @@
             // splitContainer_well_graphs.Panel2
             // 
             this.splitContainer_well_graphs.Panel2.Controls.Add(this.tableLayoutPanel_well_graphs);
-            this.splitContainer_well_graphs.Size = new System.Drawing.Size(1195, 635);
+            this.splitContainer_well_graphs.Size = new System.Drawing.Size(1195, 634);
             this.splitContainer_well_graphs.SplitterDistance = 98;
             this.splitContainer_well_graphs.SplitterWidth = 5;
             this.splitContainer_well_graphs.TabIndex = 1;
@@ -431,7 +431,7 @@
             this.listBox_wg_wells.Location = new System.Drawing.Point(0, 0);
             this.listBox_wg_wells.Margin = new System.Windows.Forms.Padding(4);
             this.listBox_wg_wells.Name = "listBox_wg_wells";
-            this.listBox_wg_wells.Size = new System.Drawing.Size(98, 635);
+            this.listBox_wg_wells.Size = new System.Drawing.Size(98, 634);
             this.listBox_wg_wells.TabIndex = 0;
             this.listBox_wg_wells.SelectedIndexChanged += new System.EventHandler(this.listBox_wells_SelectedIndexChanged);
             // 
@@ -457,7 +457,7 @@
             this.tableLayoutPanel_well_graphs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
             this.tableLayoutPanel_well_graphs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
             this.tableLayoutPanel_well_graphs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.99813F));
-            this.tableLayoutPanel_well_graphs.Size = new System.Drawing.Size(1092, 635);
+            this.tableLayoutPanel_well_graphs.Size = new System.Drawing.Size(1092, 634);
             this.tableLayoutPanel_well_graphs.TabIndex = 0;
             // 
             // zedGraphControl_gr_op
@@ -551,7 +551,7 @@
             this.zedGraphControl_gr_press.ScrollMinX = 0D;
             this.zedGraphControl_gr_press.ScrollMinY = 0D;
             this.zedGraphControl_gr_press.ScrollMinY2 = 0D;
-            this.zedGraphControl_gr_press.Size = new System.Drawing.Size(536, 151);
+            this.zedGraphControl_gr_press.Size = new System.Drawing.Size(536, 150);
             this.zedGraphControl_gr_press.TabIndex = 2;
             this.zedGraphControl_gr_press.UseExtendedPrintDialog = true;
             // 
@@ -608,7 +608,7 @@
             this.zedGraphControl_gr_wct_gor.ScrollMinX = 0D;
             this.zedGraphControl_gr_wct_gor.ScrollMinY = 0D;
             this.zedGraphControl_gr_wct_gor.ScrollMinY2 = 0D;
-            this.zedGraphControl_gr_wct_gor.Size = new System.Drawing.Size(536, 151);
+            this.zedGraphControl_gr_wct_gor.Size = new System.Drawing.Size(536, 150);
             this.zedGraphControl_gr_wct_gor.TabIndex = 0;
             this.zedGraphControl_gr_wct_gor.UseExtendedPrintDialog = true;
             // 
@@ -618,7 +618,7 @@
             this.tabPage_hm_analyse.Location = new System.Drawing.Point(4, 25);
             this.tabPage_hm_analyse.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_hm_analyse.Name = "tabPage_hm_analyse";
-            this.tabPage_hm_analyse.Size = new System.Drawing.Size(1195, 635);
+            this.tabPage_hm_analyse.Size = new System.Drawing.Size(1195, 634);
             this.tabPage_hm_analyse.TabIndex = 2;
             this.tabPage_hm_analyse.Text = "hm analyse";
             this.tabPage_hm_analyse.UseVisualStyleBackColor = true;
@@ -637,7 +637,7 @@
             // splitContainer_hm_analyse.Panel2
             // 
             this.splitContainer_hm_analyse.Panel2.Controls.Add(this.tableLayoutPanel_hm_analyse);
-            this.splitContainer_hm_analyse.Size = new System.Drawing.Size(1195, 635);
+            this.splitContainer_hm_analyse.Size = new System.Drawing.Size(1195, 634);
             this.splitContainer_hm_analyse.SplitterDistance = 101;
             this.splitContainer_hm_analyse.SplitterWidth = 5;
             this.splitContainer_hm_analyse.TabIndex = 1;
@@ -650,7 +650,7 @@
             this.listBox_ha_wells.Location = new System.Drawing.Point(0, 0);
             this.listBox_ha_wells.Margin = new System.Windows.Forms.Padding(4);
             this.listBox_ha_wells.Name = "listBox_ha_wells";
-            this.listBox_ha_wells.Size = new System.Drawing.Size(101, 635);
+            this.listBox_ha_wells.Size = new System.Drawing.Size(101, 634);
             this.listBox_ha_wells.TabIndex = 0;
             this.listBox_ha_wells.SelectedIndexChanged += new System.EventHandler(this.listBox_wells_SelectedIndexChanged);
             // 
@@ -682,7 +682,7 @@
             this.tableLayoutPanel_hm_analyse.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel_hm_analyse.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel_hm_analyse.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel_hm_analyse.Size = new System.Drawing.Size(1089, 635);
+            this.tableLayoutPanel_hm_analyse.Size = new System.Drawing.Size(1089, 634);
             this.tableLayoutPanel_hm_analyse.TabIndex = 0;
             // 
             // zedGraphControl_wopt_delta
@@ -919,7 +919,7 @@
             this.tabPage_cross_sect.Location = new System.Drawing.Point(4, 25);
             this.tabPage_cross_sect.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_cross_sect.Name = "tabPage_cross_sect";
-            this.tabPage_cross_sect.Size = new System.Drawing.Size(1195, 635);
+            this.tabPage_cross_sect.Size = new System.Drawing.Size(1195, 634);
             this.tabPage_cross_sect.TabIndex = 5;
             this.tabPage_cross_sect.Text = "cross-sect";
             this.tabPage_cross_sect.UseVisualStyleBackColor = true;
@@ -938,7 +938,7 @@
             // splitContainer_cross_sec_parent.Panel2
             // 
             this.splitContainer_cross_sec_parent.Panel2.Controls.Add(this.splitContainer_cross_sec);
-            this.splitContainer_cross_sec_parent.Size = new System.Drawing.Size(1195, 635);
+            this.splitContainer_cross_sec_parent.Size = new System.Drawing.Size(1195, 634);
             this.splitContainer_cross_sec_parent.SplitterDistance = 101;
             this.splitContainer_cross_sec_parent.SplitterWidth = 5;
             this.splitContainer_cross_sec_parent.TabIndex = 2;
@@ -951,7 +951,7 @@
             this.listBox_cs_wells.Location = new System.Drawing.Point(0, 0);
             this.listBox_cs_wells.Margin = new System.Windows.Forms.Padding(4);
             this.listBox_cs_wells.Name = "listBox_cs_wells";
-            this.listBox_cs_wells.Size = new System.Drawing.Size(101, 635);
+            this.listBox_cs_wells.Size = new System.Drawing.Size(101, 634);
             this.listBox_cs_wells.TabIndex = 0;
             this.listBox_cs_wells.SelectedIndexChanged += new System.EventHandler(this.listBox_wells_SelectedIndexChanged);
             // 
@@ -969,7 +969,7 @@
             // splitContainer_cross_sec.Panel2
             // 
             this.splitContainer_cross_sec.Panel2.Controls.Add(this.tableLayoutPanel_cross_sect_plot_settings);
-            this.splitContainer_cross_sec.Size = new System.Drawing.Size(1089, 635);
+            this.splitContainer_cross_sec.Size = new System.Drawing.Size(1089, 634);
             this.splitContainer_cross_sec.SplitterDistance = 111;
             this.splitContainer_cross_sec.TabIndex = 1;
             // 
@@ -980,7 +980,7 @@
             this.checkedListBox_cross_sect.Location = new System.Drawing.Point(0, 0);
             this.checkedListBox_cross_sect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBox_cross_sect.Name = "checkedListBox_cross_sect";
-            this.checkedListBox_cross_sect.Size = new System.Drawing.Size(111, 635);
+            this.checkedListBox_cross_sect.Size = new System.Drawing.Size(111, 634);
             this.checkedListBox_cross_sect.TabIndex = 0;
             this.checkedListBox_cross_sect.MouseUp += new System.Windows.Forms.MouseEventHandler(this.checkedListBox_cross_sect_MouseUp);
             // 
@@ -997,7 +997,7 @@
             this.tableLayoutPanel_cross_sect_plot_settings.RowCount = 2;
             this.tableLayoutPanel_cross_sect_plot_settings.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel_cross_sect_plot_settings.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel_cross_sect_plot_settings.Size = new System.Drawing.Size(974, 635);
+            this.tableLayoutPanel_cross_sect_plot_settings.Size = new System.Drawing.Size(974, 634);
             this.tableLayoutPanel_cross_sect_plot_settings.TabIndex = 0;
             // 
             // tableLayoutPanel_cross_sect_settings
@@ -1096,7 +1096,7 @@
             this.tabPage_cross_plots.Location = new System.Drawing.Point(4, 25);
             this.tabPage_cross_plots.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_cross_plots.Name = "tabPage_cross_plots";
-            this.tabPage_cross_plots.Size = new System.Drawing.Size(1195, 635);
+            this.tabPage_cross_plots.Size = new System.Drawing.Size(1195, 634);
             this.tabPage_cross_plots.TabIndex = 1;
             this.tabPage_cross_plots.Text = "cross-plots";
             this.tabPage_cross_plots.UseVisualStyleBackColor = true;
@@ -1131,7 +1131,7 @@
             this.tableLayoutPanel_cross_plots.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel_cross_plots.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel_cross_plots.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel_cross_plots.Size = new System.Drawing.Size(1195, 635);
+            this.tableLayoutPanel_cross_plots.Size = new System.Drawing.Size(1195, 634);
             this.tableLayoutPanel_cross_plots.TabIndex = 1;
             // 
             // zedGraphControl_wopt_cp
@@ -1359,7 +1359,7 @@
             this.zedGraphControl_wbhp_cp.ScrollMinX = 0D;
             this.zedGraphControl_wbhp_cp.ScrollMinY = 0D;
             this.zedGraphControl_wbhp_cp.ScrollMinY2 = 0D;
-            this.zedGraphControl_wbhp_cp.Size = new System.Drawing.Size(288, 151);
+            this.zedGraphControl_wbhp_cp.Size = new System.Drawing.Size(288, 150);
             this.zedGraphControl_wbhp_cp.TabIndex = 2;
             this.zedGraphControl_wbhp_cp.UseExtendedPrintDialog = true;
             // 
@@ -1397,7 +1397,7 @@
             this.zedGraphControl_wbp9_cp.ScrollMinX = 0D;
             this.zedGraphControl_wbp9_cp.ScrollMinY = 0D;
             this.zedGraphControl_wbp9_cp.ScrollMinY2 = 0D;
-            this.zedGraphControl_wbp9_cp.Size = new System.Drawing.Size(291, 151);
+            this.zedGraphControl_wbp9_cp.Size = new System.Drawing.Size(291, 150);
             this.zedGraphControl_wbp9_cp.TabIndex = 2;
             this.zedGraphControl_wbp9_cp.UseExtendedPrintDialog = true;
             // 
@@ -1407,7 +1407,7 @@
             this.tabPage_r2_iter.Location = new System.Drawing.Point(4, 25);
             this.tabPage_r2_iter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage_r2_iter.Name = "tabPage_r2_iter";
-            this.tabPage_r2_iter.Size = new System.Drawing.Size(1195, 635);
+            this.tabPage_r2_iter.Size = new System.Drawing.Size(1195, 634);
             this.tabPage_r2_iter.TabIndex = 7;
             this.tabPage_r2_iter.Text = "r2-iter";
             this.tabPage_r2_iter.UseVisualStyleBackColor = true;
@@ -1442,7 +1442,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1195, 635);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1195, 634);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // zedGraphControl_wopt_r2
@@ -1688,7 +1688,7 @@
             this.zedGraphControl_wbhp_r2.ScrollMinX = 0D;
             this.zedGraphControl_wbhp_r2.ScrollMinY = 0D;
             this.zedGraphControl_wbhp_r2.ScrollMinY2 = 0D;
-            this.zedGraphControl_wbhp_r2.Size = new System.Drawing.Size(288, 151);
+            this.zedGraphControl_wbhp_r2.Size = new System.Drawing.Size(288, 150);
             this.zedGraphControl_wbhp_r2.TabIndex = 2;
             this.zedGraphControl_wbhp_r2.UseExtendedPrintDialog = true;
             // 
@@ -1707,7 +1707,7 @@
             this.zedGraphControl_wbp9_r2.ScrollMinX = 0D;
             this.zedGraphControl_wbp9_r2.ScrollMinY = 0D;
             this.zedGraphControl_wbp9_r2.ScrollMinY2 = 0D;
-            this.zedGraphControl_wbp9_r2.Size = new System.Drawing.Size(291, 151);
+            this.zedGraphControl_wbp9_r2.Size = new System.Drawing.Size(291, 150);
             this.zedGraphControl_wbp9_r2.TabIndex = 2;
             this.zedGraphControl_wbp9_r2.UseExtendedPrintDialog = true;
             // 
@@ -1717,7 +1717,7 @@
             this.tabPage_table.Location = new System.Drawing.Point(4, 25);
             this.tabPage_table.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_table.Name = "tabPage_table";
-            this.tabPage_table.Size = new System.Drawing.Size(1195, 635);
+            this.tabPage_table.Size = new System.Drawing.Size(1195, 634);
             this.tabPage_table.TabIndex = 3;
             this.tabPage_table.Text = "stat table";
             this.tabPage_table.UseVisualStyleBackColor = true;
@@ -1737,8 +1737,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.dataGridView_hm_table_total);
-            this.splitContainer2.Size = new System.Drawing.Size(1195, 635);
-            this.splitContainer2.SplitterDistance = 478;
+            this.splitContainer2.Size = new System.Drawing.Size(1195, 634);
+            this.splitContainer2.SplitterDistance = 477;
             this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 11;
             // 
@@ -1790,7 +1790,7 @@
             this.dataGridView_hm_table_wells.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_hm_table_wells.Name = "dataGridView_hm_table_wells";
             this.dataGridView_hm_table_wells.RowHeadersWidth = 51;
-            this.dataGridView_hm_table_wells.Size = new System.Drawing.Size(1195, 478);
+            this.dataGridView_hm_table_wells.Size = new System.Drawing.Size(1195, 477);
             this.dataGridView_hm_table_wells.TabIndex = 0;
             // 
             // Column_wells_wellname
@@ -2441,7 +2441,7 @@
             this.tabPage_view2d.Location = new System.Drawing.Point(4, 25);
             this.tabPage_view2d.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_view2d.Name = "tabPage_view2d";
-            this.tabPage_view2d.Size = new System.Drawing.Size(1195, 635);
+            this.tabPage_view2d.Size = new System.Drawing.Size(1195, 634);
             this.tabPage_view2d.TabIndex = 4;
             this.tabPage_view2d.Text = "view 2D";
             this.tabPage_view2d.UseVisualStyleBackColor = true;
@@ -2453,7 +2453,7 @@
             this.tabPage_relperm.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_relperm.Name = "tabPage_relperm";
             this.tabPage_relperm.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage_relperm.Size = new System.Drawing.Size(1195, 635);
+            this.tabPage_relperm.Size = new System.Drawing.Size(1195, 634);
             this.tabPage_relperm.TabIndex = 8;
             this.tabPage_relperm.Text = "rel perm";
             this.tabPage_relperm.UseVisualStyleBackColor = true;
@@ -2472,7 +2472,7 @@
             // splitContainer5.Panel2
             // 
             this.splitContainer5.Panel2.Controls.Add(this.tableLayoutPanel_relperm);
-            this.splitContainer5.Size = new System.Drawing.Size(1187, 627);
+            this.splitContainer5.Size = new System.Drawing.Size(1187, 626);
             this.splitContainer5.SplitterDistance = 118;
             this.splitContainer5.SplitterWidth = 5;
             this.splitContainer5.TabIndex = 0;
@@ -2485,7 +2485,7 @@
             this.listBox_satnum.Location = new System.Drawing.Point(0, 0);
             this.listBox_satnum.Margin = new System.Windows.Forms.Padding(4);
             this.listBox_satnum.Name = "listBox_satnum";
-            this.listBox_satnum.Size = new System.Drawing.Size(118, 627);
+            this.listBox_satnum.Size = new System.Drawing.Size(118, 626);
             this.listBox_satnum.TabIndex = 0;
             this.listBox_satnum.SelectedIndexChanged += new System.EventHandler(this.listBox_satnum_SelectedIndexChanged);
             // 
@@ -2505,7 +2505,7 @@
             this.tableLayoutPanel_relperm.RowCount = 2;
             this.tableLayoutPanel_relperm.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel_relperm.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel_relperm.Size = new System.Drawing.Size(1064, 627);
+            this.tableLayoutPanel_relperm.Size = new System.Drawing.Size(1064, 626);
             this.tableLayoutPanel_relperm.TabIndex = 2;
             // 
             // tableLayoutPanel3
@@ -2544,7 +2544,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(526, 310);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(526, 309);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // label9
@@ -2782,7 +2782,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(516, 277);
+            this.tabPage2.Size = new System.Drawing.Size(516, 276);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Result Pic";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -2793,7 +2793,7 @@
             this.pictureBox_relperm_points.Location = new System.Drawing.Point(4, 4);
             this.pictureBox_relperm_points.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox_relperm_points.Name = "pictureBox_relperm_points";
-            this.pictureBox_relperm_points.Size = new System.Drawing.Size(508, 269);
+            this.pictureBox_relperm_points.Size = new System.Drawing.Size(508, 268);
             this.pictureBox_relperm_points.TabIndex = 0;
             this.pictureBox_relperm_points.TabStop = false;
             // 
@@ -2810,7 +2810,7 @@
             this.zedGraphControl_swof.ScrollMinX = 0D;
             this.zedGraphControl_swof.ScrollMinY = 0D;
             this.zedGraphControl_swof.ScrollMinY2 = 0D;
-            this.zedGraphControl_swof.Size = new System.Drawing.Size(522, 304);
+            this.zedGraphControl_swof.Size = new System.Drawing.Size(522, 303);
             this.zedGraphControl_swof.TabIndex = 2;
             this.zedGraphControl_swof.UseExtendedPrintDialog = true;
             // 
@@ -2820,7 +2820,7 @@
             this.tabPage_uparam.Location = new System.Drawing.Point(4, 25);
             this.tabPage_uparam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage_uparam.Name = "tabPage_uparam";
-            this.tabPage_uparam.Size = new System.Drawing.Size(1195, 635);
+            this.tabPage_uparam.Size = new System.Drawing.Size(1195, 634);
             this.tabPage_uparam.TabIndex = 10;
             this.tabPage_uparam.Text = "uparam";
             this.tabPage_uparam.UseVisualStyleBackColor = true;
@@ -2840,8 +2840,8 @@
             // splitContainer_uparam1.Panel2
             // 
             this.splitContainer_uparam1.Panel2.Controls.Add(this.splitContainer6);
-            this.splitContainer_uparam1.Size = new System.Drawing.Size(1195, 635);
-            this.splitContainer_uparam1.SplitterDistance = 407;
+            this.splitContainer_uparam1.Size = new System.Drawing.Size(1195, 634);
+            this.splitContainer_uparam1.SplitterDistance = 406;
             this.splitContainer_uparam1.TabIndex = 0;
             // 
             // splitContainer4
@@ -2859,7 +2859,7 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.splitContainer7);
-            this.splitContainer4.Size = new System.Drawing.Size(1195, 407);
+            this.splitContainer4.Size = new System.Drawing.Size(1195, 406);
             this.splitContainer4.SplitterDistance = 204;
             this.splitContainer4.TabIndex = 0;
             // 
@@ -2870,7 +2870,7 @@
             this.checkedListBox_uparams.Location = new System.Drawing.Point(0, 27);
             this.checkedListBox_uparams.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBox_uparams.Name = "checkedListBox_uparams";
-            this.checkedListBox_uparams.Size = new System.Drawing.Size(204, 380);
+            this.checkedListBox_uparams.Size = new System.Drawing.Size(204, 379);
             this.checkedListBox_uparams.TabIndex = 1;
             this.checkedListBox_uparams.SelectedIndexChanged += new System.EventHandler(this.checkedListBox_uparams_SelectedIndexChanged);
             this.checkedListBox_uparams.MouseUp += new System.Windows.Forms.MouseEventHandler(this.checkedListBox_uparams_MouseUp);
@@ -2926,7 +2926,7 @@
             // splitContainer7.Panel1
             // 
             this.splitContainer7.Panel1.Controls.Add(this.zedGraphControl_uparams);
-            this.splitContainer7.Size = new System.Drawing.Size(987, 407);
+            this.splitContainer7.Size = new System.Drawing.Size(987, 406);
             this.splitContainer7.SplitterDistance = 524;
             this.splitContainer7.TabIndex = 0;
             // 
@@ -2943,7 +2943,7 @@
             this.zedGraphControl_uparams.ScrollMinX = 0D;
             this.zedGraphControl_uparams.ScrollMinY = 0D;
             this.zedGraphControl_uparams.ScrollMinY2 = 0D;
-            this.zedGraphControl_uparams.Size = new System.Drawing.Size(524, 407);
+            this.zedGraphControl_uparams.Size = new System.Drawing.Size(524, 406);
             this.zedGraphControl_uparams.TabIndex = 0;
             this.zedGraphControl_uparams.UseExtendedPrintDialog = true;
             // 
@@ -3083,7 +3083,7 @@
             this.richTextBox_log.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox_log.Name = "richTextBox_log";
             this.richTextBox_log.ReadOnly = true;
-            this.richTextBox_log.Size = new System.Drawing.Size(1203, 156);
+            this.richTextBox_log.Size = new System.Drawing.Size(1203, 157);
             this.richTextBox_log.TabIndex = 0;
             this.richTextBox_log.Text = "";
             this.richTextBox_log.WordWrap = false;
@@ -3099,7 +3099,7 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip.Size = new System.Drawing.Size(332, 28);
+            this.menuStrip.Size = new System.Drawing.Size(332, 30);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -3111,7 +3111,7 @@
             this.saveProjectToolStripMenuItem,
             this.saveProjectAsToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // newProjectToolStripMenuItem
@@ -3150,7 +3150,7 @@
             this.tableMakerToolStripMenuItem,
             this.fRAnalToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(58, 26);
             this.toolsToolStripMenuItem.Text = "&Tools";
             // 
             // coreyToolStripMenuItem
@@ -3186,7 +3186,7 @@
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem1});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 26);
             this.editToolStripMenuItem.Text = "&Edit";
             // 
             // settingsToolStripMenuItem1
@@ -3201,7 +3201,7 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
             // aboutToolStripMenuItem
@@ -3252,10 +3252,10 @@
             // treeView_project
             // 
             this.treeView_project.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView_project.Location = new System.Drawing.Point(0, 55);
+            this.treeView_project.Location = new System.Drawing.Point(0, 61);
             this.treeView_project.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.treeView_project.Name = "treeView_project";
-            this.treeView_project.Size = new System.Drawing.Size(332, 769);
+            this.treeView_project.Size = new System.Drawing.Size(332, 763);
             this.treeView_project.TabIndex = 1;
             this.treeView_project.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView_project_AfterSelect);
             this.treeView_project.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_project_NodeMouseDoubleClick);
@@ -3268,9 +3268,9 @@
             this.toolStripButton_add,
             this.toolStripButton_add_child,
             this.toolStripButton_remove});
-            this.toolStrip_project.Location = new System.Drawing.Point(0, 28);
+            this.toolStrip_project.Location = new System.Drawing.Point(0, 30);
             this.toolStrip_project.Name = "toolStrip_project";
-            this.toolStrip_project.Size = new System.Drawing.Size(332, 27);
+            this.toolStrip_project.Size = new System.Drawing.Size(332, 31);
             this.toolStrip_project.TabIndex = 0;
             this.toolStrip_project.Text = "toolStrip1";
             // 
@@ -3280,7 +3280,7 @@
             this.toolStripButton_wizard.Image = global::Pexel.Properties.Resources.visart;
             this.toolStripButton_wizard.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_wizard.Name = "toolStripButton_wizard";
-            this.toolStripButton_wizard.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton_wizard.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton_wizard.Text = "create a new";
             this.toolStripButton_wizard.Click += new System.EventHandler(this.toolStripButton_wizard_Click);
             // 
@@ -3290,7 +3290,7 @@
             this.toolStripButton_add.Image = global::Pexel.Properties.Resources.Add;
             this.toolStripButton_add.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_add.Name = "toolStripButton_add";
-            this.toolStripButton_add.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton_add.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton_add.Text = "import an existing";
             this.toolStripButton_add.Click += new System.EventHandler(this.toolStripButton_add_Click);
             // 
@@ -3300,7 +3300,7 @@
             this.toolStripButton_add_child.Image = global::Pexel.Properties.Resources.Folder_Add_01;
             this.toolStripButton_add_child.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_add_child.Name = "toolStripButton_add_child";
-            this.toolStripButton_add_child.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton_add_child.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton_add_child.Text = "create on the existing";
             this.toolStripButton_add_child.Click += new System.EventHandler(this.toolStripButton_add_child_Click);
             // 
@@ -3310,7 +3310,7 @@
             this.toolStripButton_remove.Image = global::Pexel.Properties.Resources.deletered;
             this.toolStripButton_remove.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_remove.Name = "toolStripButton_remove";
-            this.toolStripButton_remove.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton_remove.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton_remove.Text = "remove";
             this.toolStripButton_remove.Click += new System.EventHandler(this.toolStripButton_remove_Click);
             // 
