@@ -3542,7 +3542,7 @@ namespace Pexel.HM
 
             if (prev_iteration != null && prev_iteration.CoreySet.Tables.Count > 0)
             {
-                prev_iteration.Result.GetRegData(   satnum, actnum, 
+                prev_iteration.Result.GetRegData_fix(satnum, actnum, 
                                                     Enumerable.Range(1, prev_iteration.CoreySet.Tables.Count).ToArray(), 
                                                     out double[][] opths, out double[][] wpths, out double[][] opts, out double[][] wpts);
                 //
