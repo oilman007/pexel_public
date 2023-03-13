@@ -15,6 +15,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Threading.Tasks;
 using Pexel.Eclipse;
+using ZedGraph;
 
 
 namespace Pexel.HM.FR
@@ -34,7 +35,7 @@ namespace Pexel.HM.FR
             View2D.SetBackGround(BackGroundColor);
             View2D.SetWells(TitleColor);
             //this.splitContainer_main.Panel2.Controls.Add(this.View2D);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown_dates, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(View2D, 0, 1);
             this.View2D.Dock = System.Windows.Forms.DockStyle.Fill;
             this.View2D.Size = new Size(100, 100);
              //analyzer.SaveEvent += new EventHandler(SaveEvent);
@@ -42,10 +43,13 @@ namespace Pexel.HM.FR
         }
 
 
+
+        int selected_date = 0;
+
         TreeNode[] CaseNodes { get; set; }
 
 
-        FRProject Project = new FRProject();
+        FRProject Project { set; get; } = new FRProject();
 
         Color BackGroundColor = Color.White;
         Color TitleColor = Color.Black;
@@ -64,17 +68,17 @@ namespace Pexel.HM.FR
 
         void UpdateDates(DateTime[] dates)
         {
-            this.numericUpDown_dates.Minimum = 1;
-            this.numericUpDown_dates.Maximum = dates.Length;
-            this.numericUpDown_dates.Value = 1;
+            this.numericUpDown_dates.Minimum = 0;
+            this.numericUpDown_dates.Maximum = dates.Length - 1;
+            this.numericUpDown_dates.Value = 0;
             //
             this.comboBox_dates.Items.Clear();
             foreach (DateTime date in dates)
                 comboBox_dates.Items.Add(Helper.ShowDateTimeLong(date));
             //
-            this.trackBar_dates.Minimum = 1;
-            this.trackBar_dates.Maximum = dates.Length;
-            this.trackBar_dates.Value = 1;
+            this.trackBar_dates.Minimum = 0;
+            this.trackBar_dates.Maximum = dates.Length - 1;
+            this.trackBar_dates.Value = 0;
         }
 
 
@@ -83,11 +87,11 @@ namespace Pexel.HM.FR
         void UpdateProject(FRProject project)
         {
             Project = project;
-            this.treeView_cases.Nodes.Clear();
+            this.treeView.Nodes.Clear();
             CaseNodes = new TreeNode[project.Regions.Count];
             int i = 0;
             foreach (FRRegion r in project.Regions.Values)
-                treeView_cases.Nodes.Add(RegionNode(r, out CaseNodes[i++]));
+                treeView.Nodes.Add(RegionNode(r, out CaseNodes[i++]));
             UpdateDates(project.Dates);
         }
 
@@ -96,8 +100,11 @@ namespace Pexel.HM.FR
 
         TreeNode RegionNode(FRRegion region, out TreeNode case_node)
         {
-            TreeNode result = new TreeNode(region.Title) { Checked = true };
-            result.Tag = region;
+            TreeNode result = new TreeNode(region.Title)
+            {
+                Checked = true,
+                Tag = region
+            };
             result.Nodes.Add(BoundariesNode(region.Boundaries));
             case_node = CaseNode(region.Cases.First());
             result.Nodes.Add(case_node);
@@ -107,8 +114,11 @@ namespace Pexel.HM.FR
 
         TreeNode BoundariesNode(IEnumerable<Polygon2D> boundaries)
         {
-            TreeNode result = new TreeNode("Boundaries") { Checked = true };
-            result.Tag = boundaries;
+            TreeNode result = new TreeNode("Boundaries")
+            {
+                Checked = true,
+                Tag = boundaries
+            };
             foreach (Polygon2D p in boundaries)
                 result.Nodes.Add(BoundaryNode(p));
             return result;
@@ -116,8 +126,11 @@ namespace Pexel.HM.FR
 
         TreeNode BoundaryNode(Polygon2D boundary)
         {
-            TreeNode result = new TreeNode(boundary.Title) { Checked = boundary.Checked };
-            result.Tag = boundary;
+            TreeNode result = new TreeNode(boundary.Title)
+            {
+                Checked = boundary.Checked,
+                Tag = boundary
+            };
             return result;
         }
 
@@ -126,8 +139,11 @@ namespace Pexel.HM.FR
 
         TreeNode CaseNode(FRCase frc)
         {
-            TreeNode result = new TreeNode("Case") { Checked = true };
-            result.Tag = frc;
+            TreeNode result = new TreeNode("Case")
+            {
+                Checked = true,
+                Tag = frc
+            };
             result.Nodes.Add(WellsNode(frc.Wells));
             result.Nodes.Add(LinksNode("IPLinks", frc.IPLinks));
             result.Nodes.Add(LinksNode("IILinks", frc.IILinks));
@@ -137,8 +153,11 @@ namespace Pexel.HM.FR
 
         TreeNode WellsNode(IEnumerable<WellFace2D> wells)
         {
-            TreeNode result = new TreeNode("Wells") { Checked = true };
-            result.Tag = wells;
+            TreeNode result = new TreeNode("Wells")
+            {
+                Checked = true,
+                Tag = wells
+            };
             foreach (WellFace2D w in wells)
                 result.Nodes.Add(WellNode(w));
             return result;
@@ -146,15 +165,21 @@ namespace Pexel.HM.FR
 
         TreeNode WellNode(WellFace2D well)
         {
-            TreeNode result = new TreeNode(well.Title) { Checked = well.Checked };
-            result.Tag = well;
+            TreeNode result = new TreeNode(well.Title)
+            {
+                Checked = well.Checked,
+                Tag = well
+            };
             return result;
         }
 
         TreeNode LinksNode(string title, IEnumerable<WellsLink> links)
         {
-            TreeNode result = new TreeNode(title) { Checked = true };
-            result.Tag = links;
+            TreeNode result = new TreeNode(title)
+            {
+                Checked = true,
+                Tag = links
+            };
             foreach (WellsLink l in links)
                 result.Nodes.Add(LinkNode(l));
             return result;
@@ -162,8 +187,11 @@ namespace Pexel.HM.FR
 
         TreeNode LinkNode(WellsLink link)
         {
-            TreeNode result = new TreeNode(link.Title) { Checked = link.Checked };
-            result.Tag = link;
+            TreeNode result = new TreeNode(link.Title)
+            {
+                Checked = link.Checked,
+                Tag = link
+            };
             return result;
         }
 
@@ -296,12 +324,20 @@ namespace Pexel.HM.FR
         }
 
 
+
+
+
+        
         void New()
         {
             if (OkToContinue())
             {
-                UpdateProject(new FRProject());
-                SetCurrentFile(string.Empty);
+                //UpdateProject(new FRProject());
+                //SetCurrentFile(string.Empty);
+                //
+                NewFRForm newFRForm = new NewFRForm();
+                newFRForm.UpdateProjectEvent += UpdateProject;
+                newFRForm.ShowDialog();
             }
         }
 
@@ -510,6 +546,39 @@ namespace Pexel.HM.FR
 
 
         ToolStripMenuItem newMenu, openMenu, saveMenu, saveAsMenu, exitMenu;
+
+        private void comboBox_dates_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Updateate(Math.Max(0, comboBox_dates.SelectedIndex));
+        }
+
+        private void numericUpDown_dates_ValueChanged(object sender, EventArgs e)
+        {
+            Updateate((int)numericUpDown_dates.Value);
+        }
+
+        private void trackBar_dates_Scroll(object sender, EventArgs e)
+        {
+            Updateate(trackBar_dates.Value);
+        }
+
+
+        void Updateate(int date)
+        {
+            if (comboBox_dates.SelectedIndex != date) 
+                comboBox_dates.SelectedIndex = date;
+            if ((int)numericUpDown_dates.Value != date) 
+                numericUpDown_dates.Value = date;
+            if (trackBar_dates.Value != date) 
+                trackBar_dates.Value = date;
+
+        }
+
+
+
+
+
+
         ToolStripSeparator separatorUpFileMenu, separatorDownFileMenu;
 
 
@@ -582,6 +651,86 @@ namespace Pexel.HM.FR
             fileToolStripMenuItem.DropDownItems.Add(separatorDownFileMenu);
             fileToolStripMenuItem.DropDownItems.Add(exitMenu);
         }
+
+
+
+
+
+
+
+        /*
+        void UpdateWells()
+        {
+            WellsTreeNodes.Nodes.Clear();
+            foreach (WellFace2D face in Project.Data.Wells)
+                WellsTreeNodes.Nodes.Add(new TreeNode(face.Title) { Tag = face, Checked = face.Checked });
+
+            View2D.WellsPlane2D.Wells.Clear();
+            View2D.WellsPlane2D.Wells.AddRange(Project.Data.Wells);
+        }
+
+
+
+
+        void UpdateBoundaries()
+        {
+            BoundariesTreeNodes.Nodes.Clear();
+            foreach (Polygon2D poly in Project.Data.Boundaries)
+                BoundariesTreeNodes.Nodes.Add(new TreeNode(poly.Title) { Tag = poly, Checked = poly.Checked });
+
+            for (int i = 0; i < Project.Data.Boundaries.Count; ++i)
+                Project.Data.Boundaries[i].Color = BoundariesColor;
+
+            View2D.Boundaries = Project.Data.Boundaries;
+        }
+
+
+
+        void UpdateTargetAreas()
+        {
+            TargetAreasTreeNodes.Nodes.Clear();
+            foreach (Polygon2D poly in Project.Data.TargetAreas)
+                TargetAreasTreeNodes.Nodes.Add(new TreeNode(poly.Title) { Tag = poly, Checked = poly.Checked });
+
+            for (int i = 0; i < Project.Data.TargetAreas.Count; ++i)
+                Project.Data.TargetAreas[i].Color = TargetAreasColor;
+
+            View2D.TargetAreas = Project.Data.TargetAreas;
+            cycAnalyzerForm.SetAreas(Project.Data.TargetAreas);
+        }
+
+
+
+
+
+        void UpdateLinks(List<WellsLink> iplinks, List<WellsLink> pplinks, List<WellsLink> iilinks)
+        {
+            SetColor(ref iplinks, IPLinksColor);
+            SetColor(ref pplinks, PPLinksColor);
+            SetColor(ref iilinks, IILinksColor);
+            UpdateNodes(ref IPLinksTreeNodes, iplinks);
+            UpdateNodes(ref PPLinksTreeNodes, pplinks);
+            UpdateNodes(ref IILinksTreeNodes, iilinks);
+            View2D.WellsLinks.Clear();
+            if (IPLinksTreeNodes.Checked)
+                View2D.WellsLinks.AddRange(iplinks);
+            if (PPLinksTreeNodes.Checked)
+                View2D.WellsLinks.AddRange(pplinks);
+            if (IILinksTreeNodes.Checked)
+                View2D.WellsLinks.AddRange(iilinks);
+        }
+
+        void UpdateLinks()
+        {
+            View2D.WellsLinks.Clear();
+            if (IPLinksTreeNodes.Checked)
+                View2D.WellsLinks.AddRange((List<WellsLink>)IPLinksTreeNodes.Tag);
+            if (PPLinksTreeNodes.Checked)
+                View2D.WellsLinks.AddRange((List<WellsLink>)PPLinksTreeNodes.Tag);
+            if (IILinksTreeNodes.Checked)
+                View2D.WellsLinks.AddRange((List<WellsLink>)IILinksTreeNodes.Tag);
+        }
+        */
 
 
 
