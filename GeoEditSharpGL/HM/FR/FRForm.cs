@@ -66,6 +66,7 @@ namespace Pexel.HM.FR
 
 
 
+
         void UpdateDates(DateTime[] dates)
         {
             this.numericUpDown_dates.Minimum = 0;
@@ -90,9 +91,38 @@ namespace Pexel.HM.FR
             this.treeView.Nodes.Clear();
             CaseNodes = new TreeNode[project.Regions.Count];
             int i = 0;
-            foreach (FRRegion r in project.Regions.Values)
-                treeView.Nodes.Add(RegionNode(r, out CaseNodes[i++]));
+            foreach (FRRegion r in Project.Regions.Values)
+                treeView.Nodes.Add(RegionNode(r, out CaseNodes[i++]));         
             UpdateDates(project.Dates);
+            //UpdateCases(project.Dates.First());
+        }
+
+
+
+        void UpdateCases(DateTime dt)
+        {
+            int i = 0;
+            foreach (FRRegion region in Project.Regions.Values)
+            {
+                FRCase frc = region.Cases.Where(v => v.FirstDt <= dt && dt <= v.LastDt).First();
+                UpdateCaseNode(CaseNodes[i++], frc);
+            }
+        }
+
+
+        void UpdateCaseNode(TreeNode case_node, FRCase frc)
+        {
+            //TreeNode result = new TreeNode("Case") { Checked = true, Tag = frc };
+            //case_node.Checked = frc
+            case_node.Tag = frc;
+            bool expanded = case_node.IsExpanded;
+            case_node.Nodes.Clear();
+            case_node.Nodes.Add(WellsNode(frc.Wells));
+            case_node.Nodes.Add(LinksNode("IPLinks", frc.IPLinks));
+            case_node.Nodes.Add(LinksNode("IILinks", frc.IILinks));
+            case_node.Nodes.Add(LinksNode("PPLinks", frc.PPLinks));
+            if (expanded)
+                case_node.Expand();
         }
 
 
@@ -100,16 +130,18 @@ namespace Pexel.HM.FR
 
         TreeNode RegionNode(FRRegion region, out TreeNode case_node)
         {
-            TreeNode result = new TreeNode(region.Title)
+            TreeNode result = new TreeNode("Region " + region.Title)
             {
                 Checked = true,
                 Tag = region
             };
             result.Nodes.Add(BoundariesNode(region.Boundaries));
-            case_node = CaseNode(region.Cases.First());
+            case_node = new TreeNode("Case");
             result.Nodes.Add(case_node);
             return result;
         }
+
+
 
 
         TreeNode BoundariesNode(IEnumerable<Polygon2D> boundaries)
@@ -126,7 +158,7 @@ namespace Pexel.HM.FR
 
         TreeNode BoundaryNode(Polygon2D boundary)
         {
-            TreeNode result = new TreeNode(boundary.Title)
+            TreeNode result = new TreeNode("Boundary" + boundary.Title)
             {
                 Checked = boundary.Checked,
                 Tag = boundary
@@ -549,29 +581,36 @@ namespace Pexel.HM.FR
 
         private void comboBox_dates_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Updateate(Math.Max(0, comboBox_dates.SelectedIndex));
+            UpdateDate(Math.Max(0, comboBox_dates.SelectedIndex));
         }
 
         private void numericUpDown_dates_ValueChanged(object sender, EventArgs e)
         {
-            Updateate((int)numericUpDown_dates.Value);
+            UpdateDate((int)numericUpDown_dates.Value);
         }
 
         private void trackBar_dates_Scroll(object sender, EventArgs e)
         {
-            Updateate(trackBar_dates.Value);
+            UpdateDate(trackBar_dates.Value);
         }
 
 
-        void Updateate(int date)
+
+        int prev_date = -1;
+        void UpdateDate(int date)
         {
-            if (comboBox_dates.SelectedIndex != date) 
+            if (comboBox_dates.SelectedIndex != date)
                 comboBox_dates.SelectedIndex = date;
-            if ((int)numericUpDown_dates.Value != date) 
+            if ((int)numericUpDown_dates.Value != date)
                 numericUpDown_dates.Value = date;
-            if (trackBar_dates.Value != date) 
+            if (trackBar_dates.Value != date)
                 trackBar_dates.Value = date;
 
+            if (prev_date != date)
+            {
+                prev_date = date;
+                UpdateCases(Project.Dates[date]);
+            }                
         }
 
 
