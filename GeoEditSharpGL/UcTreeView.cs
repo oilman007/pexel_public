@@ -83,7 +83,6 @@ namespace Pexel
 
             CheckBoxRenderer.DrawCheckBox(e.Graphics, cbx(e.Bounds, 0).Location, bs1);
             CheckBoxRenderer.DrawCheckBox(e.Graphics, cbx(e.Bounds, 1).Location, bs2);
-
         }
 
         protected override void OnNodeMouseClick(TreeNodeMouseClickEventArgs e)
@@ -115,5 +114,15 @@ namespace Pexel
                                  bounds.Y + 2, glyph.Width, glyph.Height);
         }
 
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // UcTreeView
+            // 
+            this.LineColor = System.Drawing.Color.Black;
+            this.ResumeLayout(false);
+
+        }
     }
 }
