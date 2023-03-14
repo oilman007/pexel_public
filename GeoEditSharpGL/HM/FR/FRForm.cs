@@ -94,6 +94,7 @@ namespace Pexel.HM.FR
             foreach (FRRegion r in Project.Regions.Values)
                 treeView.Nodes.Add(RegionNode(r, out CaseNodes[i++]));         
             UpdateDates(project.Dates);
+            View2D.Boundaries = Project.Regions.Values.SelectMany(x => x.Boundaries).ToList();
             //UpdateCases(project.Dates.First());
         }
 
@@ -101,11 +102,19 @@ namespace Pexel.HM.FR
 
         void UpdateCases(DateTime dt)
         {
+            View2D.WellsLinks.Clear();
+            View2D.WellsPlane2D.Wells.Clear();
             int i = 0;
             foreach (FRRegion region in Project.Regions.Values)
             {
                 FRCase frc = region.Cases.Where(v => v.FirstDt <= dt && dt <= v.LastDt).First();
                 UpdateCaseNode(CaseNodes[i++], frc);
+                // wells
+                View2D.WellsPlane2D.Wells.AddRange(frc.Wells);
+                // links
+                View2D.WellsLinks.AddRange(frc.IPLinks);
+                View2D.WellsLinks.AddRange(frc.PPLinks);
+                View2D.WellsLinks.AddRange(frc.IILinks);
             }
         }
 
@@ -596,7 +605,7 @@ namespace Pexel.HM.FR
 
 
 
-        int prev_date = -1;
+        int prev_date = -999;
         void UpdateDate(int date)
         {
             if (comboBox_dates.SelectedIndex != date)
@@ -695,6 +704,13 @@ namespace Pexel.HM.FR
 
 
 
+        void UpdateViewBoundaries()
+        {
+            View2D.Boundaries = Project.Regions.Values.SelectMany(x => x.Boundaries).ToList();
+        }
+
+
+
 
 
         /*
@@ -708,20 +724,6 @@ namespace Pexel.HM.FR
             View2D.WellsPlane2D.Wells.AddRange(Project.Data.Wells);
         }
 
-
-
-
-        void UpdateBoundaries()
-        {
-            BoundariesTreeNodes.Nodes.Clear();
-            foreach (Polygon2D poly in Project.Data.Boundaries)
-                BoundariesTreeNodes.Nodes.Add(new TreeNode(poly.Title) { Tag = poly, Checked = poly.Checked });
-
-            for (int i = 0; i < Project.Data.Boundaries.Count; ++i)
-                Project.Data.Boundaries[i].Color = BoundariesColor;
-
-            View2D.Boundaries = Project.Data.Boundaries;
-        }
 
 
 
