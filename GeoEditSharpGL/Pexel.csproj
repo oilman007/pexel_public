@@ -469,6 +469,15 @@
       <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="TreeNode2.cs" />
+    <Compile Include="UcTreeFormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UcTreeFormTest.Designer.cs">
+      <DependentUpon>UcTreeFormTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="View\PropView2DControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -748,6 +757,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcTreeFormTest.resx">
+      <DependentUpon>UcTreeFormTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\PropView2DControl.resx">
       <DependentUpon>PropView2DControl.cs</DependentUpon>

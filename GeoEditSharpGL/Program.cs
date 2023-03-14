@@ -100,7 +100,11 @@ namespace Pexel
                 //Application.Run(new SCAL.PicTest());
                 //Application.Run(new SCAL.RelPermAnalyzerForm());
                 //Application.Run(new Pexel.SCAL.CoreySetForm());
-                Application.Run(new ResultsViewTreeForm());
+                
+                //Application.Run(new ResultsViewTreeForm());
+
+                Application.Run(new UcTreeFormTest());
+                
             }
 
 
