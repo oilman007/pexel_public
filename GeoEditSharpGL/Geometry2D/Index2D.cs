@@ -9,66 +9,66 @@ using System.Xml;
 
 namespace Pexel
 {
-    public class Point2I : IEquatable<Point2I>
+    public class Index2D : IEquatable<Index2D>
     {
 
-        public Point2I()
+        public Index2D()
         {
-            X = 0;
-            Y = 0;
+            I = 0;
+            J = 0;
         }
-        public Point2I(int x, int y)
+        public Index2D(int x, int y)
         {
-            X = x;
-            Y = y;
+            I = x;
+            J = y;
         }
-        public Point2I(Point2I point)
+        public Index2D(Index2D point)
         {
-            X = point.X;
-            Y = point.Y;
+            I = point.I;
+            J = point.J;
         }
-        public int X { set; get; }
-        public int Y { set; get; }
+        public int I { set; get; }
+        public int J { set; get; }
 
 
 
         public void Write(BinaryWriter writer)
         {
-            writer.Write(X);
-            writer.Write(Y);
+            writer.Write(I);
+            writer.Write(J);
         }
 
-        public static Point2I Read(BinaryReader reader)
+        public static Index2D Read(BinaryReader reader)
         {
-            return new Point2I(reader.ReadInt32(), reader.ReadInt32());
+            return new Index2D(reader.ReadInt32(), reader.ReadInt32());
         }
 
 
         public string ToString()
         {
-            return Helper.ShowInt(X) + " " + Helper.ShowInt(Y);
+            return Helper.ShowInt(I) + " " + Helper.ShowInt(J);
         }
 
-        static public Point2I operator +(Point2I p1, Point2I p2)
+        static public Index2D operator +(Index2D p1, Index2D p2)
         {
-            return new Point2I((p1.X + p2.X), (p1.Y + p2.Y));
+            return new Index2D((p1.I + p2.I), (p1.J + p2.J));
         }
-        static public Point2I operator -(Point2I p1, Point2I p2)
+        static public Index2D operator -(Index2D p1, Index2D p2)
         {
-            return new Point2I((p1.X - p2.X), (p1.Y - p2.Y));
+            return new Index2D((p1.I - p2.I), (p1.J - p2.J));
         }
-        static public bool operator ==(Point2I p1, Point2I p2)
+        static public bool operator ==(Index2D p1, Index2D p2)
         {
-            return p1.X == p2.X && p1.Y == p2.Y;
+            return p1.I == p2.I && p1.J == p2.J;
         }
-        static public bool operator !=(Point2I p1, Point2I p2)
+        static public bool operator !=(Index2D p1, Index2D p2)
         {
-            return p1.X != p2.X || p1.Y != p2.Y;
+            return p1.I != p2.I || p1.J != p2.J;
         }
 
-        public override bool Equals(object obj) => this.Equals(obj as Point2I);
+        public override bool Equals(object obj) => this.Equals(obj as Index2D);
 
-        public bool Equals(Point2I p)
+        public bool Equals(Index2D p)
         {
             if (p is null)
             {
@@ -90,10 +90,10 @@ namespace Pexel
             // Return true if the fields match.
             // Note that the base class is not invoked because it is
             // System.Object, which defines Equals as reference equality.
-            return (X == p.X) && (Y == p.Y);
+            return (I == p.I) && (J == p.J);
         }
 
-        public override int GetHashCode() => (X, Y).GetHashCode();
+        public override int GetHashCode() => (I, J).GetHashCode();
 
 
         /*

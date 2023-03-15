@@ -280,7 +280,7 @@
     </Compile>
     <Compile Include="FileIO\Eclipse.cs" />
     <Compile Include="FileIO\Helper.cs" />
-    <Compile Include="Geometry2D\Point2I.cs" />
+    <Compile Include="Geometry2D\Index2D.cs" />
     <Compile Include="Geometry2D\WellsLink.cs" />
     <Compile Include="Geometry3D\Actnum.cs" />
     <Compile Include="Geometry3D\GridPlaneOpt.cs" />
@@ -307,7 +307,9 @@
     <Compile Include="HM\HistMatchingCriteria.cs" />
     <Compile Include="HM\HistMatchingCriteriaTable.cs" />
     <Compile Include="HM\CrossPlotTag.cs" />
+    <Compile Include="private\HM\FR\AqPillar.cs" />
     <Compile Include="private\HM\FR\FRRegion.cs" />
+    <Compile Include="private\HM\FR\FRWellsLink.cs" />
     <Compile Include="private\HM\HistMatching.cs" />
     <Compile Include="HM\HistMatchingKeyValues.cs" />
     <Compile Include="HM\HistMatchingProject.cs" />

@@ -18,14 +18,14 @@ namespace Pexel.HM.HMFFR
         }
 
 
-        public void UpdateStatus(List<WellFace2D> wells, List<WellsLink> iplinks, List<Point3D> piezo_map, List<Point3D> F_map)
+        public void UpdateStatus(List<WellFace2D> wells, List<FRWellsLink> iplinks, List<Point3D> piezo_map, List<Point3D> F_map)
         {
             this.dataGridView_wells.Rows.Clear();
             int i = 0;
             double f_sum = 0f, x_sum = 0f, d_sum = 0f, t_x_f_sum = 0f, n_sum = 0f, t_sum = 0f;
             foreach (WellFace2D well in wells)
             {
-                if (well.Status == WellStatus.CYCI)// || well.Status == WellStatus.INJE)
+                if (well.Status == WellStatus.AQUI)// || well.Status == WellStatus.INJE)
                 {
                     List<double> tlist = new List<double>();
                     List<double> xlist = new List<double>();

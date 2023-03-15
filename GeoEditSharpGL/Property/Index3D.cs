@@ -49,7 +49,10 @@ namespace Pexel
 
 
 
-
+        public Index2D ToIndex2D()
+        {
+            return new Index2D(I, J);
+        }
 
 
         static public bool operator ==(Index3D i1, Index3D i2)

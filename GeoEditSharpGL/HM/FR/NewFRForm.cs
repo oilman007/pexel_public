@@ -73,11 +73,11 @@ namespace Pexel.HM.FR
                 Grid.ReadBinary(GridFile, out grid);
             else
                 grid = new Grid(GridFile, FileType.GRDECL_ASCII);
-            //Prop aqcell = new Prop();
-            //aqcell.Read(grid.NX(), grid.NY(), grid.NZ(), "AQCELL", AqcellFile, HistMatching.FILETYPE);
+            Prop aqcell = new Prop();
+            aqcell.Read(grid.NX(), grid.NY(), grid.NZ(), "AQCELL", AqcellFile, HistMatching.FILETYPE);
             IterationResult rsm = new IterationResult(RsmFile, out List<string> msgs);
             Prop regions = Aquifer.AquiferAnalyzer.Regions(grid.NX(), grid.NY(), grid.NZ(), grid.Actnum);
-            FRProject project = new FRProject(grid, regions, rsm);
+            FRProject project = new FRProject(grid, regions, aqcell, rsm);
             UpdateProjectEvent?.Invoke(project);
         }
 

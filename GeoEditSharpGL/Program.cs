@@ -7,6 +7,7 @@ using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Security.Principal;
 using Pexel.HM;
+using Pexel.HM.FR;
 
 // https://docs.obfuscar.com/getting-started/configuration.html#table-of-settings
 // https://allmnet.tistory.com/entry/NET-%EC%BD%94%EB%93%9C-%EB%82%9C%EB%8F%85%ED%99%94
@@ -103,8 +104,9 @@ namespace Pexel
                 
                 //Application.Run(new ResultsViewTreeForm());
 
-                Application.Run(new UcTreeFormTest());
-                
+                //Application.Run(new UcTreeFormTest());
+                Application.Run(new FRForm());
+
             }
 
 

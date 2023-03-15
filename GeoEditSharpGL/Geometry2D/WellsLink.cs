@@ -15,30 +15,22 @@ namespace Pexel
             W1 = new WellFace2D();
             W2 = new WellFace2D();
         }
-        public WellsLink(WellFace2D w1, WellFace2D w2)
-        {
-            W1 = w1;
-            W2 = w2;
-        }
+
+
+        public string Title { set; get; } = string.Empty;
         public WellFace2D W1 { set; get; }
         public WellFace2D W2 { set; get; }
         public Color Color { set; get; } = Color.Black;
-        public string Title { set; get; } = string.Empty;
-        public bool Checked { set; get; } = true;
+        virtual public bool Checked { set; get; } = true;
+
+
 
         public double Distance()
         {
-            double x = W1.Point.X - W2.Point.X;
-            double y = W1.Point.Y - W2.Point.Y;
-            return Math.Sqrt(x * x + y * y);
+            return Point2D.Distance(W1.Point, W2.Point);
         }
 
-        static public double Distance(Point2D p1, Point2D p2)
-        {
-            double x = p1.X - p2.X;
-            double y = p1.Y - p2.Y;
-            return Math.Sqrt(x * x + y * y);
-        }
+
 
         public static bool Intersect(WellsLink l1, WellsLink l2, out Point2D i, bool exclude_endpoints = true)
         {
@@ -187,19 +179,6 @@ namespace Pexel
 
 
 
-        public List<Triangle2D> ImpactArea()
-        {
-            double d = Distance() / 4;
-            double alfa = Math.Atan((W2.Point.Y - W1.Point.Y) / (W2.Point.X - W1.Point.X));
-            Point2D p0 = new Point2D((W2.Point.X + W1.Point.X) / 2, (W2.Point.Y + W1.Point.Y) / 2);
-            Point2D p1 = new Point2D(p0.X - d * Math.Sin(alfa), p0.Y + d * Math.Cos(alfa));
-            Point2D p2 = new Point2D(p0.X + d * Math.Sin(alfa), p0.Y - d * Math.Cos(alfa));
-            return new List<Triangle2D>()
-            {
-                new Triangle2D (W1.Point, p1, p2) { Checked = this.Checked, Title = this.Title + ":W1" },
-                new Triangle2D (W2.Point, p1, p2) { Checked = this.Checked, Title = this.Title + ":W2" }
-            };
-        }
 
 
         public Point2D Center()
@@ -207,26 +186,6 @@ namespace Pexel
             return (W1.Point + W2.Point) / 2;
         }
 
-
-        public double HCTime(double distance, double piezo)
-        {
-            if (piezo == 0) return 0;
-            double t = distance * distance / 2 / piezo / 86400;
-            return t;
-        }
-
-        
-        public double CoveredValues(List<Point3D> points)
-        {
-            List<Triangle2D> impactArea = ImpactArea();
-            List<double> sum = new List<double>();
-            foreach (Point3D point in points)
-                foreach (Triangle2D triangle in impactArea)
-                    if (triangle.Contains(point.Point2D()))
-                        sum.Add(point.Z);
-            double result = sum.Count == 0 ? 0 : sum.Average();
-            return result;
-        }
 
 
         public Line2D Line()

@@ -410,7 +410,7 @@ namespace Pexel
                     DrawTriangle(well.Point.X, well.Point.Y, wellSize, false, Color.Brown, wellLinesPlaneDepth);
                 else if (well.Status == WellStatus.INJE)
                     DrawTriangle(well.Point.X, well.Point.Y, wellSize, true, Color.Blue, wellLinesPlaneDepth);
-                else if (well.Status == WellStatus.CYCI)
+                else if (well.Status == WellStatus.AQUI)
                     DrawDoubleTriangle(well.Point.X, well.Point.Y, wellSize, true, Color.SteelBlue, Color.SkyBlue, wellLinesPlaneDepth);
                 else
                     //DrawTriangle(well.Point.X, well.Point.Y, wellSize, true, Color.Black, wellLinesPlaneDepth);

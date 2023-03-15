@@ -130,6 +130,11 @@ namespace Pexel.HM.FR
             case_node.Nodes.Add(LinksNode("IPLinks", frc.IPLinks));
             case_node.Nodes.Add(LinksNode("IILinks", frc.IILinks));
             case_node.Nodes.Add(LinksNode("PPLinks", frc.PPLinks));
+
+            View2D.Covered.Clear();
+            foreach (FRWellsLink link in frc.IPLinks)
+                View2D.Covered.AddRange(link.ImpactArea);
+
             if (expanded)
                 case_node.Expand();
         }
