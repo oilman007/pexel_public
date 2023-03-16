@@ -308,6 +308,7 @@
     <Compile Include="HM\HistMatchingCriteriaTable.cs" />
     <Compile Include="HM\CrossPlotTag.cs" />
     <Compile Include="private\HM\FR\AqPillar.cs" />
+    <Compile Include="private\HM\FR\FDModel.cs" />
     <Compile Include="private\HM\FR\FRRegion.cs" />
     <Compile Include="private\HM\FR\FRWellsLink.cs" />
     <Compile Include="private\HM\HistMatching.cs" />
