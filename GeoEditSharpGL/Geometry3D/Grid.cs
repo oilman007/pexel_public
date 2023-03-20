@@ -238,7 +238,10 @@ namespace Pexel
         }
 
 
-
+        public Cell LocalCell(Index3D index)
+        {
+            return LocalCell(index.I, index.J, index.K);
+        }
 
 
         public Cell LocalCell(int i, int j, int k)
