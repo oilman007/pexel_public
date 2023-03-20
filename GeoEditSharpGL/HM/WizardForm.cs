@@ -104,6 +104,7 @@ namespace Pexel.HM
             checkBox_relperm_matching_CheckedChanged(null, null);
             checkBox_krorw_matching_CheckedChanged(null, null);
             checkBox_krwr_matching_CheckedChanged(null, null);
+            checkBox_fdm_CheckedChanged(null, null);
 
             checkBox_simulate_before_hm.Checked = true;
             checkBox_simulate_before_hm.Checked = false;
@@ -505,6 +506,36 @@ namespace Pexel.HM
         public string ParentCase { set; get; } = string.Empty;
         public string ParentID { set; get; } = string.Empty;
         public string ParentIter { set; get; } = string.Empty;
+
+
+
+
+
+        public bool FDModel
+        {
+            set
+            {
+                this.checkBox_fdm.Checked = value;
+            }
+            get
+            {
+                return this.checkBox_fdm.Checked;
+            }
+        }
+
+
+        public string FDModelFile 
+        { 
+            set
+            {
+                this.textBox_fdm.Text = value;
+            }
+            get
+            {
+                return this.textBox_fdm.Text;
+            }
+        }
+
 
 
 
@@ -3738,6 +3769,23 @@ namespace Pexel.HM
         private void checkBox_results_sub_folder_CheckedChanged(object sender, EventArgs e)
         {
             ChangeOutFolder();
+        }
+
+        private void checkBox_fdm_CheckedChanged(object sender, EventArgs e)
+        {
+            this.button_fdm.Enabled = this.checkBox_fdm.Checked;
+            this.textBox_fdm.Enabled = this.checkBox_fdm.Checked;
+        }
+
+        private void button_fdm_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = string.Format("Flow Direction Model Files (*.{0})|*.{0}|All Files (*.*)|*.*", Pexel.HM.FR.FDModel.EXT);
+            dialog.Multiselect = false;
+            dialog.ShowDialog();
+            string filename = dialog.FileName;
+            if (!string.IsNullOrEmpty(filename))
+                this.textBox_fdm.Text = filename;
         }
     }
 }

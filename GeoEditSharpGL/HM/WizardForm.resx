@@ -117,6 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox_perm_intro.Text" xml:space="preserve">
+    <value>The DATA-file have to include a separate file containing only the permeability array (e.g. PERMX).
+Permeability file name have to mentioned in the DATA-file. And have to mentioned only once. For example, the file name "permx.inc" is okay, but the file name "permx" is not recommended, because the DATA-file usaly contains more lines with the expression "permx".
+Also, for correct functionality, the permeability limits must be specified.</value>
+  </data>
+  <data name="richTextBox_perm_file_notes.Text" xml:space="preserve">
+    <value>NOTE1: GRDECL ASCII format.
+NOTE2: The file must be exactly the one that includes DATA-file.
+NOTE3: This file will not be deleted or modified. All history matching calculations will be performed in a copy of this file. The copy will be stored in the same folder and have the same name with "pxlhm" sufix.</value>
+  </data>
+  <data name="richTextBox_krorw_notes.Text" xml:space="preserve">
+    <value>NOTE1: GRDECL ASCII format.
+NOTE2: The file must be exactly the one that includes DATA-file.
+NOTE3: This file will not be deleted or modified. All history matching calculations will be performed in a copy of this file. The copy will be stored in the same folder and have the same name with "pxlhm" sufix.</value>
+  </data>
+  <data name="richTextBox_krwr_notes.Text" xml:space="preserve">
+    <value>NOTE1: GRDECL ASCII format.
+NOTE2: The file must be exactly the one that includes DATA-file.
+NOTE3: This file will not be deleted or modified. All history matching calculations will be performed in a copy of this file. The copy will be stored in the same folder and have the same name with "pxlhm" sufix.</value>
+  </data>
   <data name="richTextBox_wlist.Text" xml:space="preserve">
     <value>WELLNAMES-file requirements:
 1) ASCII format.
@@ -131,61 +151,6 @@ NOTE: This file will not be deleted or modified. The file will be used for readi
 All input data will be used for reading only. All calculations will be done with a copy of the DATA-file. All permeability changes will be written to a copy of the permeability-file. The ID folder will be created and contain all history matching steps.
 Use Result Viewer to view the history matching metrics and to select the permeability array you like.
 The history matching process can be stopped by a user at any time regardless of the number of iterations.</value>
-  </data>
-  <data name="richTextBox_krorw_notes.Text" xml:space="preserve">
-    <value>NOTE1: GRDECL ASCII format.
-NOTE2: The file must be exactly the one that includes DATA-file.
-NOTE3: This file will not be deleted or modified. All history matching calculations will be performed in a copy of this file. The copy will be stored in the same folder and have the same name with "pxlhm" sufix.</value>
-  </data>
-  <data name="richTextBox_krwr_notes.Text" xml:space="preserve">
-    <value>NOTE1: GRDECL ASCII format.
-NOTE2: The file must be exactly the one that includes DATA-file.
-NOTE3: This file will not be deleted or modified. All history matching calculations will be performed in a copy of this file. The copy will be stored in the same folder and have the same name with "pxlhm" sufix.</value>
-  </data>
-  <data name="richTextBox_perm_intro.Text" xml:space="preserve">
-    <value>The DATA-file have to include a separate file containing only the permeability array (e.g. PERMX).
-Permeability file name have to mentioned in the DATA-file. And have to mentioned only once. For example, the file name "permx.inc" is okay, but the file name "permx" is not recommended, because the DATA-file usaly contains more lines with the expression "permx".
-Also, for correct functionality, the permeability limits must be specified.</value>
-  </data>
-  <data name="richTextBox_perm_file_notes.Text" xml:space="preserve">
-    <value>NOTE1: GRDECL ASCII format.
-NOTE2: The file must be exactly the one that includes DATA-file.
-NOTE3: This file will not be deleted or modified. All history matching calculations will be performed in a copy of this file. The copy will be stored in the same folder and have the same name with "pxlhm" sufix.</value>
-  </data>
-  <data name="richTextBox8.Text" xml:space="preserve">
-    <value>The WBHPH-file is a file with information about history bottomhole pressure measurements by wells. 
-For each well you must set at least one bottomhole pressure value on the date when the well is producing and one value on the date when the well is injecting. 
-If no such measurement exists, you must set an approximate value.
-
-WBHPH-file requirements:
-- ASCII format
-- data line must contains three value: wellname date value
-- date format is dd.mm.yyyy (for example 01.01.2000)
-- value fraction separator is '.' (dot)
-- comments after '--' (double minus) are available
-- empty lines are ignored</value>
-  </data>
-  <data name="richTextBox_results_folder.Text" xml:space="preserve">
-    <value>RESULTS-folder is a folder with DATA-file calculation results. 
-At the end of each calculation an RSM-file will be generated in this folder. 
-To create the required number of summary vectors, the following keywords must be added to the SUMMARY section. </value>
-  </data>
-  <data name="richTextBox_grid_file.Text" xml:space="preserve">
-    <value>GRID-file requirements:
-1) GRID-file have to be a GRDECL ASCII single file.
-2) The file have to contain the following keywords:
-            MAPAXES, SPECGRID, COORDSYS, COORD, ZCORN, ACTNUM.
-3) Each keyword have to occur at the GRID-file only once.
-4) Other keywords in the GRID-file are ignored.
-
-NOTE1: This file will not be deleted or modified. The file will be used for reading only.
-NOTE2: If the required keywords are in more than one file, use the File Combiner Form to create a single file.
-NOTE3: If the original file does not contain MAPAXES keyword, add to file:
-MAPAXES
-0 0 0 0 0 0 /</value>
-  </data>
-  <data name="richTextBox3.Text" xml:space="preserve">
-    <value>NOTE: This case will not be deleted or modified. All history matching calculations will be performed in a copy of this case. The copy will be stored in the same folder and have the same name with "pxlhm" sufix.</value>
   </data>
   <data name="richTextBox_intro.Text" xml:space="preserve">
     <value>You have launched PEXEL.
@@ -214,6 +179,41 @@ Please follow the instructions.
 
 For more information visit web site https://pexel.pro/
 Send any questions or feedback to support@pexel.pro</value>
+  </data>
+  <data name="richTextBox3.Text" xml:space="preserve">
+    <value>NOTE: This case will not be deleted or modified. All history matching calculations will be performed in a copy of this case. The copy will be stored in the same folder and have the same name with "pxlhm" sufix.</value>
+  </data>
+  <data name="richTextBox_grid_file.Text" xml:space="preserve">
+    <value>GRID-file requirements:
+1) GRID-file have to be a GRDECL ASCII single file.
+2) The file have to contain the following keywords:
+            MAPAXES, SPECGRID, COORDSYS, COORD, ZCORN, ACTNUM.
+3) Each keyword have to occur at the GRID-file only once.
+4) Other keywords in the GRID-file are ignored.
+
+NOTE1: This file will not be deleted or modified. The file will be used for reading only.
+NOTE2: If the required keywords are in more than one file, use the File Combiner Form to create a single file.
+NOTE3: If the original file does not contain MAPAXES keyword, add to file:
+MAPAXES
+0 0 0 0 0 0 /</value>
+  </data>
+  <data name="richTextBox8.Text" xml:space="preserve">
+    <value>The WBHPH-file is a file with information about history bottomhole pressure measurements by wells. 
+For each well you must set at least one bottomhole pressure value on the date when the well is producing and one value on the date when the well is injecting. 
+If no such measurement exists, you must set an approximate value.
+
+WBHPH-file requirements:
+- ASCII format
+- data line must contains three value: wellname date value
+- date format is dd.mm.yyyy (for example 01.01.2000)
+- value fraction separator is '.' (dot)
+- comments after '--' (double minus) are available
+- empty lines are ignored</value>
+  </data>
+  <data name="richTextBox_results_folder.Text" xml:space="preserve">
+    <value>RESULTS-folder is a folder with DATA-file calculation results. 
+At the end of each calculation an RSM-file will be generated in this folder. 
+To create the required number of summary vectors, the following keywords must be added to the SUMMARY section. </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

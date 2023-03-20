@@ -439,6 +439,10 @@ namespace Pexel.HM
         [CategoryAttribute(perm_category_attribute), DescriptionAttribute(""), BrowsableAttribute(true), ReadOnlyAttribute(true)]
         public bool PermLayerSplitting { set; get; } = true;
 
+        [CategoryAttribute(perm_category_attribute), DescriptionAttribute(""), BrowsableAttribute(true), ReadOnlyAttribute(true)]
+        public bool FDModel { set; get; } = false;
+        [CategoryAttribute(perm_category_attribute), DescriptionAttribute(""), BrowsableAttribute(true), ReadOnlyAttribute(true)]
+        public string FDModelFile { set; get; } = string.Empty;
 
 
         // relperm

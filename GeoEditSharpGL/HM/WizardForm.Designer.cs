@@ -33,81 +33,6 @@
             this.button_next = new System.Windows.Forms.Button();
             this.button_back = new System.Windows.Forms.Button();
             this.wizardPageContainer = new AeroWizard.WizardPageContainer();
-            this.wizardPage8_run = new AeroWizard.WizardPage();
-            this.richTextBox12 = new System.Windows.Forms.RichTextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.propertyGrid_input_data = new System.Windows.Forms.PropertyGrid();
-            this.label9 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel_run_settings = new System.Windows.Forms.TableLayoutPanel();
-            this.radioButton_data_check = new System.Windows.Forms.RadioButton();
-            this.comboBox_iter = new System.Windows.Forms.ComboBox();
-            this.label_iter = new System.Windows.Forms.Label();
-            this.radioButton_history_matching = new System.Windows.Forms.RadioButton();
-            this.label_id = new System.Windows.Forms.Label();
-            this.comboBox_id = new System.Windows.Forms.ComboBox();
-            this.label_last_iter = new System.Windows.Forms.Label();
-            this.numericUpDown_last_iter = new System.Windows.Forms.NumericUpDown();
-            this.checkBox_simulate_before_hm = new System.Windows.Forms.CheckBox();
-            this.wizardPage0_intro = new AeroWizard.WizardPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.richTextBox_intro = new System.Windows.Forms.RichTextBox();
-            this.wizardPage1_data = new AeroWizard.WizardPage();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.checkBox_results_sub_folder = new System.Windows.Forms.CheckBox();
-            this.checkBox_create_user_sum_file = new System.Windows.Forms.CheckBox();
-            this.richTextBox14 = new System.Windows.Forms.RichTextBox();
-            this.textBox_out_folder = new System.Windows.Forms.TextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.button_copy_sum = new System.Windows.Forms.Button();
-            this.label32 = new System.Windows.Forms.Label();
-            this.richTextBox_out_folder = new System.Windows.Forms.RichTextBox();
-            this.button_data_file = new System.Windows.Forms.Button();
-            this.textBox_data_file = new System.Windows.Forms.TextBox();
-            this.radioButton_ecl = new System.Windows.Forms.RadioButton();
-            this.numericUpDown_cpu = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_gpu_list = new System.Windows.Forms.ComboBox();
-            this.button_mpi_exe_file = new System.Windows.Forms.Button();
-            this.button_sim_exe_file = new System.Windows.Forms.Button();
-            this.button_sim_to_create_rsm = new System.Windows.Forms.Button();
-            this.radioButton_tnav = new System.Windows.Forms.RadioButton();
-            this.textBox_mpi_exe_file = new System.Windows.Forms.TextBox();
-            this.textBox_sim_exe_file = new System.Windows.Forms.TextBox();
-            this.radioButton_tempest = new System.Windows.Forms.RadioButton();
-            this.label_mpi_exe_file = new System.Windows.Forms.Label();
-            this.label_sim_exe_file = new System.Windows.Forms.Label();
-            this.label_max_cpu = new System.Windows.Forms.Label();
-            this.label_cpu_usage = new System.Windows.Forms.Label();
-            this.checkBox_use_gpu = new System.Windows.Forms.CheckBox();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.wizardPage2_grid = new AeroWizard.WizardPage();
-            this.button_split_files = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.tableLayoutPanel_dim = new System.Windows.Forms.TableLayoutPanel();
-            this.numericUpDown_nx = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_ny = new System.Windows.Forms.NumericUpDown();
-            this.label11 = new System.Windows.Forms.Label();
-            this.numericUpDown_nz = new System.Windows.Forms.NumericUpDown();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown_dx = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_dy = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_dz = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_top_depth = new System.Windows.Forms.NumericUpDown();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.radioButton_use_grid = new System.Windows.Forms.RadioButton();
-            this.radioButton_use_dim = new System.Windows.Forms.RadioButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.richTextBox_grid_file = new System.Windows.Forms.RichTextBox();
-            this.button_grid_file = new System.Windows.Forms.Button();
-            this.textBox_grid_file = new System.Windows.Forms.TextBox();
             this.wizardPage3_perm = new AeroWizard.WizardPage();
             this.tabControl_perm_min_max = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -130,6 +55,12 @@
             this.button_perm_max_file = new System.Windows.Forms.Button();
             this.checkBox_perm_matching = new System.Windows.Forms.CheckBox();
             this.richTextBox_perm_intro = new System.Windows.Forms.RichTextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox_fdm = new System.Windows.Forms.TextBox();
+            this.button_fdm = new System.Windows.Forms.Button();
+            this.checkBox_fdm = new System.Windows.Forms.CheckBox();
             this.groupBox_perm_inter_reg = new System.Windows.Forms.GroupBox();
             this.richTextBox_regions = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel_regions = new System.Windows.Forms.TableLayoutPanel();
@@ -149,34 +80,6 @@
             this.radioButton_perm_2D = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.richTextBox_perm_file_notes = new System.Windows.Forms.RichTextBox();
-            this.wizardPage5_corey = new AeroWizard.WizardPage();
-            this.groupBox_relperm_tables = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel_corey_min_max = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.numericUpDown_now_min = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_now_max = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_nw_min = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_nw_max = new System.Windows.Forms.NumericUpDown();
-            this.listBox_corey_table = new System.Windows.Forms.ListBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox_corey_file = new System.Windows.Forms.TextBox();
-            this.textBox_swof_sgof_file = new System.Windows.Forms.TextBox();
-            this.button_swof_sgof_file = new System.Windows.Forms.Button();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.groupBox_satnum = new System.Windows.Forms.GroupBox();
-            this.richTextBox_satnum = new System.Windows.Forms.RichTextBox();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox_satnum_title = new System.Windows.Forms.TextBox();
-            this.textBox_satnum_file = new System.Windows.Forms.TextBox();
-            this.radioButton_use_single_satnum = new System.Windows.Forms.RadioButton();
-            this.radioButton_use_satnum_array = new System.Windows.Forms.RadioButton();
-            this.button_satnum_file = new System.Windows.Forms.Button();
-            this.checkBox_relperm_matching = new System.Windows.Forms.CheckBox();
-            this.label24 = new System.Windows.Forms.Label();
             this.wizardPage4_kr = new AeroWizard.WizardPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Krorw = new System.Windows.Forms.TabPage();
@@ -245,6 +148,34 @@
             this.radioButton_kr_3D = new System.Windows.Forms.RadioButton();
             this.radioButton_kr_2D = new System.Windows.Forms.RadioButton();
             this.label47 = new System.Windows.Forms.Label();
+            this.wizardPage5_corey = new AeroWizard.WizardPage();
+            this.groupBox_relperm_tables = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel_corey_min_max = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.numericUpDown_now_min = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_now_max = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_nw_min = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_nw_max = new System.Windows.Forms.NumericUpDown();
+            this.listBox_corey_table = new System.Windows.Forms.ListBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox_corey_file = new System.Windows.Forms.TextBox();
+            this.textBox_swof_sgof_file = new System.Windows.Forms.TextBox();
+            this.button_swof_sgof_file = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.groupBox_satnum = new System.Windows.Forms.GroupBox();
+            this.richTextBox_satnum = new System.Windows.Forms.RichTextBox();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox_satnum_title = new System.Windows.Forms.TextBox();
+            this.textBox_satnum_file = new System.Windows.Forms.TextBox();
+            this.radioButton_use_single_satnum = new System.Windows.Forms.RadioButton();
+            this.radioButton_use_satnum_array = new System.Windows.Forms.RadioButton();
+            this.button_satnum_file = new System.Windows.Forms.Button();
+            this.checkBox_relperm_matching = new System.Windows.Forms.CheckBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.wizardPage6_aquifer = new AeroWizard.WizardPage();
             this.tabControl_multpv_min_max = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -345,6 +276,81 @@
             this.deviationsControl = new PexelControlsLibrary.DeviationsControl2();
             this.richTextBox11 = new System.Windows.Forms.RichTextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.wizardPage8_run = new AeroWizard.WizardPage();
+            this.richTextBox12 = new System.Windows.Forms.RichTextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.propertyGrid_input_data = new System.Windows.Forms.PropertyGrid();
+            this.label9 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel_run_settings = new System.Windows.Forms.TableLayoutPanel();
+            this.radioButton_data_check = new System.Windows.Forms.RadioButton();
+            this.comboBox_iter = new System.Windows.Forms.ComboBox();
+            this.label_iter = new System.Windows.Forms.Label();
+            this.radioButton_history_matching = new System.Windows.Forms.RadioButton();
+            this.label_id = new System.Windows.Forms.Label();
+            this.comboBox_id = new System.Windows.Forms.ComboBox();
+            this.label_last_iter = new System.Windows.Forms.Label();
+            this.numericUpDown_last_iter = new System.Windows.Forms.NumericUpDown();
+            this.checkBox_simulate_before_hm = new System.Windows.Forms.CheckBox();
+            this.wizardPage0_intro = new AeroWizard.WizardPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.richTextBox_intro = new System.Windows.Forms.RichTextBox();
+            this.wizardPage1_data = new AeroWizard.WizardPage();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.checkBox_results_sub_folder = new System.Windows.Forms.CheckBox();
+            this.checkBox_create_user_sum_file = new System.Windows.Forms.CheckBox();
+            this.richTextBox14 = new System.Windows.Forms.RichTextBox();
+            this.textBox_out_folder = new System.Windows.Forms.TextBox();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.button_copy_sum = new System.Windows.Forms.Button();
+            this.label32 = new System.Windows.Forms.Label();
+            this.richTextBox_out_folder = new System.Windows.Forms.RichTextBox();
+            this.button_data_file = new System.Windows.Forms.Button();
+            this.textBox_data_file = new System.Windows.Forms.TextBox();
+            this.radioButton_ecl = new System.Windows.Forms.RadioButton();
+            this.numericUpDown_cpu = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_gpu_list = new System.Windows.Forms.ComboBox();
+            this.button_mpi_exe_file = new System.Windows.Forms.Button();
+            this.button_sim_exe_file = new System.Windows.Forms.Button();
+            this.button_sim_to_create_rsm = new System.Windows.Forms.Button();
+            this.radioButton_tnav = new System.Windows.Forms.RadioButton();
+            this.textBox_mpi_exe_file = new System.Windows.Forms.TextBox();
+            this.textBox_sim_exe_file = new System.Windows.Forms.TextBox();
+            this.radioButton_tempest = new System.Windows.Forms.RadioButton();
+            this.label_mpi_exe_file = new System.Windows.Forms.Label();
+            this.label_sim_exe_file = new System.Windows.Forms.Label();
+            this.label_max_cpu = new System.Windows.Forms.Label();
+            this.label_cpu_usage = new System.Windows.Forms.Label();
+            this.checkBox_use_gpu = new System.Windows.Forms.CheckBox();
+            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.wizardPage2_grid = new AeroWizard.WizardPage();
+            this.button_split_files = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.tableLayoutPanel_dim = new System.Windows.Forms.TableLayoutPanel();
+            this.numericUpDown_nx = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_ny = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
+            this.numericUpDown_nz = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.numericUpDown_dx = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_dy = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_dz = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_top_depth = new System.Windows.Forms.NumericUpDown();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.radioButton_use_grid = new System.Windows.Forms.RadioButton();
+            this.radioButton_use_dim = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.richTextBox_grid_file = new System.Windows.Forms.RichTextBox();
+            this.button_grid_file = new System.Windows.Forms.Button();
+            this.textBox_grid_file = new System.Windows.Forms.TextBox();
             this.wizardPage_dev = new AeroWizard.WizardPage();
             this.wizardPage_wbhph_file = new AeroWizard.WizardPage();
             this.label15 = new System.Windows.Forms.Label();
@@ -363,25 +369,6 @@
             this.richTextBox_results_folder = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.wizardPageContainer)).BeginInit();
             this.wizardPageContainer.SuspendLayout();
-            this.wizardPage8_run.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.tableLayoutPanel_run_settings.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_last_iter)).BeginInit();
-            this.wizardPage0_intro.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.wizardPage1_data.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_cpu)).BeginInit();
-            this.wizardPage2_grid.SuspendLayout();
-            this.tableLayoutPanel_dim.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nx)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ny)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nz)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_dx)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_dy)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_dz)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_top_depth)).BeginInit();
             this.wizardPage3_perm.SuspendLayout();
             this.tabControl_perm_min_max.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -390,20 +377,12 @@
             this.tabPage2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_perm_max_value)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.groupBox_perm_inter_reg.SuspendLayout();
             this.tableLayoutPanel_regions.SuspendLayout();
             this.tableLayoutPanel_perm_file.SuspendLayout();
             this.groupBox_perm_inter_type.SuspendLayout();
-            this.wizardPage5_corey.SuspendLayout();
-            this.groupBox_relperm_tables.SuspendLayout();
-            this.tableLayoutPanel_corey_min_max.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_now_min)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_now_max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nw_min)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nw_max)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.groupBox_satnum.SuspendLayout();
-            this.tableLayoutPanel7.SuspendLayout();
             this.wizardPage4_kr.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Krorw.SuspendLayout();
@@ -425,6 +404,16 @@
             this.groupBox_kr_regions.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.groupBox_kr_inter_type.SuspendLayout();
+            this.wizardPage5_corey.SuspendLayout();
+            this.groupBox_relperm_tables.SuspendLayout();
+            this.tableLayoutPanel_corey_min_max.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_now_min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_now_max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nw_min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nw_max)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.groupBox_satnum.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
             this.wizardPage6_aquifer.SuspendLayout();
             this.tabControl_multpv_min_max.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -452,6 +441,25 @@
             this.groupBox4.SuspendLayout();
             this.groupBox_wellnames.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.wizardPage8_run.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.tableLayoutPanel_run_settings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_last_iter)).BeginInit();
+            this.wizardPage0_intro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.wizardPage1_data.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_cpu)).BeginInit();
+            this.wizardPage2_grid.SuspendLayout();
+            this.tableLayoutPanel_dim.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nx)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ny)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nz)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_dx)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_dy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_dz)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_top_depth)).BeginInit();
             this.wizardPage_wbhph_file.SuspendLayout();
             this.wizardPage_results_folder.SuspendLayout();
             this.SuspendLayout();
@@ -506,9 +514,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.wizardPageContainer.BackButton = this.button_back;
             this.wizardPageContainer.CancelButton = this.button_cancel;
+            this.wizardPageContainer.Controls.Add(this.wizardPage3_perm);
+            this.wizardPageContainer.Controls.Add(this.wizardPage0_intro);
             this.wizardPageContainer.Controls.Add(this.wizardPage5_corey);
             this.wizardPageContainer.Controls.Add(this.wizardPage4_kr);
-            this.wizardPageContainer.Controls.Add(this.wizardPage3_perm);
             this.wizardPageContainer.Controls.Add(this.wizardPage_dev);
             this.wizardPageContainer.Controls.Add(this.wizardPage_wbhph_file);
             this.wizardPageContainer.Controls.Add(this.wizardPage_results_folder);
@@ -517,7 +526,6 @@
             this.wizardPageContainer.Controls.Add(this.wizardPage6_aquifer);
             this.wizardPageContainer.Controls.Add(this.wizardPage2_grid);
             this.wizardPageContainer.Controls.Add(this.wizardPage1_data);
-            this.wizardPageContainer.Controls.Add(this.wizardPage0_intro);
             this.wizardPageContainer.FinishButtonText = "&Run";
             this.wizardPageContainer.Location = new System.Drawing.Point(10, 12);
             this.wizardPageContainer.Margin = new System.Windows.Forms.Padding(2);
@@ -539,1098 +547,12 @@
             this.wizardPageContainer.TabIndex = 1;
             this.wizardPageContainer.Finished += new System.EventHandler(this.button_run_Click);
             // 
-            // wizardPage8_run
-            // 
-            this.wizardPage8_run.Controls.Add(this.richTextBox12);
-            this.wizardPage8_run.Controls.Add(this.groupBox3);
-            this.wizardPage8_run.Controls.Add(this.label9);
-            this.wizardPage8_run.Controls.Add(this.groupBox1);
-            this.wizardPage8_run.IsFinishPage = true;
-            this.wizardPage8_run.Name = "wizardPage8_run";
-            this.wizardPage8_run.Size = new System.Drawing.Size(1292, 736);
-            this.wizardPage8_run.TabIndex = 5;
-            this.wizardPage8_run.Text = "wizardPage1";
-            this.wizardPage8_run.Initialize += new System.EventHandler<AeroWizard.WizardPageInitEventArgs>(this.wizardPage8_run_Initialize);
-            // 
-            // richTextBox12
-            // 
-            this.richTextBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox12.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox12.Location = new System.Drawing.Point(3, 20);
-            this.richTextBox12.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextBox12.Name = "richTextBox12";
-            this.richTextBox12.ReadOnly = true;
-            this.richTextBox12.Size = new System.Drawing.Size(1286, 100);
-            this.richTextBox12.TabIndex = 50;
-            this.richTextBox12.Text = resources.GetString("richTextBox12.Text");
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.propertyGrid_input_data);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.groupBox3.Location = new System.Drawing.Point(3, 124);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(1277, 482);
-            this.groupBox3.TabIndex = 41;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Input data";
-            // 
-            // propertyGrid_input_data
-            // 
-            this.propertyGrid_input_data.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.propertyGrid_input_data.Location = new System.Drawing.Point(5, 19);
-            this.propertyGrid_input_data.Name = "propertyGrid_input_data";
-            this.propertyGrid_input_data.Size = new System.Drawing.Size(1267, 458);
-            this.propertyGrid_input_data.TabIndex = 0;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label9.Location = new System.Drawing.Point(3, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(135, 15);
-            this.label9.TabIndex = 40;
-            this.label9.Text = "Step 8/8 - RUN-settings";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.tableLayoutPanel_run_settings);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.groupBox1.Location = new System.Drawing.Point(3, 611);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1277, 92);
-            this.groupBox1.TabIndex = 38;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "RUN settings";
-            // 
-            // tableLayoutPanel_run_settings
-            // 
-            this.tableLayoutPanel_run_settings.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel_run_settings.ColumnCount = 8;
-            this.tableLayoutPanel_run_settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
-            this.tableLayoutPanel_run_settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel_run_settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
-            this.tableLayoutPanel_run_settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel_run_settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74F));
-            this.tableLayoutPanel_run_settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
-            this.tableLayoutPanel_run_settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 72F));
-            this.tableLayoutPanel_run_settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 650F));
-            this.tableLayoutPanel_run_settings.Controls.Add(this.radioButton_data_check, 0, 0);
-            this.tableLayoutPanel_run_settings.Controls.Add(this.comboBox_iter, 4, 1);
-            this.tableLayoutPanel_run_settings.Controls.Add(this.label_iter, 3, 1);
-            this.tableLayoutPanel_run_settings.Controls.Add(this.radioButton_history_matching, 0, 1);
-            this.tableLayoutPanel_run_settings.Controls.Add(this.label_id, 1, 1);
-            this.tableLayoutPanel_run_settings.Controls.Add(this.comboBox_id, 2, 1);
-            this.tableLayoutPanel_run_settings.Controls.Add(this.label_last_iter, 5, 1);
-            this.tableLayoutPanel_run_settings.Controls.Add(this.numericUpDown_last_iter, 6, 1);
-            this.tableLayoutPanel_run_settings.Controls.Add(this.checkBox_simulate_before_hm, 7, 1);
-            this.tableLayoutPanel_run_settings.Location = new System.Drawing.Point(9, 23);
-            this.tableLayoutPanel_run_settings.Name = "tableLayoutPanel_run_settings";
-            this.tableLayoutPanel_run_settings.RowCount = 2;
-            this.tableLayoutPanel_run_settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel_run_settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel_run_settings.Size = new System.Drawing.Size(1262, 59);
-            this.tableLayoutPanel_run_settings.TabIndex = 42;
-            // 
-            // radioButton_data_check
-            // 
-            this.radioButton_data_check.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.radioButton_data_check.AutoSize = true;
-            this.radioButton_data_check.Location = new System.Drawing.Point(3, 5);
-            this.radioButton_data_check.Name = "radioButton_data_check";
-            this.radioButton_data_check.Size = new System.Drawing.Size(115, 19);
-            this.radioButton_data_check.TabIndex = 30;
-            this.radioButton_data_check.Text = "Data Check Only";
-            this.radioButton_data_check.UseVisualStyleBackColor = true;
-            this.radioButton_data_check.CheckedChanged += new System.EventHandler(this.radioButton_data_check_CheckedChanged);
-            // 
-            // comboBox_iter
-            // 
-            this.comboBox_iter.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.comboBox_iter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_iter.Font = new System.Drawing.Font("Consolas", 9F);
-            this.comboBox_iter.FormattingEnabled = true;
-            this.comboBox_iter.Location = new System.Drawing.Point(393, 33);
-            this.comboBox_iter.Name = "comboBox_iter";
-            this.comboBox_iter.Size = new System.Drawing.Size(64, 22);
-            this.comboBox_iter.TabIndex = 37;
-            this.comboBox_iter.DropDown += new System.EventHandler(this.comboBox_iter_DropDown);
-            this.comboBox_iter.SelectedIndexChanged += new System.EventHandler(this.comboBox_iter_SelectedIndexChanged);
-            // 
-            // label_iter
-            // 
-            this.label_iter.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label_iter.AutoSize = true;
-            this.label_iter.Location = new System.Drawing.Point(335, 36);
-            this.label_iter.Name = "label_iter";
-            this.label_iter.Size = new System.Drawing.Size(52, 15);
-            this.label_iter.TabIndex = 18;
-            this.label_iter.Text = "Start Iter";
-            // 
-            // radioButton_history_matching
-            // 
-            this.radioButton_history_matching.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.radioButton_history_matching.AutoSize = true;
-            this.radioButton_history_matching.Location = new System.Drawing.Point(3, 34);
-            this.radioButton_history_matching.Name = "radioButton_history_matching";
-            this.radioButton_history_matching.Size = new System.Drawing.Size(116, 19);
-            this.radioButton_history_matching.TabIndex = 30;
-            this.radioButton_history_matching.Text = "History Matching";
-            this.radioButton_history_matching.UseVisualStyleBackColor = true;
-            this.radioButton_history_matching.CheckedChanged += new System.EventHandler(this.radioButton_data_check_CheckedChanged);
-            // 
-            // label_id
-            // 
-            this.label_id.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label_id.AutoSize = true;
-            this.label_id.Location = new System.Drawing.Point(153, 36);
-            this.label_id.Name = "label_id";
-            this.label_id.Size = new System.Drawing.Size(19, 15);
-            this.label_id.TabIndex = 17;
-            this.label_id.Text = "ID";
-            // 
-            // comboBox_id
-            // 
-            this.comboBox_id.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.comboBox_id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_id.Font = new System.Drawing.Font("Consolas", 9F);
-            this.comboBox_id.FormattingEnabled = true;
-            this.comboBox_id.Location = new System.Drawing.Point(178, 33);
-            this.comboBox_id.Name = "comboBox_id";
-            this.comboBox_id.Size = new System.Drawing.Size(125, 22);
-            this.comboBox_id.TabIndex = 36;
-            this.comboBox_id.DropDown += new System.EventHandler(this.comboBox_id_DropDown);
-            this.comboBox_id.SelectedIndexChanged += new System.EventHandler(this.comboBox_id_SelectedIndexChanged_1);
-            // 
-            // label_last_iter
-            // 
-            this.label_last_iter.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label_last_iter.AutoSize = true;
-            this.label_last_iter.Location = new System.Drawing.Point(487, 36);
-            this.label_last_iter.Name = "label_last_iter";
-            this.label_last_iter.Size = new System.Drawing.Size(50, 15);
-            this.label_last_iter.TabIndex = 16;
-            this.label_last_iter.Text = "Last Iter";
-            // 
-            // numericUpDown_last_iter
-            // 
-            this.numericUpDown_last_iter.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.numericUpDown_last_iter.Font = new System.Drawing.Font("Consolas", 9F);
-            this.numericUpDown_last_iter.Location = new System.Drawing.Point(543, 33);
-            this.numericUpDown_last_iter.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.numericUpDown_last_iter.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown_last_iter.Name = "numericUpDown_last_iter";
-            this.numericUpDown_last_iter.Size = new System.Drawing.Size(64, 22);
-            this.numericUpDown_last_iter.TabIndex = 29;
-            this.numericUpDown_last_iter.Value = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            // 
-            // checkBox_simulate_before_hm
-            // 
-            this.checkBox_simulate_before_hm.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.checkBox_simulate_before_hm.AutoSize = true;
-            this.checkBox_simulate_before_hm.Location = new System.Drawing.Point(615, 34);
-            this.checkBox_simulate_before_hm.Name = "checkBox_simulate_before_hm";
-            this.checkBox_simulate_before_hm.Size = new System.Drawing.Size(168, 19);
-            this.checkBox_simulate_before_hm.TabIndex = 35;
-            this.checkBox_simulate_before_hm.Text = "Simulate case before Run";
-            this.checkBox_simulate_before_hm.UseVisualStyleBackColor = true;
-            // 
-            // wizardPage0_intro
-            // 
-            this.wizardPage0_intro.Controls.Add(this.pictureBox1);
-            this.wizardPage0_intro.Controls.Add(this.richTextBox_intro);
-            this.wizardPage0_intro.Name = "wizardPage0_intro";
-            this.wizardPage0_intro.NextPage = this.wizardPage1_data;
-            this.wizardPage0_intro.Size = new System.Drawing.Size(1292, 736);
-            this.wizardPage0_intro.TabIndex = 8;
-            this.wizardPage0_intro.Text = "wizardPage1";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::Pexel.Properties.Resources.android_icon_144x144;
-            this.pictureBox1.InitialImage = global::Pexel.Properties.Resources.android_icon_144x144;
-            this.pictureBox1.Location = new System.Drawing.Point(1134, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(155, 148);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // richTextBox_intro
-            // 
-            this.richTextBox_intro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox_intro.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox_intro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox_intro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox_intro.Location = new System.Drawing.Point(2, 3);
-            this.richTextBox_intro.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextBox_intro.Name = "richTextBox_intro";
-            this.richTextBox_intro.ReadOnly = true;
-            this.richTextBox_intro.Size = new System.Drawing.Size(1127, 597);
-            this.richTextBox_intro.TabIndex = 4;
-            this.richTextBox_intro.Text = resources.GetString("richTextBox_intro.Text");
-            // 
-            // wizardPage1_data
-            // 
-            this.wizardPage1_data.Controls.Add(this.groupBox7);
-            this.wizardPage1_data.Controls.Add(this.richTextBox5);
-            this.wizardPage1_data.Controls.Add(this.label2);
-            this.wizardPage1_data.Name = "wizardPage1_data";
-            this.wizardPage1_data.NextPage = this.wizardPage2_grid;
-            this.wizardPage1_data.Size = new System.Drawing.Size(1292, 736);
-            this.wizardPage1_data.TabIndex = 0;
-            this.wizardPage1_data.Text = "wizardPage1";
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox7.Controls.Add(this.checkBox_results_sub_folder);
-            this.groupBox7.Controls.Add(this.checkBox_create_user_sum_file);
-            this.groupBox7.Controls.Add(this.richTextBox14);
-            this.groupBox7.Controls.Add(this.textBox_out_folder);
-            this.groupBox7.Controls.Add(this.richTextBox3);
-            this.groupBox7.Controls.Add(this.label33);
-            this.groupBox7.Controls.Add(this.button_copy_sum);
-            this.groupBox7.Controls.Add(this.label32);
-            this.groupBox7.Controls.Add(this.richTextBox_out_folder);
-            this.groupBox7.Controls.Add(this.button_data_file);
-            this.groupBox7.Controls.Add(this.textBox_data_file);
-            this.groupBox7.Controls.Add(this.radioButton_ecl);
-            this.groupBox7.Controls.Add(this.numericUpDown_cpu);
-            this.groupBox7.Controls.Add(this.comboBox_gpu_list);
-            this.groupBox7.Controls.Add(this.button_mpi_exe_file);
-            this.groupBox7.Controls.Add(this.button_sim_exe_file);
-            this.groupBox7.Controls.Add(this.button_sim_to_create_rsm);
-            this.groupBox7.Controls.Add(this.radioButton_tnav);
-            this.groupBox7.Controls.Add(this.textBox_mpi_exe_file);
-            this.groupBox7.Controls.Add(this.textBox_sim_exe_file);
-            this.groupBox7.Controls.Add(this.radioButton_tempest);
-            this.groupBox7.Controls.Add(this.label_mpi_exe_file);
-            this.groupBox7.Controls.Add(this.label_sim_exe_file);
-            this.groupBox7.Controls.Add(this.label_max_cpu);
-            this.groupBox7.Controls.Add(this.label_cpu_usage);
-            this.groupBox7.Controls.Add(this.checkBox_use_gpu);
-            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox7.Location = new System.Drawing.Point(2, 49);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(1285, 378);
-            this.groupBox7.TabIndex = 47;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Main Input";
-            // 
-            // checkBox_results_sub_folder
-            // 
-            this.checkBox_results_sub_folder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox_results_sub_folder.AutoSize = true;
-            this.checkBox_results_sub_folder.Location = new System.Drawing.Point(795, 181);
-            this.checkBox_results_sub_folder.Name = "checkBox_results_sub_folder";
-            this.checkBox_results_sub_folder.Size = new System.Drawing.Size(164, 19);
-            this.checkBox_results_sub_folder.TabIndex = 45;
-            this.checkBox_results_sub_folder.Text = "Use RESULTS sub folder";
-            this.checkBox_results_sub_folder.UseVisualStyleBackColor = true;
-            this.checkBox_results_sub_folder.CheckedChanged += new System.EventHandler(this.checkBox_results_sub_folder_CheckedChanged);
-            // 
-            // checkBox_create_user_sum_file
-            // 
-            this.checkBox_create_user_sum_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox_create_user_sum_file.AutoSize = true;
-            this.checkBox_create_user_sum_file.Location = new System.Drawing.Point(1015, 181);
-            this.checkBox_create_user_sum_file.Name = "checkBox_create_user_sum_file";
-            this.checkBox_create_user_sum_file.Size = new System.Drawing.Size(145, 19);
-            this.checkBox_create_user_sum_file.TabIndex = 44;
-            this.checkBox_create_user_sum_file.Text = "Use \'USER\\*.sum\' file";
-            this.checkBox_create_user_sum_file.UseVisualStyleBackColor = true;
-            // 
-            // richTextBox14
-            // 
-            this.richTextBox14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox14.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox14.Location = new System.Drawing.Point(284, 317);
-            this.richTextBox14.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextBox14.Name = "richTextBox14";
-            this.richTextBox14.ReadOnly = true;
-            this.richTextBox14.Size = new System.Drawing.Size(949, 41);
-            this.richTextBox14.TabIndex = 38;
-            this.richTextBox14.Text = "NOTE: to create the required RSM-file at zero iteration press \"Simulate DATA-file" +
-    " with the required settings\" button.";
-            // 
-            // textBox_out_folder
-            // 
-            this.textBox_out_folder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_out_folder.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_out_folder.Location = new System.Drawing.Point(96, 85);
-            this.textBox_out_folder.Name = "textBox_out_folder";
-            this.textBox_out_folder.ReadOnly = true;
-            this.textBox_out_folder.Size = new System.Drawing.Size(1137, 22);
-            this.textBox_out_folder.TabIndex = 37;
-            // 
-            // richTextBox3
-            // 
-            this.richTextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox3.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox3.Location = new System.Drawing.Point(96, 41);
-            this.richTextBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.ReadOnly = true;
-            this.richTextBox3.Size = new System.Drawing.Size(1137, 39);
-            this.richTextBox3.TabIndex = 4;
-            this.richTextBox3.Text = resources.GetString("richTextBox3.Text");
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(8, 89);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(61, 15);
-            this.label33.TabIndex = 36;
-            this.label33.Text = "Out-folder";
-            // 
-            // button_copy_sum
-            // 
-            this.button_copy_sum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_copy_sum.Location = new System.Drawing.Point(1167, 176);
-            this.button_copy_sum.Name = "button_copy_sum";
-            this.button_copy_sum.Size = new System.Drawing.Size(113, 30);
-            this.button_copy_sum.TabIndex = 43;
-            this.button_copy_sum.Text = "Copy SUMMARY";
-            this.button_copy_sum.UseVisualStyleBackColor = true;
-            this.button_copy_sum.Click += new System.EventHandler(this.button_summary_kw_Click);
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(8, 18);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(57, 15);
-            this.label32.TabIndex = 35;
-            this.label32.Text = "DATA-file";
-            // 
-            // richTextBox_out_folder
-            // 
-            this.richTextBox_out_folder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox_out_folder.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox_out_folder.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox_out_folder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox_out_folder.Location = new System.Drawing.Point(96, 112);
-            this.richTextBox_out_folder.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextBox_out_folder.Name = "richTextBox_out_folder";
-            this.richTextBox_out_folder.ReadOnly = true;
-            this.richTextBox_out_folder.Size = new System.Drawing.Size(1137, 53);
-            this.richTextBox_out_folder.TabIndex = 4;
-            this.richTextBox_out_folder.Text = "NOTE: The Out-folder is the directory where the results of the simulations (outpu" +
-    "t files) will be saved. It depends on the settings in the DATA-file and the type" +
-    " of simulator.";
-            // 
-            // button_data_file
-            // 
-            this.button_data_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_data_file.BackColor = System.Drawing.Color.LightGreen;
-            this.button_data_file.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button_data_file.Location = new System.Drawing.Point(1239, 15);
-            this.button_data_file.Margin = new System.Windows.Forms.Padding(2);
-            this.button_data_file.Name = "button_data_file";
-            this.button_data_file.Size = new System.Drawing.Size(41, 22);
-            this.button_data_file.TabIndex = 0;
-            this.button_data_file.Text = "...";
-            this.button_data_file.UseVisualStyleBackColor = false;
-            this.button_data_file.Click += new System.EventHandler(this.button_data_file_open_Click);
-            // 
-            // textBox_data_file
-            // 
-            this.textBox_data_file.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_data_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_data_file.Location = new System.Drawing.Point(96, 15);
-            this.textBox_data_file.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_data_file.Name = "textBox_data_file";
-            this.textBox_data_file.Size = new System.Drawing.Size(1137, 22);
-            this.textBox_data_file.TabIndex = 1;
-            this.textBox_data_file.TextChanged += new System.EventHandler(this.textBox_data_file_TextChanged);
-            // 
-            // radioButton_ecl
-            // 
-            this.radioButton_ecl.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.radioButton_ecl.AutoSize = true;
-            this.radioButton_ecl.Checked = true;
-            this.radioButton_ecl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.radioButton_ecl.Location = new System.Drawing.Point(390, 180);
-            this.radioButton_ecl.Name = "radioButton_ecl";
-            this.radioButton_ecl.Size = new System.Drawing.Size(65, 19);
-            this.radioButton_ecl.TabIndex = 30;
-            this.radioButton_ecl.TabStop = true;
-            this.radioButton_ecl.Text = "Eclipse";
-            this.radioButton_ecl.UseVisualStyleBackColor = true;
-            this.radioButton_ecl.CheckedChanged += new System.EventHandler(this.radioButton_sim_CheckedChanged);
-            // 
-            // numericUpDown_cpu
-            // 
-            this.numericUpDown_cpu.Font = new System.Drawing.Font("Consolas", 9F);
-            this.numericUpDown_cpu.Location = new System.Drawing.Point(96, 222);
-            this.numericUpDown_cpu.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.numericUpDown_cpu.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown_cpu.Name = "numericUpDown_cpu";
-            this.numericUpDown_cpu.Size = new System.Drawing.Size(43, 22);
-            this.numericUpDown_cpu.TabIndex = 28;
-            this.numericUpDown_cpu.Value = new decimal(new int[] {
-            12,
-            0,
-            0,
-            0});
-            this.numericUpDown_cpu.ValueChanged += new System.EventHandler(this.numericUpDown_cpu_ValueChanged);
-            // 
-            // comboBox_gpu_list
-            // 
-            this.comboBox_gpu_list.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_gpu_list.FormattingEnabled = true;
-            this.comboBox_gpu_list.Location = new System.Drawing.Point(302, 221);
-            this.comboBox_gpu_list.Name = "comboBox_gpu_list";
-            this.comboBox_gpu_list.Size = new System.Drawing.Size(465, 23);
-            this.comboBox_gpu_list.TabIndex = 34;
-            // 
-            // button_mpi_exe_file
-            // 
-            this.button_mpi_exe_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_mpi_exe_file.Enabled = false;
-            this.button_mpi_exe_file.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button_mpi_exe_file.Location = new System.Drawing.Point(1239, 287);
-            this.button_mpi_exe_file.Name = "button_mpi_exe_file";
-            this.button_mpi_exe_file.Size = new System.Drawing.Size(41, 22);
-            this.button_mpi_exe_file.TabIndex = 25;
-            this.button_mpi_exe_file.Text = "...";
-            this.button_mpi_exe_file.UseVisualStyleBackColor = true;
-            this.button_mpi_exe_file.Click += new System.EventHandler(this.button_mpi_exe_file_Click);
-            // 
-            // button_sim_exe_file
-            // 
-            this.button_sim_exe_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_sim_exe_file.Enabled = false;
-            this.button_sim_exe_file.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button_sim_exe_file.Location = new System.Drawing.Point(1239, 254);
-            this.button_sim_exe_file.Name = "button_sim_exe_file";
-            this.button_sim_exe_file.Size = new System.Drawing.Size(41, 22);
-            this.button_sim_exe_file.TabIndex = 25;
-            this.button_sim_exe_file.Text = "...";
-            this.button_sim_exe_file.UseVisualStyleBackColor = true;
-            this.button_sim_exe_file.Click += new System.EventHandler(this.button_tNav_open_Click);
-            // 
-            // button_sim_to_create_rsm
-            // 
-            this.button_sim_to_create_rsm.Location = new System.Drawing.Point(96, 317);
-            this.button_sim_to_create_rsm.Name = "button_sim_to_create_rsm";
-            this.button_sim_to_create_rsm.Size = new System.Drawing.Size(184, 41);
-            this.button_sim_to_create_rsm.TabIndex = 33;
-            this.button_sim_to_create_rsm.Text = "Simulate DATA-file with the required settings";
-            this.button_sim_to_create_rsm.UseVisualStyleBackColor = true;
-            this.button_sim_to_create_rsm.Click += new System.EventHandler(this.button_sim_case_Click);
-            // 
-            // radioButton_tnav
-            // 
-            this.radioButton_tnav.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.radioButton_tnav.AutoSize = true;
-            this.radioButton_tnav.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.radioButton_tnav.Location = new System.Drawing.Point(599, 180);
-            this.radioButton_tnav.Name = "radioButton_tnav";
-            this.radioButton_tnav.Size = new System.Drawing.Size(80, 19);
-            this.radioButton_tnav.TabIndex = 31;
-            this.radioButton_tnav.Text = "tNavigator";
-            this.radioButton_tnav.UseVisualStyleBackColor = true;
-            this.radioButton_tnav.CheckedChanged += new System.EventHandler(this.radioButton_sim_CheckedChanged);
-            // 
-            // textBox_mpi_exe_file
-            // 
-            this.textBox_mpi_exe_file.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_mpi_exe_file.Enabled = false;
-            this.textBox_mpi_exe_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_mpi_exe_file.Location = new System.Drawing.Point(96, 287);
-            this.textBox_mpi_exe_file.Name = "textBox_mpi_exe_file";
-            this.textBox_mpi_exe_file.Size = new System.Drawing.Size(1138, 22);
-            this.textBox_mpi_exe_file.TabIndex = 24;
-            this.textBox_mpi_exe_file.TextChanged += new System.EventHandler(this.textBox_mpi_exe_file_TextChanged);
-            // 
-            // textBox_sim_exe_file
-            // 
-            this.textBox_sim_exe_file.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_sim_exe_file.Enabled = false;
-            this.textBox_sim_exe_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_sim_exe_file.Location = new System.Drawing.Point(96, 254);
-            this.textBox_sim_exe_file.Name = "textBox_sim_exe_file";
-            this.textBox_sim_exe_file.Size = new System.Drawing.Size(1138, 22);
-            this.textBox_sim_exe_file.TabIndex = 24;
-            this.textBox_sim_exe_file.TextChanged += new System.EventHandler(this.textBox_sim_exe_file_TextChanged);
-            // 
-            // radioButton_tempest
-            // 
-            this.radioButton_tempest.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.radioButton_tempest.AutoSize = true;
-            this.radioButton_tempest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.radioButton_tempest.Location = new System.Drawing.Point(489, 180);
-            this.radioButton_tempest.Name = "radioButton_tempest";
-            this.radioButton_tempest.Size = new System.Drawing.Size(73, 19);
-            this.radioButton_tempest.TabIndex = 31;
-            this.radioButton_tempest.Text = "Tempest";
-            this.radioButton_tempest.UseVisualStyleBackColor = true;
-            this.radioButton_tempest.CheckedChanged += new System.EventHandler(this.radioButton_sim_CheckedChanged);
-            // 
-            // label_mpi_exe_file
-            // 
-            this.label_mpi_exe_file.AutoSize = true;
-            this.label_mpi_exe_file.Location = new System.Drawing.Point(7, 290);
-            this.label_mpi_exe_file.Name = "label_mpi_exe_file";
-            this.label_mpi_exe_file.Size = new System.Drawing.Size(71, 15);
-            this.label_mpi_exe_file.TabIndex = 22;
-            this.label_mpi_exe_file.Text = "MPI exe file";
-            // 
-            // label_sim_exe_file
-            // 
-            this.label_sim_exe_file.AutoSize = true;
-            this.label_sim_exe_file.Location = new System.Drawing.Point(7, 258);
-            this.label_sim_exe_file.Name = "label_sim_exe_file";
-            this.label_sim_exe_file.Size = new System.Drawing.Size(73, 15);
-            this.label_sim_exe_file.TabIndex = 22;
-            this.label_sim_exe_file.Text = "tNav exe file";
-            // 
-            // label_max_cpu
-            // 
-            this.label_max_cpu.AutoSize = true;
-            this.label_max_cpu.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_max_cpu.Location = new System.Drawing.Point(145, 224);
-            this.label_max_cpu.Name = "label_max_cpu";
-            this.label_max_cpu.Size = new System.Drawing.Size(35, 14);
-            this.label_max_cpu.TabIndex = 23;
-            this.label_max_cpu.Text = "/ 40";
-            // 
-            // label_cpu_usage
-            // 
-            this.label_cpu_usage.AutoSize = true;
-            this.label_cpu_usage.Location = new System.Drawing.Point(46, 224);
-            this.label_cpu_usage.Name = "label_cpu_usage";
-            this.label_cpu_usage.Size = new System.Drawing.Size(32, 15);
-            this.label_cpu_usage.TabIndex = 23;
-            this.label_cpu_usage.Text = "CPU";
-            // 
-            // checkBox_use_gpu
-            // 
-            this.checkBox_use_gpu.AutoSize = true;
-            this.checkBox_use_gpu.Checked = true;
-            this.checkBox_use_gpu.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_use_gpu.Location = new System.Drawing.Point(205, 223);
-            this.checkBox_use_gpu.Name = "checkBox_use_gpu";
-            this.checkBox_use_gpu.Size = new System.Drawing.Size(75, 19);
-            this.checkBox_use_gpu.TabIndex = 32;
-            this.checkBox_use_gpu.Text = "use GPU";
-            this.checkBox_use_gpu.UseVisualStyleBackColor = true;
-            this.checkBox_use_gpu.CheckedChanged += new System.EventHandler(this.checkBox_use_gpu_CheckedChanged);
-            // 
-            // richTextBox5
-            // 
-            this.richTextBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox5.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox5.Location = new System.Drawing.Point(2, 20);
-            this.richTextBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.ReadOnly = true;
-            this.richTextBox5.Size = new System.Drawing.Size(1274, 24);
-            this.richTextBox5.TabIndex = 45;
-            this.richTextBox5.Text = "Select the DATA-file and the relevant simulator.";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 15);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Step 1/8 - DATA-file";
-            // 
-            // wizardPage2_grid
-            // 
-            this.wizardPage2_grid.Controls.Add(this.button_split_files);
-            this.wizardPage2_grid.Controls.Add(this.richTextBox1);
-            this.wizardPage2_grid.Controls.Add(this.tableLayoutPanel_dim);
-            this.wizardPage2_grid.Controls.Add(this.radioButton_use_grid);
-            this.wizardPage2_grid.Controls.Add(this.radioButton_use_dim);
-            this.wizardPage2_grid.Controls.Add(this.label5);
-            this.wizardPage2_grid.Controls.Add(this.richTextBox_grid_file);
-            this.wizardPage2_grid.Controls.Add(this.button_grid_file);
-            this.wizardPage2_grid.Controls.Add(this.textBox_grid_file);
-            this.wizardPage2_grid.Name = "wizardPage2_grid";
-            this.wizardPage2_grid.NextPage = this.wizardPage3_perm;
-            this.wizardPage2_grid.Size = new System.Drawing.Size(1292, 736);
-            this.wizardPage2_grid.TabIndex = 1;
-            this.wizardPage2_grid.Text = "wizardPage2";
-            // 
-            // button_split_files
-            // 
-            this.button_split_files.Location = new System.Drawing.Point(25, 452);
-            this.button_split_files.Name = "button_split_files";
-            this.button_split_files.Size = new System.Drawing.Size(190, 36);
-            this.button_split_files.TabIndex = 47;
-            this.button_split_files.Text = "Open File Combiner Form";
-            this.button_split_files.UseVisualStyleBackColor = true;
-            this.button_split_files.Click += new System.EventHandler(this.button_split_files_Click);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox1.Location = new System.Drawing.Point(7, 20);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(1234, 23);
-            this.richTextBox1.TabIndex = 46;
-            this.richTextBox1.Text = "To import/export property arrays and to correctly interpolate/extrapolate multipl" +
-    "iers for permeability, a grid must be defined.";
-            // 
-            // tableLayoutPanel_dim
-            // 
-            this.tableLayoutPanel_dim.ColumnCount = 7;
-            this.tableLayoutPanel_dim.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel_dim.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel_dim.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel_dim.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel_dim.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel_dim.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel_dim.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel_dim.Controls.Add(this.numericUpDown_nx, 0, 2);
-            this.tableLayoutPanel_dim.Controls.Add(this.numericUpDown_ny, 1, 2);
-            this.tableLayoutPanel_dim.Controls.Add(this.label11, 2, 1);
-            this.tableLayoutPanel_dim.Controls.Add(this.numericUpDown_nz, 2, 2);
-            this.tableLayoutPanel_dim.Controls.Add(this.label10, 1, 1);
-            this.tableLayoutPanel_dim.Controls.Add(this.label3, 0, 1);
-            this.tableLayoutPanel_dim.Controls.Add(this.numericUpDown_dx, 3, 2);
-            this.tableLayoutPanel_dim.Controls.Add(this.numericUpDown_dy, 4, 2);
-            this.tableLayoutPanel_dim.Controls.Add(this.numericUpDown_dz, 5, 2);
-            this.tableLayoutPanel_dim.Controls.Add(this.numericUpDown_top_depth, 6, 2);
-            this.tableLayoutPanel_dim.Controls.Add(this.label19, 3, 1);
-            this.tableLayoutPanel_dim.Controls.Add(this.label20, 4, 1);
-            this.tableLayoutPanel_dim.Controls.Add(this.label28, 5, 1);
-            this.tableLayoutPanel_dim.Controls.Add(this.label31, 0, 0);
-            this.tableLayoutPanel_dim.Controls.Add(this.label35, 3, 0);
-            this.tableLayoutPanel_dim.Controls.Add(this.label30, 6, 0);
-            this.tableLayoutPanel_dim.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.tableLayoutPanel_dim.Location = new System.Drawing.Point(25, 85);
-            this.tableLayoutPanel_dim.Name = "tableLayoutPanel_dim";
-            this.tableLayoutPanel_dim.RowCount = 3;
-            this.tableLayoutPanel_dim.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel_dim.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.2093F));
-            this.tableLayoutPanel_dim.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.7907F));
-            this.tableLayoutPanel_dim.Size = new System.Drawing.Size(633, 69);
-            this.tableLayoutPanel_dim.TabIndex = 28;
-            // 
-            // numericUpDown_nx
-            // 
-            this.numericUpDown_nx.Font = new System.Drawing.Font("Consolas", 9F);
-            this.numericUpDown_nx.Location = new System.Drawing.Point(3, 41);
-            this.numericUpDown_nx.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.numericUpDown_nx.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown_nx.Name = "numericUpDown_nx";
-            this.numericUpDown_nx.Size = new System.Drawing.Size(84, 22);
-            this.numericUpDown_nx.TabIndex = 25;
-            this.numericUpDown_nx.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown_nx.ValueChanged += new System.EventHandler(this.numericUpDown_dx_ValueChanged);
-            // 
-            // numericUpDown_ny
-            // 
-            this.numericUpDown_ny.Font = new System.Drawing.Font("Consolas", 9F);
-            this.numericUpDown_ny.Location = new System.Drawing.Point(93, 41);
-            this.numericUpDown_ny.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ny.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown_ny.Name = "numericUpDown_ny";
-            this.numericUpDown_ny.Size = new System.Drawing.Size(84, 22);
-            this.numericUpDown_ny.TabIndex = 26;
-            this.numericUpDown_ny.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown_ny.ValueChanged += new System.EventHandler(this.numericUpDown_dy_ValueChanged);
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(183, 21);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(84, 15);
-            this.label11.TabIndex = 27;
-            this.label11.Text = "NZ";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // numericUpDown_nz
-            // 
-            this.numericUpDown_nz.Font = new System.Drawing.Font("Consolas", 9F);
-            this.numericUpDown_nz.Location = new System.Drawing.Point(183, 41);
-            this.numericUpDown_nz.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.numericUpDown_nz.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown_nz.Name = "numericUpDown_nz";
-            this.numericUpDown_nz.Size = new System.Drawing.Size(84, 22);
-            this.numericUpDown_nz.TabIndex = 27;
-            this.numericUpDown_nz.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown_nz.ValueChanged += new System.EventHandler(this.numericUpDown_dz_ValueChanged);
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(93, 21);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 15);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "NY";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 15);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "NX";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // numericUpDown_dx
-            // 
-            this.numericUpDown_dx.DecimalPlaces = 1;
-            this.numericUpDown_dx.Font = new System.Drawing.Font("Consolas", 9F);
-            this.numericUpDown_dx.Location = new System.Drawing.Point(273, 41);
-            this.numericUpDown_dx.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.numericUpDown_dx.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown_dx.Name = "numericUpDown_dx";
-            this.numericUpDown_dx.Size = new System.Drawing.Size(84, 22);
-            this.numericUpDown_dx.TabIndex = 28;
-            this.numericUpDown_dx.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.numericUpDown_dx.ValueChanged += new System.EventHandler(this.numericUpDown_dx_ValueChanged);
-            // 
-            // numericUpDown_dy
-            // 
-            this.numericUpDown_dy.DecimalPlaces = 1;
-            this.numericUpDown_dy.Font = new System.Drawing.Font("Consolas", 9F);
-            this.numericUpDown_dy.Location = new System.Drawing.Point(363, 41);
-            this.numericUpDown_dy.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.numericUpDown_dy.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown_dy.Name = "numericUpDown_dy";
-            this.numericUpDown_dy.Size = new System.Drawing.Size(84, 22);
-            this.numericUpDown_dy.TabIndex = 29;
-            this.numericUpDown_dy.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.numericUpDown_dy.ValueChanged += new System.EventHandler(this.numericUpDown_dx_ValueChanged);
-            // 
-            // numericUpDown_dz
-            // 
-            this.numericUpDown_dz.DecimalPlaces = 1;
-            this.numericUpDown_dz.Font = new System.Drawing.Font("Consolas", 9F);
-            this.numericUpDown_dz.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDown_dz.Location = new System.Drawing.Point(453, 41);
-            this.numericUpDown_dz.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.numericUpDown_dz.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDown_dz.Name = "numericUpDown_dz";
-            this.numericUpDown_dz.Size = new System.Drawing.Size(84, 22);
-            this.numericUpDown_dz.TabIndex = 30;
-            this.numericUpDown_dz.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown_dz.ValueChanged += new System.EventHandler(this.numericUpDown_dx_ValueChanged);
-            // 
-            // numericUpDown_top_depth
-            // 
-            this.numericUpDown_top_depth.DecimalPlaces = 1;
-            this.numericUpDown_top_depth.Font = new System.Drawing.Font("Consolas", 9F);
-            this.numericUpDown_top_depth.Location = new System.Drawing.Point(543, 41);
-            this.numericUpDown_top_depth.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.numericUpDown_top_depth.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown_top_depth.Name = "numericUpDown_top_depth";
-            this.numericUpDown_top_depth.Size = new System.Drawing.Size(84, 22);
-            this.numericUpDown_top_depth.TabIndex = 31;
-            this.numericUpDown_top_depth.Value = new decimal(new int[] {
-            2000,
-            0,
-            0,
-            0});
-            this.numericUpDown_top_depth.ValueChanged += new System.EventHandler(this.numericUpDown_dx_ValueChanged);
-            // 
-            // label19
-            // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(273, 21);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(84, 15);
-            this.label19.TabIndex = 27;
-            this.label19.Text = "DX";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label20
-            // 
-            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(363, 21);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(84, 15);
-            this.label20.TabIndex = 27;
-            this.label20.Text = "DY";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label28
-            // 
-            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(453, 21);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(84, 15);
-            this.label28.TabIndex = 27;
-            this.label28.Text = "DZ";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label31
-            // 
-            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label31.AutoSize = true;
-            this.tableLayoutPanel_dim.SetColumnSpan(this.label31, 3);
-            this.label31.Location = new System.Drawing.Point(3, 2);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(264, 15);
-            this.label31.TabIndex = 27;
-            this.label31.Text = "Grid size";
-            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label35
-            // 
-            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label35.AutoSize = true;
-            this.tableLayoutPanel_dim.SetColumnSpan(this.label35, 3);
-            this.label35.Location = new System.Drawing.Point(273, 2);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(264, 15);
-            this.label35.TabIndex = 27;
-            this.label35.Text = "Cell size";
-            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label30
-            // 
-            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(543, 11);
-            this.label30.Name = "label30";
-            this.tableLayoutPanel_dim.SetRowSpan(this.label30, 2);
-            this.label30.Size = new System.Drawing.Size(87, 15);
-            this.label30.TabIndex = 27;
-            this.label30.Text = "Top depth";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // radioButton_use_grid
-            // 
-            this.radioButton_use_grid.AutoSize = true;
-            this.radioButton_use_grid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.radioButton_use_grid.Location = new System.Drawing.Point(5, 173);
-            this.radioButton_use_grid.Name = "radioButton_use_grid";
-            this.radioButton_use_grid.Size = new System.Drawing.Size(281, 19);
-            this.radioButton_use_grid.TabIndex = 26;
-            this.radioButton_use_grid.TabStop = true;
-            this.radioButton_use_grid.Text = "GRID-file (recommended for an unregular grid)";
-            this.radioButton_use_grid.UseVisualStyleBackColor = true;
-            this.radioButton_use_grid.CheckedChanged += new System.EventHandler(this.radioButton_use_grid_CheckedChanged);
-            // 
-            // radioButton_use_dim
-            // 
-            this.radioButton_use_dim.AutoSize = true;
-            this.radioButton_use_dim.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.radioButton_use_dim.Location = new System.Drawing.Point(5, 60);
-            this.radioButton_use_dim.Name = "radioButton_use_dim";
-            this.radioButton_use_dim.Size = new System.Drawing.Size(258, 19);
-            this.radioButton_use_dim.TabIndex = 26;
-            this.radioButton_use_dim.TabStop = true;
-            this.radioButton_use_dim.Text = "Use simple grid (suitable for a regular grid)";
-            this.radioButton_use_dim.UseVisualStyleBackColor = true;
-            this.radioButton_use_dim.CheckedChanged += new System.EventHandler(this.radioButton_use_dim_CheckedChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label5.Location = new System.Drawing.Point(3, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 15);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Step 2/8 - GRID";
-            // 
-            // richTextBox_grid_file
-            // 
-            this.richTextBox_grid_file.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox_grid_file.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox_grid_file.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox_grid_file.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox_grid_file.Location = new System.Drawing.Point(25, 227);
-            this.richTextBox_grid_file.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextBox_grid_file.Name = "richTextBox_grid_file";
-            this.richTextBox_grid_file.ReadOnly = true;
-            this.richTextBox_grid_file.Size = new System.Drawing.Size(1216, 220);
-            this.richTextBox_grid_file.TabIndex = 23;
-            this.richTextBox_grid_file.Text = resources.GetString("richTextBox_grid_file.Text");
-            // 
-            // button_grid_file
-            // 
-            this.button_grid_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_grid_file.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button_grid_file.Location = new System.Drawing.Point(1246, 198);
-            this.button_grid_file.Margin = new System.Windows.Forms.Padding(2);
-            this.button_grid_file.Name = "button_grid_file";
-            this.button_grid_file.Size = new System.Drawing.Size(42, 22);
-            this.button_grid_file.TabIndex = 20;
-            this.button_grid_file.Text = "...";
-            this.button_grid_file.UseVisualStyleBackColor = true;
-            this.button_grid_file.Click += new System.EventHandler(this.button_grid_file_Click);
-            // 
-            // textBox_grid_file
-            // 
-            this.textBox_grid_file.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_grid_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_grid_file.Location = new System.Drawing.Point(25, 198);
-            this.textBox_grid_file.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_grid_file.Name = "textBox_grid_file";
-            this.textBox_grid_file.Size = new System.Drawing.Size(1216, 22);
-            this.textBox_grid_file.TabIndex = 21;
-            this.textBox_grid_file.TextChanged += new System.EventHandler(this.textBox_grid_file_TextChanged);
-            // 
             // wizardPage3_perm
             // 
             this.wizardPage3_perm.Controls.Add(this.tabControl_perm_min_max);
             this.wizardPage3_perm.Controls.Add(this.checkBox_perm_matching);
             this.wizardPage3_perm.Controls.Add(this.richTextBox_perm_intro);
+            this.wizardPage3_perm.Controls.Add(this.groupBox2);
             this.wizardPage3_perm.Controls.Add(this.groupBox_perm_inter_reg);
             this.wizardPage3_perm.Controls.Add(this.tableLayoutPanel_perm_file);
             this.wizardPage3_perm.Controls.Add(this.groupBox_perm_inter_type);
@@ -1648,7 +570,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl_perm_min_max.Controls.Add(this.tabPage1);
             this.tabControl_perm_min_max.Controls.Add(this.tabPage2);
-            this.tabControl_perm_min_max.Location = new System.Drawing.Point(5, 289);
+            this.tabControl_perm_min_max.Location = new System.Drawing.Point(5, 260);
             this.tabControl_perm_min_max.Name = "tabControl_perm_min_max";
             this.tabControl_perm_min_max.SelectedIndex = 0;
             this.tabControl_perm_min_max.Size = new System.Drawing.Size(1275, 138);
@@ -1928,9 +850,91 @@
             this.richTextBox_perm_intro.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox_perm_intro.Name = "richTextBox_perm_intro";
             this.richTextBox_perm_intro.ReadOnly = true;
-            this.richTextBox_perm_intro.Size = new System.Drawing.Size(1275, 83);
+            this.richTextBox_perm_intro.Size = new System.Drawing.Size(1275, 75);
             this.richTextBox_perm_intro.TabIndex = 47;
             this.richTextBox_perm_intro.Text = resources.GetString("richTextBox_perm_intro.Text");
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.richTextBox2);
+            this.groupBox2.Controls.Add(this.tableLayoutPanel3);
+            this.groupBox2.Location = new System.Drawing.Point(5, 593);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1275, 90);
+            this.groupBox2.TabIndex = 41;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Field Direction Model";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox2.Location = new System.Drawing.Point(13, 62);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.ReadOnly = true;
+            this.richTextBox2.Size = new System.Drawing.Size(957, 17);
+            this.richTextBox2.TabIndex = 34;
+            this.richTextBox2.Text = "NOTE: This file will not be deleted or modified. The file will be used for readin" +
+    "g only.";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.80328F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 88.19672F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Controls.Add(this.textBox_fdm, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button_fdm, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.checkBox_fdm, 0, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(2, 23);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1266, 34);
+            this.tableLayoutPanel3.TabIndex = 37;
+            // 
+            // textBox_fdm
+            // 
+            this.textBox_fdm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_fdm.Font = new System.Drawing.Font("Consolas", 9F);
+            this.textBox_fdm.Location = new System.Drawing.Point(146, 6);
+            this.textBox_fdm.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_fdm.Name = "textBox_fdm";
+            this.textBox_fdm.Size = new System.Drawing.Size(1072, 22);
+            this.textBox_fdm.TabIndex = 33;
+            // 
+            // button_fdm
+            // 
+            this.button_fdm.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button_fdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.button_fdm.Location = new System.Drawing.Point(1223, 6);
+            this.button_fdm.Margin = new System.Windows.Forms.Padding(2);
+            this.button_fdm.Name = "button_fdm";
+            this.button_fdm.Size = new System.Drawing.Size(41, 22);
+            this.button_fdm.TabIndex = 31;
+            this.button_fdm.Text = "...";
+            this.button_fdm.UseVisualStyleBackColor = true;
+            this.button_fdm.Click += new System.EventHandler(this.button_fdm_Click);
+            // 
+            // checkBox_fdm
+            // 
+            this.checkBox_fdm.AutoSize = true;
+            this.checkBox_fdm.Location = new System.Drawing.Point(3, 3);
+            this.checkBox_fdm.Name = "checkBox_fdm";
+            this.checkBox_fdm.Size = new System.Drawing.Size(105, 19);
+            this.checkBox_fdm.TabIndex = 34;
+            this.checkBox_fdm.Text = "Use FD Model";
+            this.checkBox_fdm.UseVisualStyleBackColor = true;
+            this.checkBox_fdm.CheckedChanged += new System.EventHandler(this.checkBox_fdm_CheckedChanged);
             // 
             // groupBox_perm_inter_reg
             // 
@@ -1938,7 +942,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox_perm_inter_reg.Controls.Add(this.richTextBox_regions);
             this.groupBox_perm_inter_reg.Controls.Add(this.tableLayoutPanel_regions);
-            this.groupBox_perm_inter_reg.Location = new System.Drawing.Point(5, 494);
+            this.groupBox_perm_inter_reg.Location = new System.Drawing.Point(5, 465);
             this.groupBox_perm_inter_reg.Name = "groupBox_perm_inter_reg";
             this.groupBox_perm_inter_reg.Size = new System.Drawing.Size(1275, 122);
             this.groupBox_perm_inter_reg.TabIndex = 41;
@@ -2058,7 +1062,7 @@
             this.tableLayoutPanel_perm_file.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel_perm_file.Controls.Add(this.textBox_perm_file, 1, 1);
             this.tableLayoutPanel_perm_file.Controls.Add(this.button_perm_file, 2, 1);
-            this.tableLayoutPanel_perm_file.Location = new System.Drawing.Point(5, 143);
+            this.tableLayoutPanel_perm_file.Location = new System.Drawing.Point(5, 128);
             this.tableLayoutPanel_perm_file.Name = "tableLayoutPanel_perm_file";
             this.tableLayoutPanel_perm_file.RowCount = 2;
             this.tableLayoutPanel_perm_file.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.16981F));
@@ -2130,9 +1134,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox_perm_inter_type.Controls.Add(this.radioButton_perm_3D);
             this.groupBox_perm_inter_type.Controls.Add(this.radioButton_perm_2D);
-            this.groupBox_perm_inter_type.Location = new System.Drawing.Point(5, 433);
+            this.groupBox_perm_inter_type.Location = new System.Drawing.Point(6, 404);
             this.groupBox_perm_inter_type.Name = "groupBox_perm_inter_type";
-            this.groupBox_perm_inter_type.Size = new System.Drawing.Size(1275, 55);
+            this.groupBox_perm_inter_type.Size = new System.Drawing.Size(1274, 55);
             this.groupBox_perm_inter_type.TabIndex = 40;
             this.groupBox_perm_inter_type.TabStop = false;
             this.groupBox_perm_inter_type.Text = "Interpolation/extrapolation type";
@@ -2176,408 +1180,13 @@
             this.richTextBox_perm_file_notes.BackColor = System.Drawing.SystemColors.Control;
             this.richTextBox_perm_file_notes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox_perm_file_notes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox_perm_file_notes.Location = new System.Drawing.Point(6, 209);
+            this.richTextBox_perm_file_notes.Location = new System.Drawing.Point(5, 194);
             this.richTextBox_perm_file_notes.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox_perm_file_notes.Name = "richTextBox_perm_file_notes";
             this.richTextBox_perm_file_notes.ReadOnly = true;
-            this.richTextBox_perm_file_notes.Size = new System.Drawing.Size(1225, 75);
+            this.richTextBox_perm_file_notes.Size = new System.Drawing.Size(1226, 61);
             this.richTextBox_perm_file_notes.TabIndex = 15;
             this.richTextBox_perm_file_notes.Text = resources.GetString("richTextBox_perm_file_notes.Text");
-            // 
-            // wizardPage5_corey
-            // 
-            this.wizardPage5_corey.Controls.Add(this.groupBox_relperm_tables);
-            this.wizardPage5_corey.Controls.Add(this.groupBox_satnum);
-            this.wizardPage5_corey.Controls.Add(this.checkBox_relperm_matching);
-            this.wizardPage5_corey.Controls.Add(this.label24);
-            this.wizardPage5_corey.Name = "wizardPage5_corey";
-            this.wizardPage5_corey.NextPage = this.wizardPage6_aquifer;
-            this.wizardPage5_corey.Size = new System.Drawing.Size(1292, 736);
-            this.wizardPage5_corey.TabIndex = 9;
-            this.wizardPage5_corey.Text = "Page Title";
-            this.wizardPage5_corey.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPage4_corey_Commit);
-            // 
-            // groupBox_relperm_tables
-            // 
-            this.groupBox_relperm_tables.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox_relperm_tables.Controls.Add(this.tableLayoutPanel_corey_min_max);
-            this.groupBox_relperm_tables.Controls.Add(this.tableLayoutPanel1);
-            this.groupBox_relperm_tables.Location = new System.Drawing.Point(6, 49);
-            this.groupBox_relperm_tables.Name = "groupBox_relperm_tables";
-            this.groupBox_relperm_tables.Size = new System.Drawing.Size(1276, 237);
-            this.groupBox_relperm_tables.TabIndex = 52;
-            this.groupBox_relperm_tables.TabStop = false;
-            this.groupBox_relperm_tables.Text = "RelPerm Table files";
-            // 
-            // tableLayoutPanel_corey_min_max
-            // 
-            this.tableLayoutPanel_corey_min_max.ColumnCount = 4;
-            this.tableLayoutPanel_corey_min_max.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel_corey_min_max.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel_corey_min_max.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 174F));
-            this.tableLayoutPanel_corey_min_max.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
-            this.tableLayoutPanel_corey_min_max.Controls.Add(this.label1, 2, 0);
-            this.tableLayoutPanel_corey_min_max.Controls.Add(this.label13, 3, 0);
-            this.tableLayoutPanel_corey_min_max.Controls.Add(this.label16, 1, 1);
-            this.tableLayoutPanel_corey_min_max.Controls.Add(this.label17, 1, 2);
-            this.tableLayoutPanel_corey_min_max.Controls.Add(this.numericUpDown_now_min, 2, 1);
-            this.tableLayoutPanel_corey_min_max.Controls.Add(this.numericUpDown_now_max, 3, 1);
-            this.tableLayoutPanel_corey_min_max.Controls.Add(this.numericUpDown_nw_min, 2, 2);
-            this.tableLayoutPanel_corey_min_max.Controls.Add(this.numericUpDown_nw_max, 3, 2);
-            this.tableLayoutPanel_corey_min_max.Controls.Add(this.listBox_corey_table, 0, 0);
-            this.tableLayoutPanel_corey_min_max.Location = new System.Drawing.Point(176, 95);
-            this.tableLayoutPanel_corey_min_max.Name = "tableLayoutPanel_corey_min_max";
-            this.tableLayoutPanel_corey_min_max.RowCount = 3;
-            this.tableLayoutPanel_corey_min_max.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel_corey_min_max.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel_corey_min_max.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-            this.tableLayoutPanel_corey_min_max.Size = new System.Drawing.Size(607, 100);
-            this.tableLayoutPanel_corey_min_max.TabIndex = 53;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(267, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "min";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(441, 9);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(163, 15);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "max";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label16
-            // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(225, 42);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(36, 15);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "NOW";
-            // 
-            // label17
-            // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(234, 75);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(27, 15);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "NW";
-            // 
-            // numericUpDown_now_min
-            // 
-            this.numericUpDown_now_min.DecimalPlaces = 1;
-            this.numericUpDown_now_min.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown_now_min.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            this.numericUpDown_now_min.Location = new System.Drawing.Point(267, 36);
-            this.numericUpDown_now_min.Name = "numericUpDown_now_min";
-            this.numericUpDown_now_min.Size = new System.Drawing.Size(168, 21);
-            this.numericUpDown_now_min.TabIndex = 1;
-            this.numericUpDown_now_min.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDown_now_min.ValueChanged += new System.EventHandler(this.numericUpDown_now_min_ValueChanged);
-            // 
-            // numericUpDown_now_max
-            // 
-            this.numericUpDown_now_max.DecimalPlaces = 1;
-            this.numericUpDown_now_max.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown_now_max.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            this.numericUpDown_now_max.Location = new System.Drawing.Point(441, 36);
-            this.numericUpDown_now_max.Name = "numericUpDown_now_max";
-            this.numericUpDown_now_max.Size = new System.Drawing.Size(163, 21);
-            this.numericUpDown_now_max.TabIndex = 1;
-            this.numericUpDown_now_max.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDown_now_max.ValueChanged += new System.EventHandler(this.numericUpDown_now_max_ValueChanged);
-            // 
-            // numericUpDown_nw_min
-            // 
-            this.numericUpDown_nw_min.DecimalPlaces = 1;
-            this.numericUpDown_nw_min.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown_nw_min.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            this.numericUpDown_nw_min.Location = new System.Drawing.Point(267, 69);
-            this.numericUpDown_nw_min.Name = "numericUpDown_nw_min";
-            this.numericUpDown_nw_min.Size = new System.Drawing.Size(168, 21);
-            this.numericUpDown_nw_min.TabIndex = 1;
-            this.numericUpDown_nw_min.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDown_nw_min.ValueChanged += new System.EventHandler(this.numericUpDown_nw_min_ValueChanged);
-            // 
-            // numericUpDown_nw_max
-            // 
-            this.numericUpDown_nw_max.DecimalPlaces = 1;
-            this.numericUpDown_nw_max.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown_nw_max.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            this.numericUpDown_nw_max.Location = new System.Drawing.Point(441, 69);
-            this.numericUpDown_nw_max.Name = "numericUpDown_nw_max";
-            this.numericUpDown_nw_max.Size = new System.Drawing.Size(163, 21);
-            this.numericUpDown_nw_max.TabIndex = 1;
-            this.numericUpDown_nw_max.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDown_nw_max.ValueChanged += new System.EventHandler(this.numericUpDown_nw_max_ValueChanged);
-            // 
-            // listBox_corey_table
-            // 
-            this.listBox_corey_table.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox_corey_table.FormattingEnabled = true;
-            this.listBox_corey_table.ItemHeight = 15;
-            this.listBox_corey_table.Location = new System.Drawing.Point(3, 3);
-            this.listBox_corey_table.Name = "listBox_corey_table";
-            this.tableLayoutPanel_corey_min_max.SetRowSpan(this.listBox_corey_table, 3);
-            this.listBox_corey_table.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox_corey_table.Size = new System.Drawing.Size(126, 94);
-            this.listBox_corey_table.TabIndex = 2;
-            this.listBox_corey_table.SelectedIndexChanged += new System.EventHandler(this.listBox_corey_table_SelectedIndexChanged);
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.14141F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.85859F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.textBox_corey_file, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox_swof_sgof_file, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button_swof_sgof_file, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label25, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label26, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 23);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1267, 66);
-            this.tableLayoutPanel1.TabIndex = 50;
-            // 
-            // textBox_corey_file
-            // 
-            this.textBox_corey_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_corey_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_corey_file.Location = new System.Drawing.Point(174, 38);
-            this.textBox_corey_file.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_corey_file.Name = "textBox_corey_file";
-            this.textBox_corey_file.ReadOnly = true;
-            this.textBox_corey_file.Size = new System.Drawing.Size(1044, 22);
-            this.textBox_corey_file.TabIndex = 11;
-            // 
-            // textBox_swof_sgof_file
-            // 
-            this.textBox_swof_sgof_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_swof_sgof_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_swof_sgof_file.Location = new System.Drawing.Point(174, 5);
-            this.textBox_swof_sgof_file.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_swof_sgof_file.Name = "textBox_swof_sgof_file";
-            this.textBox_swof_sgof_file.Size = new System.Drawing.Size(1044, 22);
-            this.textBox_swof_sgof_file.TabIndex = 11;
-            this.textBox_swof_sgof_file.TextChanged += new System.EventHandler(this.textBox_swof_sgof_file_TextChanged);
-            // 
-            // button_swof_sgof_file
-            // 
-            this.button_swof_sgof_file.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button_swof_sgof_file.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button_swof_sgof_file.Location = new System.Drawing.Point(1223, 5);
-            this.button_swof_sgof_file.Margin = new System.Windows.Forms.Padding(2);
-            this.button_swof_sgof_file.Name = "button_swof_sgof_file";
-            this.button_swof_sgof_file.Size = new System.Drawing.Size(42, 22);
-            this.button_swof_sgof_file.TabIndex = 10;
-            this.button_swof_sgof_file.Text = "...";
-            this.button_swof_sgof_file.UseVisualStyleBackColor = true;
-            this.button_swof_sgof_file.Click += new System.EventHandler(this.button_swof_sgof_file_Click);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(3, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(127, 15);
-            this.label25.TabIndex = 12;
-            this.label25.Text = "SWOF/SGOF table file";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(3, 33);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(87, 15);
-            this.label26.TabIndex = 12;
-            this.label26.Text = "Corey Input file";
-            // 
-            // groupBox_satnum
-            // 
-            this.groupBox_satnum.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox_satnum.Controls.Add(this.richTextBox_satnum);
-            this.groupBox_satnum.Controls.Add(this.tableLayoutPanel7);
-            this.groupBox_satnum.Location = new System.Drawing.Point(6, 292);
-            this.groupBox_satnum.Name = "groupBox_satnum";
-            this.groupBox_satnum.Size = new System.Drawing.Size(1276, 122);
-            this.groupBox_satnum.TabIndex = 51;
-            this.groupBox_satnum.TabStop = false;
-            this.groupBox_satnum.Text = "SATNUM regions";
-            // 
-            // richTextBox_satnum
-            // 
-            this.richTextBox_satnum.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox_satnum.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox_satnum.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox_satnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox_satnum.Location = new System.Drawing.Point(2, 94);
-            this.richTextBox_satnum.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextBox_satnum.Name = "richTextBox_satnum";
-            this.richTextBox_satnum.ReadOnly = true;
-            this.richTextBox_satnum.Size = new System.Drawing.Size(958, 26);
-            this.richTextBox_satnum.TabIndex = 34;
-            this.richTextBox_satnum.Text = "NOTE1: GRDECL ASCII format.   NOTE2: This file will not be deleted or modified. T" +
-    "he file will be used for reading only.";
-            // 
-            // tableLayoutPanel7
-            // 
-            this.tableLayoutPanel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel7.ColumnCount = 4;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.14141F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.85859F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel7.Controls.Add(this.textBox_satnum_title, 1, 1);
-            this.tableLayoutPanel7.Controls.Add(this.textBox_satnum_file, 2, 1);
-            this.tableLayoutPanel7.Controls.Add(this.radioButton_use_single_satnum, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.radioButton_use_satnum_array, 0, 1);
-            this.tableLayoutPanel7.Controls.Add(this.button_satnum_file, 3, 1);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(2, 23);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 2;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1267, 66);
-            this.tableLayoutPanel7.TabIndex = 37;
-            // 
-            // textBox_satnum_title
-            // 
-            this.textBox_satnum_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_satnum_title.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox_satnum_title.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_satnum_title.Location = new System.Drawing.Point(146, 38);
-            this.textBox_satnum_title.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_satnum_title.Name = "textBox_satnum_title";
-            this.textBox_satnum_title.Size = new System.Drawing.Size(196, 22);
-            this.textBox_satnum_title.TabIndex = 33;
-            this.textBox_satnum_title.Text = "SATNUM";
-            // 
-            // textBox_satnum_file
-            // 
-            this.textBox_satnum_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_satnum_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_satnum_file.Location = new System.Drawing.Point(346, 38);
-            this.textBox_satnum_file.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_satnum_file.Name = "textBox_satnum_file";
-            this.textBox_satnum_file.Size = new System.Drawing.Size(873, 22);
-            this.textBox_satnum_file.TabIndex = 33;
-            // 
-            // radioButton_use_single_satnum
-            // 
-            this.radioButton_use_single_satnum.AutoSize = true;
-            this.tableLayoutPanel7.SetColumnSpan(this.radioButton_use_single_satnum, 2);
-            this.radioButton_use_single_satnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.radioButton_use_single_satnum.Location = new System.Drawing.Point(3, 3);
-            this.radioButton_use_single_satnum.Name = "radioButton_use_single_satnum";
-            this.radioButton_use_single_satnum.Size = new System.Drawing.Size(192, 19);
-            this.radioButton_use_single_satnum.TabIndex = 39;
-            this.radioButton_use_single_satnum.TabStop = true;
-            this.radioButton_use_single_satnum.Text = "Use a single region for all cells";
-            this.radioButton_use_single_satnum.UseVisualStyleBackColor = true;
-            this.radioButton_use_single_satnum.CheckedChanged += new System.EventHandler(this.radioButton_use_single_satnum_CheckedChanged);
-            // 
-            // radioButton_use_satnum_array
-            // 
-            this.radioButton_use_satnum_array.AutoSize = true;
-            this.radioButton_use_satnum_array.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.radioButton_use_satnum_array.Location = new System.Drawing.Point(3, 36);
-            this.radioButton_use_satnum_array.Name = "radioButton_use_satnum_array";
-            this.radioButton_use_satnum_array.Size = new System.Drawing.Size(94, 19);
-            this.radioButton_use_satnum_array.TabIndex = 39;
-            this.radioButton_use_satnum_array.TabStop = true;
-            this.radioButton_use_satnum_array.Text = "Use an array";
-            this.radioButton_use_satnum_array.UseVisualStyleBackColor = true;
-            this.radioButton_use_satnum_array.CheckedChanged += new System.EventHandler(this.radioButton_use_satnum_array_CheckedChanged);
-            // 
-            // button_satnum_file
-            // 
-            this.button_satnum_file.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button_satnum_file.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button_satnum_file.Location = new System.Drawing.Point(1224, 38);
-            this.button_satnum_file.Margin = new System.Windows.Forms.Padding(2);
-            this.button_satnum_file.Name = "button_satnum_file";
-            this.button_satnum_file.Size = new System.Drawing.Size(41, 22);
-            this.button_satnum_file.TabIndex = 31;
-            this.button_satnum_file.Text = "...";
-            this.button_satnum_file.UseVisualStyleBackColor = true;
-            this.button_satnum_file.Click += new System.EventHandler(this.button_satnum_file_Click);
-            // 
-            // checkBox_relperm_matching
-            // 
-            this.checkBox_relperm_matching.AutoSize = true;
-            this.checkBox_relperm_matching.Location = new System.Drawing.Point(8, 21);
-            this.checkBox_relperm_matching.Name = "checkBox_relperm_matching";
-            this.checkBox_relperm_matching.Size = new System.Drawing.Size(129, 19);
-            this.checkBox_relperm_matching.TabIndex = 49;
-            this.checkBox_relperm_matching.Text = "RelPerm matching";
-            this.checkBox_relperm_matching.UseVisualStyleBackColor = true;
-            this.checkBox_relperm_matching.CheckedChanged += new System.EventHandler(this.checkBox_relperm_matching_CheckedChanged);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label24.Location = new System.Drawing.Point(3, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(93, 15);
-            this.label24.TabIndex = 35;
-            this.label24.Text = "Step 5/8 - Corey";
             // 
             // wizardPage4_kr
             // 
@@ -3531,6 +2140,401 @@
             this.label47.Size = new System.Drawing.Size(128, 15);
             this.label47.TabIndex = 50;
             this.label47.Text = "Step 4/8 - Kr matching";
+            // 
+            // wizardPage5_corey
+            // 
+            this.wizardPage5_corey.Controls.Add(this.groupBox_relperm_tables);
+            this.wizardPage5_corey.Controls.Add(this.groupBox_satnum);
+            this.wizardPage5_corey.Controls.Add(this.checkBox_relperm_matching);
+            this.wizardPage5_corey.Controls.Add(this.label24);
+            this.wizardPage5_corey.Name = "wizardPage5_corey";
+            this.wizardPage5_corey.NextPage = this.wizardPage6_aquifer;
+            this.wizardPage5_corey.Size = new System.Drawing.Size(1292, 736);
+            this.wizardPage5_corey.TabIndex = 9;
+            this.wizardPage5_corey.Text = "Page Title";
+            this.wizardPage5_corey.Commit += new System.EventHandler<AeroWizard.WizardPageConfirmEventArgs>(this.wizardPage4_corey_Commit);
+            // 
+            // groupBox_relperm_tables
+            // 
+            this.groupBox_relperm_tables.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox_relperm_tables.Controls.Add(this.tableLayoutPanel_corey_min_max);
+            this.groupBox_relperm_tables.Controls.Add(this.tableLayoutPanel1);
+            this.groupBox_relperm_tables.Location = new System.Drawing.Point(6, 49);
+            this.groupBox_relperm_tables.Name = "groupBox_relperm_tables";
+            this.groupBox_relperm_tables.Size = new System.Drawing.Size(1276, 237);
+            this.groupBox_relperm_tables.TabIndex = 52;
+            this.groupBox_relperm_tables.TabStop = false;
+            this.groupBox_relperm_tables.Text = "RelPerm Table files";
+            // 
+            // tableLayoutPanel_corey_min_max
+            // 
+            this.tableLayoutPanel_corey_min_max.ColumnCount = 4;
+            this.tableLayoutPanel_corey_min_max.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel_corey_min_max.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel_corey_min_max.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 174F));
+            this.tableLayoutPanel_corey_min_max.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
+            this.tableLayoutPanel_corey_min_max.Controls.Add(this.label1, 2, 0);
+            this.tableLayoutPanel_corey_min_max.Controls.Add(this.label13, 3, 0);
+            this.tableLayoutPanel_corey_min_max.Controls.Add(this.label16, 1, 1);
+            this.tableLayoutPanel_corey_min_max.Controls.Add(this.label17, 1, 2);
+            this.tableLayoutPanel_corey_min_max.Controls.Add(this.numericUpDown_now_min, 2, 1);
+            this.tableLayoutPanel_corey_min_max.Controls.Add(this.numericUpDown_now_max, 3, 1);
+            this.tableLayoutPanel_corey_min_max.Controls.Add(this.numericUpDown_nw_min, 2, 2);
+            this.tableLayoutPanel_corey_min_max.Controls.Add(this.numericUpDown_nw_max, 3, 2);
+            this.tableLayoutPanel_corey_min_max.Controls.Add(this.listBox_corey_table, 0, 0);
+            this.tableLayoutPanel_corey_min_max.Location = new System.Drawing.Point(176, 95);
+            this.tableLayoutPanel_corey_min_max.Name = "tableLayoutPanel_corey_min_max";
+            this.tableLayoutPanel_corey_min_max.RowCount = 3;
+            this.tableLayoutPanel_corey_min_max.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel_corey_min_max.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel_corey_min_max.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel_corey_min_max.Size = new System.Drawing.Size(607, 100);
+            this.tableLayoutPanel_corey_min_max.TabIndex = 53;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(267, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(168, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "min";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(441, 9);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(163, 15);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "max";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(225, 42);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(36, 15);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "NOW";
+            // 
+            // label17
+            // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(234, 75);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(27, 15);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "NW";
+            // 
+            // numericUpDown_now_min
+            // 
+            this.numericUpDown_now_min.DecimalPlaces = 1;
+            this.numericUpDown_now_min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDown_now_min.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.numericUpDown_now_min.Location = new System.Drawing.Point(267, 36);
+            this.numericUpDown_now_min.Name = "numericUpDown_now_min";
+            this.numericUpDown_now_min.Size = new System.Drawing.Size(168, 21);
+            this.numericUpDown_now_min.TabIndex = 1;
+            this.numericUpDown_now_min.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDown_now_min.ValueChanged += new System.EventHandler(this.numericUpDown_now_min_ValueChanged);
+            // 
+            // numericUpDown_now_max
+            // 
+            this.numericUpDown_now_max.DecimalPlaces = 1;
+            this.numericUpDown_now_max.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDown_now_max.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.numericUpDown_now_max.Location = new System.Drawing.Point(441, 36);
+            this.numericUpDown_now_max.Name = "numericUpDown_now_max";
+            this.numericUpDown_now_max.Size = new System.Drawing.Size(163, 21);
+            this.numericUpDown_now_max.TabIndex = 1;
+            this.numericUpDown_now_max.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown_now_max.ValueChanged += new System.EventHandler(this.numericUpDown_now_max_ValueChanged);
+            // 
+            // numericUpDown_nw_min
+            // 
+            this.numericUpDown_nw_min.DecimalPlaces = 1;
+            this.numericUpDown_nw_min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDown_nw_min.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.numericUpDown_nw_min.Location = new System.Drawing.Point(267, 69);
+            this.numericUpDown_nw_min.Name = "numericUpDown_nw_min";
+            this.numericUpDown_nw_min.Size = new System.Drawing.Size(168, 21);
+            this.numericUpDown_nw_min.TabIndex = 1;
+            this.numericUpDown_nw_min.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDown_nw_min.ValueChanged += new System.EventHandler(this.numericUpDown_nw_min_ValueChanged);
+            // 
+            // numericUpDown_nw_max
+            // 
+            this.numericUpDown_nw_max.DecimalPlaces = 1;
+            this.numericUpDown_nw_max.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDown_nw_max.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.numericUpDown_nw_max.Location = new System.Drawing.Point(441, 69);
+            this.numericUpDown_nw_max.Name = "numericUpDown_nw_max";
+            this.numericUpDown_nw_max.Size = new System.Drawing.Size(163, 21);
+            this.numericUpDown_nw_max.TabIndex = 1;
+            this.numericUpDown_nw_max.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown_nw_max.ValueChanged += new System.EventHandler(this.numericUpDown_nw_max_ValueChanged);
+            // 
+            // listBox_corey_table
+            // 
+            this.listBox_corey_table.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBox_corey_table.FormattingEnabled = true;
+            this.listBox_corey_table.ItemHeight = 15;
+            this.listBox_corey_table.Location = new System.Drawing.Point(3, 3);
+            this.listBox_corey_table.Name = "listBox_corey_table";
+            this.tableLayoutPanel_corey_min_max.SetRowSpan(this.listBox_corey_table, 3);
+            this.listBox_corey_table.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBox_corey_table.Size = new System.Drawing.Size(126, 94);
+            this.listBox_corey_table.TabIndex = 2;
+            this.listBox_corey_table.SelectedIndexChanged += new System.EventHandler(this.listBox_corey_table_SelectedIndexChanged);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.14141F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.85859F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.textBox_corey_file, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.textBox_swof_sgof_file, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button_swof_sgof_file, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label25, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label26, 0, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 23);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1267, 66);
+            this.tableLayoutPanel1.TabIndex = 50;
+            // 
+            // textBox_corey_file
+            // 
+            this.textBox_corey_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_corey_file.Font = new System.Drawing.Font("Consolas", 9F);
+            this.textBox_corey_file.Location = new System.Drawing.Point(174, 38);
+            this.textBox_corey_file.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_corey_file.Name = "textBox_corey_file";
+            this.textBox_corey_file.ReadOnly = true;
+            this.textBox_corey_file.Size = new System.Drawing.Size(1044, 22);
+            this.textBox_corey_file.TabIndex = 11;
+            // 
+            // textBox_swof_sgof_file
+            // 
+            this.textBox_swof_sgof_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_swof_sgof_file.Font = new System.Drawing.Font("Consolas", 9F);
+            this.textBox_swof_sgof_file.Location = new System.Drawing.Point(174, 5);
+            this.textBox_swof_sgof_file.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_swof_sgof_file.Name = "textBox_swof_sgof_file";
+            this.textBox_swof_sgof_file.Size = new System.Drawing.Size(1044, 22);
+            this.textBox_swof_sgof_file.TabIndex = 11;
+            this.textBox_swof_sgof_file.TextChanged += new System.EventHandler(this.textBox_swof_sgof_file_TextChanged);
+            // 
+            // button_swof_sgof_file
+            // 
+            this.button_swof_sgof_file.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button_swof_sgof_file.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.button_swof_sgof_file.Location = new System.Drawing.Point(1223, 5);
+            this.button_swof_sgof_file.Margin = new System.Windows.Forms.Padding(2);
+            this.button_swof_sgof_file.Name = "button_swof_sgof_file";
+            this.button_swof_sgof_file.Size = new System.Drawing.Size(42, 22);
+            this.button_swof_sgof_file.TabIndex = 10;
+            this.button_swof_sgof_file.Text = "...";
+            this.button_swof_sgof_file.UseVisualStyleBackColor = true;
+            this.button_swof_sgof_file.Click += new System.EventHandler(this.button_swof_sgof_file_Click);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(3, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(127, 15);
+            this.label25.TabIndex = 12;
+            this.label25.Text = "SWOF/SGOF table file";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(3, 33);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(87, 15);
+            this.label26.TabIndex = 12;
+            this.label26.Text = "Corey Input file";
+            // 
+            // groupBox_satnum
+            // 
+            this.groupBox_satnum.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox_satnum.Controls.Add(this.richTextBox_satnum);
+            this.groupBox_satnum.Controls.Add(this.tableLayoutPanel7);
+            this.groupBox_satnum.Location = new System.Drawing.Point(6, 292);
+            this.groupBox_satnum.Name = "groupBox_satnum";
+            this.groupBox_satnum.Size = new System.Drawing.Size(1276, 122);
+            this.groupBox_satnum.TabIndex = 51;
+            this.groupBox_satnum.TabStop = false;
+            this.groupBox_satnum.Text = "SATNUM regions";
+            // 
+            // richTextBox_satnum
+            // 
+            this.richTextBox_satnum.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox_satnum.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox_satnum.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_satnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox_satnum.Location = new System.Drawing.Point(2, 94);
+            this.richTextBox_satnum.Margin = new System.Windows.Forms.Padding(2);
+            this.richTextBox_satnum.Name = "richTextBox_satnum";
+            this.richTextBox_satnum.ReadOnly = true;
+            this.richTextBox_satnum.Size = new System.Drawing.Size(958, 26);
+            this.richTextBox_satnum.TabIndex = 34;
+            this.richTextBox_satnum.Text = "NOTE1: GRDECL ASCII format.   NOTE2: This file will not be deleted or modified. T" +
+    "he file will be used for reading only.";
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel7.ColumnCount = 4;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.14141F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.85859F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel7.Controls.Add(this.textBox_satnum_title, 1, 1);
+            this.tableLayoutPanel7.Controls.Add(this.textBox_satnum_file, 2, 1);
+            this.tableLayoutPanel7.Controls.Add(this.radioButton_use_single_satnum, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.radioButton_use_satnum_array, 0, 1);
+            this.tableLayoutPanel7.Controls.Add(this.button_satnum_file, 3, 1);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(2, 23);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 2;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1267, 66);
+            this.tableLayoutPanel7.TabIndex = 37;
+            // 
+            // textBox_satnum_title
+            // 
+            this.textBox_satnum_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_satnum_title.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox_satnum_title.Font = new System.Drawing.Font("Consolas", 9F);
+            this.textBox_satnum_title.Location = new System.Drawing.Point(146, 38);
+            this.textBox_satnum_title.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_satnum_title.Name = "textBox_satnum_title";
+            this.textBox_satnum_title.Size = new System.Drawing.Size(196, 22);
+            this.textBox_satnum_title.TabIndex = 33;
+            this.textBox_satnum_title.Text = "SATNUM";
+            // 
+            // textBox_satnum_file
+            // 
+            this.textBox_satnum_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_satnum_file.Font = new System.Drawing.Font("Consolas", 9F);
+            this.textBox_satnum_file.Location = new System.Drawing.Point(346, 38);
+            this.textBox_satnum_file.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_satnum_file.Name = "textBox_satnum_file";
+            this.textBox_satnum_file.Size = new System.Drawing.Size(873, 22);
+            this.textBox_satnum_file.TabIndex = 33;
+            // 
+            // radioButton_use_single_satnum
+            // 
+            this.radioButton_use_single_satnum.AutoSize = true;
+            this.tableLayoutPanel7.SetColumnSpan(this.radioButton_use_single_satnum, 2);
+            this.radioButton_use_single_satnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.radioButton_use_single_satnum.Location = new System.Drawing.Point(3, 3);
+            this.radioButton_use_single_satnum.Name = "radioButton_use_single_satnum";
+            this.radioButton_use_single_satnum.Size = new System.Drawing.Size(192, 19);
+            this.radioButton_use_single_satnum.TabIndex = 39;
+            this.radioButton_use_single_satnum.TabStop = true;
+            this.radioButton_use_single_satnum.Text = "Use a single region for all cells";
+            this.radioButton_use_single_satnum.UseVisualStyleBackColor = true;
+            this.radioButton_use_single_satnum.CheckedChanged += new System.EventHandler(this.radioButton_use_single_satnum_CheckedChanged);
+            // 
+            // radioButton_use_satnum_array
+            // 
+            this.radioButton_use_satnum_array.AutoSize = true;
+            this.radioButton_use_satnum_array.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.radioButton_use_satnum_array.Location = new System.Drawing.Point(3, 36);
+            this.radioButton_use_satnum_array.Name = "radioButton_use_satnum_array";
+            this.radioButton_use_satnum_array.Size = new System.Drawing.Size(94, 19);
+            this.radioButton_use_satnum_array.TabIndex = 39;
+            this.radioButton_use_satnum_array.TabStop = true;
+            this.radioButton_use_satnum_array.Text = "Use an array";
+            this.radioButton_use_satnum_array.UseVisualStyleBackColor = true;
+            this.radioButton_use_satnum_array.CheckedChanged += new System.EventHandler(this.radioButton_use_satnum_array_CheckedChanged);
+            // 
+            // button_satnum_file
+            // 
+            this.button_satnum_file.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button_satnum_file.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.button_satnum_file.Location = new System.Drawing.Point(1224, 38);
+            this.button_satnum_file.Margin = new System.Windows.Forms.Padding(2);
+            this.button_satnum_file.Name = "button_satnum_file";
+            this.button_satnum_file.Size = new System.Drawing.Size(41, 22);
+            this.button_satnum_file.TabIndex = 31;
+            this.button_satnum_file.Text = "...";
+            this.button_satnum_file.UseVisualStyleBackColor = true;
+            this.button_satnum_file.Click += new System.EventHandler(this.button_satnum_file_Click);
+            // 
+            // checkBox_relperm_matching
+            // 
+            this.checkBox_relperm_matching.AutoSize = true;
+            this.checkBox_relperm_matching.Location = new System.Drawing.Point(8, 21);
+            this.checkBox_relperm_matching.Name = "checkBox_relperm_matching";
+            this.checkBox_relperm_matching.Size = new System.Drawing.Size(129, 19);
+            this.checkBox_relperm_matching.TabIndex = 49;
+            this.checkBox_relperm_matching.Text = "RelPerm matching";
+            this.checkBox_relperm_matching.UseVisualStyleBackColor = true;
+            this.checkBox_relperm_matching.CheckedChanged += new System.EventHandler(this.checkBox_relperm_matching_CheckedChanged);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label24.Location = new System.Drawing.Point(3, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(93, 15);
+            this.label24.TabIndex = 35;
+            this.label24.Text = "Step 5/8 - Corey";
             // 
             // wizardPage6_aquifer
             // 
@@ -4928,6 +3932,1093 @@
             this.label14.TabIndex = 44;
             this.label14.Text = "Step 7/8 - Well names";
             // 
+            // wizardPage8_run
+            // 
+            this.wizardPage8_run.Controls.Add(this.richTextBox12);
+            this.wizardPage8_run.Controls.Add(this.groupBox3);
+            this.wizardPage8_run.Controls.Add(this.label9);
+            this.wizardPage8_run.Controls.Add(this.groupBox1);
+            this.wizardPage8_run.IsFinishPage = true;
+            this.wizardPage8_run.Name = "wizardPage8_run";
+            this.wizardPage8_run.Size = new System.Drawing.Size(1292, 736);
+            this.wizardPage8_run.TabIndex = 5;
+            this.wizardPage8_run.Text = "wizardPage1";
+            this.wizardPage8_run.Initialize += new System.EventHandler<AeroWizard.WizardPageInitEventArgs>(this.wizardPage8_run_Initialize);
+            // 
+            // richTextBox12
+            // 
+            this.richTextBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox12.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox12.Location = new System.Drawing.Point(3, 20);
+            this.richTextBox12.Margin = new System.Windows.Forms.Padding(2);
+            this.richTextBox12.Name = "richTextBox12";
+            this.richTextBox12.ReadOnly = true;
+            this.richTextBox12.Size = new System.Drawing.Size(1286, 100);
+            this.richTextBox12.TabIndex = 50;
+            this.richTextBox12.Text = resources.GetString("richTextBox12.Text");
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.propertyGrid_input_data);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.groupBox3.Location = new System.Drawing.Point(3, 124);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(1277, 482);
+            this.groupBox3.TabIndex = 41;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Input data";
+            // 
+            // propertyGrid_input_data
+            // 
+            this.propertyGrid_input_data.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.propertyGrid_input_data.Location = new System.Drawing.Point(5, 19);
+            this.propertyGrid_input_data.Name = "propertyGrid_input_data";
+            this.propertyGrid_input_data.Size = new System.Drawing.Size(1267, 458);
+            this.propertyGrid_input_data.TabIndex = 0;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label9.Location = new System.Drawing.Point(3, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(135, 15);
+            this.label9.TabIndex = 40;
+            this.label9.Text = "Step 8/8 - RUN-settings";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.tableLayoutPanel_run_settings);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.groupBox1.Location = new System.Drawing.Point(3, 611);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1277, 92);
+            this.groupBox1.TabIndex = 38;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "RUN settings";
+            // 
+            // tableLayoutPanel_run_settings
+            // 
+            this.tableLayoutPanel_run_settings.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel_run_settings.ColumnCount = 8;
+            this.tableLayoutPanel_run_settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
+            this.tableLayoutPanel_run_settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel_run_settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
+            this.tableLayoutPanel_run_settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel_run_settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74F));
+            this.tableLayoutPanel_run_settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
+            this.tableLayoutPanel_run_settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 72F));
+            this.tableLayoutPanel_run_settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 650F));
+            this.tableLayoutPanel_run_settings.Controls.Add(this.radioButton_data_check, 0, 0);
+            this.tableLayoutPanel_run_settings.Controls.Add(this.comboBox_iter, 4, 1);
+            this.tableLayoutPanel_run_settings.Controls.Add(this.label_iter, 3, 1);
+            this.tableLayoutPanel_run_settings.Controls.Add(this.radioButton_history_matching, 0, 1);
+            this.tableLayoutPanel_run_settings.Controls.Add(this.label_id, 1, 1);
+            this.tableLayoutPanel_run_settings.Controls.Add(this.comboBox_id, 2, 1);
+            this.tableLayoutPanel_run_settings.Controls.Add(this.label_last_iter, 5, 1);
+            this.tableLayoutPanel_run_settings.Controls.Add(this.numericUpDown_last_iter, 6, 1);
+            this.tableLayoutPanel_run_settings.Controls.Add(this.checkBox_simulate_before_hm, 7, 1);
+            this.tableLayoutPanel_run_settings.Location = new System.Drawing.Point(9, 23);
+            this.tableLayoutPanel_run_settings.Name = "tableLayoutPanel_run_settings";
+            this.tableLayoutPanel_run_settings.RowCount = 2;
+            this.tableLayoutPanel_run_settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel_run_settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel_run_settings.Size = new System.Drawing.Size(1262, 59);
+            this.tableLayoutPanel_run_settings.TabIndex = 42;
+            // 
+            // radioButton_data_check
+            // 
+            this.radioButton_data_check.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.radioButton_data_check.AutoSize = true;
+            this.radioButton_data_check.Location = new System.Drawing.Point(3, 5);
+            this.radioButton_data_check.Name = "radioButton_data_check";
+            this.radioButton_data_check.Size = new System.Drawing.Size(115, 19);
+            this.radioButton_data_check.TabIndex = 30;
+            this.radioButton_data_check.Text = "Data Check Only";
+            this.radioButton_data_check.UseVisualStyleBackColor = true;
+            this.radioButton_data_check.CheckedChanged += new System.EventHandler(this.radioButton_data_check_CheckedChanged);
+            // 
+            // comboBox_iter
+            // 
+            this.comboBox_iter.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.comboBox_iter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_iter.Font = new System.Drawing.Font("Consolas", 9F);
+            this.comboBox_iter.FormattingEnabled = true;
+            this.comboBox_iter.Location = new System.Drawing.Point(393, 33);
+            this.comboBox_iter.Name = "comboBox_iter";
+            this.comboBox_iter.Size = new System.Drawing.Size(64, 22);
+            this.comboBox_iter.TabIndex = 37;
+            this.comboBox_iter.DropDown += new System.EventHandler(this.comboBox_iter_DropDown);
+            this.comboBox_iter.SelectedIndexChanged += new System.EventHandler(this.comboBox_iter_SelectedIndexChanged);
+            // 
+            // label_iter
+            // 
+            this.label_iter.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label_iter.AutoSize = true;
+            this.label_iter.Location = new System.Drawing.Point(335, 36);
+            this.label_iter.Name = "label_iter";
+            this.label_iter.Size = new System.Drawing.Size(52, 15);
+            this.label_iter.TabIndex = 18;
+            this.label_iter.Text = "Start Iter";
+            // 
+            // radioButton_history_matching
+            // 
+            this.radioButton_history_matching.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.radioButton_history_matching.AutoSize = true;
+            this.radioButton_history_matching.Location = new System.Drawing.Point(3, 34);
+            this.radioButton_history_matching.Name = "radioButton_history_matching";
+            this.radioButton_history_matching.Size = new System.Drawing.Size(116, 19);
+            this.radioButton_history_matching.TabIndex = 30;
+            this.radioButton_history_matching.Text = "History Matching";
+            this.radioButton_history_matching.UseVisualStyleBackColor = true;
+            this.radioButton_history_matching.CheckedChanged += new System.EventHandler(this.radioButton_data_check_CheckedChanged);
+            // 
+            // label_id
+            // 
+            this.label_id.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label_id.AutoSize = true;
+            this.label_id.Location = new System.Drawing.Point(153, 36);
+            this.label_id.Name = "label_id";
+            this.label_id.Size = new System.Drawing.Size(19, 15);
+            this.label_id.TabIndex = 17;
+            this.label_id.Text = "ID";
+            // 
+            // comboBox_id
+            // 
+            this.comboBox_id.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.comboBox_id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_id.Font = new System.Drawing.Font("Consolas", 9F);
+            this.comboBox_id.FormattingEnabled = true;
+            this.comboBox_id.Location = new System.Drawing.Point(178, 33);
+            this.comboBox_id.Name = "comboBox_id";
+            this.comboBox_id.Size = new System.Drawing.Size(125, 22);
+            this.comboBox_id.TabIndex = 36;
+            this.comboBox_id.DropDown += new System.EventHandler(this.comboBox_id_DropDown);
+            this.comboBox_id.SelectedIndexChanged += new System.EventHandler(this.comboBox_id_SelectedIndexChanged_1);
+            // 
+            // label_last_iter
+            // 
+            this.label_last_iter.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label_last_iter.AutoSize = true;
+            this.label_last_iter.Location = new System.Drawing.Point(487, 36);
+            this.label_last_iter.Name = "label_last_iter";
+            this.label_last_iter.Size = new System.Drawing.Size(50, 15);
+            this.label_last_iter.TabIndex = 16;
+            this.label_last_iter.Text = "Last Iter";
+            // 
+            // numericUpDown_last_iter
+            // 
+            this.numericUpDown_last_iter.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.numericUpDown_last_iter.Font = new System.Drawing.Font("Consolas", 9F);
+            this.numericUpDown_last_iter.Location = new System.Drawing.Point(543, 33);
+            this.numericUpDown_last_iter.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numericUpDown_last_iter.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown_last_iter.Name = "numericUpDown_last_iter";
+            this.numericUpDown_last_iter.Size = new System.Drawing.Size(64, 22);
+            this.numericUpDown_last_iter.TabIndex = 29;
+            this.numericUpDown_last_iter.Value = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            // 
+            // checkBox_simulate_before_hm
+            // 
+            this.checkBox_simulate_before_hm.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.checkBox_simulate_before_hm.AutoSize = true;
+            this.checkBox_simulate_before_hm.Location = new System.Drawing.Point(615, 34);
+            this.checkBox_simulate_before_hm.Name = "checkBox_simulate_before_hm";
+            this.checkBox_simulate_before_hm.Size = new System.Drawing.Size(168, 19);
+            this.checkBox_simulate_before_hm.TabIndex = 35;
+            this.checkBox_simulate_before_hm.Text = "Simulate case before Run";
+            this.checkBox_simulate_before_hm.UseVisualStyleBackColor = true;
+            // 
+            // wizardPage0_intro
+            // 
+            this.wizardPage0_intro.Controls.Add(this.pictureBox1);
+            this.wizardPage0_intro.Controls.Add(this.richTextBox_intro);
+            this.wizardPage0_intro.Name = "wizardPage0_intro";
+            this.wizardPage0_intro.NextPage = this.wizardPage1_data;
+            this.wizardPage0_intro.Size = new System.Drawing.Size(1292, 736);
+            this.wizardPage0_intro.TabIndex = 8;
+            this.wizardPage0_intro.Text = "wizardPage1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::Pexel.Properties.Resources.android_icon_144x144;
+            this.pictureBox1.InitialImage = global::Pexel.Properties.Resources.android_icon_144x144;
+            this.pictureBox1.Location = new System.Drawing.Point(1134, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(155, 148);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // richTextBox_intro
+            // 
+            this.richTextBox_intro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox_intro.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox_intro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_intro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox_intro.Location = new System.Drawing.Point(2, 3);
+            this.richTextBox_intro.Margin = new System.Windows.Forms.Padding(2);
+            this.richTextBox_intro.Name = "richTextBox_intro";
+            this.richTextBox_intro.ReadOnly = true;
+            this.richTextBox_intro.Size = new System.Drawing.Size(1127, 597);
+            this.richTextBox_intro.TabIndex = 4;
+            this.richTextBox_intro.Text = resources.GetString("richTextBox_intro.Text");
+            // 
+            // wizardPage1_data
+            // 
+            this.wizardPage1_data.Controls.Add(this.groupBox7);
+            this.wizardPage1_data.Controls.Add(this.richTextBox5);
+            this.wizardPage1_data.Controls.Add(this.label2);
+            this.wizardPage1_data.Name = "wizardPage1_data";
+            this.wizardPage1_data.NextPage = this.wizardPage2_grid;
+            this.wizardPage1_data.Size = new System.Drawing.Size(1292, 736);
+            this.wizardPage1_data.TabIndex = 0;
+            this.wizardPage1_data.Text = "wizardPage1";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox7.Controls.Add(this.checkBox_results_sub_folder);
+            this.groupBox7.Controls.Add(this.checkBox_create_user_sum_file);
+            this.groupBox7.Controls.Add(this.richTextBox14);
+            this.groupBox7.Controls.Add(this.textBox_out_folder);
+            this.groupBox7.Controls.Add(this.richTextBox3);
+            this.groupBox7.Controls.Add(this.label33);
+            this.groupBox7.Controls.Add(this.button_copy_sum);
+            this.groupBox7.Controls.Add(this.label32);
+            this.groupBox7.Controls.Add(this.richTextBox_out_folder);
+            this.groupBox7.Controls.Add(this.button_data_file);
+            this.groupBox7.Controls.Add(this.textBox_data_file);
+            this.groupBox7.Controls.Add(this.radioButton_ecl);
+            this.groupBox7.Controls.Add(this.numericUpDown_cpu);
+            this.groupBox7.Controls.Add(this.comboBox_gpu_list);
+            this.groupBox7.Controls.Add(this.button_mpi_exe_file);
+            this.groupBox7.Controls.Add(this.button_sim_exe_file);
+            this.groupBox7.Controls.Add(this.button_sim_to_create_rsm);
+            this.groupBox7.Controls.Add(this.radioButton_tnav);
+            this.groupBox7.Controls.Add(this.textBox_mpi_exe_file);
+            this.groupBox7.Controls.Add(this.textBox_sim_exe_file);
+            this.groupBox7.Controls.Add(this.radioButton_tempest);
+            this.groupBox7.Controls.Add(this.label_mpi_exe_file);
+            this.groupBox7.Controls.Add(this.label_sim_exe_file);
+            this.groupBox7.Controls.Add(this.label_max_cpu);
+            this.groupBox7.Controls.Add(this.label_cpu_usage);
+            this.groupBox7.Controls.Add(this.checkBox_use_gpu);
+            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox7.Location = new System.Drawing.Point(2, 49);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(1285, 378);
+            this.groupBox7.TabIndex = 47;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Main Input";
+            // 
+            // checkBox_results_sub_folder
+            // 
+            this.checkBox_results_sub_folder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBox_results_sub_folder.AutoSize = true;
+            this.checkBox_results_sub_folder.Location = new System.Drawing.Point(795, 181);
+            this.checkBox_results_sub_folder.Name = "checkBox_results_sub_folder";
+            this.checkBox_results_sub_folder.Size = new System.Drawing.Size(164, 19);
+            this.checkBox_results_sub_folder.TabIndex = 45;
+            this.checkBox_results_sub_folder.Text = "Use RESULTS sub folder";
+            this.checkBox_results_sub_folder.UseVisualStyleBackColor = true;
+            this.checkBox_results_sub_folder.CheckedChanged += new System.EventHandler(this.checkBox_results_sub_folder_CheckedChanged);
+            // 
+            // checkBox_create_user_sum_file
+            // 
+            this.checkBox_create_user_sum_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBox_create_user_sum_file.AutoSize = true;
+            this.checkBox_create_user_sum_file.Location = new System.Drawing.Point(1015, 181);
+            this.checkBox_create_user_sum_file.Name = "checkBox_create_user_sum_file";
+            this.checkBox_create_user_sum_file.Size = new System.Drawing.Size(145, 19);
+            this.checkBox_create_user_sum_file.TabIndex = 44;
+            this.checkBox_create_user_sum_file.Text = "Use \'USER\\*.sum\' file";
+            this.checkBox_create_user_sum_file.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox14
+            // 
+            this.richTextBox14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox14.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox14.Location = new System.Drawing.Point(284, 317);
+            this.richTextBox14.Margin = new System.Windows.Forms.Padding(2);
+            this.richTextBox14.Name = "richTextBox14";
+            this.richTextBox14.ReadOnly = true;
+            this.richTextBox14.Size = new System.Drawing.Size(949, 41);
+            this.richTextBox14.TabIndex = 38;
+            this.richTextBox14.Text = "NOTE: to create the required RSM-file at zero iteration press \"Simulate DATA-file" +
+    " with the required settings\" button.";
+            // 
+            // textBox_out_folder
+            // 
+            this.textBox_out_folder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_out_folder.Font = new System.Drawing.Font("Consolas", 9F);
+            this.textBox_out_folder.Location = new System.Drawing.Point(96, 85);
+            this.textBox_out_folder.Name = "textBox_out_folder";
+            this.textBox_out_folder.ReadOnly = true;
+            this.textBox_out_folder.Size = new System.Drawing.Size(1137, 22);
+            this.textBox_out_folder.TabIndex = 37;
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox3.Location = new System.Drawing.Point(96, 41);
+            this.richTextBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.ReadOnly = true;
+            this.richTextBox3.Size = new System.Drawing.Size(1137, 39);
+            this.richTextBox3.TabIndex = 4;
+            this.richTextBox3.Text = resources.GetString("richTextBox3.Text");
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(8, 89);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(61, 15);
+            this.label33.TabIndex = 36;
+            this.label33.Text = "Out-folder";
+            // 
+            // button_copy_sum
+            // 
+            this.button_copy_sum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_copy_sum.Location = new System.Drawing.Point(1167, 176);
+            this.button_copy_sum.Name = "button_copy_sum";
+            this.button_copy_sum.Size = new System.Drawing.Size(113, 30);
+            this.button_copy_sum.TabIndex = 43;
+            this.button_copy_sum.Text = "Copy SUMMARY";
+            this.button_copy_sum.UseVisualStyleBackColor = true;
+            this.button_copy_sum.Click += new System.EventHandler(this.button_summary_kw_Click);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(8, 18);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(57, 15);
+            this.label32.TabIndex = 35;
+            this.label32.Text = "DATA-file";
+            // 
+            // richTextBox_out_folder
+            // 
+            this.richTextBox_out_folder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox_out_folder.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox_out_folder.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_out_folder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox_out_folder.Location = new System.Drawing.Point(96, 112);
+            this.richTextBox_out_folder.Margin = new System.Windows.Forms.Padding(2);
+            this.richTextBox_out_folder.Name = "richTextBox_out_folder";
+            this.richTextBox_out_folder.ReadOnly = true;
+            this.richTextBox_out_folder.Size = new System.Drawing.Size(1137, 53);
+            this.richTextBox_out_folder.TabIndex = 4;
+            this.richTextBox_out_folder.Text = "NOTE: The Out-folder is the directory where the results of the simulations (outpu" +
+    "t files) will be saved. It depends on the settings in the DATA-file and the type" +
+    " of simulator.";
+            // 
+            // button_data_file
+            // 
+            this.button_data_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_data_file.BackColor = System.Drawing.Color.LightGreen;
+            this.button_data_file.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.button_data_file.Location = new System.Drawing.Point(1239, 15);
+            this.button_data_file.Margin = new System.Windows.Forms.Padding(2);
+            this.button_data_file.Name = "button_data_file";
+            this.button_data_file.Size = new System.Drawing.Size(41, 22);
+            this.button_data_file.TabIndex = 0;
+            this.button_data_file.Text = "...";
+            this.button_data_file.UseVisualStyleBackColor = false;
+            this.button_data_file.Click += new System.EventHandler(this.button_data_file_open_Click);
+            // 
+            // textBox_data_file
+            // 
+            this.textBox_data_file.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_data_file.Font = new System.Drawing.Font("Consolas", 9F);
+            this.textBox_data_file.Location = new System.Drawing.Point(96, 15);
+            this.textBox_data_file.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_data_file.Name = "textBox_data_file";
+            this.textBox_data_file.Size = new System.Drawing.Size(1137, 22);
+            this.textBox_data_file.TabIndex = 1;
+            this.textBox_data_file.TextChanged += new System.EventHandler(this.textBox_data_file_TextChanged);
+            // 
+            // radioButton_ecl
+            // 
+            this.radioButton_ecl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.radioButton_ecl.AutoSize = true;
+            this.radioButton_ecl.Checked = true;
+            this.radioButton_ecl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.radioButton_ecl.Location = new System.Drawing.Point(390, 180);
+            this.radioButton_ecl.Name = "radioButton_ecl";
+            this.radioButton_ecl.Size = new System.Drawing.Size(65, 19);
+            this.radioButton_ecl.TabIndex = 30;
+            this.radioButton_ecl.TabStop = true;
+            this.radioButton_ecl.Text = "Eclipse";
+            this.radioButton_ecl.UseVisualStyleBackColor = true;
+            this.radioButton_ecl.CheckedChanged += new System.EventHandler(this.radioButton_sim_CheckedChanged);
+            // 
+            // numericUpDown_cpu
+            // 
+            this.numericUpDown_cpu.Font = new System.Drawing.Font("Consolas", 9F);
+            this.numericUpDown_cpu.Location = new System.Drawing.Point(96, 222);
+            this.numericUpDown_cpu.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numericUpDown_cpu.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown_cpu.Name = "numericUpDown_cpu";
+            this.numericUpDown_cpu.Size = new System.Drawing.Size(43, 22);
+            this.numericUpDown_cpu.TabIndex = 28;
+            this.numericUpDown_cpu.Value = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.numericUpDown_cpu.ValueChanged += new System.EventHandler(this.numericUpDown_cpu_ValueChanged);
+            // 
+            // comboBox_gpu_list
+            // 
+            this.comboBox_gpu_list.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_gpu_list.FormattingEnabled = true;
+            this.comboBox_gpu_list.Location = new System.Drawing.Point(302, 221);
+            this.comboBox_gpu_list.Name = "comboBox_gpu_list";
+            this.comboBox_gpu_list.Size = new System.Drawing.Size(465, 23);
+            this.comboBox_gpu_list.TabIndex = 34;
+            // 
+            // button_mpi_exe_file
+            // 
+            this.button_mpi_exe_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_mpi_exe_file.Enabled = false;
+            this.button_mpi_exe_file.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.button_mpi_exe_file.Location = new System.Drawing.Point(1239, 287);
+            this.button_mpi_exe_file.Name = "button_mpi_exe_file";
+            this.button_mpi_exe_file.Size = new System.Drawing.Size(41, 22);
+            this.button_mpi_exe_file.TabIndex = 25;
+            this.button_mpi_exe_file.Text = "...";
+            this.button_mpi_exe_file.UseVisualStyleBackColor = true;
+            this.button_mpi_exe_file.Click += new System.EventHandler(this.button_mpi_exe_file_Click);
+            // 
+            // button_sim_exe_file
+            // 
+            this.button_sim_exe_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_sim_exe_file.Enabled = false;
+            this.button_sim_exe_file.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.button_sim_exe_file.Location = new System.Drawing.Point(1239, 254);
+            this.button_sim_exe_file.Name = "button_sim_exe_file";
+            this.button_sim_exe_file.Size = new System.Drawing.Size(41, 22);
+            this.button_sim_exe_file.TabIndex = 25;
+            this.button_sim_exe_file.Text = "...";
+            this.button_sim_exe_file.UseVisualStyleBackColor = true;
+            this.button_sim_exe_file.Click += new System.EventHandler(this.button_tNav_open_Click);
+            // 
+            // button_sim_to_create_rsm
+            // 
+            this.button_sim_to_create_rsm.Location = new System.Drawing.Point(96, 317);
+            this.button_sim_to_create_rsm.Name = "button_sim_to_create_rsm";
+            this.button_sim_to_create_rsm.Size = new System.Drawing.Size(184, 41);
+            this.button_sim_to_create_rsm.TabIndex = 33;
+            this.button_sim_to_create_rsm.Text = "Simulate DATA-file with the required settings";
+            this.button_sim_to_create_rsm.UseVisualStyleBackColor = true;
+            this.button_sim_to_create_rsm.Click += new System.EventHandler(this.button_sim_case_Click);
+            // 
+            // radioButton_tnav
+            // 
+            this.radioButton_tnav.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.radioButton_tnav.AutoSize = true;
+            this.radioButton_tnav.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.radioButton_tnav.Location = new System.Drawing.Point(599, 180);
+            this.radioButton_tnav.Name = "radioButton_tnav";
+            this.radioButton_tnav.Size = new System.Drawing.Size(80, 19);
+            this.radioButton_tnav.TabIndex = 31;
+            this.radioButton_tnav.Text = "tNavigator";
+            this.radioButton_tnav.UseVisualStyleBackColor = true;
+            this.radioButton_tnav.CheckedChanged += new System.EventHandler(this.radioButton_sim_CheckedChanged);
+            // 
+            // textBox_mpi_exe_file
+            // 
+            this.textBox_mpi_exe_file.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_mpi_exe_file.Enabled = false;
+            this.textBox_mpi_exe_file.Font = new System.Drawing.Font("Consolas", 9F);
+            this.textBox_mpi_exe_file.Location = new System.Drawing.Point(96, 287);
+            this.textBox_mpi_exe_file.Name = "textBox_mpi_exe_file";
+            this.textBox_mpi_exe_file.Size = new System.Drawing.Size(1138, 22);
+            this.textBox_mpi_exe_file.TabIndex = 24;
+            this.textBox_mpi_exe_file.TextChanged += new System.EventHandler(this.textBox_mpi_exe_file_TextChanged);
+            // 
+            // textBox_sim_exe_file
+            // 
+            this.textBox_sim_exe_file.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_sim_exe_file.Enabled = false;
+            this.textBox_sim_exe_file.Font = new System.Drawing.Font("Consolas", 9F);
+            this.textBox_sim_exe_file.Location = new System.Drawing.Point(96, 254);
+            this.textBox_sim_exe_file.Name = "textBox_sim_exe_file";
+            this.textBox_sim_exe_file.Size = new System.Drawing.Size(1138, 22);
+            this.textBox_sim_exe_file.TabIndex = 24;
+            this.textBox_sim_exe_file.TextChanged += new System.EventHandler(this.textBox_sim_exe_file_TextChanged);
+            // 
+            // radioButton_tempest
+            // 
+            this.radioButton_tempest.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.radioButton_tempest.AutoSize = true;
+            this.radioButton_tempest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.radioButton_tempest.Location = new System.Drawing.Point(489, 180);
+            this.radioButton_tempest.Name = "radioButton_tempest";
+            this.radioButton_tempest.Size = new System.Drawing.Size(73, 19);
+            this.radioButton_tempest.TabIndex = 31;
+            this.radioButton_tempest.Text = "Tempest";
+            this.radioButton_tempest.UseVisualStyleBackColor = true;
+            this.radioButton_tempest.CheckedChanged += new System.EventHandler(this.radioButton_sim_CheckedChanged);
+            // 
+            // label_mpi_exe_file
+            // 
+            this.label_mpi_exe_file.AutoSize = true;
+            this.label_mpi_exe_file.Location = new System.Drawing.Point(7, 290);
+            this.label_mpi_exe_file.Name = "label_mpi_exe_file";
+            this.label_mpi_exe_file.Size = new System.Drawing.Size(71, 15);
+            this.label_mpi_exe_file.TabIndex = 22;
+            this.label_mpi_exe_file.Text = "MPI exe file";
+            // 
+            // label_sim_exe_file
+            // 
+            this.label_sim_exe_file.AutoSize = true;
+            this.label_sim_exe_file.Location = new System.Drawing.Point(7, 258);
+            this.label_sim_exe_file.Name = "label_sim_exe_file";
+            this.label_sim_exe_file.Size = new System.Drawing.Size(73, 15);
+            this.label_sim_exe_file.TabIndex = 22;
+            this.label_sim_exe_file.Text = "tNav exe file";
+            // 
+            // label_max_cpu
+            // 
+            this.label_max_cpu.AutoSize = true;
+            this.label_max_cpu.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_max_cpu.Location = new System.Drawing.Point(145, 224);
+            this.label_max_cpu.Name = "label_max_cpu";
+            this.label_max_cpu.Size = new System.Drawing.Size(35, 14);
+            this.label_max_cpu.TabIndex = 23;
+            this.label_max_cpu.Text = "/ 40";
+            // 
+            // label_cpu_usage
+            // 
+            this.label_cpu_usage.AutoSize = true;
+            this.label_cpu_usage.Location = new System.Drawing.Point(46, 224);
+            this.label_cpu_usage.Name = "label_cpu_usage";
+            this.label_cpu_usage.Size = new System.Drawing.Size(32, 15);
+            this.label_cpu_usage.TabIndex = 23;
+            this.label_cpu_usage.Text = "CPU";
+            // 
+            // checkBox_use_gpu
+            // 
+            this.checkBox_use_gpu.AutoSize = true;
+            this.checkBox_use_gpu.Checked = true;
+            this.checkBox_use_gpu.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_use_gpu.Location = new System.Drawing.Point(205, 223);
+            this.checkBox_use_gpu.Name = "checkBox_use_gpu";
+            this.checkBox_use_gpu.Size = new System.Drawing.Size(75, 19);
+            this.checkBox_use_gpu.TabIndex = 32;
+            this.checkBox_use_gpu.Text = "use GPU";
+            this.checkBox_use_gpu.UseVisualStyleBackColor = true;
+            this.checkBox_use_gpu.CheckedChanged += new System.EventHandler(this.checkBox_use_gpu_CheckedChanged);
+            // 
+            // richTextBox5
+            // 
+            this.richTextBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox5.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox5.Location = new System.Drawing.Point(2, 20);
+            this.richTextBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.richTextBox5.Name = "richTextBox5";
+            this.richTextBox5.ReadOnly = true;
+            this.richTextBox5.Size = new System.Drawing.Size(1274, 24);
+            this.richTextBox5.TabIndex = 45;
+            this.richTextBox5.Text = "Select the DATA-file and the relevant simulator.";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 15);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Step 1/8 - DATA-file";
+            // 
+            // wizardPage2_grid
+            // 
+            this.wizardPage2_grid.Controls.Add(this.button_split_files);
+            this.wizardPage2_grid.Controls.Add(this.richTextBox1);
+            this.wizardPage2_grid.Controls.Add(this.tableLayoutPanel_dim);
+            this.wizardPage2_grid.Controls.Add(this.radioButton_use_grid);
+            this.wizardPage2_grid.Controls.Add(this.radioButton_use_dim);
+            this.wizardPage2_grid.Controls.Add(this.label5);
+            this.wizardPage2_grid.Controls.Add(this.richTextBox_grid_file);
+            this.wizardPage2_grid.Controls.Add(this.button_grid_file);
+            this.wizardPage2_grid.Controls.Add(this.textBox_grid_file);
+            this.wizardPage2_grid.Name = "wizardPage2_grid";
+            this.wizardPage2_grid.NextPage = this.wizardPage3_perm;
+            this.wizardPage2_grid.Size = new System.Drawing.Size(1292, 736);
+            this.wizardPage2_grid.TabIndex = 1;
+            this.wizardPage2_grid.Text = "wizardPage2";
+            // 
+            // button_split_files
+            // 
+            this.button_split_files.Location = new System.Drawing.Point(25, 452);
+            this.button_split_files.Name = "button_split_files";
+            this.button_split_files.Size = new System.Drawing.Size(190, 36);
+            this.button_split_files.TabIndex = 47;
+            this.button_split_files.Text = "Open File Combiner Form";
+            this.button_split_files.UseVisualStyleBackColor = true;
+            this.button_split_files.Click += new System.EventHandler(this.button_split_files_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox1.Location = new System.Drawing.Point(7, 20);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(1234, 23);
+            this.richTextBox1.TabIndex = 46;
+            this.richTextBox1.Text = "To import/export property arrays and to correctly interpolate/extrapolate multipl" +
+    "iers for permeability, a grid must be defined.";
+            // 
+            // tableLayoutPanel_dim
+            // 
+            this.tableLayoutPanel_dim.ColumnCount = 7;
+            this.tableLayoutPanel_dim.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel_dim.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel_dim.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel_dim.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel_dim.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel_dim.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel_dim.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel_dim.Controls.Add(this.numericUpDown_nx, 0, 2);
+            this.tableLayoutPanel_dim.Controls.Add(this.numericUpDown_ny, 1, 2);
+            this.tableLayoutPanel_dim.Controls.Add(this.label11, 2, 1);
+            this.tableLayoutPanel_dim.Controls.Add(this.numericUpDown_nz, 2, 2);
+            this.tableLayoutPanel_dim.Controls.Add(this.label10, 1, 1);
+            this.tableLayoutPanel_dim.Controls.Add(this.label3, 0, 1);
+            this.tableLayoutPanel_dim.Controls.Add(this.numericUpDown_dx, 3, 2);
+            this.tableLayoutPanel_dim.Controls.Add(this.numericUpDown_dy, 4, 2);
+            this.tableLayoutPanel_dim.Controls.Add(this.numericUpDown_dz, 5, 2);
+            this.tableLayoutPanel_dim.Controls.Add(this.numericUpDown_top_depth, 6, 2);
+            this.tableLayoutPanel_dim.Controls.Add(this.label19, 3, 1);
+            this.tableLayoutPanel_dim.Controls.Add(this.label20, 4, 1);
+            this.tableLayoutPanel_dim.Controls.Add(this.label28, 5, 1);
+            this.tableLayoutPanel_dim.Controls.Add(this.label31, 0, 0);
+            this.tableLayoutPanel_dim.Controls.Add(this.label35, 3, 0);
+            this.tableLayoutPanel_dim.Controls.Add(this.label30, 6, 0);
+            this.tableLayoutPanel_dim.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.tableLayoutPanel_dim.Location = new System.Drawing.Point(25, 85);
+            this.tableLayoutPanel_dim.Name = "tableLayoutPanel_dim";
+            this.tableLayoutPanel_dim.RowCount = 3;
+            this.tableLayoutPanel_dim.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel_dim.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.2093F));
+            this.tableLayoutPanel_dim.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.7907F));
+            this.tableLayoutPanel_dim.Size = new System.Drawing.Size(633, 69);
+            this.tableLayoutPanel_dim.TabIndex = 28;
+            // 
+            // numericUpDown_nx
+            // 
+            this.numericUpDown_nx.Font = new System.Drawing.Font("Consolas", 9F);
+            this.numericUpDown_nx.Location = new System.Drawing.Point(3, 41);
+            this.numericUpDown_nx.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numericUpDown_nx.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown_nx.Name = "numericUpDown_nx";
+            this.numericUpDown_nx.Size = new System.Drawing.Size(84, 22);
+            this.numericUpDown_nx.TabIndex = 25;
+            this.numericUpDown_nx.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown_nx.ValueChanged += new System.EventHandler(this.numericUpDown_dx_ValueChanged);
+            // 
+            // numericUpDown_ny
+            // 
+            this.numericUpDown_ny.Font = new System.Drawing.Font("Consolas", 9F);
+            this.numericUpDown_ny.Location = new System.Drawing.Point(93, 41);
+            this.numericUpDown_ny.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ny.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown_ny.Name = "numericUpDown_ny";
+            this.numericUpDown_ny.Size = new System.Drawing.Size(84, 22);
+            this.numericUpDown_ny.TabIndex = 26;
+            this.numericUpDown_ny.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown_ny.ValueChanged += new System.EventHandler(this.numericUpDown_dy_ValueChanged);
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(183, 21);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(84, 15);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "NZ";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // numericUpDown_nz
+            // 
+            this.numericUpDown_nz.Font = new System.Drawing.Font("Consolas", 9F);
+            this.numericUpDown_nz.Location = new System.Drawing.Point(183, 41);
+            this.numericUpDown_nz.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numericUpDown_nz.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown_nz.Name = "numericUpDown_nz";
+            this.numericUpDown_nz.Size = new System.Drawing.Size(84, 22);
+            this.numericUpDown_nz.TabIndex = 27;
+            this.numericUpDown_nz.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown_nz.ValueChanged += new System.EventHandler(this.numericUpDown_dz_ValueChanged);
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(93, 21);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(84, 15);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "NY";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 15);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "NX";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // numericUpDown_dx
+            // 
+            this.numericUpDown_dx.DecimalPlaces = 1;
+            this.numericUpDown_dx.Font = new System.Drawing.Font("Consolas", 9F);
+            this.numericUpDown_dx.Location = new System.Drawing.Point(273, 41);
+            this.numericUpDown_dx.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numericUpDown_dx.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown_dx.Name = "numericUpDown_dx";
+            this.numericUpDown_dx.Size = new System.Drawing.Size(84, 22);
+            this.numericUpDown_dx.TabIndex = 28;
+            this.numericUpDown_dx.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.numericUpDown_dx.ValueChanged += new System.EventHandler(this.numericUpDown_dx_ValueChanged);
+            // 
+            // numericUpDown_dy
+            // 
+            this.numericUpDown_dy.DecimalPlaces = 1;
+            this.numericUpDown_dy.Font = new System.Drawing.Font("Consolas", 9F);
+            this.numericUpDown_dy.Location = new System.Drawing.Point(363, 41);
+            this.numericUpDown_dy.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numericUpDown_dy.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown_dy.Name = "numericUpDown_dy";
+            this.numericUpDown_dy.Size = new System.Drawing.Size(84, 22);
+            this.numericUpDown_dy.TabIndex = 29;
+            this.numericUpDown_dy.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.numericUpDown_dy.ValueChanged += new System.EventHandler(this.numericUpDown_dx_ValueChanged);
+            // 
+            // numericUpDown_dz
+            // 
+            this.numericUpDown_dz.DecimalPlaces = 1;
+            this.numericUpDown_dz.Font = new System.Drawing.Font("Consolas", 9F);
+            this.numericUpDown_dz.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDown_dz.Location = new System.Drawing.Point(453, 41);
+            this.numericUpDown_dz.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.numericUpDown_dz.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDown_dz.Name = "numericUpDown_dz";
+            this.numericUpDown_dz.Size = new System.Drawing.Size(84, 22);
+            this.numericUpDown_dz.TabIndex = 30;
+            this.numericUpDown_dz.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown_dz.ValueChanged += new System.EventHandler(this.numericUpDown_dx_ValueChanged);
+            // 
+            // numericUpDown_top_depth
+            // 
+            this.numericUpDown_top_depth.DecimalPlaces = 1;
+            this.numericUpDown_top_depth.Font = new System.Drawing.Font("Consolas", 9F);
+            this.numericUpDown_top_depth.Location = new System.Drawing.Point(543, 41);
+            this.numericUpDown_top_depth.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numericUpDown_top_depth.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown_top_depth.Name = "numericUpDown_top_depth";
+            this.numericUpDown_top_depth.Size = new System.Drawing.Size(84, 22);
+            this.numericUpDown_top_depth.TabIndex = 31;
+            this.numericUpDown_top_depth.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDown_top_depth.ValueChanged += new System.EventHandler(this.numericUpDown_dx_ValueChanged);
+            // 
+            // label19
+            // 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(273, 21);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(84, 15);
+            this.label19.TabIndex = 27;
+            this.label19.Text = "DX";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label20
+            // 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(363, 21);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(84, 15);
+            this.label20.TabIndex = 27;
+            this.label20.Text = "DY";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label28
+            // 
+            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(453, 21);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(84, 15);
+            this.label28.TabIndex = 27;
+            this.label28.Text = "DZ";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label31
+            // 
+            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label31.AutoSize = true;
+            this.tableLayoutPanel_dim.SetColumnSpan(this.label31, 3);
+            this.label31.Location = new System.Drawing.Point(3, 2);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(264, 15);
+            this.label31.TabIndex = 27;
+            this.label31.Text = "Grid size";
+            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label35
+            // 
+            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label35.AutoSize = true;
+            this.tableLayoutPanel_dim.SetColumnSpan(this.label35, 3);
+            this.label35.Location = new System.Drawing.Point(273, 2);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(264, 15);
+            this.label35.TabIndex = 27;
+            this.label35.Text = "Cell size";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label30
+            // 
+            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(543, 11);
+            this.label30.Name = "label30";
+            this.tableLayoutPanel_dim.SetRowSpan(this.label30, 2);
+            this.label30.Size = new System.Drawing.Size(87, 15);
+            this.label30.TabIndex = 27;
+            this.label30.Text = "Top depth";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // radioButton_use_grid
+            // 
+            this.radioButton_use_grid.AutoSize = true;
+            this.radioButton_use_grid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.radioButton_use_grid.Location = new System.Drawing.Point(5, 173);
+            this.radioButton_use_grid.Name = "radioButton_use_grid";
+            this.radioButton_use_grid.Size = new System.Drawing.Size(281, 19);
+            this.radioButton_use_grid.TabIndex = 26;
+            this.radioButton_use_grid.TabStop = true;
+            this.radioButton_use_grid.Text = "GRID-file (recommended for an unregular grid)";
+            this.radioButton_use_grid.UseVisualStyleBackColor = true;
+            this.radioButton_use_grid.CheckedChanged += new System.EventHandler(this.radioButton_use_grid_CheckedChanged);
+            // 
+            // radioButton_use_dim
+            // 
+            this.radioButton_use_dim.AutoSize = true;
+            this.radioButton_use_dim.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.radioButton_use_dim.Location = new System.Drawing.Point(5, 60);
+            this.radioButton_use_dim.Name = "radioButton_use_dim";
+            this.radioButton_use_dim.Size = new System.Drawing.Size(258, 19);
+            this.radioButton_use_dim.TabIndex = 26;
+            this.radioButton_use_dim.TabStop = true;
+            this.radioButton_use_dim.Text = "Use simple grid (suitable for a regular grid)";
+            this.radioButton_use_dim.UseVisualStyleBackColor = true;
+            this.radioButton_use_dim.CheckedChanged += new System.EventHandler(this.radioButton_use_dim_CheckedChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(92, 15);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Step 2/8 - GRID";
+            // 
+            // richTextBox_grid_file
+            // 
+            this.richTextBox_grid_file.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox_grid_file.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox_grid_file.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_grid_file.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox_grid_file.Location = new System.Drawing.Point(25, 227);
+            this.richTextBox_grid_file.Margin = new System.Windows.Forms.Padding(2);
+            this.richTextBox_grid_file.Name = "richTextBox_grid_file";
+            this.richTextBox_grid_file.ReadOnly = true;
+            this.richTextBox_grid_file.Size = new System.Drawing.Size(1216, 220);
+            this.richTextBox_grid_file.TabIndex = 23;
+            this.richTextBox_grid_file.Text = resources.GetString("richTextBox_grid_file.Text");
+            // 
+            // button_grid_file
+            // 
+            this.button_grid_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_grid_file.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.button_grid_file.Location = new System.Drawing.Point(1246, 198);
+            this.button_grid_file.Margin = new System.Windows.Forms.Padding(2);
+            this.button_grid_file.Name = "button_grid_file";
+            this.button_grid_file.Size = new System.Drawing.Size(42, 22);
+            this.button_grid_file.TabIndex = 20;
+            this.button_grid_file.Text = "...";
+            this.button_grid_file.UseVisualStyleBackColor = true;
+            this.button_grid_file.Click += new System.EventHandler(this.button_grid_file_Click);
+            // 
+            // textBox_grid_file
+            // 
+            this.textBox_grid_file.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_grid_file.Font = new System.Drawing.Font("Consolas", 9F);
+            this.textBox_grid_file.Location = new System.Drawing.Point(25, 198);
+            this.textBox_grid_file.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_grid_file.Name = "textBox_grid_file";
+            this.textBox_grid_file.Size = new System.Drawing.Size(1216, 22);
+            this.textBox_grid_file.TabIndex = 21;
+            this.textBox_grid_file.TextChanged += new System.EventHandler(this.textBox_grid_file_TextChanged);
+            // 
             // wizardPage_dev
             // 
             this.wizardPage_dev.Name = "wizardPage_dev";
@@ -5138,31 +5229,6 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.WizardForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.wizardPageContainer)).EndInit();
             this.wizardPageContainer.ResumeLayout(false);
-            this.wizardPage8_run.ResumeLayout(false);
-            this.wizardPage8_run.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.tableLayoutPanel_run_settings.ResumeLayout(false);
-            this.tableLayoutPanel_run_settings.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_last_iter)).EndInit();
-            this.wizardPage0_intro.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.wizardPage1_data.ResumeLayout(false);
-            this.wizardPage1_data.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_cpu)).EndInit();
-            this.wizardPage2_grid.ResumeLayout(false);
-            this.wizardPage2_grid.PerformLayout();
-            this.tableLayoutPanel_dim.ResumeLayout(false);
-            this.tableLayoutPanel_dim.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nx)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ny)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nz)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_dx)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_dy)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_dz)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_top_depth)).EndInit();
             this.wizardPage3_perm.ResumeLayout(false);
             this.wizardPage3_perm.PerformLayout();
             this.tabControl_perm_min_max.ResumeLayout(false);
@@ -5174,6 +5240,9 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_perm_max_value)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.groupBox_perm_inter_reg.ResumeLayout(false);
             this.tableLayoutPanel_regions.ResumeLayout(false);
             this.tableLayoutPanel_regions.PerformLayout();
@@ -5181,20 +5250,6 @@
             this.tableLayoutPanel_perm_file.PerformLayout();
             this.groupBox_perm_inter_type.ResumeLayout(false);
             this.groupBox_perm_inter_type.PerformLayout();
-            this.wizardPage5_corey.ResumeLayout(false);
-            this.wizardPage5_corey.PerformLayout();
-            this.groupBox_relperm_tables.ResumeLayout(false);
-            this.tableLayoutPanel_corey_min_max.ResumeLayout(false);
-            this.tableLayoutPanel_corey_min_max.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_now_min)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_now_max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nw_min)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nw_max)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.groupBox_satnum.ResumeLayout(false);
-            this.tableLayoutPanel7.ResumeLayout(false);
-            this.tableLayoutPanel7.PerformLayout();
             this.wizardPage4_kr.ResumeLayout(false);
             this.wizardPage4_kr.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -5227,6 +5282,20 @@
             this.tableLayoutPanel5.PerformLayout();
             this.groupBox_kr_inter_type.ResumeLayout(false);
             this.groupBox_kr_inter_type.PerformLayout();
+            this.wizardPage5_corey.ResumeLayout(false);
+            this.wizardPage5_corey.PerformLayout();
+            this.groupBox_relperm_tables.ResumeLayout(false);
+            this.tableLayoutPanel_corey_min_max.ResumeLayout(false);
+            this.tableLayoutPanel_corey_min_max.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_now_min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_now_max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nw_min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nw_max)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.groupBox_satnum.ResumeLayout(false);
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel7.PerformLayout();
             this.wizardPage6_aquifer.ResumeLayout(false);
             this.wizardPage6_aquifer.PerformLayout();
             this.tabControl_multpv_min_max.ResumeLayout(false);
@@ -5270,6 +5339,31 @@
             this.groupBox_wellnames.ResumeLayout(false);
             this.groupBox_wellnames.PerformLayout();
             this.groupBox6.ResumeLayout(false);
+            this.wizardPage8_run.ResumeLayout(false);
+            this.wizardPage8_run.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.tableLayoutPanel_run_settings.ResumeLayout(false);
+            this.tableLayoutPanel_run_settings.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_last_iter)).EndInit();
+            this.wizardPage0_intro.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.wizardPage1_data.ResumeLayout(false);
+            this.wizardPage1_data.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_cpu)).EndInit();
+            this.wizardPage2_grid.ResumeLayout(false);
+            this.wizardPage2_grid.PerformLayout();
+            this.tableLayoutPanel_dim.ResumeLayout(false);
+            this.tableLayoutPanel_dim.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nx)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ny)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_nz)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_dx)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_dy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_dz)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_top_depth)).EndInit();
             this.wizardPage_wbhph_file.ResumeLayout(false);
             this.wizardPage_wbhph_file.PerformLayout();
             this.wizardPage_results_folder.ResumeLayout(false);
@@ -5612,5 +5706,11 @@
         private System.Windows.Forms.NumericUpDown numericUpDown_nw_max;
         private System.Windows.Forms.ListBox listBox_corey_table;
         private System.Windows.Forms.CheckBox checkBox_results_sub_folder;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TextBox textBox_fdm;
+        private System.Windows.Forms.Button button_fdm;
+        private System.Windows.Forms.CheckBox checkBox_fdm;
     }
 }
