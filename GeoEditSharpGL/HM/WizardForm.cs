@@ -3362,6 +3362,7 @@ namespace Pexel.HM
             this.richTextBox_perm_file_notes.Enabled = matching;
             this.groupBox_perm_inter_type.Enabled = matching;
             this.groupBox_perm_inter_reg.Enabled = matching;
+            this.groupBox_fdm.Enabled = matching;
         }
 
         void RelPermMatchingInterface(bool matching)

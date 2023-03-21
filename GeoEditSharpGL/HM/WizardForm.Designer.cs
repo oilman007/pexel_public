@@ -55,7 +55,7 @@
             this.button_perm_max_file = new System.Windows.Forms.Button();
             this.checkBox_perm_matching = new System.Windows.Forms.CheckBox();
             this.richTextBox_perm_intro = new System.Windows.Forms.RichTextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox_fdm = new System.Windows.Forms.GroupBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox_fdm = new System.Windows.Forms.TextBox();
@@ -377,7 +377,7 @@
             this.tabPage2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_perm_max_value)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.groupBox_fdm.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.groupBox_perm_inter_reg.SuspendLayout();
             this.tableLayoutPanel_regions.SuspendLayout();
@@ -515,6 +515,7 @@
             this.wizardPageContainer.BackButton = this.button_back;
             this.wizardPageContainer.CancelButton = this.button_cancel;
             this.wizardPageContainer.Controls.Add(this.wizardPage3_perm);
+            this.wizardPageContainer.Controls.Add(this.wizardPage1_data);
             this.wizardPageContainer.Controls.Add(this.wizardPage0_intro);
             this.wizardPageContainer.Controls.Add(this.wizardPage5_corey);
             this.wizardPageContainer.Controls.Add(this.wizardPage4_kr);
@@ -525,7 +526,6 @@
             this.wizardPageContainer.Controls.Add(this.wizardPage7_wellnames);
             this.wizardPageContainer.Controls.Add(this.wizardPage6_aquifer);
             this.wizardPageContainer.Controls.Add(this.wizardPage2_grid);
-            this.wizardPageContainer.Controls.Add(this.wizardPage1_data);
             this.wizardPageContainer.FinishButtonText = "&Run";
             this.wizardPageContainer.Location = new System.Drawing.Point(10, 12);
             this.wizardPageContainer.Margin = new System.Windows.Forms.Padding(2);
@@ -552,7 +552,7 @@
             this.wizardPage3_perm.Controls.Add(this.tabControl_perm_min_max);
             this.wizardPage3_perm.Controls.Add(this.checkBox_perm_matching);
             this.wizardPage3_perm.Controls.Add(this.richTextBox_perm_intro);
-            this.wizardPage3_perm.Controls.Add(this.groupBox2);
+            this.wizardPage3_perm.Controls.Add(this.groupBox_fdm);
             this.wizardPage3_perm.Controls.Add(this.groupBox_perm_inter_reg);
             this.wizardPage3_perm.Controls.Add(this.tableLayoutPanel_perm_file);
             this.wizardPage3_perm.Controls.Add(this.groupBox_perm_inter_type);
@@ -581,10 +581,10 @@
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage1.Controls.Add(this.richTextBox_perm_min_note);
             this.tabPage1.Controls.Add(this.tableLayoutPanel6);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1267, 110);
+            this.tabPage1.Size = new System.Drawing.Size(1267, 107);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Permeability min";
             // 
@@ -632,7 +632,7 @@
             this.radioButton_perm_min_value.AutoSize = true;
             this.radioButton_perm_min_value.Location = new System.Drawing.Point(3, 3);
             this.radioButton_perm_min_value.Name = "radioButton_perm_min_value";
-            this.radioButton_perm_min_value.Size = new System.Drawing.Size(56, 19);
+            this.radioButton_perm_min_value.Size = new System.Drawing.Size(65, 22);
             this.radioButton_perm_min_value.TabIndex = 31;
             this.radioButton_perm_min_value.TabStop = true;
             this.radioButton_perm_min_value.Text = "Value";
@@ -644,7 +644,7 @@
             this.radioButton_perm_min_file.AutoSize = true;
             this.radioButton_perm_min_file.Location = new System.Drawing.Point(3, 36);
             this.radioButton_perm_min_file.Name = "radioButton_perm_min_file";
-            this.radioButton_perm_min_file.Size = new System.Drawing.Size(52, 19);
+            this.radioButton_perm_min_file.Size = new System.Drawing.Size(63, 22);
             this.radioButton_perm_min_file.TabIndex = 31;
             this.radioButton_perm_min_file.TabStop = true;
             this.radioButton_perm_min_file.Text = "Array";
@@ -662,7 +662,7 @@
             0,
             0});
             this.numericUpDown_perm_min_value.Name = "numericUpDown_perm_min_value";
-            this.numericUpDown_perm_min_value.Size = new System.Drawing.Size(192, 22);
+            this.numericUpDown_perm_min_value.Size = new System.Drawing.Size(192, 25);
             this.numericUpDown_perm_min_value.TabIndex = 34;
             this.numericUpDown_perm_min_value.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDown_perm_min_value.ValueChanged += new System.EventHandler(this.numericUpDown_perm_min_value_ValueChanged);
@@ -672,20 +672,20 @@
             this.textBox_perm_min_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_perm_min_title.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_perm_min_title.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_perm_min_title.Location = new System.Drawing.Point(144, 38);
+            this.textBox_perm_min_title.Location = new System.Drawing.Point(144, 37);
             this.textBox_perm_min_title.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_perm_min_title.Name = "textBox_perm_min_title";
-            this.textBox_perm_min_title.Size = new System.Drawing.Size(196, 22);
+            this.textBox_perm_min_title.Size = new System.Drawing.Size(196, 25);
             this.textBox_perm_min_title.TabIndex = 33;
             // 
             // textBox_perm_min_file
             // 
             this.textBox_perm_min_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_perm_min_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_perm_min_file.Location = new System.Drawing.Point(344, 38);
+            this.textBox_perm_min_file.Location = new System.Drawing.Point(344, 37);
             this.textBox_perm_min_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_perm_min_file.Name = "textBox_perm_min_file";
-            this.textBox_perm_min_file.Size = new System.Drawing.Size(862, 22);
+            this.textBox_perm_min_file.Size = new System.Drawing.Size(862, 25);
             this.textBox_perm_min_file.TabIndex = 11;
             this.textBox_perm_min_file.TextChanged += new System.EventHandler(this.textBox_permMinArray_TextChanged);
             // 
@@ -707,10 +707,10 @@
             this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage2.Controls.Add(this.richTextBox_perm_max_note);
             this.tabPage2.Controls.Add(this.tableLayoutPanel4);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1267, 110);
+            this.tabPage2.Size = new System.Drawing.Size(1267, 107);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Permeability max";
             // 
@@ -758,7 +758,7 @@
             this.radioButton_perm_max_file.AutoSize = true;
             this.radioButton_perm_max_file.Location = new System.Drawing.Point(3, 36);
             this.radioButton_perm_max_file.Name = "radioButton_perm_max_file";
-            this.radioButton_perm_max_file.Size = new System.Drawing.Size(52, 19);
+            this.radioButton_perm_max_file.Size = new System.Drawing.Size(63, 22);
             this.radioButton_perm_max_file.TabIndex = 31;
             this.radioButton_perm_max_file.TabStop = true;
             this.radioButton_perm_max_file.Text = "Array";
@@ -770,7 +770,7 @@
             this.radioButton_perm_max_value.AutoSize = true;
             this.radioButton_perm_max_value.Location = new System.Drawing.Point(3, 3);
             this.radioButton_perm_max_value.Name = "radioButton_perm_max_value";
-            this.radioButton_perm_max_value.Size = new System.Drawing.Size(56, 19);
+            this.radioButton_perm_max_value.Size = new System.Drawing.Size(65, 22);
             this.radioButton_perm_max_value.TabIndex = 31;
             this.radioButton_perm_max_value.TabStop = true;
             this.radioButton_perm_max_value.Text = "Value";
@@ -788,7 +788,7 @@
             0,
             0});
             this.numericUpDown_perm_max_value.Name = "numericUpDown_perm_max_value";
-            this.numericUpDown_perm_max_value.Size = new System.Drawing.Size(192, 22);
+            this.numericUpDown_perm_max_value.Size = new System.Drawing.Size(192, 25);
             this.numericUpDown_perm_max_value.TabIndex = 34;
             this.numericUpDown_perm_max_value.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDown_perm_max_value.ValueChanged += new System.EventHandler(this.numericUpDown_perm_max_value_ValueChanged);
@@ -798,20 +798,20 @@
             this.textBox_perm_max_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_perm_max_title.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_perm_max_title.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_perm_max_title.Location = new System.Drawing.Point(144, 38);
+            this.textBox_perm_max_title.Location = new System.Drawing.Point(144, 37);
             this.textBox_perm_max_title.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_perm_max_title.Name = "textBox_perm_max_title";
-            this.textBox_perm_max_title.Size = new System.Drawing.Size(196, 22);
+            this.textBox_perm_max_title.Size = new System.Drawing.Size(196, 25);
             this.textBox_perm_max_title.TabIndex = 33;
             // 
             // textBox_perm_max_file
             // 
             this.textBox_perm_max_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_perm_max_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_perm_max_file.Location = new System.Drawing.Point(344, 38);
+            this.textBox_perm_max_file.Location = new System.Drawing.Point(344, 37);
             this.textBox_perm_max_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_perm_max_file.Name = "textBox_perm_max_file";
-            this.textBox_perm_max_file.Size = new System.Drawing.Size(862, 22);
+            this.textBox_perm_max_file.Size = new System.Drawing.Size(862, 25);
             this.textBox_perm_max_file.TabIndex = 11;
             this.textBox_perm_max_file.TextChanged += new System.EventHandler(this.textBox_permMaxArray_TextChanged);
             // 
@@ -833,7 +833,7 @@
             this.checkBox_perm_matching.AutoSize = true;
             this.checkBox_perm_matching.Location = new System.Drawing.Point(5, 21);
             this.checkBox_perm_matching.Name = "checkBox_perm_matching";
-            this.checkBox_perm_matching.Size = new System.Drawing.Size(148, 19);
+            this.checkBox_perm_matching.Size = new System.Drawing.Size(174, 22);
             this.checkBox_perm_matching.TabIndex = 48;
             this.checkBox_perm_matching.Text = "Permeability matching";
             this.checkBox_perm_matching.UseVisualStyleBackColor = true;
@@ -854,18 +854,18 @@
             this.richTextBox_perm_intro.TabIndex = 47;
             this.richTextBox_perm_intro.Text = resources.GetString("richTextBox_perm_intro.Text");
             // 
-            // groupBox2
+            // groupBox_fdm
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox_fdm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.richTextBox2);
-            this.groupBox2.Controls.Add(this.tableLayoutPanel3);
-            this.groupBox2.Location = new System.Drawing.Point(5, 593);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1275, 90);
-            this.groupBox2.TabIndex = 41;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Field Direction Model";
+            this.groupBox_fdm.Controls.Add(this.richTextBox2);
+            this.groupBox_fdm.Controls.Add(this.tableLayoutPanel3);
+            this.groupBox_fdm.Location = new System.Drawing.Point(5, 593);
+            this.groupBox_fdm.Name = "groupBox_fdm";
+            this.groupBox_fdm.Size = new System.Drawing.Size(1275, 90);
+            this.groupBox_fdm.TabIndex = 41;
+            this.groupBox_fdm.TabStop = false;
+            this.groupBox_fdm.Text = "Flow Direction Model";
             // 
             // richTextBox2
             // 
@@ -906,10 +906,10 @@
             // 
             this.textBox_fdm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_fdm.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_fdm.Location = new System.Drawing.Point(146, 6);
+            this.textBox_fdm.Location = new System.Drawing.Point(146, 4);
             this.textBox_fdm.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_fdm.Name = "textBox_fdm";
-            this.textBox_fdm.Size = new System.Drawing.Size(1072, 22);
+            this.textBox_fdm.Size = new System.Drawing.Size(1072, 25);
             this.textBox_fdm.TabIndex = 33;
             // 
             // button_fdm
@@ -930,7 +930,7 @@
             this.checkBox_fdm.AutoSize = true;
             this.checkBox_fdm.Location = new System.Drawing.Point(3, 3);
             this.checkBox_fdm.Name = "checkBox_fdm";
-            this.checkBox_fdm.Size = new System.Drawing.Size(105, 19);
+            this.checkBox_fdm.Size = new System.Drawing.Size(126, 22);
             this.checkBox_fdm.TabIndex = 34;
             this.checkBox_fdm.Text = "Use FD Model";
             this.checkBox_fdm.UseVisualStyleBackColor = true;
@@ -992,10 +992,10 @@
             this.textBox_perm_regions_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_perm_regions_title.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_perm_regions_title.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_perm_regions_title.Location = new System.Drawing.Point(146, 38);
+            this.textBox_perm_regions_title.Location = new System.Drawing.Point(146, 37);
             this.textBox_perm_regions_title.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_perm_regions_title.Name = "textBox_perm_regions_title";
-            this.textBox_perm_regions_title.Size = new System.Drawing.Size(196, 22);
+            this.textBox_perm_regions_title.Size = new System.Drawing.Size(196, 25);
             this.textBox_perm_regions_title.TabIndex = 33;
             this.textBox_perm_regions_title.Text = "REGIONS";
             // 
@@ -1003,10 +1003,10 @@
             // 
             this.textBox_perm_regions_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_perm_regions_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_perm_regions_file.Location = new System.Drawing.Point(346, 38);
+            this.textBox_perm_regions_file.Location = new System.Drawing.Point(346, 37);
             this.textBox_perm_regions_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_perm_regions_file.Name = "textBox_perm_regions_file";
-            this.textBox_perm_regions_file.Size = new System.Drawing.Size(872, 22);
+            this.textBox_perm_regions_file.Size = new System.Drawing.Size(872, 25);
             this.textBox_perm_regions_file.TabIndex = 33;
             // 
             // radioButton_use_perm_single_region
@@ -1016,7 +1016,7 @@
             this.radioButton_use_perm_single_region.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.radioButton_use_perm_single_region.Location = new System.Drawing.Point(3, 3);
             this.radioButton_use_perm_single_region.Name = "radioButton_use_perm_single_region";
-            this.radioButton_use_perm_single_region.Size = new System.Drawing.Size(192, 19);
+            this.radioButton_use_perm_single_region.Size = new System.Drawing.Size(229, 22);
             this.radioButton_use_perm_single_region.TabIndex = 39;
             this.radioButton_use_perm_single_region.TabStop = true;
             this.radioButton_use_perm_single_region.Text = "Use a single region for all cells";
@@ -1029,7 +1029,7 @@
             this.radioButton_use_perm_regions_array.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.radioButton_use_perm_regions_array.Location = new System.Drawing.Point(3, 36);
             this.radioButton_use_perm_regions_array.Name = "radioButton_use_perm_regions_array";
-            this.radioButton_use_perm_regions_array.Size = new System.Drawing.Size(94, 19);
+            this.radioButton_use_perm_regions_array.Size = new System.Drawing.Size(113, 22);
             this.radioButton_use_perm_regions_array.TabIndex = 39;
             this.radioButton_use_perm_regions_array.TabStop = true;
             this.radioButton_use_perm_regions_array.Text = "Use an array";
@@ -1075,10 +1075,10 @@
             this.textBox_perm_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_perm_title.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_perm_title.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_perm_title.Location = new System.Drawing.Point(2, 33);
+            this.textBox_perm_title.Location = new System.Drawing.Point(2, 32);
             this.textBox_perm_title.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_perm_title.Name = "textBox_perm_title";
-            this.textBox_perm_title.Size = new System.Drawing.Size(167, 22);
+            this.textBox_perm_title.Size = new System.Drawing.Size(167, 25);
             this.textBox_perm_title.TabIndex = 33;
             // 
             // label29
@@ -1086,10 +1086,10 @@
             this.label29.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label29.Location = new System.Drawing.Point(173, 6);
+            this.label29.Location = new System.Drawing.Point(173, 5);
             this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(27, 15);
+            this.label29.Size = new System.Drawing.Size(31, 18);
             this.label29.TabIndex = 32;
             this.label29.Text = "File";
             // 
@@ -1098,10 +1098,10 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label4.Location = new System.Drawing.Point(2, 6);
+            this.label4.Location = new System.Drawing.Point(2, 5);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 15);
+            this.label4.Size = new System.Drawing.Size(35, 18);
             this.label4.TabIndex = 10;
             this.label4.Text = "Title";
             // 
@@ -1109,10 +1109,10 @@
             // 
             this.textBox_perm_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_perm_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_perm_file.Location = new System.Drawing.Point(173, 33);
+            this.textBox_perm_file.Location = new System.Drawing.Point(173, 32);
             this.textBox_perm_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_perm_file.Name = "textBox_perm_file";
-            this.textBox_perm_file.Size = new System.Drawing.Size(1053, 22);
+            this.textBox_perm_file.Size = new System.Drawing.Size(1053, 25);
             this.textBox_perm_file.TabIndex = 11;
             // 
             // button_perm_file
@@ -1146,7 +1146,7 @@
             this.radioButton_perm_3D.AutoSize = true;
             this.radioButton_perm_3D.Location = new System.Drawing.Point(222, 22);
             this.radioButton_perm_3D.Name = "radioButton_perm_3D";
-            this.radioButton_perm_3D.Size = new System.Drawing.Size(41, 19);
+            this.radioButton_perm_3D.Size = new System.Drawing.Size(48, 22);
             this.radioButton_perm_3D.TabIndex = 0;
             this.radioButton_perm_3D.Text = "3D";
             this.radioButton_perm_3D.UseVisualStyleBackColor = true;
@@ -1157,7 +1157,7 @@
             this.radioButton_perm_2D.Checked = true;
             this.radioButton_perm_2D.Location = new System.Drawing.Point(7, 22);
             this.radioButton_perm_2D.Name = "radioButton_perm_2D";
-            this.radioButton_perm_2D.Size = new System.Drawing.Size(138, 19);
+            this.radioButton_perm_2D.Size = new System.Drawing.Size(165, 22);
             this.radioButton_perm_2D.TabIndex = 0;
             this.radioButton_perm_2D.TabStop = true;
             this.radioButton_perm_2D.Text = "2D (along the layers)";
@@ -1169,7 +1169,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 15);
+            this.label6.Size = new System.Drawing.Size(155, 18);
             this.label6.TabIndex = 30;
             this.label6.Text = "Step 3/8 - Permeability";
             // 
@@ -1221,10 +1221,10 @@
             this.Krorw.Controls.Add(this.groupBox_krorw_max);
             this.Krorw.Controls.Add(this.groupBox_krorw_min);
             this.Krorw.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.Krorw.Location = new System.Drawing.Point(4, 24);
+            this.Krorw.Location = new System.Drawing.Point(4, 27);
             this.Krorw.Name = "Krorw";
             this.Krorw.Padding = new System.Windows.Forms.Padding(3);
-            this.Krorw.Size = new System.Drawing.Size(1270, 443);
+            this.Krorw.Size = new System.Drawing.Size(1270, 440);
             this.Krorw.TabIndex = 0;
             this.Krorw.Text = "Krorw   ";
             // 
@@ -1233,7 +1233,7 @@
             this.checkBox_krorw_matching.AutoSize = true;
             this.checkBox_krorw_matching.Location = new System.Drawing.Point(3, 6);
             this.checkBox_krorw_matching.Name = "checkBox_krorw_matching";
-            this.checkBox_krorw_matching.Size = new System.Drawing.Size(112, 19);
+            this.checkBox_krorw_matching.Size = new System.Drawing.Size(134, 22);
             this.checkBox_krorw_matching.TabIndex = 55;
             this.checkBox_krorw_matching.Text = "Krorw matching";
             this.checkBox_krorw_matching.UseVisualStyleBackColor = true;
@@ -1265,10 +1265,10 @@
             this.textBox_krorw_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_krorw_title.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_krorw_title.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_krorw_title.Location = new System.Drawing.Point(2, 33);
+            this.textBox_krorw_title.Location = new System.Drawing.Point(2, 32);
             this.textBox_krorw_title.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_krorw_title.Name = "textBox_krorw_title";
-            this.textBox_krorw_title.Size = new System.Drawing.Size(165, 22);
+            this.textBox_krorw_title.Size = new System.Drawing.Size(165, 25);
             this.textBox_krorw_title.TabIndex = 33;
             // 
             // label41
@@ -1276,10 +1276,10 @@
             this.label41.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label41.Location = new System.Drawing.Point(171, 6);
+            this.label41.Location = new System.Drawing.Point(171, 5);
             this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(27, 15);
+            this.label41.Size = new System.Drawing.Size(31, 18);
             this.label41.TabIndex = 32;
             this.label41.Text = "File";
             // 
@@ -1288,10 +1288,10 @@
             this.label46.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label46.Location = new System.Drawing.Point(2, 6);
+            this.label46.Location = new System.Drawing.Point(2, 5);
             this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(30, 15);
+            this.label46.Size = new System.Drawing.Size(35, 18);
             this.label46.TabIndex = 10;
             this.label46.Text = "Title";
             // 
@@ -1299,10 +1299,10 @@
             // 
             this.textBox_krorw_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_krorw_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_krorw_file.Location = new System.Drawing.Point(171, 33);
+            this.textBox_krorw_file.Location = new System.Drawing.Point(171, 32);
             this.textBox_krorw_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_krorw_file.Name = "textBox_krorw_file";
-            this.textBox_krorw_file.Size = new System.Drawing.Size(1034, 22);
+            this.textBox_krorw_file.Size = new System.Drawing.Size(1034, 25);
             this.textBox_krorw_file.TabIndex = 11;
             // 
             // button_krorw_file
@@ -1391,7 +1391,7 @@
             this.radioButton_krorw_max_array.AutoSize = true;
             this.radioButton_krorw_max_array.Location = new System.Drawing.Point(3, 36);
             this.radioButton_krorw_max_array.Name = "radioButton_krorw_max_array";
-            this.radioButton_krorw_max_array.Size = new System.Drawing.Size(52, 19);
+            this.radioButton_krorw_max_array.Size = new System.Drawing.Size(63, 22);
             this.radioButton_krorw_max_array.TabIndex = 31;
             this.radioButton_krorw_max_array.TabStop = true;
             this.radioButton_krorw_max_array.Text = "Array";
@@ -1402,7 +1402,7 @@
             this.radioButton_krorw_max_value.AutoSize = true;
             this.radioButton_krorw_max_value.Location = new System.Drawing.Point(3, 3);
             this.radioButton_krorw_max_value.Name = "radioButton_krorw_max_value";
-            this.radioButton_krorw_max_value.Size = new System.Drawing.Size(56, 19);
+            this.radioButton_krorw_max_value.Size = new System.Drawing.Size(65, 22);
             this.radioButton_krorw_max_value.TabIndex = 31;
             this.radioButton_krorw_max_value.TabStop = true;
             this.radioButton_krorw_max_value.Text = "Value";
@@ -1425,7 +1425,7 @@
             0,
             0});
             this.numericUpDown_krorw_max_value.Name = "numericUpDown_krorw_max_value";
-            this.numericUpDown_krorw_max_value.Size = new System.Drawing.Size(192, 22);
+            this.numericUpDown_krorw_max_value.Size = new System.Drawing.Size(192, 25);
             this.numericUpDown_krorw_max_value.TabIndex = 34;
             this.numericUpDown_krorw_max_value.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDown_krorw_max_value.Value = new decimal(new int[] {
@@ -1439,20 +1439,20 @@
             this.textBox_krorw_max_array_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_krorw_max_array_title.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_krorw_max_array_title.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_krorw_max_array_title.Location = new System.Drawing.Point(143, 38);
+            this.textBox_krorw_max_array_title.Location = new System.Drawing.Point(143, 37);
             this.textBox_krorw_max_array_title.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_krorw_max_array_title.Name = "textBox_krorw_max_array_title";
-            this.textBox_krorw_max_array_title.Size = new System.Drawing.Size(196, 22);
+            this.textBox_krorw_max_array_title.Size = new System.Drawing.Size(196, 25);
             this.textBox_krorw_max_array_title.TabIndex = 33;
             // 
             // textBox_krorw_max_array_file
             // 
             this.textBox_krorw_max_array_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_krorw_max_array_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_krorw_max_array_file.Location = new System.Drawing.Point(343, 38);
+            this.textBox_krorw_max_array_file.Location = new System.Drawing.Point(343, 37);
             this.textBox_krorw_max_array_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_krorw_max_array_file.Name = "textBox_krorw_max_array_file";
-            this.textBox_krorw_max_array_file.Size = new System.Drawing.Size(857, 22);
+            this.textBox_krorw_max_array_file.Size = new System.Drawing.Size(857, 25);
             this.textBox_krorw_max_array_file.TabIndex = 11;
             // 
             // button_krorw_max_array_file
@@ -1526,7 +1526,7 @@
             this.radioButton_krorw_min_value.AutoSize = true;
             this.radioButton_krorw_min_value.Location = new System.Drawing.Point(3, 3);
             this.radioButton_krorw_min_value.Name = "radioButton_krorw_min_value";
-            this.radioButton_krorw_min_value.Size = new System.Drawing.Size(56, 19);
+            this.radioButton_krorw_min_value.Size = new System.Drawing.Size(65, 22);
             this.radioButton_krorw_min_value.TabIndex = 31;
             this.radioButton_krorw_min_value.TabStop = true;
             this.radioButton_krorw_min_value.Text = "Value";
@@ -1538,7 +1538,7 @@
             this.radioButton_krorw_min_array.AutoSize = true;
             this.radioButton_krorw_min_array.Location = new System.Drawing.Point(3, 36);
             this.radioButton_krorw_min_array.Name = "radioButton_krorw_min_array";
-            this.radioButton_krorw_min_array.Size = new System.Drawing.Size(52, 19);
+            this.radioButton_krorw_min_array.Size = new System.Drawing.Size(63, 22);
             this.radioButton_krorw_min_array.TabIndex = 31;
             this.radioButton_krorw_min_array.TabStop = true;
             this.radioButton_krorw_min_array.Text = "Array";
@@ -1560,7 +1560,7 @@
             0,
             0});
             this.numericUpDown_krorw_min_value.Name = "numericUpDown_krorw_min_value";
-            this.numericUpDown_krorw_min_value.Size = new System.Drawing.Size(192, 22);
+            this.numericUpDown_krorw_min_value.Size = new System.Drawing.Size(192, 25);
             this.numericUpDown_krorw_min_value.TabIndex = 34;
             this.numericUpDown_krorw_min_value.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1569,20 +1569,20 @@
             this.textBox_krorw_min_array_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_krorw_min_array_title.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_krorw_min_array_title.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_krorw_min_array_title.Location = new System.Drawing.Point(143, 38);
+            this.textBox_krorw_min_array_title.Location = new System.Drawing.Point(143, 37);
             this.textBox_krorw_min_array_title.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_krorw_min_array_title.Name = "textBox_krorw_min_array_title";
-            this.textBox_krorw_min_array_title.Size = new System.Drawing.Size(196, 22);
+            this.textBox_krorw_min_array_title.Size = new System.Drawing.Size(196, 25);
             this.textBox_krorw_min_array_title.TabIndex = 33;
             // 
             // textBox_krorw_min_array_file
             // 
             this.textBox_krorw_min_array_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_krorw_min_array_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_krorw_min_array_file.Location = new System.Drawing.Point(343, 38);
+            this.textBox_krorw_min_array_file.Location = new System.Drawing.Point(343, 37);
             this.textBox_krorw_min_array_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_krorw_min_array_file.Name = "textBox_krorw_min_array_file";
-            this.textBox_krorw_min_array_file.Size = new System.Drawing.Size(857, 22);
+            this.textBox_krorw_min_array_file.Size = new System.Drawing.Size(857, 25);
             this.textBox_krorw_min_array_file.TabIndex = 11;
             // 
             // button_krorw_min_array_file
@@ -1607,10 +1607,10 @@
             this.Krwr.Controls.Add(this.groupBox_krwr_max);
             this.Krwr.Controls.Add(this.groupBox_krwr_min);
             this.Krwr.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.Krwr.Location = new System.Drawing.Point(4, 24);
+            this.Krwr.Location = new System.Drawing.Point(4, 27);
             this.Krwr.Name = "Krwr";
             this.Krwr.Padding = new System.Windows.Forms.Padding(3);
-            this.Krwr.Size = new System.Drawing.Size(1270, 443);
+            this.Krwr.Size = new System.Drawing.Size(1270, 440);
             this.Krwr.TabIndex = 1;
             this.Krwr.Text = "Krwr     ";
             // 
@@ -1619,7 +1619,7 @@
             this.checkBox_krwr_matching.AutoSize = true;
             this.checkBox_krwr_matching.Location = new System.Drawing.Point(3, 6);
             this.checkBox_krwr_matching.Name = "checkBox_krwr_matching";
-            this.checkBox_krwr_matching.Size = new System.Drawing.Size(105, 19);
+            this.checkBox_krwr_matching.Size = new System.Drawing.Size(125, 22);
             this.checkBox_krwr_matching.TabIndex = 60;
             this.checkBox_krwr_matching.Text = "Krwr matching";
             this.checkBox_krwr_matching.UseVisualStyleBackColor = true;
@@ -1651,10 +1651,10 @@
             this.textBox_krwr_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_krwr_title.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_krwr_title.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_krwr_title.Location = new System.Drawing.Point(2, 33);
+            this.textBox_krwr_title.Location = new System.Drawing.Point(2, 32);
             this.textBox_krwr_title.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_krwr_title.Name = "textBox_krwr_title";
-            this.textBox_krwr_title.Size = new System.Drawing.Size(165, 22);
+            this.textBox_krwr_title.Size = new System.Drawing.Size(165, 25);
             this.textBox_krwr_title.TabIndex = 33;
             // 
             // label53
@@ -1662,10 +1662,10 @@
             this.label53.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label53.Location = new System.Drawing.Point(171, 6);
+            this.label53.Location = new System.Drawing.Point(171, 5);
             this.label53.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(27, 15);
+            this.label53.Size = new System.Drawing.Size(31, 18);
             this.label53.TabIndex = 32;
             this.label53.Text = "File";
             // 
@@ -1674,10 +1674,10 @@
             this.label54.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label54.Location = new System.Drawing.Point(2, 6);
+            this.label54.Location = new System.Drawing.Point(2, 5);
             this.label54.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(30, 15);
+            this.label54.Size = new System.Drawing.Size(35, 18);
             this.label54.TabIndex = 10;
             this.label54.Text = "Title";
             // 
@@ -1685,10 +1685,10 @@
             // 
             this.textBox_krwr_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_krwr_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_krwr_file.Location = new System.Drawing.Point(171, 33);
+            this.textBox_krwr_file.Location = new System.Drawing.Point(171, 32);
             this.textBox_krwr_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_krwr_file.Name = "textBox_krwr_file";
-            this.textBox_krwr_file.Size = new System.Drawing.Size(1034, 22);
+            this.textBox_krwr_file.Size = new System.Drawing.Size(1034, 25);
             this.textBox_krwr_file.TabIndex = 11;
             // 
             // button_krwr_file
@@ -1777,7 +1777,7 @@
             this.radioButton_krwr_max_array.AutoSize = true;
             this.radioButton_krwr_max_array.Location = new System.Drawing.Point(3, 36);
             this.radioButton_krwr_max_array.Name = "radioButton_krwr_max_array";
-            this.radioButton_krwr_max_array.Size = new System.Drawing.Size(52, 19);
+            this.radioButton_krwr_max_array.Size = new System.Drawing.Size(63, 22);
             this.radioButton_krwr_max_array.TabIndex = 31;
             this.radioButton_krwr_max_array.TabStop = true;
             this.radioButton_krwr_max_array.Text = "Array";
@@ -1788,7 +1788,7 @@
             this.radioButton_krwr_max_value.AutoSize = true;
             this.radioButton_krwr_max_value.Location = new System.Drawing.Point(3, 3);
             this.radioButton_krwr_max_value.Name = "radioButton_krwr_max_value";
-            this.radioButton_krwr_max_value.Size = new System.Drawing.Size(56, 19);
+            this.radioButton_krwr_max_value.Size = new System.Drawing.Size(65, 22);
             this.radioButton_krwr_max_value.TabIndex = 31;
             this.radioButton_krwr_max_value.TabStop = true;
             this.radioButton_krwr_max_value.Text = "Value";
@@ -1811,7 +1811,7 @@
             0,
             0});
             this.numericUpDown_krwr_max_value.Name = "numericUpDown_krwr_max_value";
-            this.numericUpDown_krwr_max_value.Size = new System.Drawing.Size(192, 22);
+            this.numericUpDown_krwr_max_value.Size = new System.Drawing.Size(192, 25);
             this.numericUpDown_krwr_max_value.TabIndex = 34;
             this.numericUpDown_krwr_max_value.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDown_krwr_max_value.Value = new decimal(new int[] {
@@ -1825,20 +1825,20 @@
             this.textBox_krwr_max_array_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_krwr_max_array_title.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_krwr_max_array_title.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_krwr_max_array_title.Location = new System.Drawing.Point(143, 38);
+            this.textBox_krwr_max_array_title.Location = new System.Drawing.Point(143, 37);
             this.textBox_krwr_max_array_title.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_krwr_max_array_title.Name = "textBox_krwr_max_array_title";
-            this.textBox_krwr_max_array_title.Size = new System.Drawing.Size(196, 22);
+            this.textBox_krwr_max_array_title.Size = new System.Drawing.Size(196, 25);
             this.textBox_krwr_max_array_title.TabIndex = 33;
             // 
             // textBox_krwr_max_array_file
             // 
             this.textBox_krwr_max_array_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_krwr_max_array_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_krwr_max_array_file.Location = new System.Drawing.Point(343, 38);
+            this.textBox_krwr_max_array_file.Location = new System.Drawing.Point(343, 37);
             this.textBox_krwr_max_array_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_krwr_max_array_file.Name = "textBox_krwr_max_array_file";
-            this.textBox_krwr_max_array_file.Size = new System.Drawing.Size(857, 22);
+            this.textBox_krwr_max_array_file.Size = new System.Drawing.Size(857, 25);
             this.textBox_krwr_max_array_file.TabIndex = 11;
             // 
             // button_krwr_max_array_file
@@ -1912,7 +1912,7 @@
             this.radioButton_krwr_min_value.AutoSize = true;
             this.radioButton_krwr_min_value.Location = new System.Drawing.Point(3, 3);
             this.radioButton_krwr_min_value.Name = "radioButton_krwr_min_value";
-            this.radioButton_krwr_min_value.Size = new System.Drawing.Size(56, 19);
+            this.radioButton_krwr_min_value.Size = new System.Drawing.Size(65, 22);
             this.radioButton_krwr_min_value.TabIndex = 31;
             this.radioButton_krwr_min_value.TabStop = true;
             this.radioButton_krwr_min_value.Text = "Value";
@@ -1924,7 +1924,7 @@
             this.radioButton_krwr_min_array.AutoSize = true;
             this.radioButton_krwr_min_array.Location = new System.Drawing.Point(3, 36);
             this.radioButton_krwr_min_array.Name = "radioButton_krwr_min_array";
-            this.radioButton_krwr_min_array.Size = new System.Drawing.Size(52, 19);
+            this.radioButton_krwr_min_array.Size = new System.Drawing.Size(63, 22);
             this.radioButton_krwr_min_array.TabIndex = 31;
             this.radioButton_krwr_min_array.TabStop = true;
             this.radioButton_krwr_min_array.Text = "Array";
@@ -1946,7 +1946,7 @@
             0,
             0});
             this.numericUpDown_krwr_min_value.Name = "numericUpDown_krwr_min_value";
-            this.numericUpDown_krwr_min_value.Size = new System.Drawing.Size(192, 22);
+            this.numericUpDown_krwr_min_value.Size = new System.Drawing.Size(192, 25);
             this.numericUpDown_krwr_min_value.TabIndex = 34;
             this.numericUpDown_krwr_min_value.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1955,20 +1955,20 @@
             this.textBox_krwr_min_array_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_krwr_min_array_title.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_krwr_min_array_title.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_krwr_min_array_title.Location = new System.Drawing.Point(143, 38);
+            this.textBox_krwr_min_array_title.Location = new System.Drawing.Point(143, 37);
             this.textBox_krwr_min_array_title.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_krwr_min_array_title.Name = "textBox_krwr_min_array_title";
-            this.textBox_krwr_min_array_title.Size = new System.Drawing.Size(196, 22);
+            this.textBox_krwr_min_array_title.Size = new System.Drawing.Size(196, 25);
             this.textBox_krwr_min_array_title.TabIndex = 33;
             // 
             // textBox_krwr_min_array_file
             // 
             this.textBox_krwr_min_array_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_krwr_min_array_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_krwr_min_array_file.Location = new System.Drawing.Point(343, 38);
+            this.textBox_krwr_min_array_file.Location = new System.Drawing.Point(343, 37);
             this.textBox_krwr_min_array_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_krwr_min_array_file.Name = "textBox_krwr_min_array_file";
-            this.textBox_krwr_min_array_file.Size = new System.Drawing.Size(857, 22);
+            this.textBox_krwr_min_array_file.Size = new System.Drawing.Size(857, 25);
             this.textBox_krwr_min_array_file.TabIndex = 11;
             // 
             // button_krwr_min_array_file
@@ -2040,10 +2040,10 @@
             this.textBox_kr_regions_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_kr_regions_title.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_kr_regions_title.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_kr_regions_title.Location = new System.Drawing.Point(145, 38);
+            this.textBox_kr_regions_title.Location = new System.Drawing.Point(145, 37);
             this.textBox_kr_regions_title.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_kr_regions_title.Name = "textBox_kr_regions_title";
-            this.textBox_kr_regions_title.Size = new System.Drawing.Size(196, 22);
+            this.textBox_kr_regions_title.Size = new System.Drawing.Size(196, 25);
             this.textBox_kr_regions_title.TabIndex = 33;
             this.textBox_kr_regions_title.Text = "REGIONS";
             // 
@@ -2051,10 +2051,10 @@
             // 
             this.textBox_kr_regions_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_kr_regions_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_kr_regions_file.Location = new System.Drawing.Point(345, 38);
+            this.textBox_kr_regions_file.Location = new System.Drawing.Point(345, 37);
             this.textBox_kr_regions_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_kr_regions_file.Name = "textBox_kr_regions_file";
-            this.textBox_kr_regions_file.Size = new System.Drawing.Size(864, 22);
+            this.textBox_kr_regions_file.Size = new System.Drawing.Size(864, 25);
             this.textBox_kr_regions_file.TabIndex = 33;
             // 
             // radioButton_use_kr_single_region
@@ -2064,7 +2064,7 @@
             this.radioButton_use_kr_single_region.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.radioButton_use_kr_single_region.Location = new System.Drawing.Point(3, 3);
             this.radioButton_use_kr_single_region.Name = "radioButton_use_kr_single_region";
-            this.radioButton_use_kr_single_region.Size = new System.Drawing.Size(192, 19);
+            this.radioButton_use_kr_single_region.Size = new System.Drawing.Size(229, 22);
             this.radioButton_use_kr_single_region.TabIndex = 39;
             this.radioButton_use_kr_single_region.TabStop = true;
             this.radioButton_use_kr_single_region.Text = "Use a single region for all cells";
@@ -2077,7 +2077,7 @@
             this.radioButton_use_kr_array.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.radioButton_use_kr_array.Location = new System.Drawing.Point(3, 36);
             this.radioButton_use_kr_array.Name = "radioButton_use_kr_array";
-            this.radioButton_use_kr_array.Size = new System.Drawing.Size(94, 19);
+            this.radioButton_use_kr_array.Size = new System.Drawing.Size(113, 22);
             this.radioButton_use_kr_array.TabIndex = 39;
             this.radioButton_use_kr_array.TabStop = true;
             this.radioButton_use_kr_array.Text = "Use an array";
@@ -2114,7 +2114,7 @@
             this.radioButton_kr_3D.AutoSize = true;
             this.radioButton_kr_3D.Location = new System.Drawing.Point(222, 22);
             this.radioButton_kr_3D.Name = "radioButton_kr_3D";
-            this.radioButton_kr_3D.Size = new System.Drawing.Size(41, 19);
+            this.radioButton_kr_3D.Size = new System.Drawing.Size(48, 22);
             this.radioButton_kr_3D.TabIndex = 0;
             this.radioButton_kr_3D.Text = "3D";
             this.radioButton_kr_3D.UseVisualStyleBackColor = true;
@@ -2125,7 +2125,7 @@
             this.radioButton_kr_2D.Checked = true;
             this.radioButton_kr_2D.Location = new System.Drawing.Point(7, 22);
             this.radioButton_kr_2D.Name = "radioButton_kr_2D";
-            this.radioButton_kr_2D.Size = new System.Drawing.Size(138, 19);
+            this.radioButton_kr_2D.Size = new System.Drawing.Size(165, 22);
             this.radioButton_kr_2D.TabIndex = 0;
             this.radioButton_kr_2D.TabStop = true;
             this.radioButton_kr_2D.Text = "2D (along the layers)";
@@ -2137,7 +2137,7 @@
             this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label47.Location = new System.Drawing.Point(2, 0);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(128, 15);
+            this.label47.Size = new System.Drawing.Size(154, 18);
             this.label47.TabIndex = 50;
             this.label47.Text = "Step 4/8 - Kr matching";
             // 
@@ -2196,9 +2196,9 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(267, 9);
+            this.label1.Location = new System.Drawing.Point(267, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 15);
+            this.label1.Size = new System.Drawing.Size(168, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "min";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2207,9 +2207,9 @@
             // 
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(441, 9);
+            this.label13.Location = new System.Drawing.Point(441, 7);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(163, 15);
+            this.label13.Size = new System.Drawing.Size(163, 18);
             this.label13.TabIndex = 0;
             this.label13.Text = "max";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2218,9 +2218,9 @@
             // 
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(225, 42);
+            this.label16.Location = new System.Drawing.Point(215, 40);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(36, 15);
+            this.label16.Size = new System.Drawing.Size(46, 18);
             this.label16.TabIndex = 0;
             this.label16.Text = "NOW";
             // 
@@ -2228,9 +2228,9 @@
             // 
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(234, 75);
+            this.label17.Location = new System.Drawing.Point(227, 74);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(27, 15);
+            this.label17.Size = new System.Drawing.Size(34, 18);
             this.label17.TabIndex = 0;
             this.label17.Text = "NW";
             // 
@@ -2245,7 +2245,7 @@
             65536});
             this.numericUpDown_now_min.Location = new System.Drawing.Point(267, 36);
             this.numericUpDown_now_min.Name = "numericUpDown_now_min";
-            this.numericUpDown_now_min.Size = new System.Drawing.Size(168, 21);
+            this.numericUpDown_now_min.Size = new System.Drawing.Size(168, 24);
             this.numericUpDown_now_min.TabIndex = 1;
             this.numericUpDown_now_min.Value = new decimal(new int[] {
             1,
@@ -2265,7 +2265,7 @@
             65536});
             this.numericUpDown_now_max.Location = new System.Drawing.Point(441, 36);
             this.numericUpDown_now_max.Name = "numericUpDown_now_max";
-            this.numericUpDown_now_max.Size = new System.Drawing.Size(163, 21);
+            this.numericUpDown_now_max.Size = new System.Drawing.Size(163, 24);
             this.numericUpDown_now_max.TabIndex = 1;
             this.numericUpDown_now_max.Value = new decimal(new int[] {
             10,
@@ -2285,7 +2285,7 @@
             65536});
             this.numericUpDown_nw_min.Location = new System.Drawing.Point(267, 69);
             this.numericUpDown_nw_min.Name = "numericUpDown_nw_min";
-            this.numericUpDown_nw_min.Size = new System.Drawing.Size(168, 21);
+            this.numericUpDown_nw_min.Size = new System.Drawing.Size(168, 24);
             this.numericUpDown_nw_min.TabIndex = 1;
             this.numericUpDown_nw_min.Value = new decimal(new int[] {
             1,
@@ -2305,7 +2305,7 @@
             65536});
             this.numericUpDown_nw_max.Location = new System.Drawing.Point(441, 69);
             this.numericUpDown_nw_max.Name = "numericUpDown_nw_max";
-            this.numericUpDown_nw_max.Size = new System.Drawing.Size(163, 21);
+            this.numericUpDown_nw_max.Size = new System.Drawing.Size(163, 24);
             this.numericUpDown_nw_max.TabIndex = 1;
             this.numericUpDown_nw_max.Value = new decimal(new int[] {
             10,
@@ -2318,7 +2318,7 @@
             // 
             this.listBox_corey_table.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox_corey_table.FormattingEnabled = true;
-            this.listBox_corey_table.ItemHeight = 15;
+            this.listBox_corey_table.ItemHeight = 18;
             this.listBox_corey_table.Location = new System.Drawing.Point(3, 3);
             this.listBox_corey_table.Name = "listBox_corey_table";
             this.tableLayoutPanel_corey_min_max.SetRowSpan(this.listBox_corey_table, 3);
@@ -2353,21 +2353,21 @@
             // 
             this.textBox_corey_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_corey_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_corey_file.Location = new System.Drawing.Point(174, 38);
+            this.textBox_corey_file.Location = new System.Drawing.Point(174, 37);
             this.textBox_corey_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_corey_file.Name = "textBox_corey_file";
             this.textBox_corey_file.ReadOnly = true;
-            this.textBox_corey_file.Size = new System.Drawing.Size(1044, 22);
+            this.textBox_corey_file.Size = new System.Drawing.Size(1044, 25);
             this.textBox_corey_file.TabIndex = 11;
             // 
             // textBox_swof_sgof_file
             // 
             this.textBox_swof_sgof_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_swof_sgof_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_swof_sgof_file.Location = new System.Drawing.Point(174, 5);
+            this.textBox_swof_sgof_file.Location = new System.Drawing.Point(174, 4);
             this.textBox_swof_sgof_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_swof_sgof_file.Name = "textBox_swof_sgof_file";
-            this.textBox_swof_sgof_file.Size = new System.Drawing.Size(1044, 22);
+            this.textBox_swof_sgof_file.Size = new System.Drawing.Size(1044, 25);
             this.textBox_swof_sgof_file.TabIndex = 11;
             this.textBox_swof_sgof_file.TextChanged += new System.EventHandler(this.textBox_swof_sgof_file_TextChanged);
             // 
@@ -2389,7 +2389,7 @@
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(3, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(127, 15);
+            this.label25.Size = new System.Drawing.Size(158, 18);
             this.label25.TabIndex = 12;
             this.label25.Text = "SWOF/SGOF table file";
             // 
@@ -2398,7 +2398,7 @@
             this.label26.AutoSize = true;
             this.label26.Location = new System.Drawing.Point(3, 33);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(87, 15);
+            this.label26.Size = new System.Drawing.Size(105, 18);
             this.label26.TabIndex = 12;
             this.label26.Text = "Corey Input file";
             // 
@@ -2458,10 +2458,10 @@
             this.textBox_satnum_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_satnum_title.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_satnum_title.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_satnum_title.Location = new System.Drawing.Point(146, 38);
+            this.textBox_satnum_title.Location = new System.Drawing.Point(146, 37);
             this.textBox_satnum_title.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_satnum_title.Name = "textBox_satnum_title";
-            this.textBox_satnum_title.Size = new System.Drawing.Size(196, 22);
+            this.textBox_satnum_title.Size = new System.Drawing.Size(196, 25);
             this.textBox_satnum_title.TabIndex = 33;
             this.textBox_satnum_title.Text = "SATNUM";
             // 
@@ -2469,10 +2469,10 @@
             // 
             this.textBox_satnum_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_satnum_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_satnum_file.Location = new System.Drawing.Point(346, 38);
+            this.textBox_satnum_file.Location = new System.Drawing.Point(346, 37);
             this.textBox_satnum_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_satnum_file.Name = "textBox_satnum_file";
-            this.textBox_satnum_file.Size = new System.Drawing.Size(873, 22);
+            this.textBox_satnum_file.Size = new System.Drawing.Size(873, 25);
             this.textBox_satnum_file.TabIndex = 33;
             // 
             // radioButton_use_single_satnum
@@ -2482,7 +2482,7 @@
             this.radioButton_use_single_satnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.radioButton_use_single_satnum.Location = new System.Drawing.Point(3, 3);
             this.radioButton_use_single_satnum.Name = "radioButton_use_single_satnum";
-            this.radioButton_use_single_satnum.Size = new System.Drawing.Size(192, 19);
+            this.radioButton_use_single_satnum.Size = new System.Drawing.Size(229, 22);
             this.radioButton_use_single_satnum.TabIndex = 39;
             this.radioButton_use_single_satnum.TabStop = true;
             this.radioButton_use_single_satnum.Text = "Use a single region for all cells";
@@ -2495,7 +2495,7 @@
             this.radioButton_use_satnum_array.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.radioButton_use_satnum_array.Location = new System.Drawing.Point(3, 36);
             this.radioButton_use_satnum_array.Name = "radioButton_use_satnum_array";
-            this.radioButton_use_satnum_array.Size = new System.Drawing.Size(94, 19);
+            this.radioButton_use_satnum_array.Size = new System.Drawing.Size(113, 22);
             this.radioButton_use_satnum_array.TabIndex = 39;
             this.radioButton_use_satnum_array.TabStop = true;
             this.radioButton_use_satnum_array.Text = "Use an array";
@@ -2520,7 +2520,7 @@
             this.checkBox_relperm_matching.AutoSize = true;
             this.checkBox_relperm_matching.Location = new System.Drawing.Point(8, 21);
             this.checkBox_relperm_matching.Name = "checkBox_relperm_matching";
-            this.checkBox_relperm_matching.Size = new System.Drawing.Size(129, 19);
+            this.checkBox_relperm_matching.Size = new System.Drawing.Size(152, 22);
             this.checkBox_relperm_matching.TabIndex = 49;
             this.checkBox_relperm_matching.Text = "RelPerm matching";
             this.checkBox_relperm_matching.UseVisualStyleBackColor = true;
@@ -2532,7 +2532,7 @@
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label24.Location = new System.Drawing.Point(3, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(93, 15);
+            this.label24.Size = new System.Drawing.Size(115, 18);
             this.label24.TabIndex = 35;
             this.label24.Text = "Step 5/8 - Corey";
             // 
@@ -2568,10 +2568,10 @@
             this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage3.Controls.Add(this.richTextBox_multpv_min_notes);
             this.tabPage3.Controls.Add(this.tableLayoutPanel8);
-            this.tabPage3.Location = new System.Drawing.Point(4, 24);
+            this.tabPage3.Location = new System.Drawing.Point(4, 27);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1271, 110);
+            this.tabPage3.Size = new System.Drawing.Size(1271, 107);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "MultPV min";
             // 
@@ -2619,7 +2619,7 @@
             this.radioButton_multpv_min_value.AutoSize = true;
             this.radioButton_multpv_min_value.Location = new System.Drawing.Point(3, 3);
             this.radioButton_multpv_min_value.Name = "radioButton_multpv_min_value";
-            this.radioButton_multpv_min_value.Size = new System.Drawing.Size(56, 19);
+            this.radioButton_multpv_min_value.Size = new System.Drawing.Size(65, 22);
             this.radioButton_multpv_min_value.TabIndex = 31;
             this.radioButton_multpv_min_value.TabStop = true;
             this.radioButton_multpv_min_value.Text = "Value";
@@ -2631,7 +2631,7 @@
             this.radioButton_multpv_min_array.AutoSize = true;
             this.radioButton_multpv_min_array.Location = new System.Drawing.Point(3, 36);
             this.radioButton_multpv_min_array.Name = "radioButton_multpv_min_array";
-            this.radioButton_multpv_min_array.Size = new System.Drawing.Size(52, 19);
+            this.radioButton_multpv_min_array.Size = new System.Drawing.Size(63, 22);
             this.radioButton_multpv_min_array.TabIndex = 31;
             this.radioButton_multpv_min_array.TabStop = true;
             this.radioButton_multpv_min_array.Text = "Array";
@@ -2653,7 +2653,7 @@
             0,
             0});
             this.numericUpDown_multpv_min_value.Name = "numericUpDown_multpv_min_value";
-            this.numericUpDown_multpv_min_value.Size = new System.Drawing.Size(192, 22);
+            this.numericUpDown_multpv_min_value.Size = new System.Drawing.Size(192, 25);
             this.numericUpDown_multpv_min_value.TabIndex = 34;
             this.numericUpDown_multpv_min_value.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDown_multpv_min_value.Value = new decimal(new int[] {
@@ -2667,20 +2667,20 @@
             this.textBox_multpv_min_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_multpv_min_title.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_multpv_min_title.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_multpv_min_title.Location = new System.Drawing.Point(145, 38);
+            this.textBox_multpv_min_title.Location = new System.Drawing.Point(145, 37);
             this.textBox_multpv_min_title.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_multpv_min_title.Name = "textBox_multpv_min_title";
-            this.textBox_multpv_min_title.Size = new System.Drawing.Size(196, 22);
+            this.textBox_multpv_min_title.Size = new System.Drawing.Size(196, 25);
             this.textBox_multpv_min_title.TabIndex = 33;
             // 
             // textBox_multpv_min_file
             // 
             this.textBox_multpv_min_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_multpv_min_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_multpv_min_file.Location = new System.Drawing.Point(345, 38);
+            this.textBox_multpv_min_file.Location = new System.Drawing.Point(345, 37);
             this.textBox_multpv_min_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_multpv_min_file.Name = "textBox_multpv_min_file";
-            this.textBox_multpv_min_file.Size = new System.Drawing.Size(865, 22);
+            this.textBox_multpv_min_file.Size = new System.Drawing.Size(865, 25);
             this.textBox_multpv_min_file.TabIndex = 11;
             // 
             // button_multpv_min_file
@@ -2701,10 +2701,10 @@
             this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage4.Controls.Add(this.richTextBox_multpv_max_notes);
             this.tabPage4.Controls.Add(this.tableLayoutPanel9);
-            this.tabPage4.Location = new System.Drawing.Point(4, 24);
+            this.tabPage4.Location = new System.Drawing.Point(4, 27);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1271, 110);
+            this.tabPage4.Size = new System.Drawing.Size(1271, 107);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "MultPV max";
             // 
@@ -2752,7 +2752,7 @@
             this.radioButton_multpv_max_array.AutoSize = true;
             this.radioButton_multpv_max_array.Location = new System.Drawing.Point(3, 36);
             this.radioButton_multpv_max_array.Name = "radioButton_multpv_max_array";
-            this.radioButton_multpv_max_array.Size = new System.Drawing.Size(52, 19);
+            this.radioButton_multpv_max_array.Size = new System.Drawing.Size(63, 22);
             this.radioButton_multpv_max_array.TabIndex = 31;
             this.radioButton_multpv_max_array.TabStop = true;
             this.radioButton_multpv_max_array.Text = "Array";
@@ -2764,7 +2764,7 @@
             this.radioButton_multpv_max_value.AutoSize = true;
             this.radioButton_multpv_max_value.Location = new System.Drawing.Point(3, 3);
             this.radioButton_multpv_max_value.Name = "radioButton_multpv_max_value";
-            this.radioButton_multpv_max_value.Size = new System.Drawing.Size(56, 19);
+            this.radioButton_multpv_max_value.Size = new System.Drawing.Size(65, 22);
             this.radioButton_multpv_max_value.TabIndex = 31;
             this.radioButton_multpv_max_value.TabStop = true;
             this.radioButton_multpv_max_value.Text = "Value";
@@ -2786,7 +2786,7 @@
             0,
             0});
             this.numericUpDown_multpv_max_value.Name = "numericUpDown_multpv_max_value";
-            this.numericUpDown_multpv_max_value.Size = new System.Drawing.Size(192, 22);
+            this.numericUpDown_multpv_max_value.Size = new System.Drawing.Size(192, 25);
             this.numericUpDown_multpv_max_value.TabIndex = 34;
             this.numericUpDown_multpv_max_value.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDown_multpv_max_value.Value = new decimal(new int[] {
@@ -2800,20 +2800,20 @@
             this.textBox_multpv_max_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_multpv_max_title.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_multpv_max_title.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_multpv_max_title.Location = new System.Drawing.Point(145, 38);
+            this.textBox_multpv_max_title.Location = new System.Drawing.Point(145, 37);
             this.textBox_multpv_max_title.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_multpv_max_title.Name = "textBox_multpv_max_title";
-            this.textBox_multpv_max_title.Size = new System.Drawing.Size(196, 22);
+            this.textBox_multpv_max_title.Size = new System.Drawing.Size(196, 25);
             this.textBox_multpv_max_title.TabIndex = 33;
             // 
             // textBox_multpv_max_file
             // 
             this.textBox_multpv_max_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_multpv_max_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_multpv_max_file.Location = new System.Drawing.Point(345, 38);
+            this.textBox_multpv_max_file.Location = new System.Drawing.Point(345, 37);
             this.textBox_multpv_max_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_multpv_max_file.Name = "textBox_multpv_max_file";
-            this.textBox_multpv_max_file.Size = new System.Drawing.Size(865, 22);
+            this.textBox_multpv_max_file.Size = new System.Drawing.Size(865, 25);
             this.textBox_multpv_max_file.TabIndex = 11;
             // 
             // button_multpv_max_file
@@ -2834,7 +2834,7 @@
             this.checkBox_aquifer_matching.AutoSize = true;
             this.checkBox_aquifer_matching.Location = new System.Drawing.Point(14, 21);
             this.checkBox_aquifer_matching.Name = "checkBox_aquifer_matching";
-            this.checkBox_aquifer_matching.Size = new System.Drawing.Size(118, 19);
+            this.checkBox_aquifer_matching.Size = new System.Drawing.Size(139, 22);
             this.checkBox_aquifer_matching.TabIndex = 73;
             this.checkBox_aquifer_matching.Text = "Aquifer matching";
             this.checkBox_aquifer_matching.UseVisualStyleBackColor = true;
@@ -2857,7 +2857,7 @@
             this.radioButton_multpv_via_array.AutoSize = true;
             this.radioButton_multpv_via_array.Location = new System.Drawing.Point(8, 20);
             this.radioButton_multpv_via_array.Name = "radioButton_multpv_via_array";
-            this.radioButton_multpv_via_array.Size = new System.Drawing.Size(191, 19);
+            this.radioButton_multpv_via_array.Size = new System.Drawing.Size(234, 22);
             this.radioButton_multpv_via_array.TabIndex = 65;
             this.radioButton_multpv_via_array.TabStop = true;
             this.radioButton_multpv_via_array.Text = "Use start values from MULTPV";
@@ -2869,7 +2869,7 @@
             this.radioButton_multpv_start_value.AutoSize = true;
             this.radioButton_multpv_start_value.Location = new System.Drawing.Point(8, 45);
             this.radioButton_multpv_start_value.Name = "radioButton_multpv_start_value";
-            this.radioButton_multpv_start_value.Size = new System.Drawing.Size(255, 19);
+            this.radioButton_multpv_start_value.Size = new System.Drawing.Size(307, 22);
             this.radioButton_multpv_start_value.TabIndex = 65;
             this.radioButton_multpv_start_value.TabStop = true;
             this.radioButton_multpv_start_value.Text = "Ignore MULTPV values and use start value";
@@ -2890,7 +2890,7 @@
             0,
             0});
             this.numericUpDown_multpv_start_value.Name = "numericUpDown_multpv_start_value";
-            this.numericUpDown_multpv_start_value.Size = new System.Drawing.Size(92, 21);
+            this.numericUpDown_multpv_start_value.Size = new System.Drawing.Size(92, 24);
             this.numericUpDown_multpv_start_value.TabIndex = 63;
             this.numericUpDown_multpv_start_value.Value = new decimal(new int[] {
             1,
@@ -2941,10 +2941,10 @@
             this.textBox_swat_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_swat_title.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_swat_title.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_swat_title.Location = new System.Drawing.Point(2, 33);
+            this.textBox_swat_title.Location = new System.Drawing.Point(2, 32);
             this.textBox_swat_title.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_swat_title.Name = "textBox_swat_title";
-            this.textBox_swat_title.Size = new System.Drawing.Size(167, 22);
+            this.textBox_swat_title.Size = new System.Drawing.Size(167, 25);
             this.textBox_swat_title.TabIndex = 33;
             this.textBox_swat_title.Text = "SWAT";
             // 
@@ -2953,10 +2953,10 @@
             this.label42.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label42.Location = new System.Drawing.Point(2, 6);
+            this.label42.Location = new System.Drawing.Point(2, 5);
             this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(126, 15);
+            this.label42.Size = new System.Drawing.Size(154, 18);
             this.label42.TabIndex = 32;
             this.label42.Text = "Water saturation array";
             // 
@@ -2977,10 +2977,10 @@
             // 
             this.textBox_swat_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_swat_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_swat_file.Location = new System.Drawing.Point(173, 33);
+            this.textBox_swat_file.Location = new System.Drawing.Point(173, 32);
             this.textBox_swat_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_swat_file.Name = "textBox_swat_file";
-            this.textBox_swat_file.Size = new System.Drawing.Size(1048, 22);
+            this.textBox_swat_file.Size = new System.Drawing.Size(1048, 25);
             this.textBox_swat_file.TabIndex = 33;
             // 
             // label43
@@ -2988,10 +2988,10 @@
             this.label43.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label43.Location = new System.Drawing.Point(173, 6);
+            this.label43.Location = new System.Drawing.Point(173, 5);
             this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(27, 15);
+            this.label43.Size = new System.Drawing.Size(31, 18);
             this.label43.TabIndex = 32;
             this.label43.Text = "File";
             // 
@@ -3021,10 +3021,10 @@
             this.textBox_multpv_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_multpv_title.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_multpv_title.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_multpv_title.Location = new System.Drawing.Point(2, 33);
+            this.textBox_multpv_title.Location = new System.Drawing.Point(2, 32);
             this.textBox_multpv_title.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_multpv_title.Name = "textBox_multpv_title";
-            this.textBox_multpv_title.Size = new System.Drawing.Size(167, 22);
+            this.textBox_multpv_title.Size = new System.Drawing.Size(167, 25);
             this.textBox_multpv_title.TabIndex = 33;
             this.textBox_multpv_title.Text = "MULTPV";
             // 
@@ -3033,10 +3033,10 @@
             this.label48.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label48.Location = new System.Drawing.Point(2, 6);
+            this.label48.Location = new System.Drawing.Point(2, 5);
             this.label48.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(86, 15);
+            this.label48.Size = new System.Drawing.Size(105, 18);
             this.label48.TabIndex = 32;
             this.label48.Text = "MULTPV array";
             // 
@@ -3057,10 +3057,10 @@
             // 
             this.textBox_multpv_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_multpv_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_multpv_file.Location = new System.Drawing.Point(173, 33);
+            this.textBox_multpv_file.Location = new System.Drawing.Point(173, 32);
             this.textBox_multpv_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_multpv_file.Name = "textBox_multpv_file";
-            this.textBox_multpv_file.Size = new System.Drawing.Size(1048, 22);
+            this.textBox_multpv_file.Size = new System.Drawing.Size(1048, 25);
             this.textBox_multpv_file.TabIndex = 33;
             // 
             // label49
@@ -3068,10 +3068,10 @@
             this.label49.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label49.Location = new System.Drawing.Point(173, 6);
+            this.label49.Location = new System.Drawing.Point(173, 5);
             this.label49.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(27, 15);
+            this.label49.Size = new System.Drawing.Size(31, 18);
             this.label49.TabIndex = 32;
             this.label49.Text = "File";
             // 
@@ -3101,10 +3101,10 @@
             this.textBox_aqreg_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_aqreg_title.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_aqreg_title.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_aqreg_title.Location = new System.Drawing.Point(2, 33);
+            this.textBox_aqreg_title.Location = new System.Drawing.Point(2, 32);
             this.textBox_aqreg_title.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_aqreg_title.Name = "textBox_aqreg_title";
-            this.textBox_aqreg_title.Size = new System.Drawing.Size(167, 22);
+            this.textBox_aqreg_title.Size = new System.Drawing.Size(167, 25);
             this.textBox_aqreg_title.TabIndex = 33;
             this.textBox_aqreg_title.Text = "AQREG";
             // 
@@ -3113,10 +3113,10 @@
             this.label36.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label36.Location = new System.Drawing.Point(2, 6);
+            this.label36.Location = new System.Drawing.Point(2, 5);
             this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(79, 15);
+            this.label36.Size = new System.Drawing.Size(99, 18);
             this.label36.TabIndex = 32;
             this.label36.Text = "AQREG array";
             // 
@@ -3137,10 +3137,10 @@
             // 
             this.textBox_aqreg_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_aqreg_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_aqreg_file.Location = new System.Drawing.Point(173, 33);
+            this.textBox_aqreg_file.Location = new System.Drawing.Point(173, 32);
             this.textBox_aqreg_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_aqreg_file.Name = "textBox_aqreg_file";
-            this.textBox_aqreg_file.Size = new System.Drawing.Size(1048, 22);
+            this.textBox_aqreg_file.Size = new System.Drawing.Size(1048, 25);
             this.textBox_aqreg_file.TabIndex = 33;
             // 
             // label37
@@ -3148,10 +3148,10 @@
             this.label37.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label37.Location = new System.Drawing.Point(173, 6);
+            this.label37.Location = new System.Drawing.Point(173, 5);
             this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(27, 15);
+            this.label37.Size = new System.Drawing.Size(31, 18);
             this.label37.TabIndex = 32;
             this.label37.Text = "File";
             // 
@@ -3181,10 +3181,10 @@
             this.textBox_aqcell_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_aqcell_title.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_aqcell_title.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_aqcell_title.Location = new System.Drawing.Point(2, 33);
+            this.textBox_aqcell_title.Location = new System.Drawing.Point(2, 32);
             this.textBox_aqcell_title.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_aqcell_title.Name = "textBox_aqcell_title";
-            this.textBox_aqcell_title.Size = new System.Drawing.Size(167, 22);
+            this.textBox_aqcell_title.Size = new System.Drawing.Size(167, 25);
             this.textBox_aqcell_title.TabIndex = 33;
             this.textBox_aqcell_title.Text = "AQCELL";
             // 
@@ -3193,10 +3193,10 @@
             this.label38.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label38.Location = new System.Drawing.Point(2, 6);
+            this.label38.Location = new System.Drawing.Point(2, 5);
             this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(83, 15);
+            this.label38.Size = new System.Drawing.Size(103, 18);
             this.label38.TabIndex = 32;
             this.label38.Text = "AQCELL array";
             // 
@@ -3217,10 +3217,10 @@
             // 
             this.textBox_aqcell_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_aqcell_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_aqcell_file.Location = new System.Drawing.Point(173, 33);
+            this.textBox_aqcell_file.Location = new System.Drawing.Point(173, 32);
             this.textBox_aqcell_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_aqcell_file.Name = "textBox_aqcell_file";
-            this.textBox_aqcell_file.Size = new System.Drawing.Size(1048, 22);
+            this.textBox_aqcell_file.Size = new System.Drawing.Size(1048, 25);
             this.textBox_aqcell_file.TabIndex = 33;
             // 
             // label39
@@ -3228,10 +3228,10 @@
             this.label39.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label39.Location = new System.Drawing.Point(173, 6);
+            this.label39.Location = new System.Drawing.Point(173, 5);
             this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(27, 15);
+            this.label39.Size = new System.Drawing.Size(31, 18);
             this.label39.TabIndex = 32;
             this.label39.Text = "File";
             // 
@@ -3272,10 +3272,10 @@
             // 
             this.textBox_res_press_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_res_press_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_res_press_file.Location = new System.Drawing.Point(173, 34);
+            this.textBox_res_press_file.Location = new System.Drawing.Point(173, 32);
             this.textBox_res_press_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_res_press_file.Name = "textBox_res_press_file";
-            this.textBox_res_press_file.Size = new System.Drawing.Size(1048, 22);
+            this.textBox_res_press_file.Size = new System.Drawing.Size(1048, 25);
             this.textBox_res_press_file.TabIndex = 33;
             // 
             // radioButton_use_thph_as_res_press
@@ -3284,7 +3284,7 @@
             this.tableLayoutPanel_res_press.SetColumnSpan(this.radioButton_use_thph_as_res_press, 2);
             this.radioButton_use_thph_as_res_press.Location = new System.Drawing.Point(3, 3);
             this.radioButton_use_thph_as_res_press.Name = "radioButton_use_thph_as_res_press";
-            this.radioButton_use_thph_as_res_press.Size = new System.Drawing.Size(169, 19);
+            this.radioButton_use_thph_as_res_press.Size = new System.Drawing.Size(210, 22);
             this.radioButton_use_thph_as_res_press.TabIndex = 34;
             this.radioButton_use_thph_as_res_press.TabStop = true;
             this.radioButton_use_thph_as_res_press.Text = "Use WTHPH as Res Press";
@@ -3296,7 +3296,7 @@
             this.radioButton_use_res_press_file.AutoSize = true;
             this.radioButton_use_res_press_file.Location = new System.Drawing.Point(3, 33);
             this.radioButton_use_res_press_file.Name = "radioButton_use_res_press_file";
-            this.radioButton_use_res_press_file.Size = new System.Drawing.Size(155, 19);
+            this.radioButton_use_res_press_file.Size = new System.Drawing.Size(165, 22);
             this.radioButton_use_res_press_file.TabIndex = 34;
             this.radioButton_use_res_press_file.TabStop = true;
             this.radioButton_use_res_press_file.Text = "Use Res Press table file";
@@ -3329,10 +3329,10 @@
             this.textBox_actnum_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_actnum_title.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_actnum_title.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_actnum_title.Location = new System.Drawing.Point(2, 33);
+            this.textBox_actnum_title.Location = new System.Drawing.Point(2, 32);
             this.textBox_actnum_title.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_actnum_title.Name = "textBox_actnum_title";
-            this.textBox_actnum_title.Size = new System.Drawing.Size(167, 22);
+            this.textBox_actnum_title.Size = new System.Drawing.Size(167, 25);
             this.textBox_actnum_title.TabIndex = 33;
             this.textBox_actnum_title.Text = "ACTNUM";
             // 
@@ -3341,10 +3341,10 @@
             this.label44.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label44.Location = new System.Drawing.Point(2, 6);
+            this.label44.Location = new System.Drawing.Point(2, 5);
             this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(88, 15);
+            this.label44.Size = new System.Drawing.Size(109, 18);
             this.label44.TabIndex = 32;
             this.label44.Text = "ACTNUM array";
             // 
@@ -3365,10 +3365,10 @@
             // 
             this.textBox_actnum_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_actnum_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_actnum_file.Location = new System.Drawing.Point(173, 33);
+            this.textBox_actnum_file.Location = new System.Drawing.Point(173, 32);
             this.textBox_actnum_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_actnum_file.Name = "textBox_actnum_file";
-            this.textBox_actnum_file.Size = new System.Drawing.Size(1048, 22);
+            this.textBox_actnum_file.Size = new System.Drawing.Size(1048, 25);
             this.textBox_actnum_file.TabIndex = 33;
             // 
             // label45
@@ -3376,10 +3376,10 @@
             this.label45.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label45.Location = new System.Drawing.Point(173, 6);
+            this.label45.Location = new System.Drawing.Point(173, 5);
             this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(27, 15);
+            this.label45.Size = new System.Drawing.Size(31, 18);
             this.label45.TabIndex = 32;
             this.label45.Text = "File";
             // 
@@ -3402,7 +3402,7 @@
             this.labe_aquifer_d.AutoSize = true;
             this.labe_aquifer_d.Location = new System.Drawing.Point(112, 72);
             this.labe_aquifer_d.Name = "labe_aquifer_d";
-            this.labe_aquifer_d.Size = new System.Drawing.Size(150, 15);
+            this.labe_aquifer_d.Size = new System.Drawing.Size(178, 18);
             this.labe_aquifer_d.TabIndex = 67;
             this.labe_aquifer_d.Text = "Min aquifer disrance, cells";
             // 
@@ -3411,7 +3411,7 @@
             this.radioButton_aqcell_auto.AutoSize = true;
             this.radioButton_aqcell_auto.Location = new System.Drawing.Point(8, 70);
             this.radioButton_aqcell_auto.Name = "radioButton_aqcell_auto";
-            this.radioButton_aqcell_auto.Size = new System.Drawing.Size(49, 19);
+            this.radioButton_aqcell_auto.Size = new System.Drawing.Size(59, 22);
             this.radioButton_aqcell_auto.TabIndex = 62;
             this.radioButton_aqcell_auto.TabStop = true;
             this.radioButton_aqcell_auto.Text = "Auto";
@@ -3423,7 +3423,7 @@
             this.radioButton_aqcell_via_multpv.AutoSize = true;
             this.radioButton_aqcell_via_multpv.Location = new System.Drawing.Point(8, 20);
             this.radioButton_aqcell_via_multpv.Name = "radioButton_aqcell_via_multpv";
-            this.radioButton_aqcell_via_multpv.Size = new System.Drawing.Size(272, 19);
+            this.radioButton_aqcell_via_multpv.Size = new System.Drawing.Size(330, 22);
             this.radioButton_aqcell_via_multpv.TabIndex = 65;
             this.radioButton_aqcell_via_multpv.TabStop = true;
             this.radioButton_aqcell_via_multpv.Text = "MULTPV array (>1 - aquifer, <=1 - not aquifer)";
@@ -3435,7 +3435,7 @@
             this.radioButton_aqcell_via_array.AutoSize = true;
             this.radioButton_aqcell_via_array.Location = new System.Drawing.Point(8, 45);
             this.radioButton_aqcell_via_array.Name = "radioButton_aqcell_via_array";
-            this.radioButton_aqcell_via_array.Size = new System.Drawing.Size(248, 19);
+            this.radioButton_aqcell_via_array.Size = new System.Drawing.Size(301, 22);
             this.radioButton_aqcell_via_array.TabIndex = 62;
             this.radioButton_aqcell_via_array.TabStop = true;
             this.radioButton_aqcell_via_array.Text = "AQCELL array (1 - aquifer, 0 - not aquifer)";
@@ -3456,7 +3456,7 @@
             0,
             0});
             this.numericUpDown_aquifer_d.Name = "numericUpDown_aquifer_d";
-            this.numericUpDown_aquifer_d.Size = new System.Drawing.Size(68, 21);
+            this.numericUpDown_aquifer_d.Size = new System.Drawing.Size(68, 24);
             this.numericUpDown_aquifer_d.TabIndex = 63;
             this.numericUpDown_aquifer_d.Value = new decimal(new int[] {
             1,
@@ -3481,7 +3481,7 @@
             this.radioButton_aqreg_auto.AutoSize = true;
             this.radioButton_aqreg_auto.Location = new System.Drawing.Point(8, 70);
             this.radioButton_aqreg_auto.Name = "radioButton_aqreg_auto";
-            this.radioButton_aqreg_auto.Size = new System.Drawing.Size(49, 19);
+            this.radioButton_aqreg_auto.Size = new System.Drawing.Size(59, 22);
             this.radioButton_aqreg_auto.TabIndex = 62;
             this.radioButton_aqreg_auto.TabStop = true;
             this.radioButton_aqreg_auto.Text = "Auto";
@@ -3493,7 +3493,7 @@
             this.radioButton_aqreg_single.AutoSize = true;
             this.radioButton_aqreg_single.Location = new System.Drawing.Point(8, 20);
             this.radioButton_aqreg_single.Name = "radioButton_aqreg_single";
-            this.radioButton_aqreg_single.Size = new System.Drawing.Size(98, 19);
+            this.radioButton_aqreg_single.Size = new System.Drawing.Size(114, 22);
             this.radioButton_aqreg_single.TabIndex = 62;
             this.radioButton_aqreg_single.TabStop = true;
             this.radioButton_aqreg_single.Text = "Single region";
@@ -3505,7 +3505,7 @@
             this.radioButton_aqreg_via_array.AutoSize = true;
             this.radioButton_aqreg_via_array.Location = new System.Drawing.Point(8, 45);
             this.radioButton_aqreg_via_array.Name = "radioButton_aqreg_via_array";
-            this.radioButton_aqreg_via_array.Size = new System.Drawing.Size(97, 19);
+            this.radioButton_aqreg_via_array.Size = new System.Drawing.Size(120, 22);
             this.radioButton_aqreg_via_array.TabIndex = 62;
             this.radioButton_aqreg_via_array.TabStop = true;
             this.radioButton_aqreg_via_array.Text = "AQREG array";
@@ -3518,7 +3518,7 @@
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label40.Location = new System.Drawing.Point(3, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(100, 15);
+            this.label40.Size = new System.Drawing.Size(120, 18);
             this.label40.TabIndex = 36;
             this.label40.Text = "Step 6/8 - Aquifer";
             // 
@@ -3582,7 +3582,7 @@
             this.radioButton_control_lrat.AutoSize = true;
             this.radioButton_control_lrat.Location = new System.Drawing.Point(3, 3);
             this.radioButton_control_lrat.Name = "radioButton_control_lrat";
-            this.radioButton_control_lrat.Size = new System.Drawing.Size(55, 19);
+            this.radioButton_control_lrat.Size = new System.Drawing.Size(66, 22);
             this.radioButton_control_lrat.TabIndex = 0;
             this.radioButton_control_lrat.TabStop = true;
             this.radioButton_control_lrat.Text = "LRAT";
@@ -3591,7 +3591,7 @@
             // 
             // numericUpDown_glr
             // 
-            this.numericUpDown_glr.Location = new System.Drawing.Point(167, 28);
+            this.numericUpDown_glr.Location = new System.Drawing.Point(167, 31);
             this.numericUpDown_glr.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -3603,7 +3603,7 @@
             0,
             0});
             this.numericUpDown_glr.Name = "numericUpDown_glr";
-            this.numericUpDown_glr.Size = new System.Drawing.Size(84, 21);
+            this.numericUpDown_glr.Size = new System.Drawing.Size(84, 24);
             this.numericUpDown_glr.TabIndex = 0;
             this.numericUpDown_glr.Value = new decimal(new int[] {
             10000,
@@ -3615,18 +3615,18 @@
             // 
             this.label_glr.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label_glr.AutoSize = true;
-            this.label_glr.Location = new System.Drawing.Point(129, 31);
+            this.label_glr.Location = new System.Drawing.Point(122, 34);
             this.label_glr.Name = "label_glr";
-            this.label_glr.Size = new System.Drawing.Size(32, 15);
+            this.label_glr.Size = new System.Drawing.Size(39, 18);
             this.label_glr.TabIndex = 1;
             this.label_glr.Text = "GLR";
             // 
             // radioButton_control_auto
             // 
             this.radioButton_control_auto.AutoSize = true;
-            this.radioButton_control_auto.Location = new System.Drawing.Point(3, 28);
+            this.radioButton_control_auto.Location = new System.Drawing.Point(3, 31);
             this.radioButton_control_auto.Name = "radioButton_control_auto";
-            this.radioButton_control_auto.Size = new System.Drawing.Size(49, 19);
+            this.radioButton_control_auto.Size = new System.Drawing.Size(59, 22);
             this.radioButton_control_auto.TabIndex = 0;
             this.radioButton_control_auto.TabStop = true;
             this.radioButton_control_auto.Text = "Auto";
@@ -3636,9 +3636,9 @@
             // radioButton_control_custom
             // 
             this.radioButton_control_custom.AutoSize = true;
-            this.radioButton_control_custom.Location = new System.Drawing.Point(3, 55);
+            this.radioButton_control_custom.Location = new System.Drawing.Point(3, 61);
             this.radioButton_control_custom.Name = "radioButton_control_custom";
-            this.radioButton_control_custom.Size = new System.Drawing.Size(67, 19);
+            this.radioButton_control_custom.Size = new System.Drawing.Size(79, 22);
             this.radioButton_control_custom.TabIndex = 0;
             this.radioButton_control_custom.TabStop = true;
             this.radioButton_control_custom.Text = "Custom";
@@ -3650,7 +3650,7 @@
             this.radioButton_control_orat.AutoSize = true;
             this.radioButton_control_orat.Location = new System.Drawing.Point(88, 3);
             this.radioButton_control_orat.Name = "radioButton_control_orat";
-            this.radioButton_control_orat.Size = new System.Drawing.Size(57, 19);
+            this.radioButton_control_orat.Size = new System.Drawing.Size(70, 22);
             this.radioButton_control_orat.TabIndex = 0;
             this.radioButton_control_orat.TabStop = true;
             this.radioButton_control_orat.Text = "ORAT";
@@ -3662,7 +3662,7 @@
             this.radioButton_control_grat.AutoSize = true;
             this.radioButton_control_grat.Location = new System.Drawing.Point(167, 3);
             this.radioButton_control_grat.Name = "radioButton_control_grat";
-            this.radioButton_control_grat.Size = new System.Drawing.Size(57, 19);
+            this.radioButton_control_grat.Size = new System.Drawing.Size(70, 22);
             this.radioButton_control_grat.TabIndex = 0;
             this.radioButton_control_grat.TabStop = true;
             this.radioButton_control_grat.Text = "GRAT";
@@ -3675,16 +3675,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.SetColumnSpan(this.textBox_control_custom_file, 2);
             this.textBox_control_custom_file.Font = new System.Drawing.Font("Consolas", 9F);
-            this.textBox_control_custom_file.Location = new System.Drawing.Point(87, 54);
+            this.textBox_control_custom_file.Location = new System.Drawing.Point(87, 60);
             this.textBox_control_custom_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_control_custom_file.Name = "textBox_control_custom_file";
-            this.textBox_control_custom_file.Size = new System.Drawing.Size(551, 22);
+            this.textBox_control_custom_file.Size = new System.Drawing.Size(551, 25);
             this.textBox_control_custom_file.TabIndex = 41;
             // 
             // button_control_custom_file
             // 
             this.button_control_custom_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_control_custom_file.Location = new System.Drawing.Point(644, 54);
+            this.button_control_custom_file.Location = new System.Drawing.Point(644, 60);
             this.button_control_custom_file.Margin = new System.Windows.Forms.Padding(2);
             this.button_control_custom_file.Name = "button_control_custom_file";
             this.button_control_custom_file.Size = new System.Drawing.Size(42, 22);
@@ -3716,7 +3716,7 @@
             this.checkBox_use_wbhph_file.AutoSize = true;
             this.checkBox_use_wbhph_file.Location = new System.Drawing.Point(9, 21);
             this.checkBox_use_wbhph_file.Name = "checkBox_use_wbhph_file";
-            this.checkBox_use_wbhph_file.Size = new System.Drawing.Size(106, 19);
+            this.checkBox_use_wbhph_file.Size = new System.Drawing.Size(129, 22);
             this.checkBox_use_wbhph_file.TabIndex = 46;
             this.checkBox_use_wbhph_file.Text = "Use WBHP file";
             this.checkBox_use_wbhph_file.UseVisualStyleBackColor = true;
@@ -3730,7 +3730,7 @@
             this.textBox_add_wbhph.Location = new System.Drawing.Point(8, 44);
             this.textBox_add_wbhph.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_add_wbhph.Name = "textBox_add_wbhph";
-            this.textBox_add_wbhph.Size = new System.Drawing.Size(636, 22);
+            this.textBox_add_wbhph.Size = new System.Drawing.Size(636, 25);
             this.textBox_add_wbhph.TabIndex = 41;
             // 
             // radioButton_wbhph_replace
@@ -3738,7 +3738,7 @@
             this.radioButton_wbhph_replace.AutoSize = true;
             this.radioButton_wbhph_replace.Location = new System.Drawing.Point(327, 20);
             this.radioButton_wbhph_replace.Name = "radioButton_wbhph_replace";
-            this.radioButton_wbhph_replace.Size = new System.Drawing.Size(103, 19);
+            this.radioButton_wbhph_replace.Size = new System.Drawing.Size(122, 22);
             this.radioButton_wbhph_replace.TabIndex = 45;
             this.radioButton_wbhph_replace.TabStop = true;
             this.radioButton_wbhph_replace.Text = "replace if exist";
@@ -3762,7 +3762,7 @@
             this.radioButton_wbhph_add.AutoSize = true;
             this.radioButton_wbhph_add.Location = new System.Drawing.Point(198, 20);
             this.radioButton_wbhph_add.Name = "radioButton_wbhph_add";
-            this.radioButton_wbhph_add.Size = new System.Drawing.Size(103, 19);
+            this.radioButton_wbhph_add.Size = new System.Drawing.Size(123, 22);
             this.radioButton_wbhph_add.TabIndex = 45;
             this.radioButton_wbhph_add.TabStop = true;
             this.radioButton_wbhph_add.Text = "add if not exist";
@@ -3793,7 +3793,7 @@
             this.textBox_wlist.Location = new System.Drawing.Point(8, 47);
             this.textBox_wlist.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_wlist.Name = "textBox_wlist";
-            this.textBox_wlist.Size = new System.Drawing.Size(636, 22);
+            this.textBox_wlist.Size = new System.Drawing.Size(636, 25);
             this.textBox_wlist.TabIndex = 41;
             // 
             // radioButton_use_wlist
@@ -3801,7 +3801,7 @@
             this.radioButton_use_wlist.AutoSize = true;
             this.radioButton_use_wlist.Location = new System.Drawing.Point(125, 23);
             this.radioButton_use_wlist.Name = "radioButton_use_wlist";
-            this.radioButton_use_wlist.Size = new System.Drawing.Size(162, 19);
+            this.radioButton_use_wlist.Size = new System.Drawing.Size(196, 22);
             this.radioButton_use_wlist.TabIndex = 45;
             this.radioButton_use_wlist.TabStop = true;
             this.radioButton_use_wlist.Text = "use WELLNAMES-file list";
@@ -3826,7 +3826,7 @@
             this.radioButton_not_use_wlist.AutoSize = true;
             this.radioButton_not_use_wlist.Location = new System.Drawing.Point(6, 23);
             this.radioButton_not_use_wlist.Name = "radioButton_not_use_wlist";
-            this.radioButton_not_use_wlist.Size = new System.Drawing.Size(86, 19);
+            this.radioButton_not_use_wlist.Size = new System.Drawing.Size(102, 22);
             this.radioButton_not_use_wlist.TabIndex = 45;
             this.radioButton_not_use_wlist.TabStop = true;
             this.radioButton_not_use_wlist.Text = "for all wells";
@@ -3891,7 +3891,7 @@
             this.deviationsControl.LiqProdWatRequested = false;
             this.deviationsControl.LiqProdWatTotal = 0D;
             this.deviationsControl.Location = new System.Drawing.Point(7, 20);
-            this.deviationsControl.Margin = new System.Windows.Forms.Padding(4);
+            this.deviationsControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.deviationsControl.MinimumSize = new System.Drawing.Size(383, 353);
             this.deviationsControl.Name = "deviationsControl";
             this.deviationsControl.OilInjeRate = 0D;
@@ -3928,7 +3928,7 @@
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label14.Location = new System.Drawing.Point(3, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(127, 15);
+            this.label14.Size = new System.Drawing.Size(153, 18);
             this.label14.TabIndex = 44;
             this.label14.Text = "Step 7/8 - Well names";
             // 
@@ -3992,7 +3992,7 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label9.Location = new System.Drawing.Point(3, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(135, 15);
+            this.label9.Size = new System.Drawing.Size(164, 18);
             this.label9.TabIndex = 40;
             this.label9.Text = "Step 8/8 - RUN-settings";
             // 
@@ -4043,9 +4043,9 @@
             // 
             this.radioButton_data_check.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.radioButton_data_check.AutoSize = true;
-            this.radioButton_data_check.Location = new System.Drawing.Point(3, 5);
+            this.radioButton_data_check.Location = new System.Drawing.Point(3, 3);
             this.radioButton_data_check.Name = "radioButton_data_check";
-            this.radioButton_data_check.Size = new System.Drawing.Size(115, 19);
+            this.radioButton_data_check.Size = new System.Drawing.Size(134, 22);
             this.radioButton_data_check.TabIndex = 30;
             this.radioButton_data_check.Text = "Data Check Only";
             this.radioButton_data_check.UseVisualStyleBackColor = true;
@@ -4057,9 +4057,9 @@
             this.comboBox_iter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_iter.Font = new System.Drawing.Font("Consolas", 9F);
             this.comboBox_iter.FormattingEnabled = true;
-            this.comboBox_iter.Location = new System.Drawing.Point(393, 33);
+            this.comboBox_iter.Location = new System.Drawing.Point(393, 32);
             this.comboBox_iter.Name = "comboBox_iter";
-            this.comboBox_iter.Size = new System.Drawing.Size(64, 22);
+            this.comboBox_iter.Size = new System.Drawing.Size(64, 26);
             this.comboBox_iter.TabIndex = 37;
             this.comboBox_iter.DropDown += new System.EventHandler(this.comboBox_iter_DropDown);
             this.comboBox_iter.SelectedIndexChanged += new System.EventHandler(this.comboBox_iter_SelectedIndexChanged);
@@ -4068,9 +4068,9 @@
             // 
             this.label_iter.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label_iter.AutoSize = true;
-            this.label_iter.Location = new System.Drawing.Point(335, 36);
+            this.label_iter.Location = new System.Drawing.Point(324, 35);
             this.label_iter.Name = "label_iter";
-            this.label_iter.Size = new System.Drawing.Size(52, 15);
+            this.label_iter.Size = new System.Drawing.Size(63, 18);
             this.label_iter.TabIndex = 18;
             this.label_iter.Text = "Start Iter";
             // 
@@ -4078,9 +4078,9 @@
             // 
             this.radioButton_history_matching.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.radioButton_history_matching.AutoSize = true;
-            this.radioButton_history_matching.Location = new System.Drawing.Point(3, 34);
+            this.radioButton_history_matching.Location = new System.Drawing.Point(3, 33);
             this.radioButton_history_matching.Name = "radioButton_history_matching";
-            this.radioButton_history_matching.Size = new System.Drawing.Size(116, 19);
+            this.radioButton_history_matching.Size = new System.Drawing.Size(134, 22);
             this.radioButton_history_matching.TabIndex = 30;
             this.radioButton_history_matching.Text = "History Matching";
             this.radioButton_history_matching.UseVisualStyleBackColor = true;
@@ -4090,9 +4090,9 @@
             // 
             this.label_id.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label_id.AutoSize = true;
-            this.label_id.Location = new System.Drawing.Point(153, 36);
+            this.label_id.Location = new System.Drawing.Point(150, 35);
             this.label_id.Name = "label_id";
-            this.label_id.Size = new System.Drawing.Size(19, 15);
+            this.label_id.Size = new System.Drawing.Size(22, 18);
             this.label_id.TabIndex = 17;
             this.label_id.Text = "ID";
             // 
@@ -4102,9 +4102,9 @@
             this.comboBox_id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_id.Font = new System.Drawing.Font("Consolas", 9F);
             this.comboBox_id.FormattingEnabled = true;
-            this.comboBox_id.Location = new System.Drawing.Point(178, 33);
+            this.comboBox_id.Location = new System.Drawing.Point(178, 32);
             this.comboBox_id.Name = "comboBox_id";
-            this.comboBox_id.Size = new System.Drawing.Size(125, 22);
+            this.comboBox_id.Size = new System.Drawing.Size(125, 26);
             this.comboBox_id.TabIndex = 36;
             this.comboBox_id.DropDown += new System.EventHandler(this.comboBox_id_DropDown);
             this.comboBox_id.SelectedIndexChanged += new System.EventHandler(this.comboBox_id_SelectedIndexChanged_1);
@@ -4113,9 +4113,9 @@
             // 
             this.label_last_iter.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label_last_iter.AutoSize = true;
-            this.label_last_iter.Location = new System.Drawing.Point(487, 36);
+            this.label_last_iter.Location = new System.Drawing.Point(477, 35);
             this.label_last_iter.Name = "label_last_iter";
-            this.label_last_iter.Size = new System.Drawing.Size(50, 15);
+            this.label_last_iter.Size = new System.Drawing.Size(60, 18);
             this.label_last_iter.TabIndex = 16;
             this.label_last_iter.Text = "Last Iter";
             // 
@@ -4123,7 +4123,7 @@
             // 
             this.numericUpDown_last_iter.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.numericUpDown_last_iter.Font = new System.Drawing.Font("Consolas", 9F);
-            this.numericUpDown_last_iter.Location = new System.Drawing.Point(543, 33);
+            this.numericUpDown_last_iter.Location = new System.Drawing.Point(543, 32);
             this.numericUpDown_last_iter.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -4135,7 +4135,7 @@
             0,
             0});
             this.numericUpDown_last_iter.Name = "numericUpDown_last_iter";
-            this.numericUpDown_last_iter.Size = new System.Drawing.Size(64, 22);
+            this.numericUpDown_last_iter.Size = new System.Drawing.Size(64, 25);
             this.numericUpDown_last_iter.TabIndex = 29;
             this.numericUpDown_last_iter.Value = new decimal(new int[] {
             9999,
@@ -4147,9 +4147,9 @@
             // 
             this.checkBox_simulate_before_hm.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.checkBox_simulate_before_hm.AutoSize = true;
-            this.checkBox_simulate_before_hm.Location = new System.Drawing.Point(615, 34);
+            this.checkBox_simulate_before_hm.Location = new System.Drawing.Point(615, 33);
             this.checkBox_simulate_before_hm.Name = "checkBox_simulate_before_hm";
-            this.checkBox_simulate_before_hm.Size = new System.Drawing.Size(168, 19);
+            this.checkBox_simulate_before_hm.Size = new System.Drawing.Size(200, 22);
             this.checkBox_simulate_before_hm.TabIndex = 35;
             this.checkBox_simulate_before_hm.Text = "Simulate case before Run";
             this.checkBox_simulate_before_hm.UseVisualStyleBackColor = true;
@@ -4243,9 +4243,9 @@
             // 
             this.checkBox_results_sub_folder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox_results_sub_folder.AutoSize = true;
-            this.checkBox_results_sub_folder.Location = new System.Drawing.Point(795, 181);
+            this.checkBox_results_sub_folder.Location = new System.Drawing.Point(760, 181);
             this.checkBox_results_sub_folder.Name = "checkBox_results_sub_folder";
-            this.checkBox_results_sub_folder.Size = new System.Drawing.Size(164, 19);
+            this.checkBox_results_sub_folder.Size = new System.Drawing.Size(199, 22);
             this.checkBox_results_sub_folder.TabIndex = 45;
             this.checkBox_results_sub_folder.Text = "Use RESULTS sub folder";
             this.checkBox_results_sub_folder.UseVisualStyleBackColor = true;
@@ -4255,9 +4255,9 @@
             // 
             this.checkBox_create_user_sum_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox_create_user_sum_file.AutoSize = true;
-            this.checkBox_create_user_sum_file.Location = new System.Drawing.Point(1015, 181);
+            this.checkBox_create_user_sum_file.Location = new System.Drawing.Point(986, 181);
             this.checkBox_create_user_sum_file.Name = "checkBox_create_user_sum_file";
-            this.checkBox_create_user_sum_file.Size = new System.Drawing.Size(145, 19);
+            this.checkBox_create_user_sum_file.Size = new System.Drawing.Size(174, 22);
             this.checkBox_create_user_sum_file.TabIndex = 44;
             this.checkBox_create_user_sum_file.Text = "Use \'USER\\*.sum\' file";
             this.checkBox_create_user_sum_file.UseVisualStyleBackColor = true;
@@ -4286,7 +4286,7 @@
             this.textBox_out_folder.Location = new System.Drawing.Point(96, 85);
             this.textBox_out_folder.Name = "textBox_out_folder";
             this.textBox_out_folder.ReadOnly = true;
-            this.textBox_out_folder.Size = new System.Drawing.Size(1137, 22);
+            this.textBox_out_folder.Size = new System.Drawing.Size(1137, 25);
             this.textBox_out_folder.TabIndex = 37;
             // 
             // richTextBox3
@@ -4309,7 +4309,7 @@
             this.label33.AutoSize = true;
             this.label33.Location = new System.Drawing.Point(8, 89);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(61, 15);
+            this.label33.Size = new System.Drawing.Size(74, 18);
             this.label33.TabIndex = 36;
             this.label33.Text = "Out-folder";
             // 
@@ -4329,7 +4329,7 @@
             this.label32.AutoSize = true;
             this.label32.Location = new System.Drawing.Point(8, 18);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(57, 15);
+            this.label32.Size = new System.Drawing.Size(69, 18);
             this.label32.TabIndex = 35;
             this.label32.Text = "DATA-file";
             // 
@@ -4372,7 +4372,7 @@
             this.textBox_data_file.Location = new System.Drawing.Point(96, 15);
             this.textBox_data_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_data_file.Name = "textBox_data_file";
-            this.textBox_data_file.Size = new System.Drawing.Size(1137, 22);
+            this.textBox_data_file.Size = new System.Drawing.Size(1137, 25);
             this.textBox_data_file.TabIndex = 1;
             this.textBox_data_file.TextChanged += new System.EventHandler(this.textBox_data_file_TextChanged);
             // 
@@ -4384,7 +4384,7 @@
             this.radioButton_ecl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.radioButton_ecl.Location = new System.Drawing.Point(390, 180);
             this.radioButton_ecl.Name = "radioButton_ecl";
-            this.radioButton_ecl.Size = new System.Drawing.Size(65, 19);
+            this.radioButton_ecl.Size = new System.Drawing.Size(77, 22);
             this.radioButton_ecl.TabIndex = 30;
             this.radioButton_ecl.TabStop = true;
             this.radioButton_ecl.Text = "Eclipse";
@@ -4406,7 +4406,7 @@
             0,
             0});
             this.numericUpDown_cpu.Name = "numericUpDown_cpu";
-            this.numericUpDown_cpu.Size = new System.Drawing.Size(43, 22);
+            this.numericUpDown_cpu.Size = new System.Drawing.Size(43, 25);
             this.numericUpDown_cpu.TabIndex = 28;
             this.numericUpDown_cpu.Value = new decimal(new int[] {
             12,
@@ -4421,7 +4421,7 @@
             this.comboBox_gpu_list.FormattingEnabled = true;
             this.comboBox_gpu_list.Location = new System.Drawing.Point(302, 221);
             this.comboBox_gpu_list.Name = "comboBox_gpu_list";
-            this.comboBox_gpu_list.Size = new System.Drawing.Size(465, 23);
+            this.comboBox_gpu_list.Size = new System.Drawing.Size(465, 26);
             this.comboBox_gpu_list.TabIndex = 34;
             // 
             // button_mpi_exe_file
@@ -4467,7 +4467,7 @@
             this.radioButton_tnav.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.radioButton_tnav.Location = new System.Drawing.Point(599, 180);
             this.radioButton_tnav.Name = "radioButton_tnav";
-            this.radioButton_tnav.Size = new System.Drawing.Size(80, 19);
+            this.radioButton_tnav.Size = new System.Drawing.Size(96, 22);
             this.radioButton_tnav.TabIndex = 31;
             this.radioButton_tnav.Text = "tNavigator";
             this.radioButton_tnav.UseVisualStyleBackColor = true;
@@ -4481,7 +4481,7 @@
             this.textBox_mpi_exe_file.Font = new System.Drawing.Font("Consolas", 9F);
             this.textBox_mpi_exe_file.Location = new System.Drawing.Point(96, 287);
             this.textBox_mpi_exe_file.Name = "textBox_mpi_exe_file";
-            this.textBox_mpi_exe_file.Size = new System.Drawing.Size(1138, 22);
+            this.textBox_mpi_exe_file.Size = new System.Drawing.Size(1138, 25);
             this.textBox_mpi_exe_file.TabIndex = 24;
             this.textBox_mpi_exe_file.TextChanged += new System.EventHandler(this.textBox_mpi_exe_file_TextChanged);
             // 
@@ -4493,7 +4493,7 @@
             this.textBox_sim_exe_file.Font = new System.Drawing.Font("Consolas", 9F);
             this.textBox_sim_exe_file.Location = new System.Drawing.Point(96, 254);
             this.textBox_sim_exe_file.Name = "textBox_sim_exe_file";
-            this.textBox_sim_exe_file.Size = new System.Drawing.Size(1138, 22);
+            this.textBox_sim_exe_file.Size = new System.Drawing.Size(1138, 25);
             this.textBox_sim_exe_file.TabIndex = 24;
             this.textBox_sim_exe_file.TextChanged += new System.EventHandler(this.textBox_sim_exe_file_TextChanged);
             // 
@@ -4504,7 +4504,7 @@
             this.radioButton_tempest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.radioButton_tempest.Location = new System.Drawing.Point(489, 180);
             this.radioButton_tempest.Name = "radioButton_tempest";
-            this.radioButton_tempest.Size = new System.Drawing.Size(73, 19);
+            this.radioButton_tempest.Size = new System.Drawing.Size(87, 22);
             this.radioButton_tempest.TabIndex = 31;
             this.radioButton_tempest.Text = "Tempest";
             this.radioButton_tempest.UseVisualStyleBackColor = true;
@@ -4515,7 +4515,7 @@
             this.label_mpi_exe_file.AutoSize = true;
             this.label_mpi_exe_file.Location = new System.Drawing.Point(7, 290);
             this.label_mpi_exe_file.Name = "label_mpi_exe_file";
-            this.label_mpi_exe_file.Size = new System.Drawing.Size(71, 15);
+            this.label_mpi_exe_file.Size = new System.Drawing.Size(83, 18);
             this.label_mpi_exe_file.TabIndex = 22;
             this.label_mpi_exe_file.Text = "MPI exe file";
             // 
@@ -4524,7 +4524,7 @@
             this.label_sim_exe_file.AutoSize = true;
             this.label_sim_exe_file.Location = new System.Drawing.Point(7, 258);
             this.label_sim_exe_file.Name = "label_sim_exe_file";
-            this.label_sim_exe_file.Size = new System.Drawing.Size(73, 15);
+            this.label_sim_exe_file.Size = new System.Drawing.Size(87, 18);
             this.label_sim_exe_file.TabIndex = 22;
             this.label_sim_exe_file.Text = "tNav exe file";
             // 
@@ -4534,7 +4534,7 @@
             this.label_max_cpu.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_max_cpu.Location = new System.Drawing.Point(145, 224);
             this.label_max_cpu.Name = "label_max_cpu";
-            this.label_max_cpu.Size = new System.Drawing.Size(35, 14);
+            this.label_max_cpu.Size = new System.Drawing.Size(40, 18);
             this.label_max_cpu.TabIndex = 23;
             this.label_max_cpu.Text = "/ 40";
             // 
@@ -4543,7 +4543,7 @@
             this.label_cpu_usage.AutoSize = true;
             this.label_cpu_usage.Location = new System.Drawing.Point(46, 224);
             this.label_cpu_usage.Name = "label_cpu_usage";
-            this.label_cpu_usage.Size = new System.Drawing.Size(32, 15);
+            this.label_cpu_usage.Size = new System.Drawing.Size(40, 18);
             this.label_cpu_usage.TabIndex = 23;
             this.label_cpu_usage.Text = "CPU";
             // 
@@ -4554,7 +4554,7 @@
             this.checkBox_use_gpu.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_use_gpu.Location = new System.Drawing.Point(205, 223);
             this.checkBox_use_gpu.Name = "checkBox_use_gpu";
-            this.checkBox_use_gpu.Size = new System.Drawing.Size(75, 19);
+            this.checkBox_use_gpu.Size = new System.Drawing.Size(91, 22);
             this.checkBox_use_gpu.TabIndex = 32;
             this.checkBox_use_gpu.Text = "use GPU";
             this.checkBox_use_gpu.UseVisualStyleBackColor = true;
@@ -4581,7 +4581,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 15);
+            this.label2.Size = new System.Drawing.Size(136, 18);
             this.label2.TabIndex = 5;
             this.label2.Text = "Step 1/8 - DATA-file";
             // 
@@ -4679,7 +4679,7 @@
             0,
             0});
             this.numericUpDown_nx.Name = "numericUpDown_nx";
-            this.numericUpDown_nx.Size = new System.Drawing.Size(84, 22);
+            this.numericUpDown_nx.Size = new System.Drawing.Size(84, 25);
             this.numericUpDown_nx.TabIndex = 25;
             this.numericUpDown_nx.Value = new decimal(new int[] {
             1,
@@ -4703,7 +4703,7 @@
             0,
             0});
             this.numericUpDown_ny.Name = "numericUpDown_ny";
-            this.numericUpDown_ny.Size = new System.Drawing.Size(84, 22);
+            this.numericUpDown_ny.Size = new System.Drawing.Size(84, 25);
             this.numericUpDown_ny.TabIndex = 26;
             this.numericUpDown_ny.Value = new decimal(new int[] {
             1,
@@ -4716,9 +4716,9 @@
             // 
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(183, 21);
+            this.label11.Location = new System.Drawing.Point(183, 20);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(84, 15);
+            this.label11.Size = new System.Drawing.Size(84, 18);
             this.label11.TabIndex = 27;
             this.label11.Text = "NZ";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4738,7 +4738,7 @@
             0,
             0});
             this.numericUpDown_nz.Name = "numericUpDown_nz";
-            this.numericUpDown_nz.Size = new System.Drawing.Size(84, 22);
+            this.numericUpDown_nz.Size = new System.Drawing.Size(84, 25);
             this.numericUpDown_nz.TabIndex = 27;
             this.numericUpDown_nz.Value = new decimal(new int[] {
             1,
@@ -4751,9 +4751,9 @@
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(93, 21);
+            this.label10.Location = new System.Drawing.Point(93, 20);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 15);
+            this.label10.Size = new System.Drawing.Size(84, 18);
             this.label10.TabIndex = 27;
             this.label10.Text = "NY";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4762,9 +4762,9 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 21);
+            this.label3.Location = new System.Drawing.Point(3, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 15);
+            this.label3.Size = new System.Drawing.Size(84, 18);
             this.label3.TabIndex = 27;
             this.label3.Text = "NX";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4785,7 +4785,7 @@
             0,
             0});
             this.numericUpDown_dx.Name = "numericUpDown_dx";
-            this.numericUpDown_dx.Size = new System.Drawing.Size(84, 22);
+            this.numericUpDown_dx.Size = new System.Drawing.Size(84, 25);
             this.numericUpDown_dx.TabIndex = 28;
             this.numericUpDown_dx.Value = new decimal(new int[] {
             50,
@@ -4810,7 +4810,7 @@
             0,
             0});
             this.numericUpDown_dy.Name = "numericUpDown_dy";
-            this.numericUpDown_dy.Size = new System.Drawing.Size(84, 22);
+            this.numericUpDown_dy.Size = new System.Drawing.Size(84, 25);
             this.numericUpDown_dy.TabIndex = 29;
             this.numericUpDown_dy.Value = new decimal(new int[] {
             50,
@@ -4840,7 +4840,7 @@
             0,
             65536});
             this.numericUpDown_dz.Name = "numericUpDown_dz";
-            this.numericUpDown_dz.Size = new System.Drawing.Size(84, 22);
+            this.numericUpDown_dz.Size = new System.Drawing.Size(84, 25);
             this.numericUpDown_dz.TabIndex = 30;
             this.numericUpDown_dz.Value = new decimal(new int[] {
             1,
@@ -4865,7 +4865,7 @@
             0,
             0});
             this.numericUpDown_top_depth.Name = "numericUpDown_top_depth";
-            this.numericUpDown_top_depth.Size = new System.Drawing.Size(84, 22);
+            this.numericUpDown_top_depth.Size = new System.Drawing.Size(84, 25);
             this.numericUpDown_top_depth.TabIndex = 31;
             this.numericUpDown_top_depth.Value = new decimal(new int[] {
             2000,
@@ -4878,9 +4878,9 @@
             // 
             this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(273, 21);
+            this.label19.Location = new System.Drawing.Point(273, 20);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(84, 15);
+            this.label19.Size = new System.Drawing.Size(84, 18);
             this.label19.TabIndex = 27;
             this.label19.Text = "DX";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4889,9 +4889,9 @@
             // 
             this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(363, 21);
+            this.label20.Location = new System.Drawing.Point(363, 20);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(84, 15);
+            this.label20.Size = new System.Drawing.Size(84, 18);
             this.label20.TabIndex = 27;
             this.label20.Text = "DY";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4900,9 +4900,9 @@
             // 
             this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(453, 21);
+            this.label28.Location = new System.Drawing.Point(453, 20);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(84, 15);
+            this.label28.Size = new System.Drawing.Size(84, 18);
             this.label28.TabIndex = 27;
             this.label28.Text = "DZ";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4912,9 +4912,9 @@
             this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label31.AutoSize = true;
             this.tableLayoutPanel_dim.SetColumnSpan(this.label31, 3);
-            this.label31.Location = new System.Drawing.Point(3, 2);
+            this.label31.Location = new System.Drawing.Point(3, 1);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(264, 15);
+            this.label31.Size = new System.Drawing.Size(264, 18);
             this.label31.TabIndex = 27;
             this.label31.Text = "Grid size";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4924,9 +4924,9 @@
             this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label35.AutoSize = true;
             this.tableLayoutPanel_dim.SetColumnSpan(this.label35, 3);
-            this.label35.Location = new System.Drawing.Point(273, 2);
+            this.label35.Location = new System.Drawing.Point(273, 1);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(264, 15);
+            this.label35.Size = new System.Drawing.Size(264, 18);
             this.label35.TabIndex = 27;
             this.label35.Text = "Cell size";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4935,10 +4935,10 @@
             // 
             this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(543, 11);
+            this.label30.Location = new System.Drawing.Point(543, 10);
             this.label30.Name = "label30";
             this.tableLayoutPanel_dim.SetRowSpan(this.label30, 2);
-            this.label30.Size = new System.Drawing.Size(87, 15);
+            this.label30.Size = new System.Drawing.Size(87, 18);
             this.label30.TabIndex = 27;
             this.label30.Text = "Top depth";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4949,7 +4949,7 @@
             this.radioButton_use_grid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.radioButton_use_grid.Location = new System.Drawing.Point(5, 173);
             this.radioButton_use_grid.Name = "radioButton_use_grid";
-            this.radioButton_use_grid.Size = new System.Drawing.Size(281, 19);
+            this.radioButton_use_grid.Size = new System.Drawing.Size(334, 22);
             this.radioButton_use_grid.TabIndex = 26;
             this.radioButton_use_grid.TabStop = true;
             this.radioButton_use_grid.Text = "GRID-file (recommended for an unregular grid)";
@@ -4962,7 +4962,7 @@
             this.radioButton_use_dim.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.radioButton_use_dim.Location = new System.Drawing.Point(5, 60);
             this.radioButton_use_dim.Name = "radioButton_use_dim";
-            this.radioButton_use_dim.Size = new System.Drawing.Size(258, 19);
+            this.radioButton_use_dim.Size = new System.Drawing.Size(306, 22);
             this.radioButton_use_dim.TabIndex = 26;
             this.radioButton_use_dim.TabStop = true;
             this.radioButton_use_dim.Text = "Use simple grid (suitable for a regular grid)";
@@ -4975,7 +4975,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 15);
+            this.label5.Size = new System.Drawing.Size(112, 18);
             this.label5.TabIndex = 24;
             this.label5.Text = "Step 2/8 - GRID";
             // 
@@ -5015,7 +5015,7 @@
             this.textBox_grid_file.Location = new System.Drawing.Point(25, 198);
             this.textBox_grid_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_grid_file.Name = "textBox_grid_file";
-            this.textBox_grid_file.Size = new System.Drawing.Size(1216, 22);
+            this.textBox_grid_file.Size = new System.Drawing.Size(1216, 25);
             this.textBox_grid_file.TabIndex = 21;
             this.textBox_grid_file.TextChanged += new System.EventHandler(this.textBox_grid_file_TextChanged);
             // 
@@ -5045,7 +5045,7 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(3, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(127, 15);
+            this.label15.Size = new System.Drawing.Size(155, 18);
             this.label15.TabIndex = 54;
             this.label15.Text = "Step 5/7 - WBHPH-file";
             // 
@@ -5084,7 +5084,7 @@
             this.textBox_wbhph_file.Location = new System.Drawing.Point(114, 375);
             this.textBox_wbhph_file.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_wbhph_file.Name = "textBox_wbhph_file";
-            this.textBox_wbhph_file.Size = new System.Drawing.Size(1126, 21);
+            this.textBox_wbhph_file.Size = new System.Drawing.Size(1126, 24);
             this.textBox_wbhph_file.TabIndex = 51;
             // 
             // label7
@@ -5093,7 +5093,7 @@
             this.label7.Location = new System.Drawing.Point(35, 378);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 15);
+            this.label7.Size = new System.Drawing.Size(88, 18);
             this.label7.TabIndex = 11;
             this.label7.Text = "WBHPH-file";
             // 
@@ -5142,7 +5142,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(3, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(153, 15);
+            this.label8.Size = new System.Drawing.Size(186, 18);
             this.label8.TabIndex = 34;
             this.label8.Text = "Step 4/7 - RESULTS-folder";
             // 
@@ -5181,7 +5181,7 @@
             this.textBox_results_folder.Location = new System.Drawing.Point(122, 324);
             this.textBox_results_folder.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_results_folder.Name = "textBox_results_folder";
-            this.textBox_results_folder.Size = new System.Drawing.Size(1120, 21);
+            this.textBox_results_folder.Size = new System.Drawing.Size(1120, 24);
             this.textBox_results_folder.TabIndex = 31;
             // 
             // label12
@@ -5190,7 +5190,7 @@
             this.label12.Location = new System.Drawing.Point(17, 324);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(98, 15);
+            this.label12.Size = new System.Drawing.Size(119, 18);
             this.label12.TabIndex = 16;
             this.label12.Text = "RESULTS-folder";
             // 
@@ -5211,7 +5211,7 @@
             // 
             // WizardForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button_cancel;
             this.ClientSize = new System.Drawing.Size(1313, 804);
@@ -5240,7 +5240,7 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_perm_max_value)).EndInit();
-            this.groupBox2.ResumeLayout(false);
+            this.groupBox_fdm.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.groupBox_perm_inter_reg.ResumeLayout(false);
@@ -5706,7 +5706,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDown_nw_max;
         private System.Windows.Forms.ListBox listBox_corey_table;
         private System.Windows.Forms.CheckBox checkBox_results_sub_folder;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox_fdm;
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TextBox textBox_fdm;

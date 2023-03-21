@@ -347,6 +347,11 @@ namespace Pexel.HM.FR
             SaveAs();
         }
 
+        void exportMenu_Click(object sender, EventArgs e)
+        {
+            Export();
+        }
+
         void recentFilesMenu_Click(object sender, EventArgs e)
         {
             string filename = ((ToolStripMenuItem)sender).Name;
@@ -434,6 +439,21 @@ namespace Pexel.HM.FR
                 return false;
             return SaveFile(filename);
         }
+
+
+
+        bool Export()
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = string.Format("Flow Direction Model Files (*.{0})|*.{0}", FR.FDModel.EXT);
+            dialog.DefaultExt = defaultExt;
+            dialog.ShowDialog();
+            string filename = dialog.FileName;
+            if (string.IsNullOrEmpty(filename))
+                return false;
+            return Project.GetModel().Save(filename);
+        }
+
 
 
         void OpenRecentFile(string filename)
@@ -589,10 +609,6 @@ namespace Pexel.HM.FR
 
 
 
-
-
-        ToolStripMenuItem newMenu, openMenu, saveMenu, saveAsMenu, exitMenu;
-
         private void comboBox_dates_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateDate(Math.Max(0, comboBox_dates.SelectedIndex));
@@ -633,7 +649,7 @@ namespace Pexel.HM.FR
 
 
         ToolStripSeparator separatorUpFileMenu, separatorDownFileMenu;
-
+        ToolStripMenuItem newMenu, openMenu, saveMenu, saveAsMenu, exitMenu, exportMenu;
 
 
         const int maxRecentFiles = 5;
@@ -671,6 +687,12 @@ namespace Pexel.HM.FR
             saveAsMenu.Text = "Save &As";
             saveAsMenu.Click += new System.EventHandler(saveAsMenu_Click);
             //
+            exportMenu = new ToolStripMenuItem();
+            exportMenu.Name = "Export_FileMenu";
+            exportMenu.Size = new Size(152, 22);
+            exportMenu.Text = "&Export";
+            exportMenu.Click += new System.EventHandler(exportMenu_Click);
+            //
             separatorUpFileMenu = new ToolStripSeparator();
             separatorUpFileMenu.Name = "separatorUp_FileMenu";
             separatorUpFileMenu.Size = new Size(149, 6);
@@ -698,6 +720,7 @@ namespace Pexel.HM.FR
             fileToolStripMenuItem.DropDownItems.Add(openMenu);
             fileToolStripMenuItem.DropDownItems.Add(saveMenu);
             fileToolStripMenuItem.DropDownItems.Add(saveAsMenu);
+            fileToolStripMenuItem.DropDownItems.Add(exportMenu);
             fileToolStripMenuItem.DropDownItems.Add(separatorUpFileMenu);
             for (int i = 0; i < maxRecentFiles; ++i)
                 fileToolStripMenuItem.DropDownItems.Add(recentFilesFileMenu[i]);

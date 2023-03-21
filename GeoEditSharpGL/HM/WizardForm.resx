@@ -152,6 +152,23 @@ All input data will be used for reading only. All calculations will be done with
 Use Result Viewer to view the history matching metrics and to select the permeability array you like.
 The history matching process can be stopped by a user at any time regardless of the number of iterations.</value>
   </data>
+  <data name="richTextBox3.Text" xml:space="preserve">
+    <value>NOTE: This case will not be deleted or modified. All history matching calculations will be performed in a copy of this case. The copy will be stored in the same folder and have the same name with "pxlhm" sufix.</value>
+  </data>
+  <data name="richTextBox_grid_file.Text" xml:space="preserve">
+    <value>GRID-file requirements:
+1) GRID-file have to be a GRDECL ASCII single file.
+2) The file have to contain the following keywords:
+            MAPAXES, SPECGRID, COORDSYS, COORD, ZCORN, ACTNUM.
+3) Each keyword have to occur at the GRID-file only once.
+4) Other keywords in the GRID-file are ignored.
+
+NOTE1: This file will not be deleted or modified. The file will be used for reading only.
+NOTE2: If the required keywords are in more than one file, use the File Combiner Form to create a single file.
+NOTE3: If the original file does not contain MAPAXES keyword, add to file:
+MAPAXES
+0 0 0 0 0 0 /</value>
+  </data>
   <data name="richTextBox_intro.Text" xml:space="preserve">
     <value>You have launched PEXEL.
 This is a software for automatic history matching of reservoir models.
@@ -179,23 +196,6 @@ Please follow the instructions.
 
 For more information visit web site https://pexel.pro/
 Send any questions or feedback to support@pexel.pro</value>
-  </data>
-  <data name="richTextBox3.Text" xml:space="preserve">
-    <value>NOTE: This case will not be deleted or modified. All history matching calculations will be performed in a copy of this case. The copy will be stored in the same folder and have the same name with "pxlhm" sufix.</value>
-  </data>
-  <data name="richTextBox_grid_file.Text" xml:space="preserve">
-    <value>GRID-file requirements:
-1) GRID-file have to be a GRDECL ASCII single file.
-2) The file have to contain the following keywords:
-            MAPAXES, SPECGRID, COORDSYS, COORD, ZCORN, ACTNUM.
-3) Each keyword have to occur at the GRID-file only once.
-4) Other keywords in the GRID-file are ignored.
-
-NOTE1: This file will not be deleted or modified. The file will be used for reading only.
-NOTE2: If the required keywords are in more than one file, use the File Combiner Form to create a single file.
-NOTE3: If the original file does not contain MAPAXES keyword, add to file:
-MAPAXES
-0 0 0 0 0 0 /</value>
   </data>
   <data name="richTextBox8.Text" xml:space="preserve">
     <value>The WBHPH-file is a file with information about history bottomhole pressure measurements by wells. 
