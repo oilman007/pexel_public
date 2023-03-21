@@ -250,6 +250,8 @@ namespace Pexel.HM
                 PermxMaxFile = Helper.GetNewPathIfExists(old_ref, new_ref, value.PermMaxFile);
                 UsePermxMinFile = value.PermMinFileUsed;
                 UsePermxMaxFile = value.PermMaxFileUsed;
+                FDModel = value.FDModel;
+                FDModelFile = value.FDModelFile;
 
                 RegionsFile = Helper.GetNewPathIfExists(old_ref, new_ref, value.PermRegionsFile);
                 RegionsTitle = value.PermRegionsTitle;
@@ -419,6 +421,8 @@ namespace Pexel.HM
                     PermRegionsFileUsed = this.UseRegionsFile,
                     PermRegionsFile = this.RegionsFile,
                     PermRegionsTitle = this.RegionsTitle,
+                    FDModel = this.FDModel,
+                    FDModelFile = this.FDModelFile,
                     TargetWellsFileUsed = this.UseTargetWellsFile,
                     TargetWellsFile = this.TargetWellsFile,
 

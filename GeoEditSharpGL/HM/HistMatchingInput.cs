@@ -93,7 +93,7 @@ namespace Pexel.HM
         public bool UserSummaryFileUsed { set; get; } = true;
 
         [CategoryAttribute(data_category_attribute), DescriptionAttribute(""), BrowsableAttribute(true), ReadOnlyAttribute(true)]
-        public bool ResultsSubFolderUsed { set; get; } = true;
+        public bool ResultsSubFolderUsed { set; get; } = false;
 
         [CategoryAttribute(data_category_attribute), DescriptionAttribute(""), BrowsableAttribute(true), ReadOnlyAttribute(true)]
         public int CpuNumber { set; get; } = 1;
@@ -439,10 +439,15 @@ namespace Pexel.HM
         [CategoryAttribute(perm_category_attribute), DescriptionAttribute(""), BrowsableAttribute(true), ReadOnlyAttribute(true)]
         public bool PermLayerSplitting { set; get; } = true;
 
+
+
+        // fdm
         [CategoryAttribute(perm_category_attribute), DescriptionAttribute(""), BrowsableAttribute(true), ReadOnlyAttribute(true)]
         public bool FDModel { set; get; } = false;
+
         [CategoryAttribute(perm_category_attribute), DescriptionAttribute(""), BrowsableAttribute(true), ReadOnlyAttribute(true)]
         public string FDModelFile { set; get; } = string.Empty;
+
 
 
         // relperm
