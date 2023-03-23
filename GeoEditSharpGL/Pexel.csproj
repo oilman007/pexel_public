@@ -279,7 +279,14 @@
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FileIO\Eclipse.cs" />
-    <Compile Include="FileIO\Helper.cs" />
+    <Compile Include="General\Helper.cs" />
+    <Compile Include="General\Table2D.cs" />
+    <Compile Include="General\Table2DTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\Table2DTest.Designer.cs">
+      <DependentUpon>Table2DTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Geometry2D\Index2D.cs" />
     <Compile Include="Geometry2D\WellsLink.cs" />
     <Compile Include="Geometry3D\Actnum.cs" />
@@ -556,13 +563,13 @@
     <Compile Include="private\ML\LinearAlgebra\Vector.cs" />
     <Compile Include="private\HM\RP\NSGener.cs" />
     <Compile Include="private\NN\NeuralNetwork.cs" />
-    <Compile Include="Poly\PolyFuncForm.cs">
+    <Compile Include="General\PolyFuncForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Poly\PolyFuncForm.Designer.cs">
+    <Compile Include="General\PolyFuncForm.Designer.cs">
       <DependentUpon>PolyFuncForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Poly\PolyFunctions.cs" />
+    <Compile Include="General\PolyFunctions.cs" />
     <Compile Include="View\View2D.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -694,6 +701,9 @@
     <EmbeddedResource Include="AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="General\Table2DTest.resx">
+      <DependentUpon>Table2DTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HM\Aquifer\AquiferCellsForm.resx">
       <DependentUpon>AquiferCellsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -788,7 +798,7 @@
     <EmbeddedResource Include="private\HM\RP\NeuroSCALForm.resx">
       <DependentUpon>NeuroSCALForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Poly\PolyFuncForm.resx">
+    <EmbeddedResource Include="General\PolyFuncForm.resx">
       <DependentUpon>PolyFuncForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Property\PropCreateForm.resx">
