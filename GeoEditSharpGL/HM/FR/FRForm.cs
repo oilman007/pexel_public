@@ -107,7 +107,10 @@ namespace Pexel.HM.FR
             int i = 0;
             foreach (FRRegion region in Project.Regions.Values)
             {
-                FRCase frc = region.Cases.Where(v => v.FirstDt <= dt && dt <= v.LastDt).First();
+                FRCase frc = region.Cases.Where(v => v.FirstDt <= dt && dt <= v.LastDt).FirstOrDefault();
+                if (frc is null)
+                    continue;
+                //
                 UpdateCaseNode(CaseNodes[i++], frc);
                 // wells
                 View2D.WellsPlane2D.Wells.AddRange(frc.Wells);
