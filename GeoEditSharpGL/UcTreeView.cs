@@ -98,8 +98,11 @@ namespace Pexel
             {
                 if (SelectedNode == n && Control.ModifierKeys == Keys.Control)
                     SelectedNode = SelectedNode != null ? null : n;
-                else SelectedNode = n;
+                // my else SelectedNode = n;
             }
+
+            // my
+            SelectedNode = n;
 
             //Console.WriteLine(" " + n.Check1 + " " + n.Check2);
 
