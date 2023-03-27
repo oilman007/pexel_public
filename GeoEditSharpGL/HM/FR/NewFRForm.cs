@@ -17,6 +17,8 @@ namespace Pexel.HM.FR
         public NewFRForm()
         {
             InitializeComponent();
+            checkBox_aqcell_CheckedChanged(null, null);
+            checkBox_aqreg_CheckedChanged(null, null);
         }
 
         public delegate void UpdateProjectHandler(FRProject project);
@@ -53,6 +55,19 @@ namespace Pexel.HM.FR
         }
 
 
+
+        bool AqcellUsed
+        {
+            set
+            {
+                this.checkBox_aqcell.Checked = value;
+            }
+            get
+            {
+                return this.checkBox_aqcell.Checked;
+            }
+        }
+
         string AqcellFile
         {
             set
@@ -66,6 +81,32 @@ namespace Pexel.HM.FR
         }
 
 
+
+        bool AqregUsed
+        {
+            set
+            {
+                this.checkBox_aqreg.Checked = value;
+            }
+            get
+            {
+                return this.checkBox_aqreg.Checked;
+            }
+        }
+
+        string AqregFile
+        {
+            set
+            {
+                this.textBox_aqreg.Text = value;
+            }
+            get
+            {
+                return this.textBox_aqreg.Text;
+            }
+        }
+
+
         private void button_run_Click(object sender, EventArgs e)
         {
             Grid grid;
@@ -73,11 +114,22 @@ namespace Pexel.HM.FR
                 Grid.ReadBinary(GridFile, out grid);
             else
                 grid = new Grid(GridFile, FileType.GRDECL_ASCII);
+            //
             Prop aqcell = new Prop();
-            aqcell.Read(grid.NX(), grid.NY(), grid.NZ(), "AQCELL", AqcellFile, HistMatching.FILETYPE);
+            if (AqcellUsed)
+                aqcell.Read(grid.NX(), grid.NY(), grid.NZ(), "AQCELL", AqcellFile, HistMatching.FILETYPE);
+            else
+                aqcell = new Prop(grid.NX(), grid.NY(), grid.NZ(), 0, "AQCELL");
+            //
+            Prop aqreg = new Prop();
+            if (AqregUsed)
+                aqreg.Read(grid.NX(), grid.NY(), grid.NZ(), "AQREG", AqregFile, HistMatching.FILETYPE);
+            else
+                aqreg = Aquifer.AquiferAnalyzer.Regions(grid.NX(), grid.NY(), grid.NZ(), grid.Actnum);
+            //
             IterationResult rsm = new IterationResult(RsmFile, out List<string> msgs);
-            Prop regions = Aquifer.AquiferAnalyzer.Regions(grid.NX(), grid.NY(), grid.NZ(), grid.Actnum);
-            FRProject project = new FRProject(grid, regions, aqcell, rsm);
+            //
+            FRProject project = new FRProject(grid, aqreg, aqcell, rsm);
             UpdateProjectEvent?.Invoke(project);
         }
 
@@ -122,15 +174,29 @@ namespace Pexel.HM.FR
         }
 
 
+        private void checkBox_aqcell_CheckedChanged(object sender, EventArgs e)
+        {
+            this.textBox_aqcell.Enabled = this.checkBox_aqcell.Checked;
+            this.button_aqcell.Enabled = this.checkBox_aqcell.Checked;
+        }
 
+        private void checkBox_aqreg_CheckedChanged(object sender, EventArgs e)
+        {
+            this.textBox_aqreg.Enabled = this.checkBox_aqreg.Checked;
+            this.button_aqreg.Enabled = this.checkBox_aqreg.Checked;
+        }
 
-
-
-
-
-
-
-
-
+        private void button_aqreg_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = string.Format("GRDECL Files (*.*)|*.*");
+            dialog.Multiselect = false;
+            dialog.ShowDialog();
+            string filename = dialog.FileName;
+            if (!string.IsNullOrEmpty(filename))
+            {
+                AqregFile = filename;
+            }
+        }
     }
 }
