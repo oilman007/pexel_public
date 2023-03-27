@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using Pexel.Geometry2D;
 
 namespace Pexel
 {
@@ -14,10 +15,18 @@ namespace Pexel
      *  0--3
      * */
 
-    public class Quad2D
+    public class Quad2D : IViewable2D
     {
         public Point2D[] Corners { get; set; } = new Point2D[4];
-        public bool Checked { set; get; } = true;
+        public bool Visible { set; get; } = true;
+        public bool Used { set; get; } = true;
+        override public bool Checked
+        {
+            get
+            {
+                return Visible && Used;
+            }
+        }
         public Color Color { set; get; } = Color.Black;
         public string Title { set; get; } = string.Empty;
         public Point2D Center()
@@ -32,7 +41,7 @@ namespace Pexel
         public static double Square(List<Quad2D> quads)
         {
             double result = 0f;
-            foreach (Quad2D item in quads) if (item.Checked) result += item.Square();
+            foreach (Quad2D item in quads) if (item.Visible) result += item.Square();
             return result;
         }
 

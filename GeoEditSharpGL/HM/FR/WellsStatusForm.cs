@@ -32,7 +32,7 @@ namespace Pexel.HM.HMFFR
                     List<double> dlist = new List<double>();
                     List<double> flist = new List<double>();
                     foreach (var link in iplinks)
-                        if (link.Checked)
+                        if (link.Visible)
                             if (well.Title == link.W1.Title)
                             {
                                 double d = link.Distance();

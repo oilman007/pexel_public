@@ -46,7 +46,7 @@ namespace Pexel.HM.FR
 
         int selected_date = 0;
 
-        TreeNode[] CaseNodes { get; set; }
+        TreeNode2[] CaseNodes { get; set; }
 
 
         FRProject Project { set; get; } = new FRProject();
@@ -88,11 +88,11 @@ namespace Pexel.HM.FR
         void UpdateProject(FRProject project)
         {
             Project = project;
-            this.treeView.Nodes.Clear();
-            CaseNodes = new TreeNode[project.Regions.Count];
+            this.ucTreeView.Nodes.Clear();
+            CaseNodes = new TreeNode2[project.Regions.Count];
             int i = 0;
             foreach (FRRegion r in Project.Regions.Values)
-                treeView.Nodes.Add(RegionNode(r, out CaseNodes[i++]));         
+                ucTreeView.Nodes.Add(RegionNode(r, out CaseNodes[i++]));         
             UpdateDates(project.Dates);
             View2D.Boundaries = Project.Regions.Values.SelectMany(x => x.Boundaries).ToList();
             //UpdateCases(project.Dates.First());
@@ -145,15 +145,16 @@ namespace Pexel.HM.FR
 
 
 
-        TreeNode RegionNode(FRRegion region, out TreeNode case_node)
+        TreeNode RegionNode(FRRegion region, out TreeNode2 case_node)
         {
-            TreeNode result = new TreeNode("Region " + region.Title)
+            TreeNode2 result = new TreeNode2("Region " + region.Title)
             {
-                Checked = true,
+                Check1 = true,
+                Check2 = true,
                 Tag = region
             };
             result.Nodes.Add(BoundariesNode(region.Boundaries));
-            case_node = new TreeNode("Case");
+            case_node = new TreeNode2("Case");
             result.Nodes.Add(case_node);
             return result;
         }
@@ -161,11 +162,12 @@ namespace Pexel.HM.FR
 
 
 
-        TreeNode BoundariesNode(IEnumerable<Polygon2D> boundaries)
+        TreeNode2 BoundariesNode(IEnumerable<Polygon2D> boundaries)
         {
-            TreeNode result = new TreeNode("Boundaries")
+            TreeNode2 result = new TreeNode2("Boundaries")
             {
-                Checked = true,
+                Check1 = true,
+                Check2 = true,
                 Tag = boundaries
             };
             foreach (Polygon2D p in boundaries)
@@ -173,11 +175,12 @@ namespace Pexel.HM.FR
             return result;
         }
 
-        TreeNode BoundaryNode(Polygon2D boundary)
+        TreeNode2 BoundaryNode(Polygon2D boundary)
         {
-            TreeNode result = new TreeNode("Boundary" + boundary.Title)
+            TreeNode2 result = new TreeNode2("Boundary" + boundary.Title)
             {
-                Checked = boundary.Checked,
+                Check1 = boundary.Visible,
+                Check2 = boundary.Used,
                 Tag = boundary
             };
             return result;
@@ -200,11 +203,12 @@ namespace Pexel.HM.FR
             return result;
         }
 
-        TreeNode WellsNode(IEnumerable<WellFace2D> wells)
+        TreeNode2 WellsNode(IEnumerable<WellFace2D> wells)
         {
-            TreeNode result = new TreeNode("Wells")
+            TreeNode2 result = new TreeNode2("Wells")
             {
-                Checked = true,
+                Check1 = true,
+                Check2 = true,
                 Tag = wells
             };
             foreach (WellFace2D w in wells)
@@ -212,21 +216,23 @@ namespace Pexel.HM.FR
             return result;
         }
 
-        TreeNode WellNode(WellFace2D well)
+        TreeNode2 WellNode(WellFace2D well)
         {
-            TreeNode result = new TreeNode(well.Title)
+            TreeNode2 result = new TreeNode2(well.Title)
             {
-                Checked = well.Checked,
+                Check1 = well.Visible,
+                Check2 = well.Used,
                 Tag = well
             };
             return result;
         }
 
-        TreeNode LinksNode(string title, IEnumerable<WellsLink> links)
+        TreeNode2 LinksNode(string title, IEnumerable<WellsLink> links)
         {
-            TreeNode result = new TreeNode(title)
+            TreeNode2 result = new TreeNode2(title)
             {
-                Checked = true,
+                Check1 = true,
+                Check2 = true,
                 Tag = links
             };
             foreach (WellsLink l in links)
@@ -234,11 +240,12 @@ namespace Pexel.HM.FR
             return result;
         }
 
-        TreeNode LinkNode(WellsLink link)
+        TreeNode2 LinkNode(WellsLink link)
         {
-            TreeNode result = new TreeNode(link.Title)
+            TreeNode2 result = new TreeNode2(link.Title)
             {
-                Checked = link.Checked,
+                Check1 = link.Visible,
+                Check2 = link.Used,
                 Tag = link
             };
             return result;
@@ -272,31 +279,31 @@ namespace Pexel.HM.FR
             if (e.Node.Tag is WellFace2D)
             {
                 WellFace2D well = (WellFace2D)e.Node.Tag;
-                well.Checked = e.Node.Checked;
+                well.Visible = e.Node.Checked;
             }
             else
             if (e.Node.Tag is WellsLink)
             {
                 WellsLink link = (WellsLink)e.Node.Tag;
-                link.Checked = e.Node.Checked;
+                link.Visible = e.Node.Checked;
             }
             else
             if (e.Node.Tag is Polygon2D)
             {
                 Polygon2D poly = (Polygon2D)e.Node.Tag;
-                poly.Checked = e.Node.Checked;
+                poly.Visible = e.Node.Checked;
             }
             else
             if (e.Node.Tag is Triangle2D)
             {
                 Triangle2D triangle = (Triangle2D)e.Node.Tag;
-                triangle.Checked = e.Node.Checked;
+                triangle.Visible = e.Node.Checked;
             }
             else
             if (e.Node.Tag is Quad2D)
             {
                 Quad2D quad = (Quad2D)e.Node.Tag;
-                quad.Checked = e.Node.Checked;
+                quad.Visible = e.Node.Checked;
             }
         }
 
@@ -654,8 +661,9 @@ namespace Pexel.HM.FR
         ToolStripSeparator separatorUpFileMenu, separatorDownFileMenu;
         ToolStripMenuItem newMenu, openMenu, saveMenu, saveAsMenu, exitMenu, exportMenu;
 
-
         const int maxRecentFiles = 5;
+
+
         ToolStripMenuItem[] recentFilesFileMenu;
         //ToolStripMenuItem wellsMenu, addWellsMenu, removeWellsMenu, renameWellsMenu;
 
@@ -803,6 +811,68 @@ namespace Pexel.HM.FR
                 View2D.WellsLinks.AddRange((List<WellsLink>)IILinksTreeNodes.Tag);
         }
         */
+
+
+
+
+
+        TreeNode selected_node;
+        private void ucTreeView_BeforeSelect(object sender, TreeViewCancelEventArgs e)
+        {
+            selected_node = e.Node;
+        }
+
+
+        private void ucTreeView_Click(object sender, EventArgs e)
+        {
+            if (selected_node is null) return;
+            //
+            TreeNode2 node = selected_node as TreeNode2;
+            if (!node.Check2)
+                selected_node.SelectedImageIndex = 2;
+            else if (!node.Check1)
+                selected_node.SelectedImageIndex = 1;
+            else
+                selected_node.SelectedImageIndex = 0;
+            selected_node.ImageIndex = selected_node.SelectedImageIndex;
+            //
+            if (node.Tag is WellFace2D)
+            {
+                WellFace2D well = (WellFace2D)node.Tag;
+                well.Visible = node.Check1;
+                well.Used = node.Check2;
+            }
+            else if (node.Tag is WellsLink)
+            {
+                WellsLink link = (WellsLink)node.Tag;
+                link.Visible = node.Check1;
+                link.Used = node.Check2;
+            }
+            else if (node.Tag is Polygon2D)
+            {
+                Polygon2D poly = (Polygon2D)node.Tag;
+                poly.Visible = node.Check1;
+                poly.Used = node.Check2;
+            }
+            else if (node.Tag is Triangle2D)
+            {
+                Triangle2D triangle = (Triangle2D)node.Tag;
+                triangle.Visible = node.Check1;
+                triangle.Used = node.Check2;
+            }
+            else if (node.Tag is Quad2D)
+            {
+                Quad2D quad = (Quad2D)node.Tag;
+                quad.Visible = node.Check1;
+                quad.Used = node.Check2;
+            }
+        }
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pexel.Geometry2D;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -9,7 +10,7 @@ using System.Text;
 namespace Pexel
 {
     [Serializable]
-    public class Triangle2D
+    public class Triangle2D : IViewable2D
     {
         public Triangle2D()
         {
@@ -33,7 +34,15 @@ namespace Pexel
         }
 
         public Point2D[] Corners { get; set; } = new Point2D[3];
-        public bool Checked { set; get; } = true;
+        public bool Visible { set; get; } = true;
+        public bool Used { set; get; } = true;
+        override public bool Checked
+        {
+            get
+            {
+                return Visible && Used;
+            }
+        }
         public Color Color { set; get; } = Color.Black;
         public string Title { set; get; } = string.Empty;
         public Point2D Center()
@@ -52,7 +61,7 @@ namespace Pexel
         public static double Square(List<Triangle2D> triangles)
         {
             double result = 0;
-            foreach (Triangle2D triangle in triangles) if (triangle.Checked) result += triangle.Square();
+            foreach (Triangle2D triangle in triangles) if (triangle.Visible) result += triangle.Square();
             return result;
         }
         double Distance(Point2D p1, Point2D p2  )

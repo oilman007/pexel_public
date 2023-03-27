@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pexel.Geometry2D;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Text;
 namespace Pexel
 {
     [Serializable]
-    public class WellsLink
+    public class WellsLink : IViewable2D
     {
         public WellsLink()
         {
@@ -21,8 +22,15 @@ namespace Pexel
         public WellFace2D W1 { set; get; }
         public WellFace2D W2 { set; get; }
         public Color Color { set; get; } = Color.Black;
-        virtual public bool Checked { set; get; } = true;
-
+        virtual public bool Visible { set; get; } = true;
+        virtual public bool Used { set; get; } = true;
+        override public bool Checked
+        {
+            get
+            {
+                return Visible && Used;
+            }
+        }
 
 
         public double Distance()

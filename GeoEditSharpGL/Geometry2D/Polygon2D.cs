@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pexel.Geometry2D;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -7,11 +8,21 @@ using System.Text;
 namespace Pexel
 {
     [Serializable]
-    public class Polygon2D
+    public class Polygon2D : IViewable2D
     {
         public List<Point2D> Points { set; get; } = new List<Point2D>();
         public Color Color { set; get; } = Color.Yellow;
-        public bool Checked { set; get; } = true;
+        public bool Visible { set; get; } = true;
+        public bool Used { set; get; } = true;
+
+        override public bool Checked
+        {
+            get
+            {
+                return Visible && Used;
+            }           
+        }
+
         public string Title { set; get; } = string.Empty;
         public bool Closed { set; get; } = false;
         public double Value { set; get; } = 0;

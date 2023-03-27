@@ -92,17 +92,25 @@ namespace Pexel
             TreeNode2 n = e.Node as TreeNode2;
             if (e == null) return;
 
-            if (cbx(n.Bounds, 0).Contains(e.Location)) n.Check1 = !n.Check1;
-            else if (cbx(n.Bounds, 1).Contains(e.Location)) n.Check2 = !n.Check2;
+            if (cbx(n.Bounds, 0).Contains(e.Location))
+            {
+                n.Check1 = !n.Check1;
+                SelectedNode = n; // my
+            }
+            else if (cbx(n.Bounds, 1).Contains(e.Location))
+            {
+                n.Check2 = !n.Check2;
+                SelectedNode = n; // my
+            }
             else
             {
                 if (SelectedNode == n && Control.ModifierKeys == Keys.Control)
                     SelectedNode = SelectedNode != null ? null : n;
-                // my else SelectedNode = n;
+                else SelectedNode = n;
             }
 
             // my
-            SelectedNode = n;
+            //SelectedNode = n;
 
             //Console.WriteLine(" " + n.Check1 + " " + n.Check2);
 

@@ -288,6 +288,7 @@
       <DependentUpon>Table2DTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Geometry2D\Index2D.cs" />
+    <Compile Include="Geometry2D\IViewable2D.cs" />
     <Compile Include="Geometry2D\WellsLink.cs" />
     <Compile Include="Geometry3D\Actnum.cs" />
     <Compile Include="Geometry3D\GridPlaneOpt.cs" />
