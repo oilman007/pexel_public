@@ -44,8 +44,6 @@ namespace Pexel.HM.FR
 
 
 
-        int selected_date = 0;
-
         TreeNode2[] CaseNodes { get; set; }
 
 
@@ -94,8 +92,15 @@ namespace Pexel.HM.FR
             foreach (FRRegion r in Project.Regions.Values)
                 ucTreeView.Nodes.Add(RegionNode(r, out CaseNodes[i++]));         
             UpdateDates(project.Dates);
-            View2D.Boundaries = Project.Regions.Values.SelectMany(x => x.Boundaries).ToList();
+            UpdateBoundaries();
             //UpdateCases(project.Dates.First());
+        }
+
+
+        void UpdateBoundaries()
+        {
+            View2D.Boundaries =
+                Project.Regions.Values.Where(x => x.Boundaries.Item1 && x.Boundaries.Item2).SelectMany(x => x.Boundaries.Item3).ToList();
         }
 
 
@@ -113,29 +118,35 @@ namespace Pexel.HM.FR
                 //
                 UpdateCaseNode(CaseNodes[i++], frc);
                 // wells
-                View2D.WellsPlane2D.Wells.AddRange(frc.Wells);
+                if (frc.Wells.Item1 && frc.Wells.Item2)
+                    View2D.WellsPlane2D.Wells.AddRange(frc.Wells.Item3);
                 // links
-                View2D.WellsLinks.AddRange(frc.IPLinks);
-                View2D.WellsLinks.AddRange(frc.PPLinks);
-                View2D.WellsLinks.AddRange(frc.IILinks);
+                if (frc.IPLinks.Item1 && frc.IPLinks.Item2)
+                    View2D.WellsLinks.AddRange(frc.IPLinks.Item3);
+                if (frc.PPLinks.Item1 && frc.PPLinks.Item2)
+                    View2D.WellsLinks.AddRange(frc.PPLinks.Item3);
+                if (frc.IILinks.Item1 && frc.IILinks.Item2)
+                    View2D.WellsLinks.AddRange(frc.IILinks.Item3);
             }
         }
 
 
-        void UpdateCaseNode(TreeNode case_node, FRCase frc)
+        void UpdateCaseNode(TreeNode2 case_node, FRCase frc)
         {
             //TreeNode result = new TreeNode("Case") { Checked = true, Tag = frc };
             //case_node.Checked = frc
             case_node.Tag = frc;
+            case_node.Check1 = true;
+            case_node.Check2 = true;
             bool expanded = case_node.IsExpanded;
             case_node.Nodes.Clear();
-            case_node.Nodes.Add(WellsNode(frc.Wells));
-            case_node.Nodes.Add(LinksNode("IPLinks", frc.IPLinks));
-            case_node.Nodes.Add(LinksNode("IILinks", frc.IILinks));
-            case_node.Nodes.Add(LinksNode("PPLinks", frc.PPLinks));
+            case_node.Nodes.Add(WellsNode(frc.Wells.Item3));
+            case_node.Nodes.Add(LinksNode("IPLinks", frc.IPLinks.Item3));
+            case_node.Nodes.Add(LinksNode("IILinks", frc.IILinks.Item3));
+            case_node.Nodes.Add(LinksNode("PPLinks", frc.PPLinks.Item3));
 
             View2D.Covered.Clear();
-            foreach (FRWellsLink link in frc.IPLinks)
+            foreach (FRWellsLink link in frc.IPLinks.Item3)
                 View2D.Covered.AddRange(link.ImpactArea);
 
             if (expanded)
@@ -149,8 +160,8 @@ namespace Pexel.HM.FR
         {
             TreeNode2 result = new TreeNode2("Region " + region.Title)
             {
-                Check1 = true,
-                Check2 = true,
+                Check1 = region.Visible,
+                Check2 = region.Used,
                 Tag = region
             };
             result.Nodes.Add(BoundariesNode(region.Boundaries));
@@ -162,15 +173,15 @@ namespace Pexel.HM.FR
 
 
 
-        TreeNode2 BoundariesNode(IEnumerable<Polygon2D> boundaries)
+        TreeNode2 BoundariesNode(Tuple<bool, bool, List<Polygon2D>> boundaries)
         {
             TreeNode2 result = new TreeNode2("Boundaries")
             {
-                Check1 = true,
-                Check2 = true,
+                Check1 = boundaries.Item1,
+                Check2 = boundaries.Item2,
                 Tag = boundaries
             };
-            foreach (Polygon2D p in boundaries)
+            foreach (Polygon2D p in boundaries.Item3)
                 result.Nodes.Add(BoundaryNode(p));
             return result;
         }
@@ -189,17 +200,18 @@ namespace Pexel.HM.FR
 
 
 
-        TreeNode CaseNode(FRCase frc)
+        TreeNode2 CaseNode(FRCase frc)
         {
-            TreeNode result = new TreeNode("Case")
+            TreeNode2 result = new TreeNode2("Case")
             {
-                Checked = true,
+                Check1 = frc.Visible,
+                Check2 = frc.Used,
                 Tag = frc
             };
-            result.Nodes.Add(WellsNode(frc.Wells));
-            result.Nodes.Add(LinksNode("IPLinks", frc.IPLinks));
-            result.Nodes.Add(LinksNode("IILinks", frc.IILinks));
-            result.Nodes.Add(LinksNode("PPLinks", frc.PPLinks));
+            result.Nodes.Add(WellsNode(frc.Wells.Item3));
+            result.Nodes.Add(LinksNode("IPLinks", frc.IPLinks.Item3));
+            result.Nodes.Add(LinksNode("IILinks", frc.IILinks.Item3));
+            result.Nodes.Add(LinksNode("PPLinks", frc.PPLinks.Item3));
             return result;
         }
 
@@ -650,7 +662,7 @@ namespace Pexel.HM.FR
             {
                 prev_date = date;
                 UpdateCases(Project.Dates[date]);
-            }                
+            }
         }
 
 
@@ -740,13 +752,6 @@ namespace Pexel.HM.FR
         }
 
 
-
-
-
-        void UpdateViewBoundaries()
-        {
-            View2D.Boundaries = Project.Regions.Values.SelectMany(x => x.Boundaries).ToList();
-        }
 
 
 
@@ -866,6 +871,13 @@ namespace Pexel.HM.FR
                 quad.Visible = node.Check1;
                 quad.Used = node.Check2;
             }
+            else if(node.Tag is Tuple<bool, bool, List<Polygon2D>>)
+            {
+                Tuple<bool, bool, List<Polygon2D>> boundaries = node.Tag as Tuple<bool, bool, List<Polygon2D>>;
+                boundaries = Tuple.Create(node.Check1, node.Check2, boundaries.Item3);
+                UpdateBoundaries();
+            }
+
         }
 
 

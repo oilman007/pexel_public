@@ -109,8 +109,7 @@ namespace Pexel
                 else SelectedNode = n;
             }
 
-            // my
-            //SelectedNode = n;
+            //SelectedNode = n;  // my
 
             //Console.WriteLine(" " + n.Check1 + " " + n.Check2);
 
