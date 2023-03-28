@@ -37,13 +37,13 @@
             this.statusStrip_main = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel_msg = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer_main = new System.Windows.Forms.SplitContainer();
+            this.treeView = new System.Windows.Forms.TreeView();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBox_dates = new System.Windows.Forms.ComboBox();
             this.trackBar_dates = new System.Windows.Forms.TrackBar();
             this.numericUpDown_dates = new System.Windows.Forms.NumericUpDown();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.ucTreeView = new Pexel.UcTreeView();
             this.menuStrip_main.SuspendLayout();
             this.statusStrip_main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer_main)).BeginInit();
@@ -65,14 +65,14 @@
             this.menuStrip_main.Location = new System.Drawing.Point(0, 0);
             this.menuStrip_main.Name = "menuStrip_main";
             this.menuStrip_main.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip_main.Size = new System.Drawing.Size(988, 30);
+            this.menuStrip_main.Size = new System.Drawing.Size(988, 28);
             this.menuStrip_main.TabIndex = 0;
             this.menuStrip_main.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // viewToolStripMenuItem
@@ -80,7 +80,7 @@
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem1});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.viewToolStripMenuItem.Text = "&View";
             // 
             // homeToolStripMenuItem1
@@ -111,20 +111,41 @@
             // splitContainer_main
             // 
             this.splitContainer_main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer_main.Location = new System.Drawing.Point(0, 30);
+            this.splitContainer_main.Location = new System.Drawing.Point(0, 28);
             this.splitContainer_main.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splitContainer_main.Name = "splitContainer_main";
             // 
             // splitContainer_main.Panel1
             // 
-            this.splitContainer_main.Panel1.Controls.Add(this.ucTreeView);
+            this.splitContainer_main.Panel1.Controls.Add(this.treeView);
             // 
             // splitContainer_main.Panel2
             // 
             this.splitContainer_main.Panel2.Controls.Add(this.tableLayoutPanel1);
-            this.splitContainer_main.Size = new System.Drawing.Size(988, 674);
+            this.splitContainer_main.Size = new System.Drawing.Size(988, 676);
             this.splitContainer_main.SplitterDistance = 228;
             this.splitContainer_main.TabIndex = 2;
+            // 
+            // treeView
+            // 
+            this.treeView.CheckBoxes = true;
+            this.treeView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView.ImageIndex = 0;
+            this.treeView.ImageList = this.imageList1;
+            this.treeView.Location = new System.Drawing.Point(0, 0);
+            this.treeView.Name = "treeView";
+            this.treeView.SelectedImageIndex = 0;
+            this.treeView.Size = new System.Drawing.Size(228, 676);
+            this.treeView.TabIndex = 0;
+            this.treeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView_wells_AfterCheck);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "view.png");
+            this.imageList1.Images.SetKeyName(1, "hide.png");
+            this.imageList1.Images.SetKeyName(2, "deletered.png");
             // 
             // tableLayoutPanel1
             // 
@@ -138,7 +159,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(756, 674);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(756, 676);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -191,31 +212,6 @@
             this.numericUpDown_dates.TabIndex = 1;
             this.numericUpDown_dates.ValueChanged += new System.EventHandler(this.numericUpDown_dates_ValueChanged);
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "view.png");
-            this.imageList1.Images.SetKeyName(1, "hide.png");
-            this.imageList1.Images.SetKeyName(2, "deletered.png");
-            // 
-            // ucTreeView
-            // 
-            this.ucTreeView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucTreeView.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawText;
-            this.ucTreeView.HideSelection = false;
-            this.ucTreeView.ImageIndex = 0;
-            this.ucTreeView.ImageList = this.imageList1;
-            this.ucTreeView.LeftPadding = 7;
-            this.ucTreeView.Location = new System.Drawing.Point(0, 0);
-            this.ucTreeView.Name = "ucTreeView";
-            this.ucTreeView.SelectedImageIndex = 0;
-            this.ucTreeView.Size = new System.Drawing.Size(228, 674);
-            this.ucTreeView.Spacing = 4;
-            this.ucTreeView.TabIndex = 0;
-            this.ucTreeView.BeforeSelect += new System.Windows.Forms.TreeViewCancelEventHandler(this.ucTreeView_BeforeSelect);
-            this.ucTreeView.Click += new System.EventHandler(this.ucTreeView_Click);
-            // 
             // FRForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -261,6 +257,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDown_dates;
         private System.Windows.Forms.TrackBar trackBar_dates;
         private System.Windows.Forms.ImageList imageList1;
-        private UcTreeView ucTreeView;
+        private System.Windows.Forms.TreeView treeView;
     }
 }

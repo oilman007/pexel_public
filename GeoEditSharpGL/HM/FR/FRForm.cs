@@ -44,7 +44,7 @@ namespace Pexel.HM.FR
 
 
 
-        TreeNode2[] CaseNodes { get; set; }
+        TreeNode[] CaseNodes { get; set; }
 
 
         FRProject Project { set; get; } = new FRProject();
@@ -86,11 +86,11 @@ namespace Pexel.HM.FR
         void UpdateProject(FRProject project)
         {
             Project = project;
-            this.ucTreeView.Nodes.Clear();
-            CaseNodes = new TreeNode2[project.Regions.Count];
-            int i = 0;
+            this.treeView.Nodes.Clear();
+            //CaseNodes = new TreeNode[project.Regions.Count];
+            //int i = 0;
             foreach (FRRegion r in Project.Regions.Values)
-                ucTreeView.Nodes.Add(RegionNode(r, out CaseNodes[i++]));         
+                treeView.Nodes.Add(RegionNode(r));
             UpdateDates(project.Dates);
             UpdateBoundaries();
             //UpdateCases(project.Dates.First());
@@ -100,7 +100,7 @@ namespace Pexel.HM.FR
         void UpdateBoundaries()
         {
             View2D.Boundaries =
-                Project.Regions.Values.Where(x => x.Boundaries.Item1 && x.Boundaries.Item2).SelectMany(x => x.Boundaries.Item3).ToList();
+                Project.Regions.Values.Where(x => x.Boundaries.Checked).SelectMany(x => x.Boundaries.Items).ToList();
         }
 
 
@@ -116,7 +116,7 @@ namespace Pexel.HM.FR
                 if (frc is null)
                     continue;
                 //
-                UpdateCaseNode(CaseNodes[i++], frc);
+                //UpdateCaseNode(CaseNodes[i++], frc);
                 // wells
                 if (frc.Wells.Item1 && frc.Wells.Item2)
                     View2D.WellsPlane2D.Wells.AddRange(frc.Wells.Item3);
@@ -131,7 +131,8 @@ namespace Pexel.HM.FR
         }
 
 
-        void UpdateCaseNode(TreeNode2 case_node, FRCase frc)
+        /*
+        void UpdateCaseNode(TreeNode case_node, FRCase frc)
         {
             //TreeNode result = new TreeNode("Case") { Checked = true, Tag = frc };
             //case_node.Checked = frc
@@ -152,33 +153,51 @@ namespace Pexel.HM.FR
             if (expanded)
                 case_node.Expand();
         }
+        */
 
 
 
-
-        TreeNode RegionNode(FRRegion region, out TreeNode2 case_node)
+        TreeNode RegionNode(FRRegion region)
         {
-            TreeNode2 result = new TreeNode2("Region " + region.Title)
+            TreeNode result = new TreeNode("Region " + region.Title)
             {
-                Check1 = region.Visible,
-                Check2 = region.Used,
+                Checked = region.Used,
                 Tag = region
             };
             result.Nodes.Add(BoundariesNode(region.Boundaries));
-            case_node = new TreeNode2("Case");
-            result.Nodes.Add(case_node);
+            foreach (FRCase frc in region.Cases)
+                result.Nodes.Add(CaseNode(frc));
             return result;
         }
 
 
 
-
-        TreeNode2 BoundariesNode(Tuple<bool, bool, List<Polygon2D>> boundaries)
+        TreeNode RegionNode2(FRRegion region)
         {
-            TreeNode2 result = new TreeNode2("Boundaries")
+            TreeNode result = new TreeNode("Region " + region.Title)
             {
-                Check1 = boundaries.Item1,
-                Check2 = boundaries.Item2,
+                Checked = region.Used,
+                Tag = region
+            };
+            result.Nodes.Add(BoundariesNode(region.Boundaries));
+
+            Tuple<bool, bool, List<FRWellsLink>> iplinks = 
+                Tuple.Create(true, true, region.Cases.Select(x => x.IPLinks).Select(x=>x.Item3).ToArray());
+
+            result.Nodes.Add(LinksNode("IPLinks", iplinks));
+            result.Nodes.Add(LinksNode("IILinks", frc.IILinks));
+            result.Nodes.Add(LinksNode("PPLinks", frc.PPLinks));
+
+            return result;
+        }
+
+
+
+        TreeNode BoundariesNode(Tuple<bool, bool, List<Polygon2D>> boundaries)
+        {
+            TreeNode result = new TreeNode("Boundaries")
+            {
+                Checked = boundaries.Item2,
                 Tag = boundaries
             };
             foreach (Polygon2D p in boundaries.Item3)
@@ -186,12 +205,11 @@ namespace Pexel.HM.FR
             return result;
         }
 
-        TreeNode2 BoundaryNode(Polygon2D boundary)
+        TreeNode BoundaryNode(Polygon2D boundary)
         {
-            TreeNode2 result = new TreeNode2("Boundary" + boundary.Title)
+            TreeNode result = new TreeNode("Boundary" + boundary.Title)
             {
-                Check1 = boundary.Visible,
-                Check2 = boundary.Used,
+                Checked = boundary.Used,
                 Tag = boundary
             };
             return result;
@@ -200,64 +218,73 @@ namespace Pexel.HM.FR
 
 
 
-        TreeNode2 CaseNode(FRCase frc)
+        TreeNode CaseNode(FRCase frc)
         {
-            TreeNode2 result = new TreeNode2("Case")
+            TreeNode result = new TreeNode(Helper.ShowDateTimeShort(frc.FirstDt) + "-" + Helper.ShowDateTimeShort(frc.LastDt))
             {
-                Check1 = frc.Visible,
-                Check2 = frc.Used,
+                Checked = frc.Used,
                 Tag = frc
             };
-            result.Nodes.Add(WellsNode(frc.Wells.Item3));
-            result.Nodes.Add(LinksNode("IPLinks", frc.IPLinks.Item3));
-            result.Nodes.Add(LinksNode("IILinks", frc.IILinks.Item3));
-            result.Nodes.Add(LinksNode("PPLinks", frc.PPLinks.Item3));
+            result.Nodes.Add(WellsNode(frc.Wells));
+            result.Nodes.Add(LinksNode("IPLinks", frc.IPLinks));
+            result.Nodes.Add(LinksNode("IILinks", frc.IILinks));
+            result.Nodes.Add(LinksNode("PPLinks", frc.PPLinks));
             return result;
         }
 
-        TreeNode2 WellsNode(IEnumerable<WellFace2D> wells)
+        TreeNode WellsNode(Tuple<bool, bool, List<WellFace2D>> wells)
         {
-            TreeNode2 result = new TreeNode2("Wells")
+            TreeNode result = new TreeNode("Wells")
             {
-                Check1 = true,
-                Check2 = true,
+                Checked = wells.Item2,
                 Tag = wells
             };
-            foreach (WellFace2D w in wells)
+            foreach (WellFace2D w in wells.Item3)
                 result.Nodes.Add(WellNode(w));
             return result;
         }
 
-        TreeNode2 WellNode(WellFace2D well)
+        TreeNode WellNode(WellFace2D well)
         {
-            TreeNode2 result = new TreeNode2(well.Title)
+            TreeNode result = new TreeNode(well.Title)
             {
-                Check1 = well.Visible,
-                Check2 = well.Used,
+                Checked = well.Used,
                 Tag = well
             };
             return result;
         }
 
-        TreeNode2 LinksNode(string title, IEnumerable<WellsLink> links)
+        TreeNode LinksNode(string title, Tuple<bool, bool, List<FRWellsLink>> links)
         {
-            TreeNode2 result = new TreeNode2(title)
+            TreeNode result = new TreeNode(title)
             {
-                Check1 = true,
-                Check2 = true,
+                Checked = links.Item2,
                 Tag = links
             };
-            foreach (WellsLink l in links)
+            foreach (WellsLink l in links.Item3)
                 result.Nodes.Add(LinkNode(l));
             return result;
         }
 
-        TreeNode2 LinkNode(WellsLink link)
+
+        TreeNode[] AllLinksNode(FRCase frc)
         {
-            TreeNode2 result = new TreeNode2(link.Title)
+            TreeNode result = new TreeNode(title)
             {
-                Check1 = link.Visible,
-                Check2 = link.Used,
+                Checked = links.Item2,
+                Tag = links
+            };
+            foreach (WellsLink l in links.Item3)
+                result.Nodes.Add(LinkNode(l));
+            return result;
+        }
+
+
+        TreeNode LinkNode(WellsLink link)
+        {
+            TreeNode result = new TreeNode(link.Title)
+            {
+                Checked = link.Used,
                 Tag = link
             };
             return result;
@@ -283,41 +310,6 @@ namespace Pexel.HM.FR
             });
         }
         
-
-
-
-        private void treeView_wells_AfterCheck(object sender, TreeViewEventArgs e)
-        {
-            if (e.Node.Tag is WellFace2D)
-            {
-                WellFace2D well = (WellFace2D)e.Node.Tag;
-                well.Visible = e.Node.Checked;
-            }
-            else
-            if (e.Node.Tag is WellsLink)
-            {
-                WellsLink link = (WellsLink)e.Node.Tag;
-                link.Visible = e.Node.Checked;
-            }
-            else
-            if (e.Node.Tag is Polygon2D)
-            {
-                Polygon2D poly = (Polygon2D)e.Node.Tag;
-                poly.Visible = e.Node.Checked;
-            }
-            else
-            if (e.Node.Tag is Triangle2D)
-            {
-                Triangle2D triangle = (Triangle2D)e.Node.Tag;
-                triangle.Visible = e.Node.Checked;
-            }
-            else
-            if (e.Node.Tag is Quad2D)
-            {
-                Quad2D quad = (Quad2D)e.Node.Tag;
-                quad.Visible = e.Node.Checked;
-            }
-        }
 
 
 
@@ -820,7 +812,7 @@ namespace Pexel.HM.FR
 
 
 
-
+        /*
         TreeNode selected_node;
         private void ucTreeView_BeforeSelect(object sender, TreeViewCancelEventArgs e)
         {
@@ -832,7 +824,7 @@ namespace Pexel.HM.FR
         {
             if (selected_node is null) return;
             //
-            TreeNode2 node = selected_node as TreeNode2;
+            TreeNode node = selected_node as TreeNode;
             if (!node.Check2)
                 selected_node.SelectedImageIndex = 2;
             else if (!node.Check1)
@@ -879,9 +871,44 @@ namespace Pexel.HM.FR
             }
 
         }
+        */
 
 
 
+
+
+        private void treeView_wells_AfterCheck(object sender, TreeViewEventArgs e)
+        {
+            if (e.Node.Tag is WellFace2D)
+            {
+                WellFace2D well = (WellFace2D)e.Node.Tag;
+                well.Visible = e.Node.Checked;
+            }
+            else
+            if (e.Node.Tag is WellsLink)
+            {
+                WellsLink link = (WellsLink)e.Node.Tag;
+                link.Visible = e.Node.Checked;
+            }
+            else
+            if (e.Node.Tag is Polygon2D)
+            {
+                Polygon2D poly = (Polygon2D)e.Node.Tag;
+                poly.Visible = e.Node.Checked;
+            }
+            else
+            if (e.Node.Tag is Triangle2D)
+            {
+                Triangle2D triangle = (Triangle2D)e.Node.Tag;
+                triangle.Visible = e.Node.Checked;
+            }
+            else
+            if (e.Node.Tag is Quad2D)
+            {
+                Quad2D quad = (Quad2D)e.Node.Tag;
+                quad.Visible = e.Node.Checked;
+            }
+        }
 
 
 
