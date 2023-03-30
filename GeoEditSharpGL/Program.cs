@@ -8,6 +8,8 @@ using System.Runtime.InteropServices;
 using System.Security.Principal;
 using Pexel.HM;
 using Pexel.HM.FR;
+using System.Reflection.Emit;
+using System.Runtime.CompilerServices;
 
 // https://docs.obfuscar.com/getting-started/configuration.html#table-of-settings
 // https://allmnet.tistory.com/entry/NET-%EC%BD%94%EB%93%9C-%EB%82%9C%EB%8F%85%ED%99%94
@@ -37,6 +39,13 @@ namespace Pexel
                 return false;
             }
         }
+
+
+        // Wizard
+        public const string WizardArg = "WZ";
+        public const string HistoryMatchingArg = "HM";
+        public const string ResultsViewerArg = "RV";
+
 
 
         /// <summary>
@@ -107,20 +116,29 @@ namespace Pexel
                 //Application.Run(new UcTreeFormTest());
                 //Application.Run(new FRForm());
             }
-
-
-
-            /*
-            else if (ZipLocker.IsValid())
+            else //if (ZipLocker.IsValid())
             {
-                if (Helper.ToUpper(args[0]) == LauncherForm.ResultsViewerArg)
+                if (Helper.ToUpper(args[0]) == ResultsViewerArg)
+                {
+                    Application.Run(new HM.ResultsViewTreeForm());
+                    //if (args.Length == 2)
+                    //    Application.Run(new HM.ResultsViewTreeForm(args[1]));
+                    //else
+                    //    Application.Run(new HM.ResultsViewTreeForm());
+                }
+                else if (Helper.ToUpper(args[0]) == WizardArg)
                 {
                     if (args.Length == 2)
-                        Application.Run(new HM.ResultsViewTreeForm(args[1]));
+                    {
+                        WizardForm wizard = new WizardForm() { DownloaderID = args[1] };
+                        Application.Run(wizard);
+                    }
                     else
-                        Application.Run(new HM.ResultsViewTreeForm());
+                    {
+                        Application.Run(new HM.WizardForm());
+                    }
                 }
-                else if (Helper.ToUpper(args[0]) == LauncherForm.HistoryMatchingWizardArg)
+                else if (Helper.ToUpper(args[0]) == HistoryMatchingArg)
                 {
                     if (args.Length == 2)
                     {
@@ -136,7 +154,6 @@ namespace Pexel
                     }
                 }
             }
-            */
 
 
 

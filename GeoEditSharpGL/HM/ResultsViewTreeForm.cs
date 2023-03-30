@@ -21,7 +21,7 @@ using System.Linq.Expressions;
 using DynamicExpresso;
 using Pexel.View;
 using SharpGL.SceneGraph.Primitives;
-
+using System.Diagnostics;
 
 namespace Pexel.HM
 {
@@ -3679,7 +3679,12 @@ namespace Pexel.HM
 
 
         private void toolStripButton_wizard_Click(object sender, EventArgs e)
-        {        
+        {
+#if !DEBUG
+            ProcessStartInfo info = 
+                new ProcessStartInfo(System.Reflection.Assembly.GetEntryAssembly().Location, string.Join(" ", Program.WizardArg, Downloader.ID)); 
+            Process.Start(info);
+#else
             Thread thread = new Thread(new ThreadStart(() =>
             {
                 WizardForm wizard = new WizardForm() { DownloaderID = Downloader.ID };
@@ -3687,7 +3692,8 @@ namespace Pexel.HM
                 Application.Run(wizard);
             }));
             thread.ApartmentState = ApartmentState.STA;
-            thread.Start();     
+            thread.Start();
+#endif
         }
 
 

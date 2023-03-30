@@ -2085,16 +2085,16 @@ namespace Pexel.HM
         }
         */
 
-        /*
+        
         Thread run_thread;
         void run_thread_abort(object o, EventArgs args)
         {
             run_thread?.Abort();
         }
-        */
 
 
 
+        /*
         private void button_run_Click(object sender, EventArgs e)
         {
             SaveInputData();
@@ -2115,18 +2115,18 @@ namespace Pexel.HM
 
                 Task run_task = new Task(() =>
                 {
-                    /*
-                    Thread runForm_thread = new Thread(() =>
-                    {
-                        Application.Run(runForm);
-                        run_task_token?.Cancel();
-                    })
-                    {
-                        ApartmentState = ApartmentState.STA
-                    };
-                    runForm_thread.Start();
-                    */
-                    
+
+                    //Thread runForm_thread = new Thread(() =>
+                    //{
+                    //    Application.Run(runForm);
+                    //    run_task_token?.Cancel();
+                    //})
+                    //{
+                    //    ApartmentState = ApartmentState.STA
+                    //};
+                    //runForm_thread.Start();
+
+
                     Task runForm_task = new Task(() =>
                     {
                         //Application.Run(runForm);
@@ -2134,7 +2134,7 @@ namespace Pexel.HM
                         run_task_token?.Cancel();
                     });
                     runForm_task.Start();
-                    
+
 
                     Thread.Sleep(50);
 
@@ -2169,7 +2169,7 @@ namespace Pexel.HM
                 this.Show();
             }
         }
-
+        */
 
 
 
@@ -2235,7 +2235,7 @@ namespace Pexel.HM
 
 
 
-        /*
+
         private void button_run_Click(object sender, EventArgs e)
         {
             SaveInputData();
@@ -2243,7 +2243,8 @@ namespace Pexel.HM
             {
                 if (!ConfirmRun(DataFile)) return;
                 string save_file = SaveFile; // для разрыва связи с элементом контроля
-                RunStartedEvent?.Invoke(save_file);
+                //RunStartedEvent?.Invoke(save_file);
+                ResultsViewTreeDataDownloader.PushCases(DownloaderID, save_file);
 
                 this.Hide();
 
@@ -2285,7 +2286,7 @@ namespace Pexel.HM
                 this.Show();
             }
         }
-        */
+        
 
 
 

@@ -279,6 +279,7 @@
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FileIO\Eclipse.cs" />
+    <Compile Include="General\BinTable.cs" />
     <Compile Include="General\Helper.cs" />
     <Compile Include="General\Table2D.cs" />
     <Compile Include="General\Table2DTest.cs">

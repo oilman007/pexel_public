@@ -118,15 +118,15 @@ namespace Pexel.HM.FR
                 //
                 //UpdateCaseNode(CaseNodes[i++], frc);
                 // wells
-                if (frc.Wells.Item1 && frc.Wells.Item2)
-                    View2D.WellsPlane2D.Wells.AddRange(frc.Wells.Item3);
+                if (frc.Wells.Checked)
+                    View2D.WellsPlane2D.Wells.AddRange(frc.Wells.Items);
                 // links
-                if (frc.IPLinks.Item1 && frc.IPLinks.Item2)
-                    View2D.WellsLinks.AddRange(frc.IPLinks.Item3);
-                if (frc.PPLinks.Item1 && frc.PPLinks.Item2)
-                    View2D.WellsLinks.AddRange(frc.PPLinks.Item3);
-                if (frc.IILinks.Item1 && frc.IILinks.Item2)
-                    View2D.WellsLinks.AddRange(frc.IILinks.Item3);
+                if (frc.IPLinks.Checked)
+                    View2D.WellsLinks.AddRange(frc.IPLinks.Items);
+                if (frc.PPLinks.Checked)
+                    View2D.WellsLinks.AddRange(frc.PPLinks.Items);
+                if (frc.IILinks.Checked)
+                    View2D.WellsLinks.AddRange(frc.IILinks.Items);
             }
         }
 
@@ -181,26 +181,26 @@ namespace Pexel.HM.FR
             };
             result.Nodes.Add(BoundariesNode(region.Boundaries));
 
-            Tuple<bool, bool, List<FRWellsLink>> iplinks = 
-                Tuple.Create(true, true, region.Cases.Select(x => x.IPLinks).Select(x=>x.Item3).ToArray());
-
-            result.Nodes.Add(LinksNode("IPLinks", iplinks));
-            result.Nodes.Add(LinksNode("IILinks", frc.IILinks));
-            result.Nodes.Add(LinksNode("PPLinks", frc.PPLinks));
+            ///Tuple<bool, bool, List<FRWellsLink>> iplinks = 
+            ///    Tuple.Create(true, true, region.Cases.Select(x => x.IPLinks).Select(x=>x.Items).ToArray());
+            
+            ///result.Nodes.Add(LinksNode("IPLinks", iplinks));
+            ///result.Nodes.Add(LinksNode("IILinks", frc.IILinks));
+            ///result.Nodes.Add(LinksNode("PPLinks", frc.PPLinks));
 
             return result;
         }
 
 
 
-        TreeNode BoundariesNode(Tuple<bool, bool, List<Polygon2D>> boundaries)
+        TreeNode BoundariesNode(FRRegion.FRBoundaries boundaries)
         {
             TreeNode result = new TreeNode("Boundaries")
             {
-                Checked = boundaries.Item2,
+                Checked = boundaries.Used,
                 Tag = boundaries
             };
-            foreach (Polygon2D p in boundaries.Item3)
+            foreach (Polygon2D p in boundaries.Items)
                 result.Nodes.Add(BoundaryNode(p));
             return result;
         }
@@ -225,7 +225,7 @@ namespace Pexel.HM.FR
                 Checked = frc.Used,
                 Tag = frc
             };
-            result.Nodes.Add(WellsNode(frc.Wells));
+            ///result.Nodes.Add(WellsNode(frc.Wells));
             result.Nodes.Add(LinksNode("IPLinks", frc.IPLinks));
             result.Nodes.Add(LinksNode("IILinks", frc.IILinks));
             result.Nodes.Add(LinksNode("PPLinks", frc.PPLinks));
@@ -254,29 +254,29 @@ namespace Pexel.HM.FR
             return result;
         }
 
-        TreeNode LinksNode(string title, Tuple<bool, bool, List<FRWellsLink>> links)
+        TreeNode LinksNode(string title, FRCase.FRWellsLinks links)
         {
             TreeNode result = new TreeNode(title)
             {
-                Checked = links.Item2,
+                ///Checked = links.Item2,
                 Tag = links
             };
-            foreach (WellsLink l in links.Item3)
-                result.Nodes.Add(LinkNode(l));
+            ///foreach (WellsLink l in links.Item3)
+            ///    result.Nodes.Add(LinkNode(l));
             return result;
         }
 
 
         TreeNode[] AllLinksNode(FRCase frc)
         {
-            TreeNode result = new TreeNode(title)
+            TreeNode result = new TreeNode("title")
             {
-                Checked = links.Item2,
-                Tag = links
+                ///Checked = links.Item2,
+                ///Tag = links
             };
-            foreach (WellsLink l in links.Item3)
-                result.Nodes.Add(LinkNode(l));
-            return result;
+            ///foreach (WellsLink l in links.Item3)
+            ///    result.Nodes.Add(LinkNode(l));
+            return Array.Empty<TreeNode>();
         }
 
 
