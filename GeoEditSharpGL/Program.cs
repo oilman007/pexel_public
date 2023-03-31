@@ -45,7 +45,8 @@ namespace Pexel
         public const string WizardArg = "WZ";
         public const string HistoryMatchingArg = "HM";
         public const string ResultsViewerArg = "RV";
-
+        public const string CoreyerArg = "CY";
+        public const string FDMArg = "FD";
 
 
         /// <summary>
@@ -121,10 +122,6 @@ namespace Pexel
                 if (Helper.ToUpper(args[0]) == ResultsViewerArg)
                 {
                     Application.Run(new HM.ResultsViewTreeForm());
-                    //if (args.Length == 2)
-                    //    Application.Run(new HM.ResultsViewTreeForm(args[1]));
-                    //else
-                    //    Application.Run(new HM.ResultsViewTreeForm());
                 }
                 else if (Helper.ToUpper(args[0]) == WizardArg)
                 {
@@ -147,10 +144,6 @@ namespace Pexel
                             HM.HistMatching hm = new HM.HistMatching(input);
                             hm.Run();
                         }
-                    }
-                    else
-                    {
-                        Application.Run(new HM.WizardForm());
                     }
                 }
             }
