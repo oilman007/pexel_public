@@ -3678,26 +3678,6 @@ namespace Pexel.HM
 
 
 
-        private void toolStripButton_wizard_Click(object sender, EventArgs e)
-        {
-#if !DEBUG
-            ProcessStartInfo info = 
-                new ProcessStartInfo(System.Reflection.Assembly.GetEntryAssembly().Location, string.Join(" ", Program.WizardArg, Downloader.ID)); 
-            Process.Start(info);
-#else
-            Thread thread = new Thread(new ThreadStart(() =>
-            {
-                WizardForm wizard = new WizardForm() { DownloaderID = Downloader.ID };
-                //wizard.RunStartedEvent += Downloader.AddFiles;
-                Application.Run(wizard);
-            }));
-            thread.ApartmentState = ApartmentState.STA;
-            thread.Start();
-#endif
-        }
-
-
-
 
         private void toolStripButton_add_child_Click(object sender, EventArgs e)
         {
@@ -3721,43 +3701,97 @@ namespace Pexel.HM
         private void toolStripButton_remove_Click(object sender, EventArgs e)
         {
             string message = $"Do you really want to remove the run  '{_selected_pxlhm_file}' from tree view?";
-            if (MessageBox.Show(message, this.Text, MessageBoxButtons.YesNoCancel) != DialogResult.Yes) 
+            if (MessageBox.Show(message, this.Text, MessageBoxButtons.YesNoCancel) != DialogResult.Yes)
                 return;
             Downloader.RemoveFiles(_selected_pxlhm_file);
         }
 
+
+        private void toolStripButton_wizard_Click(object sender, EventArgs e)
+        {
+#if !DEBUG
+            ProcessStartInfo info =
+                new ProcessStartInfo(System.Reflection.Assembly.GetEntryAssembly().Location, string.Join(" ", Program.WizardArg, Downloader.ID));
+            Process.Start(info);
+#else
+            Thread thread = new Thread(new ThreadStart(() =>
+            {
+                WizardForm wizard = new WizardForm() { DownloaderID = Downloader.ID };
+                //wizard.RunStartedEvent += Downloader.AddFiles;
+                Application.Run(wizard);
+            }));
+            thread.ApartmentState = ApartmentState.STA;
+            thread.Start();
+#endif
+        }
+
+
         private void hFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
+#if !DEBUG
+            ProcessStartInfo info = 
+                new ProcessStartInfo(System.Reflection.Assembly.GetEntryAssembly().Location, string.Join(" ", Program.HFileArg)); 
+            Process.Start(info);
+#else
             Thread thread = new Thread(new ThreadStart(() =>
             {
                 Application.Run(new HFileForm());
             }));
             thread.ApartmentState = ApartmentState.STA;
             thread.Start();
+#endif
         }
 
         private void coreyToolStripMenuItem_Click(object sender, EventArgs e)
         {
+#if !DEBUG
+            ProcessStartInfo info =
+                new ProcessStartInfo(System.Reflection.Assembly.GetEntryAssembly().Location, string.Join(" ", Program.CoreyerArg));
+            Process.Start(info);
+#else
             Thread thread = new Thread(new ThreadStart(() =>
             {
                 Application.Run(new Pexel.SCAL.CoreySetForm());
             }));
             thread.ApartmentState = ApartmentState.STA;
             thread.Start();
+#endif
         }
 
         private void tableMakerToolStripMenuItem_Click(object sender, EventArgs e)
         {
+#if !DEBUG
+            ProcessStartInfo info =
+                new ProcessStartInfo(System.Reflection.Assembly.GetEntryAssembly().Location, string.Join(" ", Program.TableMakerArg));
+            Process.Start(info);
+#else
             Thread thread = new Thread(new ThreadStart(() =>
             {
                 Application.Run(new HMTableForm());
             }));
             thread.ApartmentState = ApartmentState.STA;
             thread.Start();
+#endif
         }
 
 
 
+
+        private void fRAnalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+#if !DEBUG
+            ProcessStartInfo info =
+                new ProcessStartInfo(System.Reflection.Assembly.GetEntryAssembly().Location, string.Join(" ", Program.FDMArg));
+            Process.Start(info);
+#else
+            Thread thread = new Thread(new ThreadStart(() =>
+            {
+                Application.Run(new HM.FR.FRForm());
+            }));
+            thread.ApartmentState = ApartmentState.STA;
+            thread.Start();
+#endif
+        }
 
 
 
@@ -4588,16 +4622,6 @@ namespace Pexel.HM
         {
             //resultsViewSettingsForm.Settings = this.Settings;
             resultsViewSettingsForm.Show(this);
-        }
-
-        private void fRAnalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Thread thread = new Thread(new ThreadStart(() =>
-            {
-                Application.Run(new HM.FR.FRForm());
-            }));
-            thread.ApartmentState = ApartmentState.STA;
-            thread.Start();
         }
 
         private void ResultsViewTreeForm_FormClosed(object sender, FormClosedEventArgs e)

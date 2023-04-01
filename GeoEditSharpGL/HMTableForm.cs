@@ -36,7 +36,6 @@ namespace Pexel
         private void button_run_Click(object sender, EventArgs e)
         {
             HM.IterationResult result = new HM.IterationResult(RSMFile, out _);
-
             /*
             if(!result.SUMMARYCompleted())
             {
@@ -44,7 +43,7 @@ namespace Pexel
                 return;
             }
             */
-
+            /*
             string ID = string.Format("{0}-{1,2:00}-{2,2:00}-{3,2:00}{4,2:00}",
                             DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute);
 
@@ -53,16 +52,15 @@ namespace Pexel
                 MessageBox.Show($"Complited sucesfully!\n{file}");
             else
                 MessageBox.Show("Abort operation.");
+            */
         }
 
 
         private void HMTableForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
+        {            
             e.Cancel = true;
             this.Hide();
-            this.Parent = null;
-            
+            this.Parent = null;            
         }
 
         private void button_summary_Click(object sender, EventArgs e)

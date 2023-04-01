@@ -47,6 +47,8 @@ namespace Pexel
         public const string ResultsViewerArg = "RV";
         public const string CoreyerArg = "CY";
         public const string FDMArg = "FD";
+        public const string HFileArg = "HF";
+        public const string TableMakerArg = "TM";
 
 
         /// <summary>
@@ -145,6 +147,22 @@ namespace Pexel
                             hm.Run();
                         }
                     }
+                }
+                else if (Helper.ToUpper(args[0]) == HFileArg)
+                {
+                    Application.Run(new HFileForm());
+                }
+                else if (Helper.ToUpper(args[0]) == CoreyerArg)
+                {
+                    Application.Run(new SCAL.CoreySetForm());
+                }
+                else if (Helper.ToUpper(args[0]) == TableMakerArg)
+                {
+                    Application.Run(new HMTableForm());
+                }
+                else if (Helper.ToUpper(args[0]) == FDMArg)
+                {
+                    Application.Run(new HM.FR.FRForm());
                 }
             }
 

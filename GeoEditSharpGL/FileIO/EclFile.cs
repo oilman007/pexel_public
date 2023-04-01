@@ -5,7 +5,6 @@ using System.Text;
 using System.IO;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
-using Microsoft.Office.Interop.Word;
 
 namespace Pexel.FileIO
 {

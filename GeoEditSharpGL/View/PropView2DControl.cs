@@ -14,7 +14,6 @@ using SharpGL.SceneGraph.Collections;
 using SharpGL.SceneGraph.Primitives;
 using SharpGL.SceneGraph.Core;
 using SharpGL.Enumerations;
-using Microsoft.Office.Core;
 using Google.Protobuf.WellKnownTypes;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Pexel.HM;

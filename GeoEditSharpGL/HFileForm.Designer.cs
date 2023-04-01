@@ -48,15 +48,18 @@
             // 
             // textBox_rsm
             // 
+            this.textBox_rsm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_rsm.Location = new System.Drawing.Point(68, 10);
             this.textBox_rsm.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_rsm.Name = "textBox_rsm";
-            this.textBox_rsm.Size = new System.Drawing.Size(408, 20);
+            this.textBox_rsm.Size = new System.Drawing.Size(507, 20);
             this.textBox_rsm.TabIndex = 1;
             // 
             // button_rsm
             // 
-            this.button_rsm.Location = new System.Drawing.Point(480, 10);
+            this.button_rsm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_rsm.Location = new System.Drawing.Point(579, 10);
             this.button_rsm.Margin = new System.Windows.Forms.Padding(2);
             this.button_rsm.Name = "button_rsm";
             this.button_rsm.Size = new System.Drawing.Size(32, 19);
@@ -67,7 +70,8 @@
             // 
             // button_run
             // 
-            this.button_run.Location = new System.Drawing.Point(439, 37);
+            this.button_run.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_run.Location = new System.Drawing.Point(538, 37);
             this.button_run.Margin = new System.Windows.Forms.Padding(2);
             this.button_run.Name = "button_run";
             this.button_run.Size = new System.Drawing.Size(73, 38);
@@ -99,14 +103,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 87);
+            this.ClientSize = new System.Drawing.Size(623, 92);
             this.Controls.Add(this.button_run);
             this.Controls.Add(this.button_rsm);
             this.Controls.Add(this.textBox_wefac);
             this.Controls.Add(this.textBox_rsm);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

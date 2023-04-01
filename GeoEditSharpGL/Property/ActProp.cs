@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Bson;
-using Microsoft.Office.Core;
 using Newtonsoft.Json.Linq;
 
 namespace Pexel
