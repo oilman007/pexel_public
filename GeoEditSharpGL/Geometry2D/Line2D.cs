@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Xunit;
 
 namespace Pexel
 {
@@ -53,7 +54,7 @@ namespace Pexel
         {
             double x = p1.X - p2.X;
             double y = p1.Y - p2.Y;
-            return Math.Sqrt((x * x + y * y));
+            return Math.Sqrt(x * x + y * y);
         }
 
         public bool Intersect(Line2D other, out Point2D i, bool exclude_endpoints = true)
@@ -198,9 +199,6 @@ namespace Pexel
             return (x >= p1.X && x <= p2.X || x >= p2.X && x <= p1.X) &&
                    (y >= p1.Y && y <= p2.Y || y >= p2.Y && y <= p1.Y);
         }
-
-
-
 
 
 
