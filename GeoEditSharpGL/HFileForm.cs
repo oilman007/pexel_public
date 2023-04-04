@@ -56,9 +56,11 @@ namespace Pexel
 
         private void HFileForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            /*
             e.Cancel = true;
             this.Hide();
             this.Parent = null;
+            */
         }
 
 

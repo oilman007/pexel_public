@@ -58,9 +58,11 @@ namespace Pexel
 
         private void HMTableForm_FormClosing(object sender, FormClosingEventArgs e)
         {            
+            /*
             e.Cancel = true;
             this.Hide();
             this.Parent = null;            
+            */
         }
 
         private void button_summary_Click(object sender, EventArgs e)
