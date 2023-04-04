@@ -10,6 +10,12 @@ namespace Pexel.General
 {
     public class BinTable<T>
     {
+        public BinTable()
+        {
+            Count = 0;
+            Values = new T[0];
+        }
+
         public BinTable(int n, T default_value)
         {
             Count = n;

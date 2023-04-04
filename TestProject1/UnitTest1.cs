@@ -9,7 +9,7 @@ namespace TestProject1
         [Fact]
         public void DistanceTest()
         {
-            Assert.Equal(Math.Round(2.83,2), Math.Round(Line2D.Distance(new Point2D(1, 2), new Point2D(3, 4)), 2));
+            Assert.Equal(2.83, Math.Round(Line2D.Distance(new Point2D(1, 2), new Point2D(3, 4)), 2));
         }
     }
 }
