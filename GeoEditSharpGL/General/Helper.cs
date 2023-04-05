@@ -165,9 +165,11 @@ namespace Pexel
             if (index != -1)
                 line = line.Remove(index);
 
+            /*
             index = line.IndexOf(Terminator, StringComparison.OrdinalIgnoreCase);
             if (index != -1 && index + 1 < line.Length)
                 line = line.Remove(index + 1);
+            */
 
             line = line.Replace(TabString, SingleSpace);
             while (line.Contains(DoubleSpace))

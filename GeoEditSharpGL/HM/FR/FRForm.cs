@@ -882,7 +882,7 @@ namespace Pexel.HM.FR
             if (e.Node.Tag is WellFace2D)
             {
                 WellFace2D well = (WellFace2D)e.Node.Tag;
-                well.Visible = e.Node.Checked;
+                well.Used = e.Node.Checked;
             }
             else
             if (e.Node.Tag is WellsLink)

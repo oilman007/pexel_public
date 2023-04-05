@@ -402,7 +402,7 @@ namespace Pexel
             SharpGL.OpenGL gl = this.openGLControl.OpenGL;
             foreach (WellFace2D well in plane.Wells)
             {
-                if (!well.Checked) continue;
+                if (!well.Used) continue;
                 // title
                 PointF winPoint = ProjToWinCoord(well.Point.X, well.Point.Y);
 
