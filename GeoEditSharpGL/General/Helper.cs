@@ -158,18 +158,19 @@ namespace Pexel
             return Regex.Replace(text, @"\s+", " ", RegexOptions.Multiline).Trim();
         }
 
-        public static string ClearLine(string line)
+        public static string ClearLine(string line, bool slash_is_comment = true)
         {
             //StringBuilder sb = new StringBuilder(line);
             int index = line.IndexOf(RemString, StringComparison.OrdinalIgnoreCase);
             if (index != -1)
                 line = line.Remove(index);
 
-            /*
-            index = line.IndexOf(Terminator, StringComparison.OrdinalIgnoreCase);
-            if (index != -1 && index + 1 < line.Length)
-                line = line.Remove(index + 1);
-            */
+            if (slash_is_comment)
+            {
+                index = line.IndexOf(Terminator, StringComparison.OrdinalIgnoreCase);
+                if (index != -1 && index + 1 < line.Length)
+                    line = line.Remove(index + 1);
+            }
 
             line = line.Replace(TabString, SingleSpace);
             while (line.Contains(DoubleSpace))
