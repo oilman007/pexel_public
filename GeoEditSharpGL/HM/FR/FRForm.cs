@@ -16,6 +16,7 @@ using System.IO;
 using System.Threading.Tasks;
 using Pexel.Eclipse;
 using ZedGraph;
+using Pexel.General;
 
 
 namespace Pexel.HM.FR
@@ -43,8 +44,6 @@ namespace Pexel.HM.FR
         }
 
 
-
-        TreeNode[] CaseNodes { get; set; }
 
 
         FRProject Project { set; get; } = new FRProject();
@@ -165,8 +164,11 @@ namespace Pexel.HM.FR
                 Tag = region
             };
             result.Nodes.Add(BoundariesNode(region.Boundaries));
-            foreach (FRCase frc in region.Cases)
-                result.Nodes.Add(CaseNode(frc));
+            result.Nodes.Add(WellsNode(region.WellTitles, region.WellUsed));
+            result.Nodes.Add(LinksNode(region, WellStatus.INJE, WellStatus.PROD, "INJE-PROD Links"));
+            result.Nodes.Add(LinksNode(region, WellStatus.AQUI, WellStatus.PROD, "AQUI-PROD Links"));
+            result.Nodes.Add(LinksNode(region, WellStatus.PROD, WellStatus.PROD, "PROD-PROD Links"));
+            result.Nodes.Add(LinksNode(region, WellStatus.INJE, WellStatus.INJE, "INJE-INJE Links"));
             return result;
         }
 
@@ -232,7 +234,7 @@ namespace Pexel.HM.FR
             return result;
         }
 
-        TreeNode WellsNode(Tuple<bool, bool, List<WellFace2D>> wells)
+        TreeNode WellsNode(string[] well_titles, bool[] well_used)
         {
             TreeNode result = new TreeNode("Wells")
             {
@@ -254,7 +256,7 @@ namespace Pexel.HM.FR
             return result;
         }
 
-        TreeNode LinksNode(string title, FRCase.FRWellsLinks links)
+        TreeNode LinksNode(FRRegion region, WellStatus from, WellStatus to, string title)
         {
             TreeNode result = new TreeNode(title)
             {
@@ -263,6 +265,19 @@ namespace Pexel.HM.FR
             };
             ///foreach (WellsLink l in links.Item3)
             ///    result.Nodes.Add(LinkNode(l));
+            return result;
+        }
+
+
+
+
+        TreeNode LinkNode(WellsLink link)
+        {
+            TreeNode result = new TreeNode(link.Title)
+            {
+                Checked = link.Used,
+                Tag = link
+            };
             return result;
         }
 
@@ -277,17 +292,6 @@ namespace Pexel.HM.FR
             ///foreach (WellsLink l in links.Item3)
             ///    result.Nodes.Add(LinkNode(l));
             return Array.Empty<TreeNode>();
-        }
-
-
-        TreeNode LinkNode(WellsLink link)
-        {
-            TreeNode result = new TreeNode(link.Title)
-            {
-                Checked = link.Used,
-                Tag = link
-            };
-            return result;
         }
 
 
