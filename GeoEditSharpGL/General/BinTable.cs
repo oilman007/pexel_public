@@ -66,9 +66,16 @@ namespace Pexel.General
                 if (i != j)
                     values[n++] = Values[j];
             return values;
-        }   
+        }
 
 
+        public T[][] GetAllValues()
+        {
+            T[][] values = new T[Values.Length][];
+            for (int i = 0; i < Values.Length; i++)
+                values[i] = GetValues(i);
+            return values;
+        }
 
 
 

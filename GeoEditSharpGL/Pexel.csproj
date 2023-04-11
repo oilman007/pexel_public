@@ -112,6 +112,9 @@
     <Reference Include="AeroWizard, Version=2.3.1.0, Culture=neutral, PublicKeyToken=915e74f5d64b8f37, processorArchitecture=MSIL">
       <HintPath>..\packages\AeroWizard.2.3.1\lib\net45\AeroWizard.dll</HintPath>
     </Reference>
+    <Reference Include="Aga.Controls, Version=1.7.0.0, Culture=neutral, PublicKeyToken=fcc90fbf924463a3, processorArchitecture=MSIL">
+      <HintPath>..\packages\TreeViewAdv.1.7.0.0\lib\net\Aga.Controls.dll</HintPath>
+    </Reference>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
@@ -285,6 +288,7 @@
     <Compile Include="Geometry2D\WellsLink.cs" />
     <Compile Include="Geometry3D\Actnum.cs" />
     <Compile Include="Geometry3D\GridPlaneOpt.cs" />
+    <Compile Include="HM\FR\ColumnNode.cs" />
     <Compile Include="HM\WellTable.cs" />
     <Compile Include="HM\WellTablePeriod.cs" />
     <Compile Include="HM\WellTableStep.cs" />
@@ -318,7 +322,7 @@
     <Compile Include="private\HM\HistMatching.cs" />
     <Compile Include="HM\HistMatchingKeyValues.cs" />
     <Compile Include="HM\HistMatchingProject.cs" />
-    <Compile Include="private\HM\FR\FRCase.cs" />
+    <None Include="private\HM\FR\FRCase.cs" />
     <Compile Include="private\HM\FR\FRProject.cs" />
     <Compile Include="HM\FR\FRForm.cs">
       <SubType>Form</SubType>

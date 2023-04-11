@@ -17,7 +17,8 @@ using System.Threading.Tasks;
 using Pexel.Eclipse;
 using ZedGraph;
 using Pexel.General;
-
+using Aga.Controls.Tree;
+using Aga.Controls.Tree.NodeControls;
 
 namespace Pexel.HM.FR
 {
@@ -27,6 +28,7 @@ namespace Pexel.HM.FR
         {
             InitializeComponent();
             Init();
+            InitColumn();
             CreateFileMenuItems();
         }
 
@@ -41,6 +43,29 @@ namespace Pexel.HM.FR
             this.View2D.Size = new Size(100, 100);
              //analyzer.SaveEvent += new EventHandler(SaveEvent);
             _messageHandler += new MessageHandler(ShowMessage);
+        }
+
+
+
+        private Aga.Controls.Tree.NodeControls.NodeCheckBox NodeControl1 = new Aga.Controls.Tree.NodeControls.NodeCheckBox();
+        private Aga.Controls.Tree.NodeControls.NodeCheckBox NodeControl2 = new Aga.Controls.Tree.NodeControls.NodeCheckBox();
+
+        void InitColumn()
+        {
+            // 
+            // NodeControl1
+            // 
+            this.NodeControl1.DataPropertyName = "NodeControl1";
+            this.NodeControl1.IncrementalSearchEnabled = true;
+            this.NodeControl1.LeftMargin = 3;
+            this.NodeControl1.ParentColumn = this.treeColumn_visible;
+            // 
+            // NodeControl2
+            // 
+            this.NodeControl2.DataPropertyName = "NodeControl2";
+            this.NodeControl2.IncrementalSearchEnabled = true;
+            this.NodeControl2.LeftMargin = 3;
+            this.NodeControl2.ParentColumn = this.treeColumn_used;
         }
 
 
@@ -80,26 +105,9 @@ namespace Pexel.HM.FR
         }
 
 
-
-
-        void UpdateProject(FRProject project)
-        {
-            Project = project;
-            this.treeView.Nodes.Clear();
-            //CaseNodes = new TreeNode[project.Regions.Count];
-            //int i = 0;
-            foreach (FRRegion r in Project.Regions.Values)
-                treeView.Nodes.Add(RegionNode(r));
-            UpdateDates(project.Dates);
-            UpdateBoundaries();
-            //UpdateCases(project.Dates.First());
-        }
-
-
         void UpdateBoundaries()
         {
-            View2D.Boundaries =
-                Project.Regions.Values.Where(x => x.Boundaries.Checked).SelectMany(x => x.Boundaries.Items).ToList();
+            View2D.Boundaries = Project.Regions.Values.Select(x => x.Bounds).SelectMany(x => x).ToList();
         }
 
 
@@ -108,24 +116,11 @@ namespace Pexel.HM.FR
         {
             View2D.WellsLinks.Clear();
             View2D.WellsPlane2D.Wells.Clear();
-            int i = 0;
             foreach (FRRegion region in Project.Regions.Values)
             {
-                FRCase frc = region.Cases.Where(v => v.FirstDt <= dt && dt <= v.LastDt).FirstOrDefault();
-                if (frc is null)
-                    continue;
-                //
-                //UpdateCaseNode(CaseNodes[i++], frc);
-                // wells
-                if (frc.Wells.Checked)
-                    View2D.WellsPlane2D.Wells.AddRange(frc.Wells.Items);
-                // links
-                if (frc.IPLinks.Checked)
-                    View2D.WellsLinks.AddRange(frc.IPLinks.Items);
-                if (frc.PPLinks.Checked)
-                    View2D.WellsLinks.AddRange(frc.PPLinks.Items);
-                if (frc.IILinks.Checked)
-                    View2D.WellsLinks.AddRange(frc.IILinks.Items);
+                int p = region.GetPeriod(Array.IndexOf(Project.Dates, dt));
+                View2D.WellsLinks.AddRange(region.GetLinks(p));
+                View2D.WellsPlane2D.Wells.AddRange(region.GetWells(p));
             }
         }
 
@@ -156,62 +151,56 @@ namespace Pexel.HM.FR
 
 
 
-        TreeNode RegionNode(FRRegion region)
+        void UpdateProject(FRProject project)
         {
-            TreeNode result = new TreeNode("Region " + region.Title)
+            Project = project;            
+
+            TreeModel _model = new TreeModel();
+            this.treeViewAdv.Model = _model;
+
+            this.treeViewAdv.BeginUpdate();
+            _model.Nodes.Clear();
+
+            foreach (FRRegion r in Project.Regions.Values)
+                _model.Nodes.Add(RegionNode(r));
+            this.treeViewAdv.EndUpdate();
+
+            UpdateDates(project.Dates);
+            UpdateBoundaries();
+            //UpdateCases(project.Dates.First());
+        }
+
+
+
+
+        ColumnNode RegionNode(FRRegion region)
+        {
+            ColumnNode result = new ColumnNode("Region " + region.Title, true, true)
             {
-                Checked = region.Used,
                 Tag = region
             };
-            result.Nodes.Add(BoundariesNode(region.Boundaries));
+            result.Nodes.Add(BoundariesNode(region.Bounds));
             result.Nodes.Add(WellsNode(region.WellTitles, region.WellUsed));
-            result.Nodes.Add(LinksNode(region, WellStatus.INJE, WellStatus.PROD, "INJE-PROD Links"));
-            result.Nodes.Add(LinksNode(region, WellStatus.AQUI, WellStatus.PROD, "AQUI-PROD Links"));
-            result.Nodes.Add(LinksNode(region, WellStatus.PROD, WellStatus.PROD, "PROD-PROD Links"));
-            result.Nodes.Add(LinksNode(region, WellStatus.INJE, WellStatus.INJE, "INJE-INJE Links"));
+            result.Nodes.Add(AllLinksNode(region));
             return result;
         }
 
 
 
-        TreeNode RegionNode2(FRRegion region)
+
+
+        ColumnNode BoundariesNode(Polygon2D[] boundaries)
         {
-            TreeNode result = new TreeNode("Region " + region.Title)
-            {
-                Checked = region.Used,
-                Tag = region
-            };
-            result.Nodes.Add(BoundariesNode(region.Boundaries));
-
-            ///Tuple<bool, bool, List<FRWellsLink>> iplinks = 
-            ///    Tuple.Create(true, true, region.Cases.Select(x => x.IPLinks).Select(x=>x.Items).ToArray());
-            
-            ///result.Nodes.Add(LinksNode("IPLinks", iplinks));
-            ///result.Nodes.Add(LinksNode("IILinks", frc.IILinks));
-            ///result.Nodes.Add(LinksNode("PPLinks", frc.PPLinks));
-
-            return result;
-        }
-
-
-
-        TreeNode BoundariesNode(FRRegion.FRBoundaries boundaries)
-        {
-            TreeNode result = new TreeNode("Boundaries")
-            {
-                Checked = boundaries.Used,
-                Tag = boundaries
-            };
-            foreach (Polygon2D p in boundaries.Items)
+            ColumnNode result = new ColumnNode("Boundaries", true, true) { Tag = boundaries };
+            foreach (Polygon2D p in boundaries)
                 result.Nodes.Add(BoundaryNode(p));
             return result;
         }
 
-        TreeNode BoundaryNode(Polygon2D boundary)
+        ColumnNode BoundaryNode(Polygon2D boundary)
         {
-            TreeNode result = new TreeNode("Boundary" + boundary.Title)
+            ColumnNode result = new ColumnNode("Boundary" + boundary.Title, true, true)
             {
-                Checked = boundary.Used,
                 Tag = boundary
             };
             return result;
@@ -220,79 +209,78 @@ namespace Pexel.HM.FR
 
 
 
-        TreeNode CaseNode(FRCase frc)
+        ColumnNode WellsNode(string[] well_titles, bool[] well_used)
         {
-            TreeNode result = new TreeNode(Helper.ShowDateTimeShort(frc.FirstDt) + "-" + Helper.ShowDateTimeShort(frc.LastDt))
+            ColumnNode result = new ColumnNode("Wells", true, true)
             {
-                Checked = frc.Used,
-                Tag = frc
+
+                //Checked = wells.Item2,
+                //Tag = wells
             };
-            ///result.Nodes.Add(WellsNode(frc.Wells));
-            result.Nodes.Add(LinksNode("IPLinks", frc.IPLinks));
-            result.Nodes.Add(LinksNode("IILinks", frc.IILinks));
-            result.Nodes.Add(LinksNode("PPLinks", frc.PPLinks));
+
+            for (int i = 0; i < well_titles.Length; ++i)
+                result.Nodes.Add(WellNode(well_titles[i], well_used[i]));
+
             return result;
         }
 
-        TreeNode WellsNode(string[] well_titles, bool[] well_used)
+        ColumnNode WellNode(string title, bool used)
         {
-            TreeNode result = new TreeNode("Wells")
+            ColumnNode result = new ColumnNode(title, true, true)
             {
-                Checked = wells.Item2,
-                Tag = wells
-            };
-            foreach (WellFace2D w in wells.Item3)
-                result.Nodes.Add(WellNode(w));
-            return result;
-        }
 
-        TreeNode WellNode(WellFace2D well)
-        {
-            TreeNode result = new TreeNode(well.Title)
-            {
-                Checked = well.Used,
-                Tag = well
-            };
-            return result;
-        }
-
-        TreeNode LinksNode(FRRegion region, WellStatus from, WellStatus to, string title)
-        {
-            TreeNode result = new TreeNode(title)
-            {
-                ///Checked = links.Item2,
-                Tag = links
-            };
-            ///foreach (WellsLink l in links.Item3)
-            ///    result.Nodes.Add(LinkNode(l));
-            return result;
-        }
-
-
-
-
-        TreeNode LinkNode(WellsLink link)
-        {
-            TreeNode result = new TreeNode(link.Title)
-            {
-                Checked = link.Used,
-                Tag = link
             };
             return result;
         }
 
 
-        TreeNode[] AllLinksNode(FRCase frc)
+        ColumnNode AllLinksNode(FRRegion region)
         {
-            TreeNode result = new TreeNode("title")
-            {
-                ///Checked = links.Item2,
-                ///Tag = links
-            };
-            ///foreach (WellsLink l in links.Item3)
-            ///    result.Nodes.Add(LinkNode(l));
-            return Array.Empty<TreeNode>();
+            ColumnNode result = new ColumnNode("Links", true, true) { Tag = region };
+
+            bool[][][] all_links = region.WellsBinTable.GetAllValues();
+            for (int i = 0; i < all_links.Length; ++i)
+                result.Nodes.Add(LinksNode(region, all_links[i], i));
+
+            return result;
         }
+
+
+        ColumnNode LinksNode(FRRegion region, bool[][] links, int i)
+        {
+            ColumnNode result = new ColumnNode(region.WellTitles[i], true, true) { Tag = region };
+
+            int n = 0;
+            for (int j = 0; j < links.Length; ++j)
+                if (i != j)
+                    result.Nodes.Add(LinkNode(region, links[n++], j));
+
+            return result;
+        }
+
+
+
+
+        ColumnNode LinkNode(FRRegion region, bool[] periods, int j)
+        {
+            ColumnNode result = new ColumnNode(region.WellTitles[j], true, true) { Tag = region };
+
+            for (int t = 0; t < periods.Length; ++t)
+                result.Nodes.Add(PeriodNode(region, t));
+
+            return result;
+        }
+
+
+
+        ColumnNode PeriodNode(FRRegion region, int dt)
+        {
+            string fdt = Helper.ShowDateTimeShort(Project.Dates[region.FirstDates[dt]]);
+            string ldt = Helper.ShowDateTimeShort(Project.Dates[region.LastDates[dt]]);
+            ColumnNode result = new ColumnNode(fdt + "-" + ldt, true, true) { Tag = region };
+            return result;
+        }
+
 
 
 
@@ -911,6 +899,28 @@ namespace Pexel.HM.FR
             {
                 Quad2D quad = (Quad2D)e.Node.Tag;
                 quad.Visible = e.Node.Checked;
+            }
+        }
+
+
+
+
+        private void treeViewAdv_MouseClick(object sender, MouseEventArgs e)
+        {
+            NodeControlInfo info = treeViewAdv.GetNodeControlInfoAt(e.Location);
+            if (info.Control is NodeCheckBox)
+            {
+                NodeCheckBox nodeCheckBox = (NodeCheckBox)info.Control;
+                if (nodeCheckBox.DataPropertyName == "NodeControl1")
+                {
+                    ColumnNode node = info.Node.Tag as ColumnNode;
+                    node.NodeControl1 = !node.NodeControl1;
+                }
+                else if (nodeCheckBox.DataPropertyName == "NodeControl2")
+                {
+                    ColumnNode node = info.Node.Tag as ColumnNode;
+                    node.NodeControl2 = !node.NodeControl2;
+                }
             }
         }
 

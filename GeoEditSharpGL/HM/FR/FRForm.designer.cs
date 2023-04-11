@@ -37,13 +37,19 @@
             this.statusStrip_main = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel_msg = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer_main = new System.Windows.Forms.SplitContainer();
-            this.treeView = new System.Windows.Forms.TreeView();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.treeViewAdv = new Aga.Controls.Tree.TreeViewAdv();
+            this.treeColumn_title = new Aga.Controls.Tree.TreeColumn();
+            this.treeColumn_visible = new Aga.Controls.Tree.TreeColumn();
+            this.treeColumn_used = new Aga.Controls.Tree.TreeColumn();
+            this.nodeTextBox1 = new Aga.Controls.Tree.NodeControls.NodeTextBox();
+            this.nodeCheckBox1 = new Aga.Controls.Tree.NodeControls.NodeCheckBox();
+            this.nodeCheckBox2 = new Aga.Controls.Tree.NodeControls.NodeCheckBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBox_dates = new System.Windows.Forms.ComboBox();
             this.trackBar_dates = new System.Windows.Forms.TrackBar();
             this.numericUpDown_dates = new System.Windows.Forms.NumericUpDown();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip_main.SuspendLayout();
             this.statusStrip_main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer_main)).BeginInit();
@@ -117,7 +123,7 @@
             // 
             // splitContainer_main.Panel1
             // 
-            this.splitContainer_main.Panel1.Controls.Add(this.treeView);
+            this.splitContainer_main.Panel1.Controls.Add(this.treeViewAdv);
             // 
             // splitContainer_main.Panel2
             // 
@@ -126,26 +132,65 @@
             this.splitContainer_main.SplitterDistance = 228;
             this.splitContainer_main.TabIndex = 2;
             // 
-            // treeView
+            // treeViewAdv
             // 
-            this.treeView.CheckBoxes = true;
-            this.treeView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView.ImageIndex = 0;
-            this.treeView.ImageList = this.imageList1;
-            this.treeView.Location = new System.Drawing.Point(0, 0);
-            this.treeView.Name = "treeView";
-            this.treeView.SelectedImageIndex = 0;
-            this.treeView.Size = new System.Drawing.Size(228, 676);
-            this.treeView.TabIndex = 0;
-            this.treeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView_wells_AfterCheck);
+            this.treeViewAdv.BackColor = System.Drawing.SystemColors.Window;
+            this.treeViewAdv.Columns.Add(this.treeColumn_title);
+            this.treeViewAdv.Columns.Add(this.treeColumn_visible);
+            this.treeViewAdv.Columns.Add(this.treeColumn_used);
+            this.treeViewAdv.DefaultToolTipProvider = null;
+            this.treeViewAdv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeViewAdv.DragDropMarkColor = System.Drawing.Color.Black;
+            this.treeViewAdv.LineColor = System.Drawing.SystemColors.ControlDark;
+            this.treeViewAdv.Location = new System.Drawing.Point(0, 0);
+            this.treeViewAdv.Model = null;
+            this.treeViewAdv.Name = "treeViewAdv";
+            this.treeViewAdv.NodeControls.Add(this.nodeTextBox1);
+            this.treeViewAdv.NodeControls.Add(this.nodeCheckBox1);
+            this.treeViewAdv.NodeControls.Add(this.nodeCheckBox2);
+            this.treeViewAdv.SelectedNode = null;
+            this.treeViewAdv.Size = new System.Drawing.Size(228, 676);
+            this.treeViewAdv.TabIndex = 0;
+            this.treeViewAdv.Text = "treeViewAdv1";
+            this.treeViewAdv.UseColumns = true;
+            this.treeViewAdv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.treeViewAdv_MouseClick);
             // 
-            // imageList1
+            // treeColumn_title
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "view.png");
-            this.imageList1.Images.SetKeyName(1, "hide.png");
-            this.imageList1.Images.SetKeyName(2, "deletered.png");
+            this.treeColumn_title.Header = "Title";
+            this.treeColumn_title.SortOrder = System.Windows.Forms.SortOrder.None;
+            this.treeColumn_title.TooltipText = null;
+            // 
+            // treeColumn_visible
+            // 
+            this.treeColumn_visible.Header = "Visible";
+            this.treeColumn_visible.SortOrder = System.Windows.Forms.SortOrder.None;
+            this.treeColumn_visible.TooltipText = null;
+            // 
+            // treeColumn_used
+            // 
+            this.treeColumn_used.Header = "Used";
+            this.treeColumn_used.SortOrder = System.Windows.Forms.SortOrder.None;
+            this.treeColumn_used.TooltipText = null;
+            // 
+            // nodeTextBox1
+            // 
+            this.nodeTextBox1.DataPropertyName = "NodeControl0";
+            this.nodeTextBox1.IncrementalSearchEnabled = true;
+            this.nodeTextBox1.LeftMargin = 3;
+            this.nodeTextBox1.ParentColumn = this.treeColumn_title;
+            // 
+            // nodeCheckBox1
+            // 
+            this.nodeCheckBox1.DataPropertyName = "NodeControl1";
+            this.nodeCheckBox1.LeftMargin = 0;
+            this.nodeCheckBox1.ParentColumn = this.treeColumn_visible;
+            // 
+            // nodeCheckBox2
+            // 
+            this.nodeCheckBox2.DataPropertyName = "NodeControl2";
+            this.nodeCheckBox2.LeftMargin = 0;
+            this.nodeCheckBox2.ParentColumn = this.treeColumn_used;
             // 
             // tableLayoutPanel1
             // 
@@ -212,6 +257,14 @@
             this.numericUpDown_dates.TabIndex = 1;
             this.numericUpDown_dates.ValueChanged += new System.EventHandler(this.numericUpDown_dates_ValueChanged);
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "view.png");
+            this.imageList1.Images.SetKeyName(1, "hide.png");
+            this.imageList1.Images.SetKeyName(2, "deletered.png");
+            // 
             // FRForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -257,6 +310,12 @@
         private System.Windows.Forms.NumericUpDown numericUpDown_dates;
         private System.Windows.Forms.TrackBar trackBar_dates;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.TreeView treeView;
+        private Aga.Controls.Tree.TreeViewAdv treeViewAdv;
+        private Aga.Controls.Tree.TreeColumn treeColumn_visible;
+        private Aga.Controls.Tree.TreeColumn treeColumn_used;
+        private Aga.Controls.Tree.NodeControls.NodeCheckBox nodeCheckBox1;
+        private Aga.Controls.Tree.NodeControls.NodeCheckBox nodeCheckBox2;
+        private Aga.Controls.Tree.TreeColumn treeColumn_title;
+        private Aga.Controls.Tree.NodeControls.NodeTextBox nodeTextBox1;
     }
 }
