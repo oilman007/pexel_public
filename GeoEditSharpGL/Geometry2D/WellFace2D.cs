@@ -31,5 +31,14 @@ namespace Pexel
         public bool Used { set; get; } = true;
 
         public WellStatus Status { set; get; } = WellStatus.PROD;
+
+        public override bool Equals(object obj)
+        {
+            return obj is WellFace2D d &&
+                   Title == d.Title &&
+                   Point2D.Equals(Point, d.Point) &&
+                   Used == d.Used &&
+                   Status == d.Status;
+        }
     }
 }

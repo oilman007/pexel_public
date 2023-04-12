@@ -28,7 +28,6 @@ namespace Pexel.HM.FR
         {
             InitializeComponent();
             Init();
-            InitColumn();
             CreateFileMenuItems();
         }
 
@@ -45,28 +44,6 @@ namespace Pexel.HM.FR
             _messageHandler += new MessageHandler(ShowMessage);
         }
 
-
-
-        private Aga.Controls.Tree.NodeControls.NodeCheckBox NodeControl1 = new Aga.Controls.Tree.NodeControls.NodeCheckBox();
-        private Aga.Controls.Tree.NodeControls.NodeCheckBox NodeControl2 = new Aga.Controls.Tree.NodeControls.NodeCheckBox();
-
-        void InitColumn()
-        {
-            // 
-            // NodeControl1
-            // 
-            this.NodeControl1.DataPropertyName = "NodeControl1";
-            this.NodeControl1.IncrementalSearchEnabled = true;
-            this.NodeControl1.LeftMargin = 3;
-            this.NodeControl1.ParentColumn = this.treeColumn_visible;
-            // 
-            // NodeControl2
-            // 
-            this.NodeControl2.DataPropertyName = "NodeControl2";
-            this.NodeControl2.IncrementalSearchEnabled = true;
-            this.NodeControl2.LeftMargin = 3;
-            this.NodeControl2.ParentColumn = this.treeColumn_used;
-        }
 
 
 
@@ -125,31 +102,6 @@ namespace Pexel.HM.FR
         }
 
 
-        /*
-        void UpdateCaseNode(TreeNode case_node, FRCase frc)
-        {
-            //TreeNode result = new TreeNode("Case") { Checked = true, Tag = frc };
-            //case_node.Checked = frc
-            case_node.Tag = frc;
-            case_node.Check1 = true;
-            case_node.Check2 = true;
-            bool expanded = case_node.IsExpanded;
-            case_node.Nodes.Clear();
-            case_node.Nodes.Add(WellsNode(frc.Wells.Item3));
-            case_node.Nodes.Add(LinksNode("IPLinks", frc.IPLinks.Item3));
-            case_node.Nodes.Add(LinksNode("IILinks", frc.IILinks.Item3));
-            case_node.Nodes.Add(LinksNode("PPLinks", frc.PPLinks.Item3));
-
-            View2D.Covered.Clear();
-            foreach (FRWellsLink link in frc.IPLinks.Item3)
-                View2D.Covered.AddRange(link.ImpactArea);
-
-            if (expanded)
-                case_node.Expand();
-        }
-        */
-
-
 
         void UpdateProject(FRProject project)
         {
@@ -199,7 +151,7 @@ namespace Pexel.HM.FR
 
         ColumnNode BoundaryNode(Polygon2D boundary)
         {
-            ColumnNode result = new ColumnNode("Boundary" + boundary.Title, true, true)
+            ColumnNode result = new ColumnNode("Boundary " + boundary.Title, true, true)
             {
                 Tag = boundary
             };
@@ -251,7 +203,7 @@ namespace Pexel.HM.FR
             ColumnNode result = new ColumnNode(region.WellTitles[i], true, true) { Tag = region };
 
             int n = 0;
-            for (int j = 0; j < links.Length; ++j)
+            for (int j = 0; j < region.WellTitles.Length; ++j)
                 if (i != j)
                     result.Nodes.Add(LinkNode(region, links[n++], j));
 
@@ -914,12 +866,12 @@ namespace Pexel.HM.FR
                 if (nodeCheckBox.DataPropertyName == "NodeControl1")
                 {
                     ColumnNode node = info.Node.Tag as ColumnNode;
-                    node.NodeControl1 = !node.NodeControl1;
+                    //node.NodeControl1 = !node.NodeControl1;
                 }
                 else if (nodeCheckBox.DataPropertyName == "NodeControl2")
                 {
                     ColumnNode node = info.Node.Tag as ColumnNode;
-                    node.NodeControl2 = !node.NodeControl2;
+                    //node.NodeControl2 = !node.NodeControl2;
                 }
             }
         }
@@ -927,7 +879,10 @@ namespace Pexel.HM.FR
 
 
 
+        private void treeViewAdv_ColumnClicked(object sender, TreeColumnEventArgs e)
+        {
 
+        }
 
     }
 }

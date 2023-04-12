@@ -100,9 +100,11 @@ namespace Pexel
             return Math.Sqrt(x * x + y * y);
         }
 
-
-
-
-
+        public override bool Equals(object obj)
+        {
+            return obj is Point2D d &&
+                   X == d.X &&
+                   Y == d.Y;
+        }
     }
 }

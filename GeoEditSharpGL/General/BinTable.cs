@@ -61,20 +61,20 @@ namespace Pexel.General
         public T[] GetValues(int i)
         {
             int n = 0;
-            T[] values = new T[Values.Length - 1];
-            for (int j = 0; j < Values.Length; j++)
+            T[] result = new T[Count - 1];
+            for (int j = 0; j < Count; j++)
                 if (i != j)
-                    values[n++] = Values[j];
-            return values;
+                    result[n++] = GetValue(i, j);
+            return result;
         }
 
 
         public T[][] GetAllValues()
         {
-            T[][] values = new T[Values.Length][];
-            for (int i = 0; i < Values.Length; i++)
-                values[i] = GetValues(i);
-            return values;
+            T[][] result = new T[Count][];
+            for (int i = 0; i < Count; i++)
+                result[i] = GetValues(i);
+            return result;
         }
 
 
