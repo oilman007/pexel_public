@@ -18,15 +18,7 @@ namespace Pexel
     public class Quad2D : IViewable2D
     {
         public Point2D[] Corners { get; set; } = new Point2D[4];
-        public bool Visible { set; get; } = true;
-        public bool Used { set; get; } = true;
-        override public bool Checked
-        {
-            get
-            {
-                return Visible && Used;
-            }
-        }
+
         public Color Color { set; get; } = Color.Black;
         public string Title { set; get; } = string.Empty;
         public Point2D Center()
@@ -36,11 +28,11 @@ namespace Pexel
         }
         public double Square() // TODO
         {
-            return 0f;
+            return 0;
         }
         public static double Square(List<Quad2D> quads)
         {
-            double result = 0f;
+            double result = 0;
             foreach (Quad2D item in quads) if (item.Visible) result += item.Square();
             return result;
         }

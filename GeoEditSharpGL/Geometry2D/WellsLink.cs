@@ -22,15 +22,6 @@ namespace Pexel
         public WellFace2D W1 { set; get; }
         public WellFace2D W2 { set; get; }
         public Color Color { set; get; } = Color.Black;
-        virtual public bool Visible { set; get; } = true;
-        virtual public bool Used { set; get; } = true;
-        override public bool Checked
-        {
-            get
-            {
-                return Visible && Used;
-            }
-        }
 
 
         public double Distance()

@@ -12,16 +12,7 @@ namespace Pexel
     {
         public List<Point2D> Points { set; get; } = new List<Point2D>();
         public Color Color { set; get; } = Color.Yellow;
-        public bool Visible { set; get; } = true;
-        public bool Used { set; get; } = true;
 
-        override public bool Checked
-        {
-            get
-            {
-                return Visible && Used;
-            }           
-        }
 
         public string Title { set; get; } = string.Empty;
         public bool Closed { set; get; } = false;

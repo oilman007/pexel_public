@@ -34,15 +34,7 @@ namespace Pexel
         }
 
         public Point2D[] Corners { get; set; } = new Point2D[3];
-        public bool Visible { set; get; } = true;
-        public bool Used { set; get; } = true;
-        override public bool Checked
-        {
-            get
-            {
-                return Visible && Used;
-            }
-        }
+
         public Color Color { set; get; } = Color.Black;
         public string Title { set; get; } = string.Empty;
         public Point2D Center()

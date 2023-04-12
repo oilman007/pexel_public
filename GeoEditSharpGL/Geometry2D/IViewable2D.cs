@@ -8,6 +8,8 @@ namespace Pexel.Geometry2D
 {
     public class IViewable2D
     {
-        virtual public bool Checked { set; get; } = true;
+        public bool Visible { set; get; } = true;
+        public bool Used { set; get; } = true;
+        public bool Checked { get { return Visible && Used; } }
     }
 }

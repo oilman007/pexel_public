@@ -8,7 +8,7 @@ using System.Text;
 namespace Pexel
 {
     [Serializable]
-    public class WellFace2D
+    public class WellFace2D : IViewable2D
     {
         public WellFace2D()
         {
@@ -22,13 +22,16 @@ namespace Pexel
         public WellFace2D(string title, Point2D point, bool visible, bool used, WellStatus status) : this(title)
         {
             Point = point;
+            Visible = visible;
             Used = used;
             Status = status;
         }
 
+
+
         public string Title { set; get; }
         public Point2D Point { set; get; }
-        public bool Used { set; get; } = true;
+
 
         public WellStatus Status { set; get; } = WellStatus.PROD;
 

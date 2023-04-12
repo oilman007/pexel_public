@@ -13,6 +13,8 @@ using SharpGL.SceneGraph.Primitives;
 //using SharpGL.Serialization;
 using SharpGL.SceneGraph.Core;
 using SharpGL.Enumerations;
+using Pexel.HM.FR;
+using System.Numerics;
 //using Microsoft.Office.Interop.Excel;
 
 namespace Pexel
@@ -112,6 +114,13 @@ namespace Pexel
         public List<Triangle2D> Covered { set; get; } = new List<Triangle2D>();
         public List<Quad2D> Uncovered { set; get; } = new List<Quad2D>();
         public List<Tuple<Point3D, bool>> PieChart { set; get; } = new List<Tuple<Point3D, bool>>();
+
+
+        public List<FRBoundaries> FRBoundaries { set; get; } = new List<FRBoundaries>();
+        public List<FRWells> FRWells { set; get; } = new List<FRWells>();
+        public List<FRLinks> FRLinks { set; get; } = new List<FRLinks>();
+
+
         public bool ShowUncovered { set; get; } = true;
         public bool ShowCovered { set; get; } = true;
 
@@ -138,8 +147,10 @@ namespace Pexel
             DrawScale(Scale);
             if (WellsPlane != null) Draw(WellsPlane);
             */
-
-            Draw(WellsLinks);
+            DrawFRBoundaries(FRBoundaries);
+            DrawFRWells(FRWells);
+            DrawFRLinks(FRLinks);
+            DrawLinks(WellsLinks);
             DrawImpactAreas(Polygons);
             DrawBoundaries(Boundaries);
             DrawBoundaries(TargetAreas);
@@ -169,7 +180,16 @@ namespace Pexel
         }
 
 
-        void Draw(List<WellsLink> links)
+
+        void DrawFRLinks(IEnumerable<FRLinks> links)
+        {
+            foreach (FRLinks l in links)
+                if (l.Checked)
+                    DrawLinks(l.Items);
+        }
+
+
+        void DrawLinks(IEnumerable<WellsLink> links)
         {
             SharpGL.OpenGL gl = this.openGLControl.OpenGL;
             gl.Begin(BeginMode.Lines);
@@ -197,7 +217,15 @@ namespace Pexel
             gl.End();
         }
 
-        void DrawBoundaries(List<Polygon2D> polygons)
+
+        void DrawFRBoundaries(IEnumerable<FRBoundaries> boundaries)
+        {
+            foreach (FRBoundaries bounds in boundaries)
+                if (bounds.Checked)
+                    DrawBoundaries(bounds.Items);
+        }
+
+        void DrawBoundaries(IEnumerable<Polygon2D> polygons)
         {
             SharpGL.OpenGL gl = this.openGLControl.OpenGL;
             foreach (Polygon2D poly in polygons)
@@ -396,13 +424,49 @@ namespace Pexel
         }
 
 
+
+        void DrawFRWells(IEnumerable<FRWells> wells)
+        {
+            foreach (FRWells w in wells)
+                if (w.Checked)
+                    DrawWells(w.Items);
+        }
+
+
+
+        void DrawWells(IEnumerable<WellFace2D> wells)
+        {
+            SharpGL.OpenGL gl = this.openGLControl.OpenGL;
+            foreach (WellFace2D well in wells)
+            {
+                if (!well.Checked) continue;
+                // title
+                PointF winPoint = ProjToWinCoord(well.Point.X, well.Point.Y);
+
+                if (well.Status == WellStatus.PROD)
+                    DrawTriangle(well.Point.X, well.Point.Y, wellSize, false, Color.Brown, wellLinesPlaneDepth);
+                else if (well.Status == WellStatus.INJE)
+                    DrawTriangle(well.Point.X, well.Point.Y, wellSize, true, Color.Blue, wellLinesPlaneDepth);
+                else if (well.Status == WellStatus.AQUI)
+                    DrawDoubleTriangle(well.Point.X, well.Point.Y, wellSize, true, Color.SteelBlue, Color.SkyBlue, wellLinesPlaneDepth);
+                else
+                    //DrawTriangle(well.Point.X, well.Point.Y, wellSize, true, Color.Black, wellLinesPlaneDepth);
+                    DrawCircle(well.Point.X, well.Point.Y, wellSize / 2, 12, Color.Black, wellLinesPlaneDepth);
+
+                gl.DrawText((int)winPoint.X + 2, (int)winPoint.Y + 2,
+                            Color.Black.R, Color.Black.G, Color.Black.B, "", 10, well.Title);
+            }
+        }
+
+
+
         double wellSize = 50;
         void Draw(WellsPlane2D plane)
         {
             SharpGL.OpenGL gl = this.openGLControl.OpenGL;
             foreach (WellFace2D well in plane.Wells)
             {
-                if (!well.Used) continue;
+                if (!well.Checked) continue;
                 // title
                 PointF winPoint = ProjToWinCoord(well.Point.X, well.Point.Y);
 
