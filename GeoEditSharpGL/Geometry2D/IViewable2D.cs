@@ -10,6 +10,18 @@ namespace Pexel.Geometry2D
     {
         public bool Visible { set; get; } = true;
         public bool Used { set; get; } = true;
-        public bool Checked { get { return Visible && Used; } }
+        public bool Active { set; get; } = true;
+
+
+        public IViewable2D Parent { set; get; } = null;
+
+
+        public bool Enabled 
+        { 
+            get 
+            {
+                return Visible && Used && Active && (Parent == null || Parent.Enabled);
+            } 
+        }
     }
 }

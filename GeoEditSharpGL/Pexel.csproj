@@ -319,11 +319,13 @@
     <Compile Include="private\HM\FR\FDModelRegion.cs" />
     <Compile Include="private\HM\FR\FRBoundaries.cs" />
     <Compile Include="private\HM\FR\FRLinks.cs" />
-    <Compile Include="private\HM\FR\FRLinksStep.cs" />
+    <Compile Include="private\HM\FR\FRLinksNode.cs" />
     <Compile Include="private\HM\FR\FRPeriod.cs" />
     <Compile Include="private\HM\FR\FRRegion.cs" />
+    <Compile Include="private\HM\FR\FRWell.cs" />
     <Compile Include="private\HM\FR\FRWells.cs" />
-    <Compile Include="private\HM\FR\FRWellsLink.cs" />
+    <Compile Include="private\HM\FR\FRLink.cs" />
+    <Compile Include="private\HM\FR\FRWellsNode.cs" />
     <Compile Include="private\HM\HistMatching.cs" />
     <Compile Include="HM\HistMatchingKeyValues.cs" />
     <Compile Include="HM\HistMatchingProject.cs" />

@@ -91,58 +91,75 @@ namespace Pexel.HM.FR
         */
 
 
-        void UpdateCases(DateTime dt)
+        void UpdateCases(int dt)
         {
-            View2D.FRWells.Clear();
-            View2D.FRLinks.Clear();
-            foreach (FRRegion region in Project.Regions.Values)
+            //View2D.FRWells.Clear();
+            //View2D.FRLinks.Clear();
+            for (int r = 0; r < LinksNodes.Length; r++)
             {
-                int p = region.GetPeriod(Array.IndexOf(Project.Dates, dt));
-                View2D.FRWells.Add(region.GetWells(p));
-                View2D.FRLinks.Add(region.GetLinks(p));
+                //int p = Project.Regions.Values.ElementAt(r).GetPeriod(Array.IndexOf(Project.Dates, dt));
+                //View2D.FRWells.AddRange(WellsNodes[r].Items);
+                //View2D.FRLinks.AddRange(LinksNodes[r].Items);
+
+                foreach (var item in WellsNodes[r].Items.SelectMany(x => x.Items))
+                    item.Active = InsidePeriod(item.FirstDt, dt, item.LastDt);
+
+                foreach (var item in LinksNodes[r].Items.SelectMany(x => x.Items))
+                    item.Active = InsidePeriod(item.FirstDt, dt, item.LastDt);
             }
         }
 
 
 
-        FRWells[] FRWells { set; get; }
-        FRLinksStep[] FRLinksSteps { set; get; }
+        static bool InsidePeriod(int first, int current, int last)
+        {
+            return first <= current && current <= last;
+        }
 
+
+
+        FRWellsNode[] WellsNodes { set; get; }
+        FRLinksNode[] LinksNodes { set; get; }
 
         void UpdateProject(FRProject project)
         {
             Project = project;
+
             View2D.FRBoundaries.Clear();
+            View2D.FRWells.Clear();
+            View2D.FRLinks.Clear();
+            
+            WellsNodes = new FRWellsNode[Project.Regions.Values.Count];
+            LinksNodes = new FRLinksNode[Project.Regions.Values.Count];
 
             TreeModel _model = new TreeModel();
             this.treeViewAdv.Model = _model;
-
             this.treeViewAdv.BeginUpdate();
             _model.Nodes.Clear();
-
-            FRWells = new FRWells[Project.Regions.Values.Count];
-            FRLinksSteps = new FRLinksStep[Project.Regions.Values.Count];
-
             int i = 0;
             foreach (FRRegion r in Project.Regions.Values)
-                _model.Nodes.Add(RegionNode(r, out FRWells[i], out FRLinksSteps[i]));
+            {
+                _model.Nodes.Add(RegionNode(r, out WellsNodes[i], out LinksNodes[i]));
+                View2D.FRWells.AddRange(WellsNodes[i].Items);
+                View2D.FRLinks.AddRange(LinksNodes[i].Items);
+                i++;
+            }
             this.treeViewAdv.EndUpdate();
 
             UpdateDates(project.Dates);
-            //UpdateBoundaries();
-            UpdateCases(project.Dates.First());
+            UpdateCases(0);
         }
 
 
 
 
-        ColumnNode RegionNode(FRRegion region, out FRWells wells, out FRLinksStep links)
+        ColumnNode RegionNode(FRRegion region, out FRWellsNode wells, out FRLinksNode links)
         {
             ColumnNode result = new ColumnNode("Region " + region.Title, region.Visible, region.Used) { Tag = region };
             result.Nodes.Add(BoundariesNode(region.GetBoundaries()));
-            wells = region.GetWells(0);
+            wells = region.GetWellsNode();
             result.Nodes.Add(WellsNode(wells));
-            links = region.GetLinkSteps();
+            links = region.GetLinkNode();
             result.Nodes.Add(LinksNode(links));
             return result;
         }
@@ -162,43 +179,51 @@ namespace Pexel.HM.FR
 
         ColumnNode BoundaryNode(Polygon2D boundary)
         {
-            ColumnNode result = new ColumnNode("Boundary " + boundary.Title, boundary.Visible, boundary.Checked) { Tag = boundary };
+            ColumnNode result = new ColumnNode("Boundary " + boundary.Title, boundary.Visible, boundary.Used) { Tag = boundary };
             return result;
         }
 
 
 
 
-        ColumnNode WellsNode(FRWells wells)
+        ColumnNode WellsNode(FRWellsNode wells_node)
         {
-            ColumnNode result = new ColumnNode("Wells", wells.Visible, wells.Used) { Tag = wells };
-            foreach(WellFace2D well in wells.Items)
+            ColumnNode result = new ColumnNode("Wells", wells_node.Visible, wells_node.Used) { Tag = wells_node };
+            foreach(FRWells well in wells_node.Items)
                 result.Nodes.Add(WellNode(well));
             return result;
         }
 
-        ColumnNode WellNode(WellFace2D well)
+        ColumnNode WellNode(FRWells well)
         {
             ColumnNode result = new ColumnNode(well.Title, well.Visible, well.Used) { Tag = well };
             return result;
         }
 
 
-        ColumnNode LinksNode(FRLinks[] links)
+        ColumnNode LinksNode(FRLinksNode links_node)
         {
-            ColumnNode result = new ColumnNode("Links", links.Visible, links.Used) { Tag = links };
-            foreach (FRWellsLink link in links.Items)
+            ColumnNode result = new ColumnNode("Links", links_node.Visible, links_node.Used) { Tag = links_node };
+            foreach (FRLinks well_links in links_node.Items)
+                result.Nodes.Add(WellLinksNode(well_links));
+            return result;
+        }
+
+
+        ColumnNode WellLinksNode(FRLinks well_links)
+        {
+            ColumnNode result = new ColumnNode(well_links.Items.FirstOrDefault().Title, well_links.Visible, well_links.Used) { Tag = well_links };
+            foreach (FRLink link in well_links.Items)
                 result.Nodes.Add(LinkNode(link));
             return result;
         }
 
 
-        ColumnNode LinkNode(FRWellsLink link)
+        ColumnNode LinkNode(FRLink link)
         {
-            ColumnNode result = new ColumnNode(link.Title, link.Visible, link.Used) { Tag = link };
-
-            //for (int t = 0; t < periods.Length; ++t) result.Nodes.Add(PeriodNode(region, t));
-
+            string fdt = Helper.ShowDateTimeShort(Project.Dates[link.FirstDt]);
+            string ldt = Helper.ShowDateTimeShort(Project.Dates[link.LastDt]);
+            ColumnNode result = new ColumnNode(fdt + "-" + ldt, link.Visible, link.Used) { Tag = link };
             return result;
         }
 
@@ -576,7 +601,7 @@ namespace Pexel.HM.FR
             if (prev_date != date)
             {
                 prev_date = date;
-                UpdateCases(Project.Dates[date]);
+                UpdateCases(date);
             }
         }
 

@@ -18,7 +18,7 @@ namespace Pexel.HM.HMFFR
         }
 
 
-        public void UpdateStatus(List<WellFace2D> wells, List<FRWellsLink> iplinks, List<Point3D> piezo_map, List<Point3D> F_map)
+        public void UpdateStatus(List<WellFace2D> wells, List<FRLink> iplinks, List<Point3D> piezo_map, List<Point3D> F_map)
         {
             this.dataGridView_wells.Rows.Clear();
             int i = 0;
