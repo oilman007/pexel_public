@@ -105,6 +105,10 @@ namespace Pexel.HM.FR
 
 
 
+        FRWells[] FRWells { set; get; }
+        FRLinksStep[] FRLinksSteps { set; get; }
+
+
         void UpdateProject(FRProject project)
         {
             Project = project;
@@ -116,8 +120,12 @@ namespace Pexel.HM.FR
             this.treeViewAdv.BeginUpdate();
             _model.Nodes.Clear();
 
+            FRWells = new FRWells[Project.Regions.Values.Count];
+            FRLinksSteps = new FRLinksStep[Project.Regions.Values.Count];
+
+            int i = 0;
             foreach (FRRegion r in Project.Regions.Values)
-                _model.Nodes.Add(RegionNode(r));
+                _model.Nodes.Add(RegionNode(r, out FRWells[i], out FRLinksSteps[i]));
             this.treeViewAdv.EndUpdate();
 
             UpdateDates(project.Dates);
@@ -128,12 +136,14 @@ namespace Pexel.HM.FR
 
 
 
-        ColumnNode RegionNode(FRRegion region)
+        ColumnNode RegionNode(FRRegion region, out FRWells wells, out FRLinksStep links)
         {
             ColumnNode result = new ColumnNode("Region " + region.Title, region.Visible, region.Used) { Tag = region };
             result.Nodes.Add(BoundariesNode(region.GetBoundaries()));
-            result.Nodes.Add(WellsNode(region.GetWells(0)));
-            result.Nodes.Add(LinksNode(region.GetLinks(0)));
+            wells = region.GetWells(0);
+            result.Nodes.Add(WellsNode(wells));
+            links = region.GetLinkSteps();
+            result.Nodes.Add(LinksNode(links));
             return result;
         }
 
@@ -174,7 +184,7 @@ namespace Pexel.HM.FR
         }
 
 
-        ColumnNode LinksNode(FRLinks links)
+        ColumnNode LinksNode(FRLinks[] links)
         {
             ColumnNode result = new ColumnNode("Links", links.Visible, links.Used) { Tag = links };
             foreach (FRWellsLink link in links.Items)

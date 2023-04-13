@@ -319,6 +319,7 @@
     <Compile Include="private\HM\FR\FDModelRegion.cs" />
     <Compile Include="private\HM\FR\FRBoundaries.cs" />
     <Compile Include="private\HM\FR\FRLinks.cs" />
+    <Compile Include="private\HM\FR\FRLinksStep.cs" />
     <Compile Include="private\HM\FR\FRPeriod.cs" />
     <Compile Include="private\HM\FR\FRRegion.cs" />
     <Compile Include="private\HM\FR\FRWells.cs" />
