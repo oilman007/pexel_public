@@ -17,11 +17,11 @@ namespace Pexel.Geometry2D
 
 
         public bool Enabled 
-        { 
-            get 
+        {
+            get
             {
-                return Visible && Used && Active && (Parent == null || Parent.Enabled);
-            } 
+                return Visible && Used && Active && (Parent is null || Parent.Enabled);
+            }
         }
     }
 }

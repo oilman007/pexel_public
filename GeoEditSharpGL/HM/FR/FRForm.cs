@@ -68,19 +68,19 @@ namespace Pexel.HM.FR
 
 
 
-        void UpdateDates(DateTime[] dates)
+        void UpdateDates()
         {
-            this.numericUpDown_dates.Minimum = 0;
-            this.numericUpDown_dates.Maximum = dates.Length - 1;
-            this.numericUpDown_dates.Value = 0;
+            //this.numericUpDown_dates.Minimum = 0;
+            //this.numericUpDown_dates.Maximum = dates.Length - 1;
+            //this.numericUpDown_dates.Value = 0;
             //
             this.comboBox_dates.Items.Clear();
-            foreach (DateTime date in dates)
-                comboBox_dates.Items.Add(Helper.ShowDateTimeLong(date));
+            foreach (Index2D i in Periods)
+                comboBox_dates.Items.Add(Helper.ShowDateTimeShort(Project.Dates[i.I]) + "-" + Helper.ShowDateTimeShort(Project.Dates[i.J]));
             //
-            this.trackBar_dates.Minimum = 0;
-            this.trackBar_dates.Maximum = dates.Length - 1;
-            this.trackBar_dates.Value = 0;
+            //this.trackBar_dates.Minimum = 0;
+            //this.trackBar_dates.Maximum = dates.Length - 1;
+            //this.trackBar_dates.Value = 0;
         }
 
         /*
@@ -146,7 +146,7 @@ namespace Pexel.HM.FR
             }
             this.treeViewAdv.EndUpdate();
 
-            UpdateDates(project.Dates);
+            UpdatePeriods();
             UpdateCases(0);
         }
 
@@ -212,7 +212,7 @@ namespace Pexel.HM.FR
 
         ColumnNode WellLinksNode(FRLinks well_links)
         {
-            ColumnNode result = new ColumnNode(well_links.Items.FirstOrDefault().Title, well_links.Visible, well_links.Used) { Tag = well_links };
+            ColumnNode result = new ColumnNode(well_links.Title, well_links.Visible, well_links.Used) { Tag = well_links };
             foreach (FRLink link in well_links.Items)
                 result.Nodes.Add(LinkNode(link));
             return result;
@@ -581,11 +581,6 @@ namespace Pexel.HM.FR
             UpdateDate((int)numericUpDown_dates.Value);
         }
 
-        private void trackBar_dates_Scroll(object sender, EventArgs e)
-        {
-            UpdateDate(trackBar_dates.Value);
-        }
-
 
 
         int prev_date = -999;
@@ -595,8 +590,8 @@ namespace Pexel.HM.FR
                 comboBox_dates.SelectedIndex = date;
             if ((int)numericUpDown_dates.Value != date)
                 numericUpDown_dates.Value = date;
-            if (trackBar_dates.Value != date)
-                trackBar_dates.Value = date;
+            //if (trackBar_dates.Value != date)
+            //    trackBar_dates.Value = date;
 
             if (prev_date != date)
             {
@@ -883,10 +878,47 @@ namespace Pexel.HM.FR
                     //node.NodeControl2 = !node.NodeControl2;
                 }
                 */
+
+
             }
         }
 
 
+
+        void UpdatePeriods()
+        {
+            Index2D[] periods = GetPeriods(Project.Regions.Values.Where(x => x.Enabled).ToArray());
+            if (!Array.Equals(Periods, periods))
+            {
+                Periods = periods;
+
+                this.comboBox_dates.Items.Clear();
+                foreach (Index2D i in Periods)
+                    comboBox_dates.Items.Add(Helper.ShowDateTimeShort(Project.Dates[i.I]) + "-" + Helper.ShowDateTimeShort(Project.Dates[i.J]));
+            }
+        }
+
+
+        Index2D[] Periods { set; get; }
+
+        Index2D[] GetPeriods(FRRegion[] regions)
+        {
+            List<int> targ_dt = new List<int>();
+            foreach (FRRegion r in regions)
+            {
+                targ_dt.AddRange(r.FirstDates);
+                targ_dt.AddRange(r.LastDates.Select(x => x + 1));
+            }
+            targ_dt = targ_dt.Distinct().OrderBy(x => x).ToList();
+            Index2D[] result = new Index2D[targ_dt.Count - 1];
+            for (int i = 1; i < targ_dt.Count; i++)
+            {
+                int f = targ_dt[i - 1];
+                int l = targ_dt[i];
+                result[i - 1] = new Index2D(f, l - 1);
+            }
+            return result;
+        }
 
 
  
