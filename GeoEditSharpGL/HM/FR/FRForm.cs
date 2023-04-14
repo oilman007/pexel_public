@@ -126,7 +126,7 @@ namespace Pexel.HM.FR
             Project = project;
 
             View2D.FRBoundaries.Clear();
-            View2D.FRWells.Clear();
+            View2D.WellsPlane2D.Wells.Clear();
             View2D.FRLinks.Clear();
             
             WellsNodes = new FRWellsNode[Project.Regions.Values.Count];
@@ -140,7 +140,7 @@ namespace Pexel.HM.FR
             foreach (FRRegion r in Project.Regions.Values)
             {
                 _model.Nodes.Add(RegionNode(r, out WellsNodes[i], out LinksNodes[i]));
-                View2D.FRWells.AddRange(WellsNodes[i].Items);
+                View2D.WellsPlane2D.Wells.AddRange(WellsNodes[i].Items.SelectMany(x => x.Items));
                 View2D.FRLinks.AddRange(LinksNodes[i].Items);
                 i++;
             }
@@ -573,23 +573,17 @@ namespace Pexel.HM.FR
 
         private void comboBox_dates_SelectedIndexChanged(object sender, EventArgs e)
         {
-            UpdateDate(Math.Max(0, comboBox_dates.SelectedIndex));
+            UpdateDate(Periods[comboBox_dates.SelectedIndex].I);
         }
-
-        private void numericUpDown_dates_ValueChanged(object sender, EventArgs e)
-        {
-            UpdateDate((int)numericUpDown_dates.Value);
-        }
-
 
 
         int prev_date = -999;
         void UpdateDate(int date)
         {
-            if (comboBox_dates.SelectedIndex != date)
-                comboBox_dates.SelectedIndex = date;
-            if ((int)numericUpDown_dates.Value != date)
-                numericUpDown_dates.Value = date;
+            //if (comboBox_dates.SelectedIndex != date)
+            //    comboBox_dates.SelectedIndex = date;
+            //if ((int)numericUpDown_dates.Value != date)
+            //    numericUpDown_dates.Value = date;
             //if (trackBar_dates.Value != date)
             //    trackBar_dates.Value = date;
 
