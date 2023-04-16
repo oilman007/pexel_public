@@ -12,9 +12,9 @@ namespace Pexel.Geometry2D
         public string Title { set; get; } = string.Empty;
 
 
-        public IViewable2D Parent { set; get; } = null;
+        public List<IViewable2D> Controllers { set; get; } = new List<IViewable2D>();
 
-        public List<IViewable2D> Children { set; get; } = new List<IViewable2D>();
+        public List<IViewable2D> Controlled { set; get; } = new List<IViewable2D>();
 
 
         /*
@@ -37,7 +37,7 @@ namespace Pexel.Geometry2D
             }
             get
             {
-                return _Visible && (Parent is null || Parent.Visible);
+                return _Visible && (Controllers is null || Controllers.All(x => x.Visible));
             }
         }
 
@@ -52,7 +52,7 @@ namespace Pexel.Geometry2D
             }
             get
             {
-                return _Used && (Parent is null || Parent.Visible);
+                return _Used && (Controllers is null || Controllers.All(x => x.Used));
             }
         }
 

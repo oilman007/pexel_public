@@ -160,11 +160,11 @@ namespace Pexel.HM.FR
             result.Nodes.Add(BoundariesNode(region.GetBoundaries()));
             // wells
             IViewable2D wells_node = region.GetWellsNode();
-            wells = wells_node.Children.SelectMany(x => x.Children).Select(x => (FRWell)x).ToArray();
+            wells = wells_node.Controlled.SelectMany(x => x.Controlled).Select(x => (FRWell)x).ToArray();
             result.Nodes.Add(WellsNode(wells_node));
             // links
             IViewable2D links_node = region.GetLinkNode();
-            links = links_node.Children.SelectMany(x => x.Children).Select(x => (FRLink)x).ToArray();
+            links = links_node.Controlled.SelectMany(x => x.Controlled).Select(x => (FRLink)x).ToArray();
             result.Nodes.Add(LinksNode(links_node));
             //
             return result;
@@ -174,12 +174,14 @@ namespace Pexel.HM.FR
 
 
 
-        ColumnNode BoundariesNode(FRBoundaries boundaries)
+        ColumnNode BoundariesNode(IViewable2D boundaries)
         {
-            ColumnNode result = new ColumnNode("Boundaries", boundaries._Visible, boundaries._Used) { Tag = boundaries };
-            foreach (Polygon2D p in boundaries.Items)
+            ColumnNode result = new ColumnNode(boundaries.Title, boundaries._Visible, boundaries._Used) { Tag = boundaries };
+            foreach (Polygon2D p in boundaries.Controlled)
+            {
                 result.Nodes.Add(BoundaryNode(p));
-            View2D.FRBoundaries.Add(boundaries);
+                View2D.Boundaries.Add(p);
+            }
             return result;
         }
 
@@ -195,7 +197,7 @@ namespace Pexel.HM.FR
         ColumnNode WellsNode(IViewable2D wells_node)
         {
             ColumnNode result = new ColumnNode(wells_node.Title, wells_node._Visible, wells_node._Used) { Tag = wells_node };
-            foreach(IViewable2D well in wells_node.Children)
+            foreach(IViewable2D well in wells_node.Controlled)
                 result.Nodes.Add(WellNode(well));
             return result;
         }
@@ -210,7 +212,7 @@ namespace Pexel.HM.FR
         ColumnNode LinksNode(IViewable2D links_node)
         {
             ColumnNode result = new ColumnNode(links_node.Title, links_node._Visible, links_node._Used) { Tag = links_node };
-            foreach (IViewable2D well_links in links_node.Children)
+            foreach (IViewable2D well_links in links_node.Controlled)
                 result.Nodes.Add(WellLinksNode(well_links));
             return result;
         }
@@ -219,7 +221,7 @@ namespace Pexel.HM.FR
         ColumnNode WellLinksNode(IViewable2D well_links)
         {
             ColumnNode result = new ColumnNode(well_links.Title, well_links._Visible, well_links._Used) { Tag = well_links };
-            foreach (FRLink link in well_links.Children)
+            foreach (FRLink link in well_links.Controlled)
                 result.Nodes.Add(LinkNode(link));
             return result;
         }
@@ -851,7 +853,7 @@ namespace Pexel.HM.FR
         void UpdatePeriods()
         {
             Index2D[] periods = GetPeriods(Project.Regions.Values.Where(x => x.Visible || x.Used).ToArray());
-            if (!Array.Equals(Periods, periods))
+            if (!Periods.SequenceEqual(periods))
             {
                 Periods = periods;
                 this.comboBox_dates.Items.Clear();
@@ -861,7 +863,7 @@ namespace Pexel.HM.FR
         }
 
 
-        Index2D[] Periods { set; get; }
+        Index2D[] Periods { set; get; } = Array.Empty<Index2D>();   
 
         Index2D[] GetPeriods(FRRegion[] regions)
         {
