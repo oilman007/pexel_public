@@ -28,8 +28,6 @@ namespace Pexel
         }
 
 
-
-        public string Title { set; get; }
         public Point2D Point { set; get; }
 
 

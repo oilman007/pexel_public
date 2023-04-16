@@ -184,7 +184,7 @@ namespace Pexel
         void DrawFRLinks(IEnumerable<FRLinks> links)
         {
             foreach (FRLinks l in links)
-                if (l.Enabled)
+                if (l.Visible)
                     DrawLinks(l.Items);
         }
 
@@ -195,7 +195,7 @@ namespace Pexel
             gl.Begin(BeginMode.Lines);
             foreach (WellsLink link in links)
             {
-                if (!link.Enabled) continue;
+                if (!link.Visible) continue;
                 gl.Color(link.Color);
                 gl.Vertex(link.W1.Point.X, link.W1.Point.Y, gridLinesPlaneDepth);
                 gl.Vertex(link.W2.Point.X, link.W2.Point.Y, gridLinesPlaneDepth);
@@ -210,7 +210,7 @@ namespace Pexel
             gl.Begin(BeginMode.Quads); // TODO: 
             foreach (Polygon2D poly in polygons)
             {
-                if (!poly.Enabled) continue;
+                if (!poly.Visible) continue;
                 gl.Color(poly.Color.R, poly.Color.G, poly.Color.B, (byte)0);
                 foreach (Point2D p in poly.Points) gl.Vertex(p.X, p.Y, propPlaneDepth);
             }
@@ -221,7 +221,7 @@ namespace Pexel
         void DrawFRBoundaries(IEnumerable<FRBoundaries> boundaries)
         {
             foreach (FRBoundaries bounds in boundaries)
-                if (bounds.Enabled)
+                if (bounds.Visible)
                     DrawBoundaries(bounds.Items);
         }
 
@@ -230,7 +230,7 @@ namespace Pexel
             SharpGL.OpenGL gl = this.openGLControl.OpenGL;
             foreach (Polygon2D poly in polygons)
             {
-                if (!poly.Enabled) continue;
+                if (!poly.Visible) continue;
                 //gl.Enable( double((GL_LINE_STIPPLE);
                 if (poly.Closed) gl.Begin(BeginMode.LineLoop);
                 else gl.Begin(BeginMode.LineStrip);
@@ -257,7 +257,7 @@ namespace Pexel
             {
                 foreach (Triangle2D triangle in covered)
                 {
-                    if (!triangle.Enabled) continue;
+                    if (!triangle.Visible) continue;
                     gl.Begin(BeginMode.Triangles);
                     gl.Color(triangle.Color.R, triangle.Color.G, triangle.Color.B, (byte)127);
                     foreach (Point2D p in triangle.Corners) gl.Vertex(p.X, p.Y, propPlaneDepth);
@@ -268,7 +268,7 @@ namespace Pexel
             {
                 foreach (Quad2D quad in uncovered)
                 {
-                    if (!quad.Enabled) continue;
+                    if (!quad.Visible) continue;
                     /*
                     gl.Begin(BeginMode.Triangles);
                     gl.Color(quad.Color.R, quad.Color.G, quad.Color.B, (byte)127);
@@ -428,7 +428,7 @@ namespace Pexel
         void DrawFRWells(IEnumerable<FRWells> wells)
         {
             foreach (FRWells w in wells)
-                if (w.Enabled)
+                if (w.Visible)
                     DrawWells(w.Items);
         }
 
@@ -439,7 +439,7 @@ namespace Pexel
             SharpGL.OpenGL gl = this.openGLControl.OpenGL;
             foreach (WellFace2D well in wells)
             {
-                if (!well.Enabled) continue;
+                if (!well.Visible) continue;
                 // title
                 PointF winPoint = ProjToWinCoord(well.Point.X, well.Point.Y);
 
@@ -466,7 +466,7 @@ namespace Pexel
             SharpGL.OpenGL gl = this.openGLControl.OpenGL;
             foreach (WellFace2D well in plane.Wells)
             {
-                if (!well.Enabled) continue;
+                if (!well.Visible) continue;
                 // title
                 PointF winPoint = ProjToWinCoord(well.Point.X, well.Point.Y);
 
