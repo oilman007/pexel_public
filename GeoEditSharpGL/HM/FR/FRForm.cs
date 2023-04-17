@@ -93,20 +93,9 @@ namespace Pexel.HM.FR
 
         void UpdateCases(int dt)
         {
-            //View2D.FRWells.Clear();
-            //View2D.FRLinks.Clear();
-            for (int r = 0; r < Links.Length; r++)
-            {
-                //int p = Project.Regions.Values.ElementAt(r).GetPeriod(Array.IndexOf(Project.Dates, dt));
-                //View2D.FRWells.AddRange(WellsNodes[r].Items);
-                //View2D.FRLinks.AddRange(LinksNodes[r].Items);
-
-                foreach (var item in Wells[r])
-                    item.Visible = InsidePeriod(item.FirstDt, dt, item.LastDt);
-
-                foreach (var item in Links[r])
-                    item.Visible = InsidePeriod(item.FirstDt, dt, item.LastDt);
-            }
+            foreach (var periods in RegPeriods)
+                foreach (var period in periods)
+                    period.Visible = InsidePeriod(period.FirstDt, dt, period.LastDt);
         }
 
 
@@ -118,8 +107,9 @@ namespace Pexel.HM.FR
 
 
 
-        FRWell[][] Wells { set; get; }
-        FRLink[][] Links { set; get; }
+        FRPeriod[][] RegPeriods { set; get; }
+
+
 
         void UpdateProject(FRProject project)
         {
@@ -128,20 +118,32 @@ namespace Pexel.HM.FR
             View2D.FRBoundaries.Clear();
             View2D.WellsPlane2D.Wells.Clear();
             View2D.FRLinks.Clear();
-            
-            Wells = new FRWell[Project.Regions.Values.Count][];
-            Links = new FRLink[Project.Regions.Values.Count][];
+
+            RegPeriods = new FRPeriod[Project.Regions.Length][];
 
             TreeModel _model = new TreeModel();
             this.treeViewAdv.Model = _model;
             this.treeViewAdv.BeginUpdate();
             _model.Nodes.Clear();
             int i = 0;
-            foreach (FRRegion r in Project.Regions.Values)
+            foreach (FRRegion r in Project.Regions)
             {
-                _model.Nodes.Add(RegionNode(r, out Wells[i], out Links[i]));
-                View2D.WellsPlane2D.Wells.AddRange(Wells[i]);
-                View2D.WellsLinks.AddRange(Links[i]);
+                r.GetNodes(out IViewable2D boundaries_node, out IViewable2D wells_node,
+                           out IViewable2D links_node, out RegPeriods[i]);
+                //
+                ColumnNode reg_node = new ColumnNode(r.Title, r._Visible, r._Used) { Tag = r };
+                // bounds
+                reg_node.Nodes.Add(BoundariesNode(boundaries_node));
+                // wells
+                FRWell[] wells = wells_node.Controlled.SelectMany(x => x.Controlled).Select(x => (FRWell)x).ToArray();
+                reg_node.Nodes.Add(WellsNode(wells_node));
+                // links
+                FRLink[] links = links_node.Controlled.SelectMany(x => x.Controlled).Select(x => (FRLink)x).ToArray();
+                reg_node.Nodes.Add(LinksNode(links_node));
+                //
+                _model.Nodes.Add(reg_node);
+                View2D.WellsPlane2D.Wells.AddRange(wells);
+                View2D.WellsLinks.AddRange(links);
                 i++;
             }
             this.treeViewAdv.EndUpdate();
@@ -155,7 +157,7 @@ namespace Pexel.HM.FR
 
         ColumnNode RegionNode(FRRegion region, out FRWell[] wells, out FRLink[] links)
         {
-            ColumnNode result = new ColumnNode("Region " + region.Title, region._Visible, region._Used) { Tag = region };
+            ColumnNode result = new ColumnNode(region.Title, region._Visible, region._Used) { Tag = region };
             // bounds
             result.Nodes.Add(BoundariesNode(region.GetBoundaries()));
             // wells
@@ -844,7 +846,7 @@ namespace Pexel.HM.FR
                     //node.NodeControl2 = !node.NodeControl2;
                 }
                 */
-                UpdatePeriods();
+                //UpdatePeriods();
             }
         }
 
@@ -852,7 +854,7 @@ namespace Pexel.HM.FR
 
         void UpdatePeriods()
         {
-            Index2D[] periods = GetPeriods(Project.Regions.Values.Where(x => x.Visible || x.Used).ToArray());
+            Index2D[] periods = GetPeriods(Project.Regions.Where(x => x.Visible || x.Used).ToArray());
             if (!Periods.SequenceEqual(periods))
             {
                 Periods = periods;
