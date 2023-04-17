@@ -37,7 +37,7 @@ namespace Pexel.Geometry2D
             }
             get
             {
-                return _Visible && (Controllers is null || Controllers.All(x => x.Visible));
+                return _Visible && (Controllers is null || Controllers.Count == 0 || Controllers.All(x => x.Visible));
             }
         }
 
@@ -52,7 +52,7 @@ namespace Pexel.Geometry2D
             }
             get
             {
-                return _Used && (Controllers is null || Controllers.All(x => x.Used));
+                return _Used && (Controllers is null || Controllers.Count == 0 || Controllers.All(x => x.Used));
             }
         }
 

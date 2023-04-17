@@ -129,15 +129,15 @@ namespace Pexel.HM.FR
             View2D.WellsPlane2D.Wells.Clear();
             View2D.FRLinks.Clear();
             
-            Wells = new FRWell[Project.Regions.Values.Count][];
-            Links = new FRLink[Project.Regions.Values.Count][];
+            Wells = new FRWell[Project.Regions.Length][];
+            Links = new FRLink[Project.Regions.Length][];
 
             TreeModel _model = new TreeModel();
             this.treeViewAdv.Model = _model;
             this.treeViewAdv.BeginUpdate();
             _model.Nodes.Clear();
             int i = 0;
-            foreach (FRRegion r in Project.Regions.Values)
+            foreach (FRRegion r in Project.Regions)
             {
                 _model.Nodes.Add(RegionNode(r, out Wells[i], out Links[i]));
                 View2D.WellsPlane2D.Wells.AddRange(Wells[i]);
@@ -852,7 +852,7 @@ namespace Pexel.HM.FR
 
         void UpdatePeriods()
         {
-            Index2D[] periods = GetPeriods(Project.Regions.Values.Where(x => x.Visible || x.Used).ToArray());
+            Index2D[] periods = GetPeriods(Project.Regions.Where(x => x.Visible || x.Used).ToArray());
             if (!Periods.SequenceEqual(periods))
             {
                 Periods = periods;
