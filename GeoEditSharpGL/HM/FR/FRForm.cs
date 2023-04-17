@@ -115,9 +115,8 @@ namespace Pexel.HM.FR
         {
             Project = project;
 
-            View2D.FRBoundaries.Clear();
+            View2D.WellsLinks.Clear();
             View2D.WellsPlane2D.Wells.Clear();
-            View2D.FRLinks.Clear();
 
             RegPeriods = new FRPeriod[Project.Regions.Length][];
 
@@ -128,14 +127,13 @@ namespace Pexel.HM.FR
             int i = 0;
             foreach (FRRegion r in Project.Regions)
             {
-                r.GetNodes(out IViewable2D boundaries_node, out IViewable2D wells_node,
-                           out IViewable2D links_node, out RegPeriods[i]);
+                r.GetNodes(out IViewable2D boundaries_node, out IViewable2D wells_node, out IViewable2D links_node, out RegPeriods[i]);
                 //
                 ColumnNode reg_node = new ColumnNode(r.Title, r._Visible, r._Used) { Tag = r };
                 // bounds
                 reg_node.Nodes.Add(BoundariesNode(boundaries_node));
                 // wells
-                FRWell[] wells = wells_node.Controlled.SelectMany(x => x.Controlled).Select(x => (FRWell)x).ToArray();
+                WellFace2D[] wells = wells_node.Controlled.SelectMany(x => x.Controlled).Select(x => (WellFace2D)x).ToArray();
                 reg_node.Nodes.Add(WellsNode(wells_node));
                 // links
                 FRLink[] links = links_node.Controlled.SelectMany(x => x.Controlled).Select(x => (FRLink)x).ToArray();
@@ -150,26 +148,6 @@ namespace Pexel.HM.FR
 
             UpdatePeriods();
             UpdateCases(0);
-        }
-
-
-
-
-        ColumnNode RegionNode(FRRegion region, out FRWell[] wells, out FRLink[] links)
-        {
-            ColumnNode result = new ColumnNode(region.Title, region._Visible, region._Used) { Tag = region };
-            // bounds
-            result.Nodes.Add(BoundariesNode(region.GetBoundaries()));
-            // wells
-            IViewable2D wells_node = region.GetWellsNode();
-            wells = wells_node.Controlled.SelectMany(x => x.Controlled).Select(x => (FRWell)x).ToArray();
-            result.Nodes.Add(WellsNode(wells_node));
-            // links
-            IViewable2D links_node = region.GetLinkNode();
-            links = links_node.Controlled.SelectMany(x => x.Controlled).Select(x => (FRLink)x).ToArray();
-            result.Nodes.Add(LinksNode(links_node));
-            //
-            return result;
         }
 
 
@@ -231,21 +209,10 @@ namespace Pexel.HM.FR
 
         ColumnNode LinkNode(FRLink link)
         {
-            string fdt = Helper.ShowDateTimeShort(Project.Dates[link.FirstDt]);
-            string ldt = Helper.ShowDateTimeShort(Project.Dates[link.LastDt]);
-            ColumnNode result = new ColumnNode(fdt + "-" + ldt, link._Visible, link._Used) { Tag = link };
+            ColumnNode result = new ColumnNode(link.Title, link._Visible, link._Used) { Tag = link };
             return result;
         }
 
-
-
-        ColumnNode PeriodNode(FRRegion region, int dt)
-        {
-            string fdt = Helper.ShowDateTimeShort(Project.Dates[region.FirstDates[dt]]);
-            string ldt = Helper.ShowDateTimeShort(Project.Dates[region.LastDates[dt]]);
-            ColumnNode result = new ColumnNode(fdt + "-" + ldt, true, true) { Tag = region };
-            return result;
-        }
 
 
 
@@ -423,7 +390,7 @@ namespace Pexel.HM.FR
             string filename = dialog.FileName;
             if (string.IsNullOrEmpty(filename))
                 return false;
-            return Project.GetModel().Save(filename);
+            return true; // Project.GetModel().Save(filename);
         }
 
 
@@ -874,8 +841,8 @@ namespace Pexel.HM.FR
             List<int> targ_dt = new List<int>();
             foreach (FRRegion r in regions)
             {
-                targ_dt.AddRange(r.FirstDates);
-                targ_dt.AddRange(r.LastDates.Select(x => x + 1));
+                targ_dt.AddRange(r.Periods.Select(x => x.I));
+                targ_dt.AddRange(r.Periods.Select(x => x.J + 1));
             }
             targ_dt = targ_dt.Distinct().OrderBy(x => x).ToList();
             Index2D[] result = new Index2D[targ_dt.Count - 1];

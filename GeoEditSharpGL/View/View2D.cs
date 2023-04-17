@@ -116,10 +116,6 @@ namespace Pexel
         public List<Tuple<Point3D, bool>> PieChart { set; get; } = new List<Tuple<Point3D, bool>>();
 
 
-        public List<FRBoundaries> FRBoundaries { set; get; } = new List<FRBoundaries>();
-        public List<FRWells> FRWells { set; get; } = new List<FRWells>();
-        public List<FRLinks> FRLinks { set; get; } = new List<FRLinks>();
-
 
         public bool ShowUncovered { set; get; } = true;
         public bool ShowCovered { set; get; } = true;
