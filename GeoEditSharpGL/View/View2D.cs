@@ -143,9 +143,6 @@ namespace Pexel
             DrawScale(Scale);
             if (WellsPlane != null) Draw(WellsPlane);
             */
-            DrawFRBoundaries(FRBoundaries);
-            DrawFRWells(FRWells);
-            DrawFRLinks(FRLinks);
             DrawLinks(WellsLinks);
             DrawImpactAreas(Polygons);
             DrawBoundaries(Boundaries);
@@ -177,13 +174,6 @@ namespace Pexel
 
 
 
-        void DrawFRLinks(IEnumerable<FRLinks> links)
-        {
-            foreach (FRLinks l in links)
-                if (l.Visible)
-                    DrawLinks(l.Items);
-        }
-
 
         void DrawLinks(IEnumerable<WellsLink> links)
         {
@@ -214,12 +204,6 @@ namespace Pexel
         }
 
 
-        void DrawFRBoundaries(IEnumerable<FRBoundaries> boundaries)
-        {
-            foreach (FRBoundaries bounds in boundaries)
-                if (bounds.Visible)
-                    DrawBoundaries(bounds.Items);
-        }
 
         void DrawBoundaries(IEnumerable<Polygon2D> polygons)
         {
@@ -419,14 +403,6 @@ namespace Pexel
             }
         }
 
-
-
-        void DrawFRWells(IEnumerable<FRWells> wells)
-        {
-            foreach (FRWells w in wells)
-                if (w.Visible)
-                    DrawWells(w.Items);
-        }
 
 
 
