@@ -127,7 +127,8 @@ namespace Pexel.HM.FR
             int i = 0;
             foreach (FRRegion r in Project.Regions)
             {
-                r.GetNodes(out IViewable2D boundaries_node, out IViewable2D wells_node, out IViewable2D links_node, out RegPeriods[i]);
+                r.GetNodes(Project.Dates, out IViewable2D boundaries_node, out IViewable2D wells_node, 
+                                          out IViewable2D links_node     , out RegPeriods[i]);
                 //
                 ColumnNode reg_node = new ColumnNode(r.Title, r._Visible, r._Used) { Tag = r };
                 // bounds
@@ -813,7 +814,7 @@ namespace Pexel.HM.FR
                     //node.NodeControl2 = !node.NodeControl2;
                 }
                 */
-                //UpdatePeriods();
+                UpdatePeriods();
             }
         }
 
@@ -821,7 +822,7 @@ namespace Pexel.HM.FR
 
         void UpdatePeriods()
         {
-            Index2D[] periods = GetPeriods(Project.Regions.Where(x => x.Visible || x.Used).ToArray());
+            Index2D[] periods = GetPeriods(Project.Regions.Where(x => x.Visible).ToArray());
             if (!Periods.SequenceEqual(periods))
             {
                 Periods = periods;
@@ -829,6 +830,9 @@ namespace Pexel.HM.FR
                 foreach (Index2D i in Periods)
                     comboBox_dates.Items.Add(Helper.ShowDateTimeShort(Project.Dates[i.I]) + "-" + Helper.ShowDateTimeShort(Project.Dates[i.J]));
             }
+            int dt = prev_date;
+            prev_date = -999;
+            UpdateDate(dt);
         }
 
 

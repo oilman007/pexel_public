@@ -467,7 +467,7 @@ namespace Pexel
             gl.Color(color);
             for (int ii = 0; ii < num_segments; ii++)
             {
-                double theta = 2.0f * 3.1415926 * ii / num_segments; //get the current angle 
+                double theta = 2.0 * 3.1415926 * ii / num_segments; //get the current angle 
                 double x = r * Math.Cos(theta); //calculate the x component 
                 double y = r * Math.Sin(theta); //calculate the y component 
                 gl.Vertex(x + cx, y + cy, z); //output vertex 
