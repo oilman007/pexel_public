@@ -46,14 +46,14 @@ namespace Pexel
 
 
         public static bool Intersect(Point2D line1V1, Point2D line1V2, Point2D line2V1, Point2D line2V2,
-                                       out Point2D intersection, double tolerance = 0.001, bool exclude_endpoints = true)
+                                       out Point2D intersection, bool exclude_endpoints, double tolerance = 0.001)
         {
             if (!Intersect(line1V1, line1V2, line2V1, line2V2,
                                                out intersection, 0.001))
                 return false;
             if (exclude_endpoints)
-                return (l1.W1 != l2.W1) && (l1.W1 != l2.W2) &&
-                       (l1.W2 != l2.W1) && (l1.W2 != l2.W2);
+                return (line1V1 != line2V1) && (line1V1 != line2V2) &&
+                       (line1V2 != line2V1) && (line1V2 != line2V2);
             else
                 return true;
         }
