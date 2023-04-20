@@ -38,7 +38,7 @@ namespace Pexel
     public enum CoordPlane { XY, XZ, YZ }
     public enum FaceDistance { Near, Middle, Far }
 
-    [Serializable]
+
     public class Cell
     {
         Cell()

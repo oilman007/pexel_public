@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Pexel
 {
-    [Serializable]
+    //[Serializable]
     public class WellsLink : IViewable2D
     {
         public WellsLink()
@@ -18,7 +18,6 @@ namespace Pexel
         }
 
 
-        public string Title { set; get; } = string.Empty;
         public WellFace2D W1 { set; get; }
         public WellFace2D W2 { set; get; }
         public Color Color { set; get; } = Color.Black;

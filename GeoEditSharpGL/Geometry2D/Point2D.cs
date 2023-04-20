@@ -8,7 +8,6 @@ using System.Windows.Forms;
 
 namespace Pexel
 {
-    [Serializable]
     public class Point2D
     {
         public Point2D()
@@ -26,7 +25,9 @@ namespace Pexel
             X = point.X;
             Y = point.Y;
         }
+
         public double X { set; get; }
+
         public double Y { set; get; }
 
 

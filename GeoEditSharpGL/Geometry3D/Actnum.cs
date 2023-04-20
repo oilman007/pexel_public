@@ -11,7 +11,7 @@ using MySqlX.XDevAPI.Common;
 namespace Pexel
 {
 
-    [Serializable]
+
     public class Actnum
     {
 

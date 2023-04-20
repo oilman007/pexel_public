@@ -12,7 +12,6 @@ using Newtonsoft.Json.Linq;
 namespace Pexel
 {
 
-    [Serializable]
     public class Coord
     {
 

@@ -10,8 +10,6 @@ namespace Pexel
 {
 
 
-
-    [Serializable]
     public class CellFace
     {
 

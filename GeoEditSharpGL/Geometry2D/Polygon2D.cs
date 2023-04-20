@@ -1,22 +1,34 @@
-﻿using Pexel.Geometry2D;
+﻿using Pexel.General;
+using Pexel.Geometry2D;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Pexel
 {
-    //[Serializable]
     public class Polygon2D : IViewable2D
     {
+        public Polygon2D()
+        {
+        }
+
+
+
         public List<Point2D> Points { set; get; } = new List<Point2D>();
+
+        
         public Color Color { set; get; } = Color.Yellow;
 
-
-        public string Title { set; get; } = string.Empty;
+        
         public bool Closed { set; get; } = false;
+
         public double Value { set; get; } = 0;
+
+
+
         public static List<Polygon2D> Read(string file, out bool successfully)
         {
             List<Polygon2D> result = new List<Polygon2D>();

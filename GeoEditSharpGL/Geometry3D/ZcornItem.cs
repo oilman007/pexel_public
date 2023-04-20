@@ -9,7 +9,6 @@ using System.IO;
 
 namespace Pexel
 {
-    [Serializable]
     public class ZcornItem
     {
 

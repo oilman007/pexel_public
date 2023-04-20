@@ -20,7 +20,7 @@ using Pexel.General;
 using Aga.Controls.Tree;
 using Aga.Controls.Tree.NodeControls;
 using Pexel.Geometry2D;
-
+using System.Data.SqlTypes;
 
 namespace Pexel.HM.FR
 {
@@ -108,6 +108,7 @@ namespace Pexel.HM.FR
 
 
         FRPeriod[][] RegPeriods { set; get; }
+        FRLink[][] RegLinks { set; get; }
 
 
 
@@ -119,6 +120,7 @@ namespace Pexel.HM.FR
             View2D.WellsPlane2D.Wells.Clear();
 
             RegPeriods = new FRPeriod[Project.Regions.Length][];
+            RegLinks = new FRLink[Project.Regions.Length][];
 
             TreeModel _model = new TreeModel();
             this.treeViewAdv.Model = _model;
@@ -138,6 +140,7 @@ namespace Pexel.HM.FR
                 reg_node.Nodes.Add(WellsNode(wells_node));
                 // links
                 FRLink[] links = links_node.Controlled.SelectMany(x => x.Controlled).Select(x => (FRLink)x).ToArray();
+                RegLinks[i] = links;
                 reg_node.Nodes.Add(LinksNode(links_node));
                 //
                 _model.Nodes.Add(reg_node);
@@ -149,6 +152,8 @@ namespace Pexel.HM.FR
 
             UpdatePeriods();
             UpdateCases(0);
+            UpdateLinksColor();
+            View2D.HomePosition();
         }
 
 
@@ -802,6 +807,7 @@ namespace Pexel.HM.FR
                 }
                 */
                 UpdatePeriods();
+                UpdateLinksColor();
             }
         }
 
@@ -823,7 +829,31 @@ namespace Pexel.HM.FR
         }
 
 
-        Index2D[] Periods { set; get; } = Array.Empty<Index2D>();   
+        Index2D[] Periods { set; get; } = Array.Empty<Index2D>();
+
+
+
+
+        void UpdateLinksColor()
+        {
+            List<int> items = new List<int>();
+            for (int i = 0; i < RegLinks.Length; i++)
+                if (RegLinks[i].Any(x => x.Visible))
+                    items.Add(i);
+            
+            PropScale scale = new PropScale(0, items.Count - 1);
+
+            for (int i = 0; i < items.Count; i++)
+            {
+                Color color = scale.Color(i);
+                foreach (FRLink link in RegLinks[items[i]])
+                    link.Color = color;
+            }
+        }
+
+
+
+
 
         Index2D[] GetPeriods(FRRegion[] regions)
         {

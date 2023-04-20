@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Pexel
 {
-    [Serializable]
+    //[Serializable]
     public class Triangle2D : IViewable2D
     {
         public Triangle2D()
@@ -36,7 +36,7 @@ namespace Pexel
         public Point2D[] Corners { get; set; } = new Point2D[3];
 
         public Color Color { set; get; } = Color.Black;
-        public string Title { set; get; } = string.Empty;
+
         public Point2D Center()
         {
             return new Point2D((Corners[0].X + Corners[1].X + Corners[2].X) / 3, (Corners[0].Y + Corners[1].Y + Corners[2].Y) / 3);

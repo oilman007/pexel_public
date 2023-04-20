@@ -1,35 +1,29 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Pexel.Geometry2D
 {
-    [Serializable]
     public class IViewable2D
     {
-
         public string Title { set; get; } = string.Empty;
 
 
+        [JsonIgnore]
         public List<IViewable2D> Controllers { set; get; } = new List<IViewable2D>();
 
+        [JsonIgnore]
         public List<IViewable2D> Controlled { set; get; } = new List<IViewable2D>();
 
 
-        /*
-        public bool Enabled 
-        {
-            get
-            {
-                return Visible && Used && Active && (Parent is null || Parent.Enabled);
-            }
-        }
-        */
 
+        public bool _Visible { set;  get; } = true;
 
-        public bool _Visible { protected set;  get; } = true;
+        [JsonIgnore]
         public bool Visible
         {
             set
@@ -44,8 +38,9 @@ namespace Pexel.Geometry2D
         }
 
 
+        public bool _Used { set; get; } = true;
 
-        public bool _Used { protected set; get; } = true;
+        [JsonIgnore]
         public bool Used
         {
             set

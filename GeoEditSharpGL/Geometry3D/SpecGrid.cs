@@ -9,7 +9,6 @@ using System.Windows.Forms;
 namespace Pexel
 {
 
-    [Serializable]
     public class SpecGrid
     {
         public SpecGrid()

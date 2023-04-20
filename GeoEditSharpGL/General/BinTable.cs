@@ -3,11 +3,13 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Pexel.General
 {
+    //[DataContract]
     public class BinTable<T>
     {
         public BinTable()
@@ -23,9 +25,15 @@ namespace Pexel.General
             DefaultValue = default_value;   
         }
 
-        public int Count { private set; get; }
-        public T[] Values { private set; get; }
+        //[DataMember]
+        public int Count { set; get; }
+
+        //[DataMember]
+        public T[] Values { set; get; }
+
+        //[DataMember]
         public T DefaultValue { set; get; }
+
 
         int Index(int i, int j)
         {

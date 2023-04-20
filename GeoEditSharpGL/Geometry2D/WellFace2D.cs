@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Pexel
 {
-    [Serializable]
+    //[Serializable]
     public class WellFace2D : IViewable2D
     {
         public WellFace2D()

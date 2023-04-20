@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,6 +28,8 @@ namespace Pexel
             I = point.I;
             J = point.J;
         }
+
+ 
         public int I { set; get; }
         public int J { set; get; }
 

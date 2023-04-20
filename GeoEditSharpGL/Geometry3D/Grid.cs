@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Pexel
 {
-    [Serializable]
+
     public class Grid
     {
         public Grid() 
