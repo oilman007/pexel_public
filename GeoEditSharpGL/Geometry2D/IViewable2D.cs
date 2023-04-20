@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pexel.Geometry2D
 {
+    [Serializable]
     public class IViewable2D
     {
 

@@ -498,22 +498,16 @@ namespace Pexel.HM.FR
             Cursor.Current = Cursors.WaitCursor;
             string msg;
             bool result = true;
-            try
+            if(this.Project.Save(filename))
             {
-                IFormatter formatter = new BinaryFormatter();
-                Stream stream = new FileStream(filename, FileMode.Create, FileAccess.Write);
-                formatter.Serialize(stream, this.Project);
-                stream.Close();
-                msg = "File Saved Successfully!";
+                _messageHandler("File Saved Successfully!");
             }
-            catch (Exception ex)
+            else
             {
-                msg = "File Saving Error! Abort operation.";
+                _messageHandler("File Saving Error! Abort operation.");
                 result = false;
             }
             Cursor.Current = Cursors.Default;
-            _messageHandler(msg);
-            //MessageBox.Show(msg);
             return result;
         }
 
@@ -523,26 +517,19 @@ namespace Pexel.HM.FR
         bool ReadFile(string filename)
         {
             Cursor.Current = Cursors.WaitCursor;
-            string msg;
             bool result = true;
-            try
+            if(FRProject.Load(filename, out FRProject project))
             {
-                IFormatter formatter = new BinaryFormatter();
-                Stream stream = new FileStream(filename, FileMode.Open, FileAccess.Read);
-                FRProject project = (FRProject)formatter.Deserialize(stream);
                 UpdateProject(project);
-                stream.Close();
-                msg = "File Loaded Successfully!";
+                _messageHandler("File Loaded Successfully!");
                 View2D.HomePosition();
             }
-            catch (Exception ex)
+            else
             {
-                msg = "File Loading Error! Abort operation.";
+                _messageHandler("File Loading Error! Abort operation.");
                 result = false;
             }
             Cursor.Current = Cursors.Default;
-            _messageHandler(msg);
-            //MessageBox.Show(msg);
             return result;
         }
 

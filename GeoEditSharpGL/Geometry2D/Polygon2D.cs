@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Pexel
 {
-    [Serializable]
+    //[Serializable]
     public class Polygon2D : IViewable2D
     {
         public List<Point2D> Points { set; get; } = new List<Point2D>();
