@@ -391,6 +391,8 @@
     <Compile Include="HM\FileCombinerForm.Designer.cs">
       <DependentUpon>FileCombinerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="private\HM\WellData.cs" />
+    <Compile Include="private\HM\WellDataAnalyzer2.cs" />
     <Compile Include="private\UnlockForm.cs">
       <SubType>Form</SubType>
     </Compile>
