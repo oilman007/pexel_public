@@ -4630,6 +4630,12 @@ namespace Pexel.HM
             Downloader = null;
         }
 
+        private void toolStripButton_update_Click(object sender, EventArgs e)
+        {
+            Downloader.UpdateTree();
+        }
+
+
 
 
 

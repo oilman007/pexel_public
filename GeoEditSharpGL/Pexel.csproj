@@ -291,6 +291,7 @@
     <Compile Include="Geometry3D\Actnum.cs" />
     <Compile Include="Geometry3D\GridPlaneOpt.cs" />
     <Compile Include="HM\FR\ColumnNode.cs" />
+    <Compile Include="HM\ResultsViewTreeDataDownloader2.cs" />
     <Compile Include="HM\WellTable.cs" />
     <Compile Include="HM\WellTablePeriod.cs" />
     <Compile Include="HM\WellTableStep.cs" />
@@ -902,6 +903,7 @@
     <None Include="Resources\down.png" />
     <None Include="Resources\down.jpg" />
     <None Include="Resources\down-arrow.png" />
+    <None Include="Resources\external-content.duckduckgo.com1.jpg" />
     <Content Include="Логотип-01%282%29.ico" />
     <Content Include="Логотип-02%281%29.ico" />
     <None Include="Resources\sine-wave.png" />

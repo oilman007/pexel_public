@@ -235,6 +235,7 @@
             this.saveProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveProjectAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wizardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.coreyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fRAnalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -251,6 +252,7 @@
             this.toolStripButton_add = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_add_child = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_remove = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton_update = new System.Windows.Forms.ToolStripButton();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripButton_refrash = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -336,7 +338,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -347,9 +349,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.richTextBox_log);
-            this.splitContainer1.Size = new System.Drawing.Size(902, 665);
-            this.splitContainer1.SplitterDistance = 535;
-            this.splitContainer1.SplitterWidth = 3;
+            this.splitContainer1.Size = new System.Drawing.Size(1203, 824);
+            this.splitContainer1.SplitterDistance = 662;
             this.splitContainer1.TabIndex = 10;
             // 
             // tabControl
@@ -366,19 +367,20 @@
             this.tabControl.Controls.Add(this.tabPage_uparam);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Location = new System.Drawing.Point(0, 0);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(902, 535);
+            this.tabControl.Size = new System.Drawing.Size(1203, 662);
             this.tabControl.TabIndex = 3;
             this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage_info
             // 
             this.tabPage_info.Controls.Add(this.propertyGrid_info);
-            this.tabPage_info.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_info.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage_info.Location = new System.Drawing.Point(4, 25);
+            this.tabPage_info.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage_info.Name = "tabPage_info";
-            this.tabPage_info.Size = new System.Drawing.Size(894, 509);
+            this.tabPage_info.Size = new System.Drawing.Size(1195, 633);
             this.tabPage_info.TabIndex = 9;
             this.tabPage_info.Text = "info";
             this.tabPage_info.UseVisualStyleBackColor = true;
@@ -387,17 +389,18 @@
             // 
             this.propertyGrid_info.Dock = System.Windows.Forms.DockStyle.Fill;
             this.propertyGrid_info.Location = new System.Drawing.Point(0, 0);
-            this.propertyGrid_info.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.propertyGrid_info.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.propertyGrid_info.Name = "propertyGrid_info";
-            this.propertyGrid_info.Size = new System.Drawing.Size(894, 509);
+            this.propertyGrid_info.Size = new System.Drawing.Size(1195, 633);
             this.propertyGrid_info.TabIndex = 0;
             // 
             // tabPage_well_graphs
             // 
             this.tabPage_well_graphs.Controls.Add(this.splitContainer_well_graphs);
-            this.tabPage_well_graphs.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_well_graphs.Location = new System.Drawing.Point(4, 25);
+            this.tabPage_well_graphs.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_well_graphs.Name = "tabPage_well_graphs";
-            this.tabPage_well_graphs.Size = new System.Drawing.Size(894, 513);
+            this.tabPage_well_graphs.Size = new System.Drawing.Size(1195, 633);
             this.tabPage_well_graphs.TabIndex = 0;
             this.tabPage_well_graphs.Text = "well graphs";
             this.tabPage_well_graphs.UseVisualStyleBackColor = true;
@@ -406,6 +409,7 @@
             // 
             this.splitContainer_well_graphs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer_well_graphs.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer_well_graphs.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer_well_graphs.Name = "splitContainer_well_graphs";
             // 
             // splitContainer_well_graphs.Panel1
@@ -415,17 +419,20 @@
             // splitContainer_well_graphs.Panel2
             // 
             this.splitContainer_well_graphs.Panel2.Controls.Add(this.tableLayoutPanel_well_graphs);
-            this.splitContainer_well_graphs.Size = new System.Drawing.Size(894, 513);
-            this.splitContainer_well_graphs.SplitterDistance = 73;
+            this.splitContainer_well_graphs.Size = new System.Drawing.Size(1195, 633);
+            this.splitContainer_well_graphs.SplitterDistance = 97;
+            this.splitContainer_well_graphs.SplitterWidth = 5;
             this.splitContainer_well_graphs.TabIndex = 1;
             // 
             // listBox_wg_wells
             // 
             this.listBox_wg_wells.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox_wg_wells.FormattingEnabled = true;
+            this.listBox_wg_wells.ItemHeight = 16;
             this.listBox_wg_wells.Location = new System.Drawing.Point(0, 0);
+            this.listBox_wg_wells.Margin = new System.Windows.Forms.Padding(4);
             this.listBox_wg_wells.Name = "listBox_wg_wells";
-            this.listBox_wg_wells.Size = new System.Drawing.Size(73, 513);
+            this.listBox_wg_wells.Size = new System.Drawing.Size(97, 633);
             this.listBox_wg_wells.TabIndex = 0;
             this.listBox_wg_wells.SelectedIndexChanged += new System.EventHandler(this.listBox_wells_SelectedIndexChanged);
             // 
@@ -444,13 +451,14 @@
             this.tableLayoutPanel_well_graphs.Controls.Add(this.zedGraphControl_gr_wct_gor, 0, 3);
             this.tableLayoutPanel_well_graphs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel_well_graphs.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel_well_graphs.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel_well_graphs.Name = "tableLayoutPanel_well_graphs";
             this.tableLayoutPanel_well_graphs.RowCount = 4;
             this.tableLayoutPanel_well_graphs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00062F));
             this.tableLayoutPanel_well_graphs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
             this.tableLayoutPanel_well_graphs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
             this.tableLayoutPanel_well_graphs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.99813F));
-            this.tableLayoutPanel_well_graphs.Size = new System.Drawing.Size(817, 513);
+            this.tableLayoutPanel_well_graphs.Size = new System.Drawing.Size(1093, 633);
             this.tableLayoutPanel_well_graphs.TabIndex = 0;
             // 
             // zedGraphControl_gr_op
@@ -458,8 +466,8 @@
             this.zedGraphControl_gr_op.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_gr_op.Location = new System.Drawing.Point(4, 4);
-            this.zedGraphControl_gr_op.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_gr_op.Location = new System.Drawing.Point(5, 5);
+            this.zedGraphControl_gr_op.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_gr_op.Name = "zedGraphControl_gr_op";
             this.zedGraphControl_gr_op.ScrollGrace = 0D;
             this.zedGraphControl_gr_op.ScrollMaxX = 0D;
@@ -468,7 +476,7 @@
             this.zedGraphControl_gr_op.ScrollMinX = 0D;
             this.zedGraphControl_gr_op.ScrollMinY = 0D;
             this.zedGraphControl_gr_op.ScrollMinY2 = 0D;
-            this.zedGraphControl_gr_op.Size = new System.Drawing.Size(400, 120);
+            this.zedGraphControl_gr_op.Size = new System.Drawing.Size(536, 148);
             this.zedGraphControl_gr_op.TabIndex = 1;
             this.zedGraphControl_gr_op.UseExtendedPrintDialog = true;
             // 
@@ -477,8 +485,8 @@
             this.zedGraphControl_gr_wp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_gr_wp.Location = new System.Drawing.Point(4, 132);
-            this.zedGraphControl_gr_wp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_gr_wp.Location = new System.Drawing.Point(5, 163);
+            this.zedGraphControl_gr_wp.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_gr_wp.Name = "zedGraphControl_gr_wp";
             this.zedGraphControl_gr_wp.ScrollGrace = 0D;
             this.zedGraphControl_gr_wp.ScrollMaxX = 0D;
@@ -487,7 +495,7 @@
             this.zedGraphControl_gr_wp.ScrollMinX = 0D;
             this.zedGraphControl_gr_wp.ScrollMinY = 0D;
             this.zedGraphControl_gr_wp.ScrollMinY2 = 0D;
-            this.zedGraphControl_gr_wp.Size = new System.Drawing.Size(400, 120);
+            this.zedGraphControl_gr_wp.Size = new System.Drawing.Size(536, 148);
             this.zedGraphControl_gr_wp.TabIndex = 0;
             this.zedGraphControl_gr_wp.UseExtendedPrintDialog = true;
             // 
@@ -496,8 +504,8 @@
             this.zedGraphControl_gr_lp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_gr_lp.Location = new System.Drawing.Point(412, 4);
-            this.zedGraphControl_gr_lp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_gr_lp.Location = new System.Drawing.Point(551, 5);
+            this.zedGraphControl_gr_lp.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_gr_lp.Name = "zedGraphControl_gr_lp";
             this.zedGraphControl_gr_lp.ScrollGrace = 0D;
             this.zedGraphControl_gr_lp.ScrollMaxX = 0D;
@@ -506,7 +514,7 @@
             this.zedGraphControl_gr_lp.ScrollMinX = 0D;
             this.zedGraphControl_gr_lp.ScrollMinY = 0D;
             this.zedGraphControl_gr_lp.ScrollMinY2 = 0D;
-            this.zedGraphControl_gr_lp.Size = new System.Drawing.Size(401, 120);
+            this.zedGraphControl_gr_lp.Size = new System.Drawing.Size(537, 148);
             this.zedGraphControl_gr_lp.TabIndex = 1;
             this.zedGraphControl_gr_lp.UseExtendedPrintDialog = true;
             // 
@@ -515,8 +523,8 @@
             this.zedGraphControl_gr_wi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_gr_wi.Location = new System.Drawing.Point(412, 132);
-            this.zedGraphControl_gr_wi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_gr_wi.Location = new System.Drawing.Point(551, 163);
+            this.zedGraphControl_gr_wi.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_gr_wi.Name = "zedGraphControl_gr_wi";
             this.zedGraphControl_gr_wi.ScrollGrace = 0D;
             this.zedGraphControl_gr_wi.ScrollMaxX = 0D;
@@ -525,7 +533,7 @@
             this.zedGraphControl_gr_wi.ScrollMinX = 0D;
             this.zedGraphControl_gr_wi.ScrollMinY = 0D;
             this.zedGraphControl_gr_wi.ScrollMinY2 = 0D;
-            this.zedGraphControl_gr_wi.Size = new System.Drawing.Size(401, 120);
+            this.zedGraphControl_gr_wi.Size = new System.Drawing.Size(537, 148);
             this.zedGraphControl_gr_wi.TabIndex = 0;
             this.zedGraphControl_gr_wi.UseExtendedPrintDialog = true;
             // 
@@ -534,8 +542,8 @@
             this.zedGraphControl_gr_press.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_gr_press.Location = new System.Drawing.Point(412, 388);
-            this.zedGraphControl_gr_press.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_gr_press.Location = new System.Drawing.Point(551, 479);
+            this.zedGraphControl_gr_press.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_gr_press.Name = "zedGraphControl_gr_press";
             this.zedGraphControl_gr_press.ScrollGrace = 0D;
             this.zedGraphControl_gr_press.ScrollMaxX = 0D;
@@ -544,7 +552,7 @@
             this.zedGraphControl_gr_press.ScrollMinX = 0D;
             this.zedGraphControl_gr_press.ScrollMinY = 0D;
             this.zedGraphControl_gr_press.ScrollMinY2 = 0D;
-            this.zedGraphControl_gr_press.Size = new System.Drawing.Size(401, 121);
+            this.zedGraphControl_gr_press.Size = new System.Drawing.Size(537, 149);
             this.zedGraphControl_gr_press.TabIndex = 2;
             this.zedGraphControl_gr_press.UseExtendedPrintDialog = true;
             // 
@@ -553,8 +561,8 @@
             this.zedGraphControl_gr_gp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_gr_gp.Location = new System.Drawing.Point(4, 260);
-            this.zedGraphControl_gr_gp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_gr_gp.Location = new System.Drawing.Point(5, 321);
+            this.zedGraphControl_gr_gp.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_gr_gp.Name = "zedGraphControl_gr_gp";
             this.zedGraphControl_gr_gp.ScrollGrace = 0D;
             this.zedGraphControl_gr_gp.ScrollMaxX = 0D;
@@ -563,7 +571,7 @@
             this.zedGraphControl_gr_gp.ScrollMinX = 0D;
             this.zedGraphControl_gr_gp.ScrollMinY = 0D;
             this.zedGraphControl_gr_gp.ScrollMinY2 = 0D;
-            this.zedGraphControl_gr_gp.Size = new System.Drawing.Size(400, 120);
+            this.zedGraphControl_gr_gp.Size = new System.Drawing.Size(536, 148);
             this.zedGraphControl_gr_gp.TabIndex = 0;
             this.zedGraphControl_gr_gp.UseExtendedPrintDialog = true;
             // 
@@ -572,8 +580,8 @@
             this.zedGraphControl_gr_gi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_gr_gi.Location = new System.Drawing.Point(412, 260);
-            this.zedGraphControl_gr_gi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_gr_gi.Location = new System.Drawing.Point(551, 321);
+            this.zedGraphControl_gr_gi.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_gr_gi.Name = "zedGraphControl_gr_gi";
             this.zedGraphControl_gr_gi.ScrollGrace = 0D;
             this.zedGraphControl_gr_gi.ScrollMaxX = 0D;
@@ -582,7 +590,7 @@
             this.zedGraphControl_gr_gi.ScrollMinX = 0D;
             this.zedGraphControl_gr_gi.ScrollMinY = 0D;
             this.zedGraphControl_gr_gi.ScrollMinY2 = 0D;
-            this.zedGraphControl_gr_gi.Size = new System.Drawing.Size(401, 120);
+            this.zedGraphControl_gr_gi.Size = new System.Drawing.Size(537, 148);
             this.zedGraphControl_gr_gi.TabIndex = 0;
             this.zedGraphControl_gr_gi.UseExtendedPrintDialog = true;
             // 
@@ -591,8 +599,8 @@
             this.zedGraphControl_gr_wct_gor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_gr_wct_gor.Location = new System.Drawing.Point(4, 388);
-            this.zedGraphControl_gr_wct_gor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_gr_wct_gor.Location = new System.Drawing.Point(5, 479);
+            this.zedGraphControl_gr_wct_gor.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_gr_wct_gor.Name = "zedGraphControl_gr_wct_gor";
             this.zedGraphControl_gr_wct_gor.ScrollGrace = 0D;
             this.zedGraphControl_gr_wct_gor.ScrollMaxX = 0D;
@@ -601,16 +609,17 @@
             this.zedGraphControl_gr_wct_gor.ScrollMinX = 0D;
             this.zedGraphControl_gr_wct_gor.ScrollMinY = 0D;
             this.zedGraphControl_gr_wct_gor.ScrollMinY2 = 0D;
-            this.zedGraphControl_gr_wct_gor.Size = new System.Drawing.Size(400, 121);
+            this.zedGraphControl_gr_wct_gor.Size = new System.Drawing.Size(536, 149);
             this.zedGraphControl_gr_wct_gor.TabIndex = 0;
             this.zedGraphControl_gr_wct_gor.UseExtendedPrintDialog = true;
             // 
             // tabPage_hm_analyse
             // 
             this.tabPage_hm_analyse.Controls.Add(this.splitContainer_hm_analyse);
-            this.tabPage_hm_analyse.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_hm_analyse.Location = new System.Drawing.Point(4, 25);
+            this.tabPage_hm_analyse.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_hm_analyse.Name = "tabPage_hm_analyse";
-            this.tabPage_hm_analyse.Size = new System.Drawing.Size(894, 513);
+            this.tabPage_hm_analyse.Size = new System.Drawing.Size(1195, 633);
             this.tabPage_hm_analyse.TabIndex = 2;
             this.tabPage_hm_analyse.Text = "hm analyse";
             this.tabPage_hm_analyse.UseVisualStyleBackColor = true;
@@ -619,6 +628,7 @@
             // 
             this.splitContainer_hm_analyse.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer_hm_analyse.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer_hm_analyse.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer_hm_analyse.Name = "splitContainer_hm_analyse";
             // 
             // splitContainer_hm_analyse.Panel1
@@ -628,17 +638,20 @@
             // splitContainer_hm_analyse.Panel2
             // 
             this.splitContainer_hm_analyse.Panel2.Controls.Add(this.tableLayoutPanel_hm_analyse);
-            this.splitContainer_hm_analyse.Size = new System.Drawing.Size(894, 513);
-            this.splitContainer_hm_analyse.SplitterDistance = 75;
+            this.splitContainer_hm_analyse.Size = new System.Drawing.Size(1195, 633);
+            this.splitContainer_hm_analyse.SplitterDistance = 100;
+            this.splitContainer_hm_analyse.SplitterWidth = 5;
             this.splitContainer_hm_analyse.TabIndex = 1;
             // 
             // listBox_ha_wells
             // 
             this.listBox_ha_wells.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox_ha_wells.FormattingEnabled = true;
+            this.listBox_ha_wells.ItemHeight = 16;
             this.listBox_ha_wells.Location = new System.Drawing.Point(0, 0);
+            this.listBox_ha_wells.Margin = new System.Windows.Forms.Padding(4);
             this.listBox_ha_wells.Name = "listBox_ha_wells";
-            this.listBox_ha_wells.Size = new System.Drawing.Size(75, 513);
+            this.listBox_ha_wells.Size = new System.Drawing.Size(100, 633);
             this.listBox_ha_wells.TabIndex = 0;
             this.listBox_ha_wells.SelectedIndexChanged += new System.EventHandler(this.listBox_wells_SelectedIndexChanged);
             // 
@@ -663,13 +676,14 @@
             this.tableLayoutPanel_hm_analyse.Controls.Add(this.zedGraphControl_wgir_delta, 3, 2);
             this.tableLayoutPanel_hm_analyse.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel_hm_analyse.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel_hm_analyse.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel_hm_analyse.Name = "tableLayoutPanel_hm_analyse";
             this.tableLayoutPanel_hm_analyse.RowCount = 4;
             this.tableLayoutPanel_hm_analyse.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel_hm_analyse.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel_hm_analyse.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel_hm_analyse.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel_hm_analyse.Size = new System.Drawing.Size(815, 513);
+            this.tableLayoutPanel_hm_analyse.Size = new System.Drawing.Size(1090, 633);
             this.tableLayoutPanel_hm_analyse.TabIndex = 0;
             // 
             // zedGraphControl_wopt_delta
@@ -677,8 +691,8 @@
             this.zedGraphControl_wopt_delta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wopt_delta.Location = new System.Drawing.Point(4, 4);
-            this.zedGraphControl_wopt_delta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wopt_delta.Location = new System.Drawing.Point(5, 5);
+            this.zedGraphControl_wopt_delta.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wopt_delta.Name = "zedGraphControl_wopt_delta";
             this.zedGraphControl_wopt_delta.ScrollGrace = 0D;
             this.zedGraphControl_wopt_delta.ScrollMaxX = 0D;
@@ -687,7 +701,7 @@
             this.zedGraphControl_wopt_delta.ScrollMinX = 0D;
             this.zedGraphControl_wopt_delta.ScrollMinY = 0D;
             this.zedGraphControl_wopt_delta.ScrollMinY2 = 0D;
-            this.zedGraphControl_wopt_delta.Size = new System.Drawing.Size(195, 120);
+            this.zedGraphControl_wopt_delta.Size = new System.Drawing.Size(262, 148);
             this.zedGraphControl_wopt_delta.TabIndex = 1;
             this.zedGraphControl_wopt_delta.UseExtendedPrintDialog = true;
             // 
@@ -696,8 +710,8 @@
             this.zedGraphControl_wwpr_delta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wwpr_delta.Location = new System.Drawing.Point(207, 132);
-            this.zedGraphControl_wwpr_delta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wwpr_delta.Location = new System.Drawing.Point(277, 163);
+            this.zedGraphControl_wwpr_delta.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wwpr_delta.Name = "zedGraphControl_wwpr_delta";
             this.zedGraphControl_wwpr_delta.ScrollGrace = 0D;
             this.zedGraphControl_wwpr_delta.ScrollMaxX = 0D;
@@ -706,7 +720,7 @@
             this.zedGraphControl_wwpr_delta.ScrollMinX = 0D;
             this.zedGraphControl_wwpr_delta.ScrollMinY = 0D;
             this.zedGraphControl_wwpr_delta.ScrollMinY2 = 0D;
-            this.zedGraphControl_wwpr_delta.Size = new System.Drawing.Size(195, 120);
+            this.zedGraphControl_wwpr_delta.Size = new System.Drawing.Size(262, 148);
             this.zedGraphControl_wwpr_delta.TabIndex = 1;
             this.zedGraphControl_wwpr_delta.UseExtendedPrintDialog = true;
             // 
@@ -715,8 +729,8 @@
             this.zedGraphControl_wwpt_delta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wwpt_delta.Location = new System.Drawing.Point(4, 132);
-            this.zedGraphControl_wwpt_delta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wwpt_delta.Location = new System.Drawing.Point(5, 163);
+            this.zedGraphControl_wwpt_delta.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wwpt_delta.Name = "zedGraphControl_wwpt_delta";
             this.zedGraphControl_wwpt_delta.ScrollGrace = 0D;
             this.zedGraphControl_wwpt_delta.ScrollMaxX = 0D;
@@ -725,7 +739,7 @@
             this.zedGraphControl_wwpt_delta.ScrollMinX = 0D;
             this.zedGraphControl_wwpt_delta.ScrollMinY = 0D;
             this.zedGraphControl_wwpt_delta.ScrollMinY2 = 0D;
-            this.zedGraphControl_wwpt_delta.Size = new System.Drawing.Size(195, 120);
+            this.zedGraphControl_wwpt_delta.Size = new System.Drawing.Size(262, 148);
             this.zedGraphControl_wwpt_delta.TabIndex = 1;
             this.zedGraphControl_wwpt_delta.UseExtendedPrintDialog = true;
             // 
@@ -734,8 +748,8 @@
             this.zedGraphControl_wopr_delta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wopr_delta.Location = new System.Drawing.Point(207, 4);
-            this.zedGraphControl_wopr_delta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wopr_delta.Location = new System.Drawing.Point(277, 5);
+            this.zedGraphControl_wopr_delta.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wopr_delta.Name = "zedGraphControl_wopr_delta";
             this.zedGraphControl_wopr_delta.ScrollGrace = 0D;
             this.zedGraphControl_wopr_delta.ScrollMaxX = 0D;
@@ -744,7 +758,7 @@
             this.zedGraphControl_wopr_delta.ScrollMinX = 0D;
             this.zedGraphControl_wopr_delta.ScrollMinY = 0D;
             this.zedGraphControl_wopr_delta.ScrollMinY2 = 0D;
-            this.zedGraphControl_wopr_delta.Size = new System.Drawing.Size(195, 120);
+            this.zedGraphControl_wopr_delta.Size = new System.Drawing.Size(262, 148);
             this.zedGraphControl_wopr_delta.TabIndex = 1;
             this.zedGraphControl_wopr_delta.UseExtendedPrintDialog = true;
             // 
@@ -753,8 +767,8 @@
             this.zedGraphControl_wlpt_delta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wlpt_delta.Location = new System.Drawing.Point(410, 4);
-            this.zedGraphControl_wlpt_delta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wlpt_delta.Location = new System.Drawing.Point(549, 5);
+            this.zedGraphControl_wlpt_delta.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wlpt_delta.Name = "zedGraphControl_wlpt_delta";
             this.zedGraphControl_wlpt_delta.ScrollGrace = 0D;
             this.zedGraphControl_wlpt_delta.ScrollMaxX = 0D;
@@ -763,7 +777,7 @@
             this.zedGraphControl_wlpt_delta.ScrollMinX = 0D;
             this.zedGraphControl_wlpt_delta.ScrollMinY = 0D;
             this.zedGraphControl_wlpt_delta.ScrollMinY2 = 0D;
-            this.zedGraphControl_wlpt_delta.Size = new System.Drawing.Size(195, 120);
+            this.zedGraphControl_wlpt_delta.Size = new System.Drawing.Size(262, 148);
             this.zedGraphControl_wlpt_delta.TabIndex = 0;
             this.zedGraphControl_wlpt_delta.UseExtendedPrintDialog = true;
             // 
@@ -772,8 +786,8 @@
             this.zedGraphControl_wlpr_delta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wlpr_delta.Location = new System.Drawing.Point(613, 4);
-            this.zedGraphControl_wlpr_delta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wlpr_delta.Location = new System.Drawing.Point(821, 5);
+            this.zedGraphControl_wlpr_delta.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wlpr_delta.Name = "zedGraphControl_wlpr_delta";
             this.zedGraphControl_wlpr_delta.ScrollGrace = 0D;
             this.zedGraphControl_wlpr_delta.ScrollMaxX = 0D;
@@ -782,7 +796,7 @@
             this.zedGraphControl_wlpr_delta.ScrollMinX = 0D;
             this.zedGraphControl_wlpr_delta.ScrollMinY = 0D;
             this.zedGraphControl_wlpr_delta.ScrollMinY2 = 0D;
-            this.zedGraphControl_wlpr_delta.Size = new System.Drawing.Size(198, 120);
+            this.zedGraphControl_wlpr_delta.Size = new System.Drawing.Size(264, 148);
             this.zedGraphControl_wlpr_delta.TabIndex = 0;
             this.zedGraphControl_wlpr_delta.UseExtendedPrintDialog = true;
             // 
@@ -791,8 +805,8 @@
             this.zedGraphControl_wwir_delta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wwir_delta.Location = new System.Drawing.Point(613, 132);
-            this.zedGraphControl_wwir_delta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wwir_delta.Location = new System.Drawing.Point(821, 163);
+            this.zedGraphControl_wwir_delta.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wwir_delta.Name = "zedGraphControl_wwir_delta";
             this.zedGraphControl_wwir_delta.ScrollGrace = 0D;
             this.zedGraphControl_wwir_delta.ScrollMaxX = 0D;
@@ -801,7 +815,7 @@
             this.zedGraphControl_wwir_delta.ScrollMinX = 0D;
             this.zedGraphControl_wwir_delta.ScrollMinY = 0D;
             this.zedGraphControl_wwir_delta.ScrollMinY2 = 0D;
-            this.zedGraphControl_wwir_delta.Size = new System.Drawing.Size(198, 120);
+            this.zedGraphControl_wwir_delta.Size = new System.Drawing.Size(264, 148);
             this.zedGraphControl_wwir_delta.TabIndex = 2;
             this.zedGraphControl_wwir_delta.UseExtendedPrintDialog = true;
             // 
@@ -810,8 +824,8 @@
             this.zedGraphControl_wwit_delta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wwit_delta.Location = new System.Drawing.Point(410, 132);
-            this.zedGraphControl_wwit_delta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wwit_delta.Location = new System.Drawing.Point(549, 163);
+            this.zedGraphControl_wwit_delta.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wwit_delta.Name = "zedGraphControl_wwit_delta";
             this.zedGraphControl_wwit_delta.ScrollGrace = 0D;
             this.zedGraphControl_wwit_delta.ScrollMaxX = 0D;
@@ -820,7 +834,7 @@
             this.zedGraphControl_wwit_delta.ScrollMinX = 0D;
             this.zedGraphControl_wwit_delta.ScrollMinY = 0D;
             this.zedGraphControl_wwit_delta.ScrollMinY2 = 0D;
-            this.zedGraphControl_wwit_delta.Size = new System.Drawing.Size(195, 120);
+            this.zedGraphControl_wwit_delta.Size = new System.Drawing.Size(262, 148);
             this.zedGraphControl_wwit_delta.TabIndex = 2;
             this.zedGraphControl_wwit_delta.UseExtendedPrintDialog = true;
             // 
@@ -829,8 +843,8 @@
             this.zedGraphControl_wgpt_delta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wgpt_delta.Location = new System.Drawing.Point(4, 260);
-            this.zedGraphControl_wgpt_delta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wgpt_delta.Location = new System.Drawing.Point(5, 321);
+            this.zedGraphControl_wgpt_delta.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wgpt_delta.Name = "zedGraphControl_wgpt_delta";
             this.zedGraphControl_wgpt_delta.ScrollGrace = 0D;
             this.zedGraphControl_wgpt_delta.ScrollMaxX = 0D;
@@ -839,7 +853,7 @@
             this.zedGraphControl_wgpt_delta.ScrollMinX = 0D;
             this.zedGraphControl_wgpt_delta.ScrollMinY = 0D;
             this.zedGraphControl_wgpt_delta.ScrollMinY2 = 0D;
-            this.zedGraphControl_wgpt_delta.Size = new System.Drawing.Size(195, 120);
+            this.zedGraphControl_wgpt_delta.Size = new System.Drawing.Size(262, 148);
             this.zedGraphControl_wgpt_delta.TabIndex = 1;
             this.zedGraphControl_wgpt_delta.UseExtendedPrintDialog = true;
             // 
@@ -848,8 +862,8 @@
             this.zedGraphControl_wgit_delta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wgit_delta.Location = new System.Drawing.Point(410, 260);
-            this.zedGraphControl_wgit_delta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wgit_delta.Location = new System.Drawing.Point(549, 321);
+            this.zedGraphControl_wgit_delta.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wgit_delta.Name = "zedGraphControl_wgit_delta";
             this.zedGraphControl_wgit_delta.ScrollGrace = 0D;
             this.zedGraphControl_wgit_delta.ScrollMaxX = 0D;
@@ -858,7 +872,7 @@
             this.zedGraphControl_wgit_delta.ScrollMinX = 0D;
             this.zedGraphControl_wgit_delta.ScrollMinY = 0D;
             this.zedGraphControl_wgit_delta.ScrollMinY2 = 0D;
-            this.zedGraphControl_wgit_delta.Size = new System.Drawing.Size(195, 120);
+            this.zedGraphControl_wgit_delta.Size = new System.Drawing.Size(262, 148);
             this.zedGraphControl_wgit_delta.TabIndex = 2;
             this.zedGraphControl_wgit_delta.UseExtendedPrintDialog = true;
             // 
@@ -867,8 +881,8 @@
             this.zedGraphControl_wgpr_delta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wgpr_delta.Location = new System.Drawing.Point(207, 260);
-            this.zedGraphControl_wgpr_delta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wgpr_delta.Location = new System.Drawing.Point(277, 321);
+            this.zedGraphControl_wgpr_delta.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wgpr_delta.Name = "zedGraphControl_wgpr_delta";
             this.zedGraphControl_wgpr_delta.ScrollGrace = 0D;
             this.zedGraphControl_wgpr_delta.ScrollMaxX = 0D;
@@ -877,7 +891,7 @@
             this.zedGraphControl_wgpr_delta.ScrollMinX = 0D;
             this.zedGraphControl_wgpr_delta.ScrollMinY = 0D;
             this.zedGraphControl_wgpr_delta.ScrollMinY2 = 0D;
-            this.zedGraphControl_wgpr_delta.Size = new System.Drawing.Size(195, 120);
+            this.zedGraphControl_wgpr_delta.Size = new System.Drawing.Size(262, 148);
             this.zedGraphControl_wgpr_delta.TabIndex = 1;
             this.zedGraphControl_wgpr_delta.UseExtendedPrintDialog = true;
             // 
@@ -886,8 +900,8 @@
             this.zedGraphControl_wgir_delta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wgir_delta.Location = new System.Drawing.Point(613, 260);
-            this.zedGraphControl_wgir_delta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wgir_delta.Location = new System.Drawing.Point(821, 321);
+            this.zedGraphControl_wgir_delta.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wgir_delta.Name = "zedGraphControl_wgir_delta";
             this.zedGraphControl_wgir_delta.ScrollGrace = 0D;
             this.zedGraphControl_wgir_delta.ScrollMaxX = 0D;
@@ -896,16 +910,17 @@
             this.zedGraphControl_wgir_delta.ScrollMinX = 0D;
             this.zedGraphControl_wgir_delta.ScrollMinY = 0D;
             this.zedGraphControl_wgir_delta.ScrollMinY2 = 0D;
-            this.zedGraphControl_wgir_delta.Size = new System.Drawing.Size(198, 120);
+            this.zedGraphControl_wgir_delta.Size = new System.Drawing.Size(264, 148);
             this.zedGraphControl_wgir_delta.TabIndex = 2;
             this.zedGraphControl_wgir_delta.UseExtendedPrintDialog = true;
             // 
             // tabPage_cross_sect
             // 
             this.tabPage_cross_sect.Controls.Add(this.splitContainer_cross_sec_parent);
-            this.tabPage_cross_sect.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_cross_sect.Location = new System.Drawing.Point(4, 25);
+            this.tabPage_cross_sect.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_cross_sect.Name = "tabPage_cross_sect";
-            this.tabPage_cross_sect.Size = new System.Drawing.Size(894, 513);
+            this.tabPage_cross_sect.Size = new System.Drawing.Size(1195, 633);
             this.tabPage_cross_sect.TabIndex = 5;
             this.tabPage_cross_sect.Text = "cross-sect";
             this.tabPage_cross_sect.UseVisualStyleBackColor = true;
@@ -914,6 +929,7 @@
             // 
             this.splitContainer_cross_sec_parent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer_cross_sec_parent.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer_cross_sec_parent.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer_cross_sec_parent.Name = "splitContainer_cross_sec_parent";
             // 
             // splitContainer_cross_sec_parent.Panel1
@@ -923,17 +939,20 @@
             // splitContainer_cross_sec_parent.Panel2
             // 
             this.splitContainer_cross_sec_parent.Panel2.Controls.Add(this.splitContainer_cross_sec);
-            this.splitContainer_cross_sec_parent.Size = new System.Drawing.Size(894, 513);
-            this.splitContainer_cross_sec_parent.SplitterDistance = 75;
+            this.splitContainer_cross_sec_parent.Size = new System.Drawing.Size(1195, 633);
+            this.splitContainer_cross_sec_parent.SplitterDistance = 100;
+            this.splitContainer_cross_sec_parent.SplitterWidth = 5;
             this.splitContainer_cross_sec_parent.TabIndex = 2;
             // 
             // listBox_cs_wells
             // 
             this.listBox_cs_wells.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox_cs_wells.FormattingEnabled = true;
+            this.listBox_cs_wells.ItemHeight = 16;
             this.listBox_cs_wells.Location = new System.Drawing.Point(0, 0);
+            this.listBox_cs_wells.Margin = new System.Windows.Forms.Padding(4);
             this.listBox_cs_wells.Name = "listBox_cs_wells";
-            this.listBox_cs_wells.Size = new System.Drawing.Size(75, 513);
+            this.listBox_cs_wells.Size = new System.Drawing.Size(100, 633);
             this.listBox_cs_wells.TabIndex = 0;
             this.listBox_cs_wells.SelectedIndexChanged += new System.EventHandler(this.listBox_wells_SelectedIndexChanged);
             // 
@@ -941,7 +960,7 @@
             // 
             this.splitContainer_cross_sec.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer_cross_sec.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer_cross_sec.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitContainer_cross_sec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splitContainer_cross_sec.Name = "splitContainer_cross_sec";
             // 
             // splitContainer_cross_sec.Panel1
@@ -951,9 +970,8 @@
             // splitContainer_cross_sec.Panel2
             // 
             this.splitContainer_cross_sec.Panel2.Controls.Add(this.tableLayoutPanel_cross_sect_plot_settings);
-            this.splitContainer_cross_sec.Size = new System.Drawing.Size(815, 513);
-            this.splitContainer_cross_sec.SplitterDistance = 83;
-            this.splitContainer_cross_sec.SplitterWidth = 3;
+            this.splitContainer_cross_sec.Size = new System.Drawing.Size(1090, 633);
+            this.splitContainer_cross_sec.SplitterDistance = 111;
             this.splitContainer_cross_sec.TabIndex = 1;
             // 
             // checkedListBox_cross_sect
@@ -961,9 +979,9 @@
             this.checkedListBox_cross_sect.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkedListBox_cross_sect.FormattingEnabled = true;
             this.checkedListBox_cross_sect.Location = new System.Drawing.Point(0, 0);
-            this.checkedListBox_cross_sect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListBox_cross_sect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBox_cross_sect.Name = "checkedListBox_cross_sect";
-            this.checkedListBox_cross_sect.Size = new System.Drawing.Size(83, 513);
+            this.checkedListBox_cross_sect.Size = new System.Drawing.Size(111, 633);
             this.checkedListBox_cross_sect.TabIndex = 0;
             this.checkedListBox_cross_sect.MouseUp += new System.Windows.Forms.MouseEventHandler(this.checkedListBox_cross_sect_MouseUp);
             // 
@@ -975,12 +993,12 @@
             this.tableLayoutPanel_cross_sect_plot_settings.Controls.Add(this.tableLayoutPanel_cross_sect, 0, 1);
             this.tableLayoutPanel_cross_sect_plot_settings.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel_cross_sect_plot_settings.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel_cross_sect_plot_settings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel_cross_sect_plot_settings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel_cross_sect_plot_settings.Name = "tableLayoutPanel_cross_sect_plot_settings";
             this.tableLayoutPanel_cross_sect_plot_settings.RowCount = 2;
             this.tableLayoutPanel_cross_sect_plot_settings.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel_cross_sect_plot_settings.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel_cross_sect_plot_settings.Size = new System.Drawing.Size(729, 513);
+            this.tableLayoutPanel_cross_sect_plot_settings.Size = new System.Drawing.Size(975, 633);
             this.tableLayoutPanel_cross_sect_plot_settings.TabIndex = 0;
             // 
             // tableLayoutPanel_cross_sect_settings
@@ -995,13 +1013,13 @@
             this.tableLayoutPanel_cross_sect_settings.Controls.Add(this.trackBar_dates_cp, 3, 0);
             this.tableLayoutPanel_cross_sect_settings.Controls.Add(this.checkBox_min_max, 1, 1);
             this.tableLayoutPanel_cross_sect_settings.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel_cross_sect_settings.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel_cross_sect_settings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel_cross_sect_settings.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel_cross_sect_settings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel_cross_sect_settings.Name = "tableLayoutPanel_cross_sect_settings";
             this.tableLayoutPanel_cross_sect_settings.RowCount = 2;
             this.tableLayoutPanel_cross_sect_settings.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel_cross_sect_settings.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel_cross_sect_settings.Size = new System.Drawing.Size(725, 81);
+            this.tableLayoutPanel_cross_sect_settings.Size = new System.Drawing.Size(969, 100);
             this.tableLayoutPanel_cross_sect_settings.TabIndex = 0;
             // 
             // comboBox_dates_cp
@@ -1009,18 +1027,20 @@
             this.tableLayoutPanel_cross_sect_settings.SetColumnSpan(this.comboBox_dates_cp, 2);
             this.comboBox_dates_cp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_dates_cp.FormattingEnabled = true;
-            this.comboBox_dates_cp.Location = new System.Drawing.Point(3, 3);
+            this.comboBox_dates_cp.Location = new System.Drawing.Point(4, 4);
+            this.comboBox_dates_cp.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_dates_cp.Name = "comboBox_dates_cp";
-            this.comboBox_dates_cp.Size = new System.Drawing.Size(172, 21);
+            this.comboBox_dates_cp.Size = new System.Drawing.Size(228, 24);
             this.comboBox_dates_cp.TabIndex = 1;
             this.comboBox_dates_cp.SelectedIndexChanged += new System.EventHandler(this.comboBox_dates_cp_SelectedIndexChanged);
             // 
             // checkBox_log_scale_cp
             // 
             this.checkBox_log_scale_cp.AutoSize = true;
-            this.checkBox_log_scale_cp.Location = new System.Drawing.Point(3, 30);
+            this.checkBox_log_scale_cp.Location = new System.Drawing.Point(4, 36);
+            this.checkBox_log_scale_cp.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_log_scale_cp.Name = "checkBox_log_scale_cp";
-            this.checkBox_log_scale_cp.Size = new System.Drawing.Size(74, 17);
+            this.checkBox_log_scale_cp.Size = new System.Drawing.Size(90, 20);
             this.checkBox_log_scale_cp.TabIndex = 3;
             this.checkBox_log_scale_cp.Text = "Log Scale";
             this.checkBox_log_scale_cp.UseVisualStyleBackColor = true;
@@ -1029,20 +1049,22 @@
             // trackBar_dates_cp
             // 
             this.trackBar_dates_cp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.trackBar_dates_cp.Location = new System.Drawing.Point(312, 18);
+            this.trackBar_dates_cp.Location = new System.Drawing.Point(418, 22);
+            this.trackBar_dates_cp.Margin = new System.Windows.Forms.Padding(4);
             this.trackBar_dates_cp.Maximum = 0;
             this.trackBar_dates_cp.Name = "trackBar_dates_cp";
             this.tableLayoutPanel_cross_sect_settings.SetRowSpan(this.trackBar_dates_cp, 2);
-            this.trackBar_dates_cp.Size = new System.Drawing.Size(410, 45);
+            this.trackBar_dates_cp.Size = new System.Drawing.Size(547, 56);
             this.trackBar_dates_cp.TabIndex = 2;
             this.trackBar_dates_cp.Scroll += new System.EventHandler(this.trackBar_dates_cp_Scroll);
             // 
             // checkBox_min_max
             // 
             this.checkBox_min_max.AutoSize = true;
-            this.checkBox_min_max.Location = new System.Drawing.Point(106, 30);
+            this.checkBox_min_max.Location = new System.Drawing.Point(142, 36);
+            this.checkBox_min_max.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_min_max.Name = "checkBox_min_max";
-            this.checkBox_min_max.Size = new System.Drawing.Size(68, 17);
+            this.checkBox_min_max.Size = new System.Drawing.Size(79, 20);
             this.checkBox_min_max.TabIndex = 4;
             this.checkBox_min_max.Text = "Min/Max";
             this.checkBox_min_max.UseVisualStyleBackColor = true;
@@ -1059,21 +1081,23 @@
             this.tableLayoutPanel_cross_sect.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28531F));
             this.tableLayoutPanel_cross_sect.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28531F));
             this.tableLayoutPanel_cross_sect.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel_cross_sect.Location = new System.Drawing.Point(3, 88);
+            this.tableLayoutPanel_cross_sect.Location = new System.Drawing.Point(4, 108);
+            this.tableLayoutPanel_cross_sect.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel_cross_sect.Name = "tableLayoutPanel_cross_sect";
             this.tableLayoutPanel_cross_sect.RowCount = 1;
             this.tableLayoutPanel_cross_sect.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel_cross_sect.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 532F));
-            this.tableLayoutPanel_cross_sect.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 532F));
-            this.tableLayoutPanel_cross_sect.Size = new System.Drawing.Size(723, 532);
+            this.tableLayoutPanel_cross_sect.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 655F));
+            this.tableLayoutPanel_cross_sect.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 655F));
+            this.tableLayoutPanel_cross_sect.Size = new System.Drawing.Size(967, 655);
             this.tableLayoutPanel_cross_sect.TabIndex = 0;
             // 
             // tabPage_cross_plots
             // 
             this.tabPage_cross_plots.Controls.Add(this.tableLayoutPanel_cross_plots);
-            this.tabPage_cross_plots.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_cross_plots.Location = new System.Drawing.Point(4, 25);
+            this.tabPage_cross_plots.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_cross_plots.Name = "tabPage_cross_plots";
-            this.tabPage_cross_plots.Size = new System.Drawing.Size(894, 513);
+            this.tabPage_cross_plots.Size = new System.Drawing.Size(1195, 633);
             this.tabPage_cross_plots.TabIndex = 1;
             this.tabPage_cross_plots.Text = "cross-plots";
             this.tabPage_cross_plots.UseVisualStyleBackColor = true;
@@ -1101,13 +1125,14 @@
             this.tableLayoutPanel_cross_plots.Controls.Add(this.zedGraphControl_wbp9_cp, 3, 3);
             this.tableLayoutPanel_cross_plots.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel_cross_plots.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel_cross_plots.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel_cross_plots.Name = "tableLayoutPanel_cross_plots";
             this.tableLayoutPanel_cross_plots.RowCount = 4;
             this.tableLayoutPanel_cross_plots.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel_cross_plots.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel_cross_plots.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel_cross_plots.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel_cross_plots.Size = new System.Drawing.Size(894, 513);
+            this.tableLayoutPanel_cross_plots.Size = new System.Drawing.Size(1195, 633);
             this.tableLayoutPanel_cross_plots.TabIndex = 1;
             // 
             // zedGraphControl_wopt_cp
@@ -1115,8 +1140,8 @@
             this.zedGraphControl_wopt_cp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wopt_cp.Location = new System.Drawing.Point(4, 4);
-            this.zedGraphControl_wopt_cp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wopt_cp.Location = new System.Drawing.Point(5, 5);
+            this.zedGraphControl_wopt_cp.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wopt_cp.Name = "zedGraphControl_wopt_cp";
             this.zedGraphControl_wopt_cp.ScrollGrace = 0D;
             this.zedGraphControl_wopt_cp.ScrollMaxX = 0D;
@@ -1125,7 +1150,7 @@
             this.zedGraphControl_wopt_cp.ScrollMinX = 0D;
             this.zedGraphControl_wopt_cp.ScrollMinY = 0D;
             this.zedGraphControl_wopt_cp.ScrollMinY2 = 0D;
-            this.zedGraphControl_wopt_cp.Size = new System.Drawing.Size(215, 120);
+            this.zedGraphControl_wopt_cp.Size = new System.Drawing.Size(288, 148);
             this.zedGraphControl_wopt_cp.TabIndex = 1;
             this.zedGraphControl_wopt_cp.UseExtendedPrintDialog = true;
             // 
@@ -1134,8 +1159,8 @@
             this.zedGraphControl_wgit_cp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wgit_cp.Location = new System.Drawing.Point(450, 260);
-            this.zedGraphControl_wgit_cp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wgit_cp.Location = new System.Drawing.Point(601, 321);
+            this.zedGraphControl_wgit_cp.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wgit_cp.Name = "zedGraphControl_wgit_cp";
             this.zedGraphControl_wgit_cp.ScrollGrace = 0D;
             this.zedGraphControl_wgit_cp.ScrollMaxX = 0D;
@@ -1144,7 +1169,7 @@
             this.zedGraphControl_wgit_cp.ScrollMinX = 0D;
             this.zedGraphControl_wgit_cp.ScrollMinY = 0D;
             this.zedGraphControl_wgit_cp.ScrollMinY2 = 0D;
-            this.zedGraphControl_wgit_cp.Size = new System.Drawing.Size(215, 120);
+            this.zedGraphControl_wgit_cp.Size = new System.Drawing.Size(288, 148);
             this.zedGraphControl_wgit_cp.TabIndex = 3;
             this.zedGraphControl_wgit_cp.UseExtendedPrintDialog = true;
             // 
@@ -1153,8 +1178,8 @@
             this.zedGraphControl_wopr_cp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wopr_cp.Location = new System.Drawing.Point(227, 4);
-            this.zedGraphControl_wopr_cp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wopr_cp.Location = new System.Drawing.Point(303, 5);
+            this.zedGraphControl_wopr_cp.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wopr_cp.Name = "zedGraphControl_wopr_cp";
             this.zedGraphControl_wopr_cp.ScrollGrace = 0D;
             this.zedGraphControl_wopr_cp.ScrollMaxX = 0D;
@@ -1163,7 +1188,7 @@
             this.zedGraphControl_wopr_cp.ScrollMinX = 0D;
             this.zedGraphControl_wopr_cp.ScrollMinY = 0D;
             this.zedGraphControl_wopr_cp.ScrollMinY2 = 0D;
-            this.zedGraphControl_wopr_cp.Size = new System.Drawing.Size(215, 120);
+            this.zedGraphControl_wopr_cp.Size = new System.Drawing.Size(288, 148);
             this.zedGraphControl_wopr_cp.TabIndex = 5;
             this.zedGraphControl_wopr_cp.UseExtendedPrintDialog = true;
             // 
@@ -1172,8 +1197,8 @@
             this.zedGraphControl_wlpt_cp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wlpt_cp.Location = new System.Drawing.Point(450, 4);
-            this.zedGraphControl_wlpt_cp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wlpt_cp.Location = new System.Drawing.Point(601, 5);
+            this.zedGraphControl_wlpt_cp.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wlpt_cp.Name = "zedGraphControl_wlpt_cp";
             this.zedGraphControl_wlpt_cp.ScrollGrace = 0D;
             this.zedGraphControl_wlpt_cp.ScrollMaxX = 0D;
@@ -1182,7 +1207,7 @@
             this.zedGraphControl_wlpt_cp.ScrollMinX = 0D;
             this.zedGraphControl_wlpt_cp.ScrollMinY = 0D;
             this.zedGraphControl_wlpt_cp.ScrollMinY2 = 0D;
-            this.zedGraphControl_wlpt_cp.Size = new System.Drawing.Size(215, 120);
+            this.zedGraphControl_wlpt_cp.Size = new System.Drawing.Size(288, 148);
             this.zedGraphControl_wlpt_cp.TabIndex = 0;
             this.zedGraphControl_wlpt_cp.UseExtendedPrintDialog = true;
             this.zedGraphControl_wlpt_cp.ZoomEvent += new ZedGraph.ZedGraphControl.ZoomEventHandler(this.zedGraphControl_cp_ZoomEvent);
@@ -1192,8 +1217,8 @@
             this.zedGraphControl_wlpr_cp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wlpr_cp.Location = new System.Drawing.Point(673, 4);
-            this.zedGraphControl_wlpr_cp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wlpr_cp.Location = new System.Drawing.Point(899, 5);
+            this.zedGraphControl_wlpr_cp.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wlpr_cp.Name = "zedGraphControl_wlpr_cp";
             this.zedGraphControl_wlpr_cp.ScrollGrace = 0D;
             this.zedGraphControl_wlpr_cp.ScrollMaxX = 0D;
@@ -1202,7 +1227,7 @@
             this.zedGraphControl_wlpr_cp.ScrollMinX = 0D;
             this.zedGraphControl_wlpr_cp.ScrollMinY = 0D;
             this.zedGraphControl_wlpr_cp.ScrollMinY2 = 0D;
-            this.zedGraphControl_wlpr_cp.Size = new System.Drawing.Size(217, 120);
+            this.zedGraphControl_wlpr_cp.Size = new System.Drawing.Size(291, 148);
             this.zedGraphControl_wlpr_cp.TabIndex = 5;
             this.zedGraphControl_wlpr_cp.UseExtendedPrintDialog = true;
             // 
@@ -1211,8 +1236,8 @@
             this.zedGraphControl_wwpt_cp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wwpt_cp.Location = new System.Drawing.Point(4, 132);
-            this.zedGraphControl_wwpt_cp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wwpt_cp.Location = new System.Drawing.Point(5, 163);
+            this.zedGraphControl_wwpt_cp.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wwpt_cp.Name = "zedGraphControl_wwpt_cp";
             this.zedGraphControl_wwpt_cp.ScrollGrace = 0D;
             this.zedGraphControl_wwpt_cp.ScrollMaxX = 0D;
@@ -1221,7 +1246,7 @@
             this.zedGraphControl_wwpt_cp.ScrollMinX = 0D;
             this.zedGraphControl_wwpt_cp.ScrollMinY = 0D;
             this.zedGraphControl_wwpt_cp.ScrollMinY2 = 0D;
-            this.zedGraphControl_wwpt_cp.Size = new System.Drawing.Size(215, 120);
+            this.zedGraphControl_wwpt_cp.Size = new System.Drawing.Size(288, 148);
             this.zedGraphControl_wwpt_cp.TabIndex = 4;
             this.zedGraphControl_wwpt_cp.UseExtendedPrintDialog = true;
             // 
@@ -1230,8 +1255,8 @@
             this.zedGraphControl_wwpr_cp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wwpr_cp.Location = new System.Drawing.Point(227, 132);
-            this.zedGraphControl_wwpr_cp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wwpr_cp.Location = new System.Drawing.Point(303, 163);
+            this.zedGraphControl_wwpr_cp.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wwpr_cp.Name = "zedGraphControl_wwpr_cp";
             this.zedGraphControl_wwpr_cp.ScrollGrace = 0D;
             this.zedGraphControl_wwpr_cp.ScrollMaxX = 0D;
@@ -1240,7 +1265,7 @@
             this.zedGraphControl_wwpr_cp.ScrollMinX = 0D;
             this.zedGraphControl_wwpr_cp.ScrollMinY = 0D;
             this.zedGraphControl_wwpr_cp.ScrollMinY2 = 0D;
-            this.zedGraphControl_wwpr_cp.Size = new System.Drawing.Size(215, 120);
+            this.zedGraphControl_wwpr_cp.Size = new System.Drawing.Size(288, 148);
             this.zedGraphControl_wwpr_cp.TabIndex = 5;
             this.zedGraphControl_wwpr_cp.UseExtendedPrintDialog = true;
             // 
@@ -1249,8 +1274,8 @@
             this.zedGraphControl_wwit_cp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wwit_cp.Location = new System.Drawing.Point(450, 132);
-            this.zedGraphControl_wwit_cp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wwit_cp.Location = new System.Drawing.Point(601, 163);
+            this.zedGraphControl_wwit_cp.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wwit_cp.Name = "zedGraphControl_wwit_cp";
             this.zedGraphControl_wwit_cp.ScrollGrace = 0D;
             this.zedGraphControl_wwit_cp.ScrollMaxX = 0D;
@@ -1259,7 +1284,7 @@
             this.zedGraphControl_wwit_cp.ScrollMinX = 0D;
             this.zedGraphControl_wwit_cp.ScrollMinY = 0D;
             this.zedGraphControl_wwit_cp.ScrollMinY2 = 0D;
-            this.zedGraphControl_wwit_cp.Size = new System.Drawing.Size(215, 120);
+            this.zedGraphControl_wwit_cp.Size = new System.Drawing.Size(288, 148);
             this.zedGraphControl_wwit_cp.TabIndex = 1;
             this.zedGraphControl_wwit_cp.UseExtendedPrintDialog = true;
             // 
@@ -1268,8 +1293,8 @@
             this.zedGraphControl_wwir_cp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wwir_cp.Location = new System.Drawing.Point(673, 132);
-            this.zedGraphControl_wwir_cp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wwir_cp.Location = new System.Drawing.Point(899, 163);
+            this.zedGraphControl_wwir_cp.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wwir_cp.Name = "zedGraphControl_wwir_cp";
             this.zedGraphControl_wwir_cp.ScrollGrace = 0D;
             this.zedGraphControl_wwir_cp.ScrollMaxX = 0D;
@@ -1278,7 +1303,7 @@
             this.zedGraphControl_wwir_cp.ScrollMinX = 0D;
             this.zedGraphControl_wwir_cp.ScrollMinY = 0D;
             this.zedGraphControl_wwir_cp.ScrollMinY2 = 0D;
-            this.zedGraphControl_wwir_cp.Size = new System.Drawing.Size(217, 120);
+            this.zedGraphControl_wwir_cp.Size = new System.Drawing.Size(291, 148);
             this.zedGraphControl_wwir_cp.TabIndex = 5;
             this.zedGraphControl_wwir_cp.UseExtendedPrintDialog = true;
             // 
@@ -1287,8 +1312,8 @@
             this.zedGraphControl_wgpr_cp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wgpr_cp.Location = new System.Drawing.Point(227, 260);
-            this.zedGraphControl_wgpr_cp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wgpr_cp.Location = new System.Drawing.Point(303, 321);
+            this.zedGraphControl_wgpr_cp.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wgpr_cp.Name = "zedGraphControl_wgpr_cp";
             this.zedGraphControl_wgpr_cp.ScrollGrace = 0D;
             this.zedGraphControl_wgpr_cp.ScrollMaxX = 0D;
@@ -1297,7 +1322,7 @@
             this.zedGraphControl_wgpr_cp.ScrollMinX = 0D;
             this.zedGraphControl_wgpr_cp.ScrollMinY = 0D;
             this.zedGraphControl_wgpr_cp.ScrollMinY2 = 0D;
-            this.zedGraphControl_wgpr_cp.Size = new System.Drawing.Size(215, 120);
+            this.zedGraphControl_wgpr_cp.Size = new System.Drawing.Size(288, 148);
             this.zedGraphControl_wgpr_cp.TabIndex = 5;
             this.zedGraphControl_wgpr_cp.UseExtendedPrintDialog = true;
             // 
@@ -1306,8 +1331,8 @@
             this.zedGraphControl_wgpt_cp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wgpt_cp.Location = new System.Drawing.Point(4, 260);
-            this.zedGraphControl_wgpt_cp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wgpt_cp.Location = new System.Drawing.Point(5, 321);
+            this.zedGraphControl_wgpt_cp.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wgpt_cp.Name = "zedGraphControl_wgpt_cp";
             this.zedGraphControl_wgpt_cp.ScrollGrace = 0D;
             this.zedGraphControl_wgpt_cp.ScrollMaxX = 0D;
@@ -1316,7 +1341,7 @@
             this.zedGraphControl_wgpt_cp.ScrollMinX = 0D;
             this.zedGraphControl_wgpt_cp.ScrollMinY = 0D;
             this.zedGraphControl_wgpt_cp.ScrollMinY2 = 0D;
-            this.zedGraphControl_wgpt_cp.Size = new System.Drawing.Size(215, 120);
+            this.zedGraphControl_wgpt_cp.Size = new System.Drawing.Size(288, 148);
             this.zedGraphControl_wgpt_cp.TabIndex = 4;
             this.zedGraphControl_wgpt_cp.UseExtendedPrintDialog = true;
             // 
@@ -1325,8 +1350,8 @@
             this.zedGraphControl_wbhp_cp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wbhp_cp.Location = new System.Drawing.Point(450, 388);
-            this.zedGraphControl_wbhp_cp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wbhp_cp.Location = new System.Drawing.Point(601, 479);
+            this.zedGraphControl_wbhp_cp.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wbhp_cp.Name = "zedGraphControl_wbhp_cp";
             this.zedGraphControl_wbhp_cp.ScrollGrace = 0D;
             this.zedGraphControl_wbhp_cp.ScrollMaxX = 0D;
@@ -1335,7 +1360,7 @@
             this.zedGraphControl_wbhp_cp.ScrollMinX = 0D;
             this.zedGraphControl_wbhp_cp.ScrollMinY = 0D;
             this.zedGraphControl_wbhp_cp.ScrollMinY2 = 0D;
-            this.zedGraphControl_wbhp_cp.Size = new System.Drawing.Size(215, 121);
+            this.zedGraphControl_wbhp_cp.Size = new System.Drawing.Size(288, 149);
             this.zedGraphControl_wbhp_cp.TabIndex = 2;
             this.zedGraphControl_wbhp_cp.UseExtendedPrintDialog = true;
             // 
@@ -1344,8 +1369,8 @@
             this.zedGraphControl_wgir_cp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wgir_cp.Location = new System.Drawing.Point(673, 260);
-            this.zedGraphControl_wgir_cp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wgir_cp.Location = new System.Drawing.Point(899, 321);
+            this.zedGraphControl_wgir_cp.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wgir_cp.Name = "zedGraphControl_wgir_cp";
             this.zedGraphControl_wgir_cp.ScrollGrace = 0D;
             this.zedGraphControl_wgir_cp.ScrollMaxX = 0D;
@@ -1354,7 +1379,7 @@
             this.zedGraphControl_wgir_cp.ScrollMinX = 0D;
             this.zedGraphControl_wgir_cp.ScrollMinY = 0D;
             this.zedGraphControl_wgir_cp.ScrollMinY2 = 0D;
-            this.zedGraphControl_wgir_cp.Size = new System.Drawing.Size(217, 120);
+            this.zedGraphControl_wgir_cp.Size = new System.Drawing.Size(291, 148);
             this.zedGraphControl_wgir_cp.TabIndex = 5;
             this.zedGraphControl_wgir_cp.UseExtendedPrintDialog = true;
             // 
@@ -1363,8 +1388,8 @@
             this.zedGraphControl_wbp9_cp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wbp9_cp.Location = new System.Drawing.Point(673, 388);
-            this.zedGraphControl_wbp9_cp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wbp9_cp.Location = new System.Drawing.Point(899, 479);
+            this.zedGraphControl_wbp9_cp.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wbp9_cp.Name = "zedGraphControl_wbp9_cp";
             this.zedGraphControl_wbp9_cp.ScrollGrace = 0D;
             this.zedGraphControl_wbp9_cp.ScrollMaxX = 0D;
@@ -1373,17 +1398,17 @@
             this.zedGraphControl_wbp9_cp.ScrollMinX = 0D;
             this.zedGraphControl_wbp9_cp.ScrollMinY = 0D;
             this.zedGraphControl_wbp9_cp.ScrollMinY2 = 0D;
-            this.zedGraphControl_wbp9_cp.Size = new System.Drawing.Size(217, 121);
+            this.zedGraphControl_wbp9_cp.Size = new System.Drawing.Size(291, 149);
             this.zedGraphControl_wbp9_cp.TabIndex = 2;
             this.zedGraphControl_wbp9_cp.UseExtendedPrintDialog = true;
             // 
             // tabPage_r2_iter
             // 
             this.tabPage_r2_iter.Controls.Add(this.tableLayoutPanel1);
-            this.tabPage_r2_iter.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_r2_iter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage_r2_iter.Location = new System.Drawing.Point(4, 25);
+            this.tabPage_r2_iter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage_r2_iter.Name = "tabPage_r2_iter";
-            this.tabPage_r2_iter.Size = new System.Drawing.Size(894, 513);
+            this.tabPage_r2_iter.Size = new System.Drawing.Size(1195, 633);
             this.tabPage_r2_iter.TabIndex = 7;
             this.tabPage_r2_iter.Text = "r2-iter";
             this.tabPage_r2_iter.UseVisualStyleBackColor = true;
@@ -1411,13 +1436,14 @@
             this.tableLayoutPanel1.Controls.Add(this.zedGraphControl_wbp9_r2, 3, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(894, 513);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1195, 633);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // zedGraphControl_wopt_r2
@@ -1425,8 +1451,8 @@
             this.zedGraphControl_wopt_r2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wopt_r2.Location = new System.Drawing.Point(4, 4);
-            this.zedGraphControl_wopt_r2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wopt_r2.Location = new System.Drawing.Point(5, 5);
+            this.zedGraphControl_wopt_r2.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wopt_r2.Name = "zedGraphControl_wopt_r2";
             this.zedGraphControl_wopt_r2.ScrollGrace = 0D;
             this.zedGraphControl_wopt_r2.ScrollMaxX = 0D;
@@ -1435,7 +1461,7 @@
             this.zedGraphControl_wopt_r2.ScrollMinX = 0D;
             this.zedGraphControl_wopt_r2.ScrollMinY = 0D;
             this.zedGraphControl_wopt_r2.ScrollMinY2 = 0D;
-            this.zedGraphControl_wopt_r2.Size = new System.Drawing.Size(215, 120);
+            this.zedGraphControl_wopt_r2.Size = new System.Drawing.Size(288, 148);
             this.zedGraphControl_wopt_r2.TabIndex = 1;
             this.zedGraphControl_wopt_r2.UseExtendedPrintDialog = true;
             // 
@@ -1444,8 +1470,8 @@
             this.zedGraphControl_wwpr_r2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wwpr_r2.Location = new System.Drawing.Point(227, 132);
-            this.zedGraphControl_wwpr_r2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wwpr_r2.Location = new System.Drawing.Point(303, 163);
+            this.zedGraphControl_wwpr_r2.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wwpr_r2.Name = "zedGraphControl_wwpr_r2";
             this.zedGraphControl_wwpr_r2.ScrollGrace = 0D;
             this.zedGraphControl_wwpr_r2.ScrollMaxX = 0D;
@@ -1454,7 +1480,7 @@
             this.zedGraphControl_wwpr_r2.ScrollMinX = 0D;
             this.zedGraphControl_wwpr_r2.ScrollMinY = 0D;
             this.zedGraphControl_wwpr_r2.ScrollMinY2 = 0D;
-            this.zedGraphControl_wwpr_r2.Size = new System.Drawing.Size(215, 120);
+            this.zedGraphControl_wwpr_r2.Size = new System.Drawing.Size(288, 148);
             this.zedGraphControl_wwpr_r2.TabIndex = 1;
             this.zedGraphControl_wwpr_r2.UseExtendedPrintDialog = true;
             // 
@@ -1463,8 +1489,8 @@
             this.zedGraphControl_wwpt_r2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wwpt_r2.Location = new System.Drawing.Point(4, 132);
-            this.zedGraphControl_wwpt_r2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wwpt_r2.Location = new System.Drawing.Point(5, 163);
+            this.zedGraphControl_wwpt_r2.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wwpt_r2.Name = "zedGraphControl_wwpt_r2";
             this.zedGraphControl_wwpt_r2.ScrollGrace = 0D;
             this.zedGraphControl_wwpt_r2.ScrollMaxX = 0D;
@@ -1473,7 +1499,7 @@
             this.zedGraphControl_wwpt_r2.ScrollMinX = 0D;
             this.zedGraphControl_wwpt_r2.ScrollMinY = 0D;
             this.zedGraphControl_wwpt_r2.ScrollMinY2 = 0D;
-            this.zedGraphControl_wwpt_r2.Size = new System.Drawing.Size(215, 120);
+            this.zedGraphControl_wwpt_r2.Size = new System.Drawing.Size(288, 148);
             this.zedGraphControl_wwpt_r2.TabIndex = 1;
             this.zedGraphControl_wwpt_r2.UseExtendedPrintDialog = true;
             // 
@@ -1482,8 +1508,8 @@
             this.zedGraphControl_wopr_r2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wopr_r2.Location = new System.Drawing.Point(227, 4);
-            this.zedGraphControl_wopr_r2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wopr_r2.Location = new System.Drawing.Point(303, 5);
+            this.zedGraphControl_wopr_r2.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wopr_r2.Name = "zedGraphControl_wopr_r2";
             this.zedGraphControl_wopr_r2.ScrollGrace = 0D;
             this.zedGraphControl_wopr_r2.ScrollMaxX = 0D;
@@ -1492,7 +1518,7 @@
             this.zedGraphControl_wopr_r2.ScrollMinX = 0D;
             this.zedGraphControl_wopr_r2.ScrollMinY = 0D;
             this.zedGraphControl_wopr_r2.ScrollMinY2 = 0D;
-            this.zedGraphControl_wopr_r2.Size = new System.Drawing.Size(215, 120);
+            this.zedGraphControl_wopr_r2.Size = new System.Drawing.Size(288, 148);
             this.zedGraphControl_wopr_r2.TabIndex = 1;
             this.zedGraphControl_wopr_r2.UseExtendedPrintDialog = true;
             // 
@@ -1501,8 +1527,8 @@
             this.zedGraphControl_wlpt_r2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wlpt_r2.Location = new System.Drawing.Point(450, 4);
-            this.zedGraphControl_wlpt_r2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wlpt_r2.Location = new System.Drawing.Point(601, 5);
+            this.zedGraphControl_wlpt_r2.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wlpt_r2.Name = "zedGraphControl_wlpt_r2";
             this.zedGraphControl_wlpt_r2.ScrollGrace = 0D;
             this.zedGraphControl_wlpt_r2.ScrollMaxX = 0D;
@@ -1511,7 +1537,7 @@
             this.zedGraphControl_wlpt_r2.ScrollMinX = 0D;
             this.zedGraphControl_wlpt_r2.ScrollMinY = 0D;
             this.zedGraphControl_wlpt_r2.ScrollMinY2 = 0D;
-            this.zedGraphControl_wlpt_r2.Size = new System.Drawing.Size(215, 120);
+            this.zedGraphControl_wlpt_r2.Size = new System.Drawing.Size(288, 148);
             this.zedGraphControl_wlpt_r2.TabIndex = 0;
             this.zedGraphControl_wlpt_r2.UseExtendedPrintDialog = true;
             // 
@@ -1520,8 +1546,8 @@
             this.zedGraphControl_wlpr_r2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wlpr_r2.Location = new System.Drawing.Point(673, 4);
-            this.zedGraphControl_wlpr_r2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wlpr_r2.Location = new System.Drawing.Point(899, 5);
+            this.zedGraphControl_wlpr_r2.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wlpr_r2.Name = "zedGraphControl_wlpr_r2";
             this.zedGraphControl_wlpr_r2.ScrollGrace = 0D;
             this.zedGraphControl_wlpr_r2.ScrollMaxX = 0D;
@@ -1530,7 +1556,7 @@
             this.zedGraphControl_wlpr_r2.ScrollMinX = 0D;
             this.zedGraphControl_wlpr_r2.ScrollMinY = 0D;
             this.zedGraphControl_wlpr_r2.ScrollMinY2 = 0D;
-            this.zedGraphControl_wlpr_r2.Size = new System.Drawing.Size(217, 120);
+            this.zedGraphControl_wlpr_r2.Size = new System.Drawing.Size(291, 148);
             this.zedGraphControl_wlpr_r2.TabIndex = 0;
             this.zedGraphControl_wlpr_r2.UseExtendedPrintDialog = true;
             // 
@@ -1539,8 +1565,8 @@
             this.zedGraphControl_wwir_r2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wwir_r2.Location = new System.Drawing.Point(673, 132);
-            this.zedGraphControl_wwir_r2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wwir_r2.Location = new System.Drawing.Point(899, 163);
+            this.zedGraphControl_wwir_r2.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wwir_r2.Name = "zedGraphControl_wwir_r2";
             this.zedGraphControl_wwir_r2.ScrollGrace = 0D;
             this.zedGraphControl_wwir_r2.ScrollMaxX = 0D;
@@ -1549,7 +1575,7 @@
             this.zedGraphControl_wwir_r2.ScrollMinX = 0D;
             this.zedGraphControl_wwir_r2.ScrollMinY = 0D;
             this.zedGraphControl_wwir_r2.ScrollMinY2 = 0D;
-            this.zedGraphControl_wwir_r2.Size = new System.Drawing.Size(217, 120);
+            this.zedGraphControl_wwir_r2.Size = new System.Drawing.Size(291, 148);
             this.zedGraphControl_wwir_r2.TabIndex = 2;
             this.zedGraphControl_wwir_r2.UseExtendedPrintDialog = true;
             // 
@@ -1558,8 +1584,8 @@
             this.zedGraphControl_wwit_r2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wwit_r2.Location = new System.Drawing.Point(450, 132);
-            this.zedGraphControl_wwit_r2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wwit_r2.Location = new System.Drawing.Point(601, 163);
+            this.zedGraphControl_wwit_r2.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wwit_r2.Name = "zedGraphControl_wwit_r2";
             this.zedGraphControl_wwit_r2.ScrollGrace = 0D;
             this.zedGraphControl_wwit_r2.ScrollMaxX = 0D;
@@ -1568,7 +1594,7 @@
             this.zedGraphControl_wwit_r2.ScrollMinX = 0D;
             this.zedGraphControl_wwit_r2.ScrollMinY = 0D;
             this.zedGraphControl_wwit_r2.ScrollMinY2 = 0D;
-            this.zedGraphControl_wwit_r2.Size = new System.Drawing.Size(215, 120);
+            this.zedGraphControl_wwit_r2.Size = new System.Drawing.Size(288, 148);
             this.zedGraphControl_wwit_r2.TabIndex = 2;
             this.zedGraphControl_wwit_r2.UseExtendedPrintDialog = true;
             // 
@@ -1577,8 +1603,8 @@
             this.zedGraphControl_wgpt_r2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wgpt_r2.Location = new System.Drawing.Point(4, 260);
-            this.zedGraphControl_wgpt_r2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wgpt_r2.Location = new System.Drawing.Point(5, 321);
+            this.zedGraphControl_wgpt_r2.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wgpt_r2.Name = "zedGraphControl_wgpt_r2";
             this.zedGraphControl_wgpt_r2.ScrollGrace = 0D;
             this.zedGraphControl_wgpt_r2.ScrollMaxX = 0D;
@@ -1587,7 +1613,7 @@
             this.zedGraphControl_wgpt_r2.ScrollMinX = 0D;
             this.zedGraphControl_wgpt_r2.ScrollMinY = 0D;
             this.zedGraphControl_wgpt_r2.ScrollMinY2 = 0D;
-            this.zedGraphControl_wgpt_r2.Size = new System.Drawing.Size(215, 120);
+            this.zedGraphControl_wgpt_r2.Size = new System.Drawing.Size(288, 148);
             this.zedGraphControl_wgpt_r2.TabIndex = 1;
             this.zedGraphControl_wgpt_r2.UseExtendedPrintDialog = true;
             // 
@@ -1596,8 +1622,8 @@
             this.zedGraphControl_wgit_r2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wgit_r2.Location = new System.Drawing.Point(450, 260);
-            this.zedGraphControl_wgit_r2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wgit_r2.Location = new System.Drawing.Point(601, 321);
+            this.zedGraphControl_wgit_r2.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wgit_r2.Name = "zedGraphControl_wgit_r2";
             this.zedGraphControl_wgit_r2.ScrollGrace = 0D;
             this.zedGraphControl_wgit_r2.ScrollMaxX = 0D;
@@ -1606,7 +1632,7 @@
             this.zedGraphControl_wgit_r2.ScrollMinX = 0D;
             this.zedGraphControl_wgit_r2.ScrollMinY = 0D;
             this.zedGraphControl_wgit_r2.ScrollMinY2 = 0D;
-            this.zedGraphControl_wgit_r2.Size = new System.Drawing.Size(215, 120);
+            this.zedGraphControl_wgit_r2.Size = new System.Drawing.Size(288, 148);
             this.zedGraphControl_wgit_r2.TabIndex = 2;
             this.zedGraphControl_wgit_r2.UseExtendedPrintDialog = true;
             // 
@@ -1615,8 +1641,8 @@
             this.zedGraphControl_wgpr_r2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wgpr_r2.Location = new System.Drawing.Point(227, 260);
-            this.zedGraphControl_wgpr_r2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wgpr_r2.Location = new System.Drawing.Point(303, 321);
+            this.zedGraphControl_wgpr_r2.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wgpr_r2.Name = "zedGraphControl_wgpr_r2";
             this.zedGraphControl_wgpr_r2.ScrollGrace = 0D;
             this.zedGraphControl_wgpr_r2.ScrollMaxX = 0D;
@@ -1625,7 +1651,7 @@
             this.zedGraphControl_wgpr_r2.ScrollMinX = 0D;
             this.zedGraphControl_wgpr_r2.ScrollMinY = 0D;
             this.zedGraphControl_wgpr_r2.ScrollMinY2 = 0D;
-            this.zedGraphControl_wgpr_r2.Size = new System.Drawing.Size(215, 120);
+            this.zedGraphControl_wgpr_r2.Size = new System.Drawing.Size(288, 148);
             this.zedGraphControl_wgpr_r2.TabIndex = 1;
             this.zedGraphControl_wgpr_r2.UseExtendedPrintDialog = true;
             // 
@@ -1634,8 +1660,8 @@
             this.zedGraphControl_wgir_r2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wgir_r2.Location = new System.Drawing.Point(673, 260);
-            this.zedGraphControl_wgir_r2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wgir_r2.Location = new System.Drawing.Point(899, 321);
+            this.zedGraphControl_wgir_r2.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wgir_r2.Name = "zedGraphControl_wgir_r2";
             this.zedGraphControl_wgir_r2.ScrollGrace = 0D;
             this.zedGraphControl_wgir_r2.ScrollMaxX = 0D;
@@ -1644,7 +1670,7 @@
             this.zedGraphControl_wgir_r2.ScrollMinX = 0D;
             this.zedGraphControl_wgir_r2.ScrollMinY = 0D;
             this.zedGraphControl_wgir_r2.ScrollMinY2 = 0D;
-            this.zedGraphControl_wgir_r2.Size = new System.Drawing.Size(217, 120);
+            this.zedGraphControl_wgir_r2.Size = new System.Drawing.Size(291, 148);
             this.zedGraphControl_wgir_r2.TabIndex = 2;
             this.zedGraphControl_wgir_r2.UseExtendedPrintDialog = true;
             // 
@@ -1653,8 +1679,8 @@
             this.zedGraphControl_wbhp_r2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wbhp_r2.Location = new System.Drawing.Point(450, 388);
-            this.zedGraphControl_wbhp_r2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wbhp_r2.Location = new System.Drawing.Point(601, 479);
+            this.zedGraphControl_wbhp_r2.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wbhp_r2.Name = "zedGraphControl_wbhp_r2";
             this.zedGraphControl_wbhp_r2.ScrollGrace = 0D;
             this.zedGraphControl_wbhp_r2.ScrollMaxX = 0D;
@@ -1663,7 +1689,7 @@
             this.zedGraphControl_wbhp_r2.ScrollMinX = 0D;
             this.zedGraphControl_wbhp_r2.ScrollMinY = 0D;
             this.zedGraphControl_wbhp_r2.ScrollMinY2 = 0D;
-            this.zedGraphControl_wbhp_r2.Size = new System.Drawing.Size(215, 121);
+            this.zedGraphControl_wbhp_r2.Size = new System.Drawing.Size(288, 149);
             this.zedGraphControl_wbhp_r2.TabIndex = 2;
             this.zedGraphControl_wbhp_r2.UseExtendedPrintDialog = true;
             // 
@@ -1672,8 +1698,8 @@
             this.zedGraphControl_wbp9_r2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl_wbp9_r2.Location = new System.Drawing.Point(673, 388);
-            this.zedGraphControl_wbp9_r2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_wbp9_r2.Location = new System.Drawing.Point(899, 479);
+            this.zedGraphControl_wbp9_r2.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_wbp9_r2.Name = "zedGraphControl_wbp9_r2";
             this.zedGraphControl_wbp9_r2.ScrollGrace = 0D;
             this.zedGraphControl_wbp9_r2.ScrollMaxX = 0D;
@@ -1682,16 +1708,17 @@
             this.zedGraphControl_wbp9_r2.ScrollMinX = 0D;
             this.zedGraphControl_wbp9_r2.ScrollMinY = 0D;
             this.zedGraphControl_wbp9_r2.ScrollMinY2 = 0D;
-            this.zedGraphControl_wbp9_r2.Size = new System.Drawing.Size(217, 121);
+            this.zedGraphControl_wbp9_r2.Size = new System.Drawing.Size(291, 149);
             this.zedGraphControl_wbp9_r2.TabIndex = 2;
             this.zedGraphControl_wbp9_r2.UseExtendedPrintDialog = true;
             // 
             // tabPage_table
             // 
             this.tabPage_table.Controls.Add(this.splitContainer2);
-            this.tabPage_table.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_table.Location = new System.Drawing.Point(4, 25);
+            this.tabPage_table.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_table.Name = "tabPage_table";
-            this.tabPage_table.Size = new System.Drawing.Size(894, 513);
+            this.tabPage_table.Size = new System.Drawing.Size(1195, 633);
             this.tabPage_table.TabIndex = 3;
             this.tabPage_table.Text = "stat table";
             this.tabPage_table.UseVisualStyleBackColor = true;
@@ -1700,6 +1727,7 @@
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -1710,8 +1738,9 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.dataGridView_hm_table_total);
-            this.splitContainer2.Size = new System.Drawing.Size(894, 513);
-            this.splitContainer2.SplitterDistance = 385;
+            this.splitContainer2.Size = new System.Drawing.Size(1195, 633);
+            this.splitContainer2.SplitterDistance = 475;
+            this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 11;
             // 
             // dataGridView_hm_table_wells
@@ -1759,9 +1788,10 @@
             this.Column_wells_wgir_delta});
             this.dataGridView_hm_table_wells.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_hm_table_wells.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView_hm_table_wells.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_hm_table_wells.Name = "dataGridView_hm_table_wells";
             this.dataGridView_hm_table_wells.RowHeadersWidth = 51;
-            this.dataGridView_hm_table_wells.Size = new System.Drawing.Size(894, 385);
+            this.dataGridView_hm_table_wells.Size = new System.Drawing.Size(1195, 475);
             this.dataGridView_hm_table_wells.TabIndex = 0;
             // 
             // Column_wells_wellname
@@ -2105,9 +2135,10 @@
             this.Column_totals_wgir_delta});
             this.dataGridView_hm_table_total.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_hm_table_total.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView_hm_table_total.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_hm_table_total.Name = "dataGridView_hm_table_total";
             this.dataGridView_hm_table_total.RowHeadersWidth = 51;
-            this.dataGridView_hm_table_total.Size = new System.Drawing.Size(894, 124);
+            this.dataGridView_hm_table_total.Size = new System.Drawing.Size(1195, 153);
             this.dataGridView_hm_table_total.TabIndex = 1;
             // 
             // Column_totals_wellname
@@ -2408,9 +2439,10 @@
             // 
             // tabPage_view2d
             // 
-            this.tabPage_view2d.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_view2d.Location = new System.Drawing.Point(4, 25);
+            this.tabPage_view2d.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_view2d.Name = "tabPage_view2d";
-            this.tabPage_view2d.Size = new System.Drawing.Size(894, 513);
+            this.tabPage_view2d.Size = new System.Drawing.Size(1195, 633);
             this.tabPage_view2d.TabIndex = 4;
             this.tabPage_view2d.Text = "view 2D";
             this.tabPage_view2d.UseVisualStyleBackColor = true;
@@ -2418,10 +2450,11 @@
             // tabPage_relperm
             // 
             this.tabPage_relperm.Controls.Add(this.splitContainer5);
-            this.tabPage_relperm.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_relperm.Location = new System.Drawing.Point(4, 25);
+            this.tabPage_relperm.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_relperm.Name = "tabPage_relperm";
-            this.tabPage_relperm.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage_relperm.Size = new System.Drawing.Size(894, 513);
+            this.tabPage_relperm.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage_relperm.Size = new System.Drawing.Size(1195, 633);
             this.tabPage_relperm.TabIndex = 8;
             this.tabPage_relperm.Text = "rel perm";
             this.tabPage_relperm.UseVisualStyleBackColor = true;
@@ -2429,7 +2462,8 @@
             // splitContainer5
             // 
             this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer5.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer5.Location = new System.Drawing.Point(4, 4);
+            this.splitContainer5.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer5.Name = "splitContainer5";
             // 
             // splitContainer5.Panel1
@@ -2439,17 +2473,20 @@
             // splitContainer5.Panel2
             // 
             this.splitContainer5.Panel2.Controls.Add(this.tableLayoutPanel_relperm);
-            this.splitContainer5.Size = new System.Drawing.Size(888, 507);
-            this.splitContainer5.SplitterDistance = 88;
+            this.splitContainer5.Size = new System.Drawing.Size(1187, 625);
+            this.splitContainer5.SplitterDistance = 117;
+            this.splitContainer5.SplitterWidth = 5;
             this.splitContainer5.TabIndex = 0;
             // 
             // listBox_satnum
             // 
             this.listBox_satnum.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox_satnum.FormattingEnabled = true;
+            this.listBox_satnum.ItemHeight = 16;
             this.listBox_satnum.Location = new System.Drawing.Point(0, 0);
+            this.listBox_satnum.Margin = new System.Windows.Forms.Padding(4);
             this.listBox_satnum.Name = "listBox_satnum";
-            this.listBox_satnum.Size = new System.Drawing.Size(88, 507);
+            this.listBox_satnum.Size = new System.Drawing.Size(117, 625);
             this.listBox_satnum.TabIndex = 0;
             this.listBox_satnum.SelectedIndexChanged += new System.EventHandler(this.listBox_satnum_SelectedIndexChanged);
             // 
@@ -2464,12 +2501,12 @@
             this.tableLayoutPanel_relperm.Controls.Add(this.zedGraphControl_swof, 0, 1);
             this.tableLayoutPanel_relperm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel_relperm.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel_relperm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel_relperm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel_relperm.Name = "tableLayoutPanel_relperm";
             this.tableLayoutPanel_relperm.RowCount = 2;
             this.tableLayoutPanel_relperm.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel_relperm.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel_relperm.Size = new System.Drawing.Size(796, 507);
+            this.tableLayoutPanel_relperm.Size = new System.Drawing.Size(1065, 625);
             this.tableLayoutPanel_relperm.TabIndex = 2;
             // 
             // tableLayoutPanel3
@@ -2481,7 +2518,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66643F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66477F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66602F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Controls.Add(this.label9, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.textBox_aver_value, 2, 1);
             this.tableLayoutPanel3.Controls.Add(this.textBox_poly_value, 2, 2);
@@ -2500,76 +2537,74 @@
             this.tableLayoutPanel3.Controls.Add(this.label7, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.label10, 4, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(400, 255);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(535, 314);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(394, 250);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(527, 309);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // label9
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(132, 4);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(177, 5);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 26);
+            this.label9.Size = new System.Drawing.Size(81, 32);
             this.label9.TabIndex = 0;
             this.label9.Text = "Graph Value";
             // 
             // textBox_aver_value
             // 
             this.textBox_aver_value.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_aver_value.Location = new System.Drawing.Point(132, 37);
-            this.textBox_aver_value.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_aver_value.Location = new System.Drawing.Point(177, 47);
+            this.textBox_aver_value.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_aver_value.Name = "textBox_aver_value";
             this.textBox_aver_value.ReadOnly = true;
-            this.textBox_aver_value.Size = new System.Drawing.Size(61, 20);
+            this.textBox_aver_value.Size = new System.Drawing.Size(81, 22);
             this.textBox_aver_value.TabIndex = 1;
             // 
             // textBox_poly_value
             // 
             this.textBox_poly_value.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_poly_value.Location = new System.Drawing.Point(132, 62);
-            this.textBox_poly_value.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_poly_value.Location = new System.Drawing.Point(177, 78);
+            this.textBox_poly_value.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_poly_value.Name = "textBox_poly_value";
             this.textBox_poly_value.ReadOnly = true;
-            this.textBox_poly_value.Size = new System.Drawing.Size(61, 20);
+            this.textBox_poly_value.Size = new System.Drawing.Size(81, 22);
             this.textBox_poly_value.TabIndex = 1;
             // 
             // textBox_now_cur
             // 
             this.textBox_now_cur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_now_cur.Location = new System.Drawing.Point(327, 37);
-            this.textBox_now_cur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_now_cur.Location = new System.Drawing.Point(438, 47);
+            this.textBox_now_cur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_now_cur.Name = "textBox_now_cur";
             this.textBox_now_cur.ReadOnly = true;
-            this.textBox_now_cur.Size = new System.Drawing.Size(65, 20);
+            this.textBox_now_cur.Size = new System.Drawing.Size(86, 22);
             this.textBox_now_cur.TabIndex = 1;
             // 
             // textBox_nw_cur
             // 
             this.textBox_nw_cur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_nw_cur.Location = new System.Drawing.Point(327, 62);
-            this.textBox_nw_cur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_nw_cur.Location = new System.Drawing.Point(438, 78);
+            this.textBox_nw_cur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_nw_cur.Name = "textBox_nw_cur";
             this.textBox_nw_cur.ReadOnly = true;
-            this.textBox_nw_cur.Size = new System.Drawing.Size(65, 20);
+            this.textBox_nw_cur.Size = new System.Drawing.Size(86, 22);
             this.textBox_nw_cur.TabIndex = 1;
             // 
             // label12
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(327, 11);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(438, 13);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 13);
+            this.label12.Size = new System.Drawing.Size(86, 16);
             this.label12.TabIndex = 0;
             this.label12.Text = "Current";
             // 
@@ -2577,81 +2612,79 @@
             // 
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(197, 11);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(264, 13);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(61, 13);
+            this.label11.Size = new System.Drawing.Size(81, 16);
             this.label11.TabIndex = 0;
             this.label11.Text = "Mult";
             // 
             // textBox_aver_result
             // 
             this.textBox_aver_result.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_aver_result.Location = new System.Drawing.Point(262, 37);
-            this.textBox_aver_result.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_aver_result.Location = new System.Drawing.Point(351, 47);
+            this.textBox_aver_result.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_aver_result.Name = "textBox_aver_result";
             this.textBox_aver_result.ReadOnly = true;
-            this.textBox_aver_result.Size = new System.Drawing.Size(61, 20);
+            this.textBox_aver_result.Size = new System.Drawing.Size(81, 22);
             this.textBox_aver_result.TabIndex = 1;
             // 
             // textBox_poly_result
             // 
             this.textBox_poly_result.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_poly_result.Location = new System.Drawing.Point(262, 62);
-            this.textBox_poly_result.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_poly_result.Location = new System.Drawing.Point(351, 78);
+            this.textBox_poly_result.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_poly_result.Name = "textBox_poly_result";
             this.textBox_poly_result.ReadOnly = true;
-            this.textBox_poly_result.Size = new System.Drawing.Size(61, 20);
+            this.textBox_poly_result.Size = new System.Drawing.Size(81, 22);
             this.textBox_poly_result.TabIndex = 1;
             // 
             // textBox_aver_mult
             // 
             this.textBox_aver_mult.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_aver_mult.Location = new System.Drawing.Point(197, 37);
-            this.textBox_aver_mult.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_aver_mult.Location = new System.Drawing.Point(264, 47);
+            this.textBox_aver_mult.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_aver_mult.Name = "textBox_aver_mult";
             this.textBox_aver_mult.ReadOnly = true;
-            this.textBox_aver_mult.Size = new System.Drawing.Size(61, 20);
+            this.textBox_aver_mult.Size = new System.Drawing.Size(81, 22);
             this.textBox_aver_mult.TabIndex = 1;
             // 
             // textBox_poly_mult
             // 
             this.textBox_poly_mult.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_poly_mult.Location = new System.Drawing.Point(197, 62);
-            this.textBox_poly_mult.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_poly_mult.Location = new System.Drawing.Point(264, 78);
+            this.textBox_poly_mult.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_poly_mult.Name = "textBox_poly_mult";
             this.textBox_poly_mult.ReadOnly = true;
-            this.textBox_poly_mult.Size = new System.Drawing.Size(61, 20);
+            this.textBox_poly_mult.Size = new System.Drawing.Size(81, 22);
             this.textBox_poly_mult.TabIndex = 1;
             // 
             // textBox_nw_prev
             // 
             this.textBox_nw_prev.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_nw_prev.Location = new System.Drawing.Point(67, 62);
-            this.textBox_nw_prev.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_nw_prev.Location = new System.Drawing.Point(90, 78);
+            this.textBox_nw_prev.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_nw_prev.Name = "textBox_nw_prev";
             this.textBox_nw_prev.ReadOnly = true;
-            this.textBox_nw_prev.Size = new System.Drawing.Size(61, 20);
+            this.textBox_nw_prev.Size = new System.Drawing.Size(81, 22);
             this.textBox_nw_prev.TabIndex = 1;
             // 
             // textBox_now_prev
             // 
             this.textBox_now_prev.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_now_prev.Location = new System.Drawing.Point(67, 37);
-            this.textBox_now_prev.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_now_prev.Location = new System.Drawing.Point(90, 47);
+            this.textBox_now_prev.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_now_prev.Name = "textBox_now_prev";
             this.textBox_now_prev.ReadOnly = true;
-            this.textBox_now_prev.Size = new System.Drawing.Size(61, 20);
+            this.textBox_now_prev.Size = new System.Drawing.Size(81, 22);
             this.textBox_now_prev.TabIndex = 1;
             // 
             // label13
             // 
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(67, 11);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(90, 13);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(61, 13);
+            this.label13.Size = new System.Drawing.Size(81, 16);
             this.label13.TabIndex = 0;
             this.label13.Text = "Prev";
             // 
@@ -2659,10 +2692,9 @@
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(2, 66);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(3, 81);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 13);
+            this.label8.Size = new System.Drawing.Size(81, 16);
             this.label8.TabIndex = 0;
             this.label8.Text = "NW (Poly)";
             // 
@@ -2670,10 +2702,9 @@
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(2, 35);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(3, 50);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 25);
+            this.label7.Size = new System.Drawing.Size(81, 16);
             this.label7.TabIndex = 0;
             this.label7.Text = "NOW (Aver)";
             // 
@@ -2681,18 +2712,17 @@
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(262, 4);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(351, 5);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 26);
+            this.label10.Size = new System.Drawing.Size(81, 32);
             this.label10.TabIndex = 0;
             this.label10.Text = "Result Value";
             // 
             // zedGraphControl_distancies
             // 
             this.zedGraphControl_distancies.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zedGraphControl_distancies.Location = new System.Drawing.Point(402, 4);
-            this.zedGraphControl_distancies.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_distancies.Location = new System.Drawing.Point(537, 5);
+            this.zedGraphControl_distancies.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_distancies.Name = "zedGraphControl_distancies";
             this.zedGraphControl_distancies.ScrollGrace = 0D;
             this.zedGraphControl_distancies.ScrollMaxX = 0D;
@@ -2701,7 +2731,7 @@
             this.zedGraphControl_distancies.ScrollMinX = 0D;
             this.zedGraphControl_distancies.ScrollMinY = 0D;
             this.zedGraphControl_distancies.ScrollMinY2 = 0D;
-            this.zedGraphControl_distancies.Size = new System.Drawing.Size(390, 245);
+            this.zedGraphControl_distancies.Size = new System.Drawing.Size(523, 302);
             this.zedGraphControl_distancies.TabIndex = 0;
             this.zedGraphControl_distancies.UseExtendedPrintDialog = true;
             // 
@@ -2710,19 +2740,21 @@
             this.tabControl_wct_lpt.Controls.Add(this.tabPage1);
             this.tabControl_wct_lpt.Controls.Add(this.tabPage2);
             this.tabControl_wct_lpt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl_wct_lpt.Location = new System.Drawing.Point(3, 3);
+            this.tabControl_wct_lpt.Location = new System.Drawing.Point(4, 4);
+            this.tabControl_wct_lpt.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl_wct_lpt.Name = "tabControl_wct_lpt";
             this.tabControl_wct_lpt.SelectedIndex = 0;
-            this.tabControl_wct_lpt.Size = new System.Drawing.Size(392, 247);
+            this.tabControl_wct_lpt.Size = new System.Drawing.Size(524, 304);
             this.tabControl_wct_lpt.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.zedGraphControl_lpt_vs_wct);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage1.Size = new System.Drawing.Size(384, 221);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Size = new System.Drawing.Size(516, 275);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Graph";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -2730,8 +2762,8 @@
             // zedGraphControl_lpt_vs_wct
             // 
             this.zedGraphControl_lpt_vs_wct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zedGraphControl_lpt_vs_wct.Location = new System.Drawing.Point(3, 3);
-            this.zedGraphControl_lpt_vs_wct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_lpt_vs_wct.Location = new System.Drawing.Point(4, 4);
+            this.zedGraphControl_lpt_vs_wct.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_lpt_vs_wct.Name = "zedGraphControl_lpt_vs_wct";
             this.zedGraphControl_lpt_vs_wct.ScrollGrace = 0D;
             this.zedGraphControl_lpt_vs_wct.ScrollMaxX = 0D;
@@ -2740,17 +2772,18 @@
             this.zedGraphControl_lpt_vs_wct.ScrollMinX = 0D;
             this.zedGraphControl_lpt_vs_wct.ScrollMinY = 0D;
             this.zedGraphControl_lpt_vs_wct.ScrollMinY2 = 0D;
-            this.zedGraphControl_lpt_vs_wct.Size = new System.Drawing.Size(378, 215);
+            this.zedGraphControl_lpt_vs_wct.Size = new System.Drawing.Size(508, 267);
             this.zedGraphControl_lpt_vs_wct.TabIndex = 0;
             this.zedGraphControl_lpt_vs_wct.UseExtendedPrintDialog = true;
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.pictureBox_relperm_points);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage2.Size = new System.Drawing.Size(385, 223);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Size = new System.Drawing.Size(516, 275);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Result Pic";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -2758,18 +2791,18 @@
             // pictureBox_relperm_points
             // 
             this.pictureBox_relperm_points.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox_relperm_points.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox_relperm_points.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox_relperm_points.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox_relperm_points.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox_relperm_points.Name = "pictureBox_relperm_points";
-            this.pictureBox_relperm_points.Size = new System.Drawing.Size(379, 217);
+            this.pictureBox_relperm_points.Size = new System.Drawing.Size(508, 267);
             this.pictureBox_relperm_points.TabIndex = 0;
             this.pictureBox_relperm_points.TabStop = false;
             // 
             // zedGraphControl_swof
             // 
             this.zedGraphControl_swof.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zedGraphControl_swof.Location = new System.Drawing.Point(4, 257);
-            this.zedGraphControl_swof.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_swof.Location = new System.Drawing.Point(5, 317);
+            this.zedGraphControl_swof.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_swof.Name = "zedGraphControl_swof";
             this.zedGraphControl_swof.ScrollGrace = 0D;
             this.zedGraphControl_swof.ScrollMaxX = 0D;
@@ -2778,17 +2811,17 @@
             this.zedGraphControl_swof.ScrollMinX = 0D;
             this.zedGraphControl_swof.ScrollMinY = 0D;
             this.zedGraphControl_swof.ScrollMinY2 = 0D;
-            this.zedGraphControl_swof.Size = new System.Drawing.Size(390, 246);
+            this.zedGraphControl_swof.Size = new System.Drawing.Size(522, 303);
             this.zedGraphControl_swof.TabIndex = 2;
             this.zedGraphControl_swof.UseExtendedPrintDialog = true;
             // 
             // tabPage_uparam
             // 
             this.tabPage_uparam.Controls.Add(this.splitContainer_uparam1);
-            this.tabPage_uparam.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_uparam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage_uparam.Location = new System.Drawing.Point(4, 25);
+            this.tabPage_uparam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage_uparam.Name = "tabPage_uparam";
-            this.tabPage_uparam.Size = new System.Drawing.Size(894, 513);
+            this.tabPage_uparam.Size = new System.Drawing.Size(1195, 633);
             this.tabPage_uparam.TabIndex = 10;
             this.tabPage_uparam.Text = "uparam";
             this.tabPage_uparam.UseVisualStyleBackColor = true;
@@ -2797,7 +2830,7 @@
             // 
             this.splitContainer_uparam1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer_uparam1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer_uparam1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitContainer_uparam1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splitContainer_uparam1.Name = "splitContainer_uparam1";
             this.splitContainer_uparam1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -2808,16 +2841,15 @@
             // splitContainer_uparam1.Panel2
             // 
             this.splitContainer_uparam1.Panel2.Controls.Add(this.splitContainer6);
-            this.splitContainer_uparam1.Size = new System.Drawing.Size(894, 513);
-            this.splitContainer_uparam1.SplitterDistance = 328;
-            this.splitContainer_uparam1.SplitterWidth = 3;
+            this.splitContainer_uparam1.Size = new System.Drawing.Size(1195, 633);
+            this.splitContainer_uparam1.SplitterDistance = 404;
             this.splitContainer_uparam1.TabIndex = 0;
             // 
             // splitContainer4
             // 
             this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer4.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitContainer4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splitContainer4.Name = "splitContainer4";
             // 
             // splitContainer4.Panel1
@@ -2828,9 +2860,8 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.splitContainer7);
-            this.splitContainer4.Size = new System.Drawing.Size(894, 328);
-            this.splitContainer4.SplitterDistance = 152;
-            this.splitContainer4.SplitterWidth = 3;
+            this.splitContainer4.Size = new System.Drawing.Size(1195, 404);
+            this.splitContainer4.SplitterDistance = 203;
             this.splitContainer4.TabIndex = 0;
             // 
             // checkedListBox_uparams
@@ -2838,9 +2869,9 @@
             this.checkedListBox_uparams.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkedListBox_uparams.FormattingEnabled = true;
             this.checkedListBox_uparams.Location = new System.Drawing.Point(0, 27);
-            this.checkedListBox_uparams.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListBox_uparams.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBox_uparams.Name = "checkedListBox_uparams";
-            this.checkedListBox_uparams.Size = new System.Drawing.Size(152, 301);
+            this.checkedListBox_uparams.Size = new System.Drawing.Size(203, 377);
             this.checkedListBox_uparams.TabIndex = 1;
             this.checkedListBox_uparams.SelectedIndexChanged += new System.EventHandler(this.checkedListBox_uparams_SelectedIndexChanged);
             this.checkedListBox_uparams.MouseUp += new System.Windows.Forms.MouseEventHandler(this.checkedListBox_uparams_MouseUp);
@@ -2854,7 +2885,7 @@
             this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(152, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(203, 27);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -2864,7 +2895,7 @@
             this.toolStripButton_add_param.Image = global::Pexel.Properties.Resources.Add;
             this.toolStripButton_add_param.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_add_param.Name = "toolStripButton_add_param";
-            this.toolStripButton_add_param.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton_add_param.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton_add_param.Text = "toolStripButton1";
             this.toolStripButton_add_param.Click += new System.EventHandler(this.toolStripButton_add_param_Click);
             // 
@@ -2874,7 +2905,7 @@
             this.toolStripButton_remove_param.Image = global::Pexel.Properties.Resources.deletered;
             this.toolStripButton_remove_param.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_remove_param.Name = "toolStripButton_remove_param";
-            this.toolStripButton_remove_param.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton_remove_param.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton_remove_param.Text = "toolStripButton2";
             // 
             // toolStripButton3
@@ -2883,29 +2914,28 @@
             this.toolStripButton3.Image = global::Pexel.Properties.Resources.Rename_icon;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton3.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton3.Text = "toolStripButton3";
             // 
             // splitContainer7
             // 
             this.splitContainer7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer7.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitContainer7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splitContainer7.Name = "splitContainer7";
             // 
             // splitContainer7.Panel1
             // 
             this.splitContainer7.Panel1.Controls.Add(this.zedGraphControl_uparams);
-            this.splitContainer7.Size = new System.Drawing.Size(739, 328);
-            this.splitContainer7.SplitterDistance = 392;
-            this.splitContainer7.SplitterWidth = 3;
+            this.splitContainer7.Size = new System.Drawing.Size(988, 404);
+            this.splitContainer7.SplitterDistance = 524;
             this.splitContainer7.TabIndex = 0;
             // 
             // zedGraphControl_uparams
             // 
             this.zedGraphControl_uparams.Dock = System.Windows.Forms.DockStyle.Fill;
             this.zedGraphControl_uparams.Location = new System.Drawing.Point(0, 0);
-            this.zedGraphControl_uparams.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zedGraphControl_uparams.Margin = new System.Windows.Forms.Padding(5);
             this.zedGraphControl_uparams.Name = "zedGraphControl_uparams";
             this.zedGraphControl_uparams.ScrollGrace = 0D;
             this.zedGraphControl_uparams.ScrollMaxX = 0D;
@@ -2914,7 +2944,7 @@
             this.zedGraphControl_uparams.ScrollMinX = 0D;
             this.zedGraphControl_uparams.ScrollMinY = 0D;
             this.zedGraphControl_uparams.ScrollMinY2 = 0D;
-            this.zedGraphControl_uparams.Size = new System.Drawing.Size(392, 328);
+            this.zedGraphControl_uparams.Size = new System.Drawing.Size(524, 404);
             this.zedGraphControl_uparams.TabIndex = 0;
             this.zedGraphControl_uparams.UseExtendedPrintDialog = true;
             // 
@@ -2922,7 +2952,7 @@
             // 
             this.splitContainer6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer6.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitContainer6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splitContainer6.Name = "splitContainer6";
             // 
             // splitContainer6.Panel1
@@ -2932,9 +2962,8 @@
             // splitContainer6.Panel2
             // 
             this.splitContainer6.Panel2.Controls.Add(this.richTextBox_expression);
-            this.splitContainer6.Size = new System.Drawing.Size(894, 182);
-            this.splitContainer6.SplitterDistance = 152;
-            this.splitContainer6.SplitterWidth = 3;
+            this.splitContainer6.Size = new System.Drawing.Size(1195, 225);
+            this.splitContainer6.SplitterDistance = 203;
             this.splitContainer6.TabIndex = 0;
             // 
             // listBox_kw
@@ -2942,7 +2971,7 @@
             this.listBox_kw.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox_kw.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox_kw.FormattingEnabled = true;
-            this.listBox_kw.ItemHeight = 14;
+            this.listBox_kw.ItemHeight = 18;
             this.listBox_kw.Items.AddRange(new object[] {
             "OPT_DP",
             "WPT_DP",
@@ -3029,9 +3058,9 @@
             "AW_BHP_R2",
             "AW_BP9_R2"});
             this.listBox_kw.Location = new System.Drawing.Point(0, 0);
-            this.listBox_kw.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBox_kw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox_kw.Name = "listBox_kw";
-            this.listBox_kw.Size = new System.Drawing.Size(152, 182);
+            this.listBox_kw.Size = new System.Drawing.Size(203, 225);
             this.listBox_kw.TabIndex = 0;
             this.listBox_kw.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBox_kw_MouseDoubleClick);
             // 
@@ -3040,9 +3069,9 @@
             this.richTextBox_expression.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox_expression.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox_expression.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox_expression.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox_expression.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox_expression.Name = "richTextBox_expression";
-            this.richTextBox_expression.Size = new System.Drawing.Size(739, 182);
+            this.richTextBox_expression.Size = new System.Drawing.Size(988, 225);
             this.richTextBox_expression.TabIndex = 0;
             this.richTextBox_expression.Text = "";
             this.richTextBox_expression.TextChanged += new System.EventHandler(this.richTextBox_uparam_expression_TextChanged);
@@ -3052,10 +3081,10 @@
             this.richTextBox_log.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox_log.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox_log.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox_log.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox_log.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox_log.Name = "richTextBox_log";
             this.richTextBox_log.ReadOnly = true;
-            this.richTextBox_log.Size = new System.Drawing.Size(902, 127);
+            this.richTextBox_log.Size = new System.Drawing.Size(1203, 158);
             this.richTextBox_log.TabIndex = 0;
             this.richTextBox_log.Text = "";
             this.richTextBox_log.WordWrap = false;
@@ -3070,8 +3099,8 @@
             this.helpToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip.Size = new System.Drawing.Size(249, 24);
+            this.menuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip.Size = new System.Drawing.Size(332, 28);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -3083,65 +3112,73 @@
             this.saveProjectToolStripMenuItem,
             this.saveProjectAsToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // newProjectToolStripMenuItem
             // 
             this.newProjectToolStripMenuItem.Name = "newProjectToolStripMenuItem";
-            this.newProjectToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.newProjectToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.newProjectToolStripMenuItem.Text = "&New Project";
             this.newProjectToolStripMenuItem.Click += new System.EventHandler(this.newProjectToolStripMenuItem_Click);
             // 
             // importRSMToolStripMenuItem
             // 
             this.importRSMToolStripMenuItem.Name = "importRSMToolStripMenuItem";
-            this.importRSMToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.importRSMToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.importRSMToolStripMenuItem.Text = "&Open Project";
             this.importRSMToolStripMenuItem.Click += new System.EventHandler(this.importRSMToolStripMenuItem_Click);
             // 
             // saveProjectToolStripMenuItem
             // 
             this.saveProjectToolStripMenuItem.Name = "saveProjectToolStripMenuItem";
-            this.saveProjectToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.saveProjectToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.saveProjectToolStripMenuItem.Text = "&Save Project";
             this.saveProjectToolStripMenuItem.Click += new System.EventHandler(this.saveProjectToolStripMenuItem_Click);
             // 
             // saveProjectAsToolStripMenuItem
             // 
             this.saveProjectAsToolStripMenuItem.Name = "saveProjectAsToolStripMenuItem";
-            this.saveProjectAsToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.saveProjectAsToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.saveProjectAsToolStripMenuItem.Text = "Save Project &As";
             this.saveProjectAsToolStripMenuItem.Click += new System.EventHandler(this.saveProjectAsToolStripMenuItem_Click);
             // 
             // toolsToolStripMenuItem
             // 
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.wizardToolStripMenuItem,
             this.coreyToolStripMenuItem,
             this.hFileToolStripMenuItem,
             this.fRAnalToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
             this.toolsToolStripMenuItem.Text = "&Tools";
+            // 
+            // wizardToolStripMenuItem
+            // 
+            this.wizardToolStripMenuItem.Name = "wizardToolStripMenuItem";
+            this.wizardToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
+            this.wizardToolStripMenuItem.Text = "&Wizard";
+            this.wizardToolStripMenuItem.Click += new System.EventHandler(this.toolStripButton_wizard_Click);
             // 
             // coreyToolStripMenuItem
             // 
             this.coreyToolStripMenuItem.Name = "coreyToolStripMenuItem";
-            this.coreyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.coreyToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
             this.coreyToolStripMenuItem.Text = "&Corey...";
             this.coreyToolStripMenuItem.Click += new System.EventHandler(this.coreyToolStripMenuItem_Click);
             // 
             // hFileToolStripMenuItem
             // 
             this.hFileToolStripMenuItem.Name = "hFileToolStripMenuItem";
-            this.hFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.hFileToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
             this.hFileToolStripMenuItem.Text = "&HFile...";
             this.hFileToolStripMenuItem.Click += new System.EventHandler(this.hFileToolStripMenuItem_Click);
             // 
             // fRAnalToolStripMenuItem
             // 
             this.fRAnalToolStripMenuItem.Name = "fRAnalToolStripMenuItem";
-            this.fRAnalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fRAnalToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
             this.fRAnalToolStripMenuItem.Text = "&FR Analyzer...";
             this.fRAnalToolStripMenuItem.Click += new System.EventHandler(this.fRAnalToolStripMenuItem_Click);
             // 
@@ -3150,13 +3187,13 @@
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem1});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             this.editToolStripMenuItem.Text = "&Edit";
             // 
             // settingsToolStripMenuItem1
             // 
             this.settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
-            this.settingsToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
+            this.settingsToolStripMenuItem1.Size = new System.Drawing.Size(154, 26);
             this.settingsToolStripMenuItem1.Text = "&Settings...";
             this.settingsToolStripMenuItem1.Click += new System.EventHandler(this.settingsToolStripMenuItem1_Click);
             // 
@@ -3165,13 +3202,13 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
             this.aboutToolStripMenuItem.Text = "&About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -3180,22 +3217,23 @@
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 665);
+            this.statusStrip.Location = new System.Drawing.Point(0, 824);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
-            this.statusStrip.Size = new System.Drawing.Size(1155, 22);
+            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 13, 0);
+            this.statusStrip.Size = new System.Drawing.Size(1540, 22);
             this.statusStrip.TabIndex = 3;
             this.statusStrip.Text = "statusStrip1";
             // 
             // toolStripStatusLabel
             // 
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(0, 17);
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(0, 16);
             // 
             // splitContainer3
             // 
             this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer3.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer3.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer3.Name = "splitContainer3";
             // 
             // splitContainer3.Panel1
@@ -3207,17 +3245,18 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.splitContainer1);
-            this.splitContainer3.Size = new System.Drawing.Size(1155, 665);
-            this.splitContainer3.SplitterDistance = 249;
+            this.splitContainer3.Size = new System.Drawing.Size(1540, 824);
+            this.splitContainer3.SplitterDistance = 332;
+            this.splitContainer3.SplitterWidth = 5;
             this.splitContainer3.TabIndex = 12;
             // 
             // treeView_project
             // 
             this.treeView_project.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView_project.Location = new System.Drawing.Point(0, 51);
-            this.treeView_project.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.treeView_project.Location = new System.Drawing.Point(0, 55);
+            this.treeView_project.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.treeView_project.Name = "treeView_project";
-            this.treeView_project.Size = new System.Drawing.Size(249, 614);
+            this.treeView_project.Size = new System.Drawing.Size(332, 769);
             this.treeView_project.TabIndex = 1;
             this.treeView_project.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView_project_AfterSelect);
             this.treeView_project.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_project_NodeMouseDoubleClick);
@@ -3229,10 +3268,11 @@
             this.toolStripButton_wizard,
             this.toolStripButton_add,
             this.toolStripButton_add_child,
-            this.toolStripButton_remove});
-            this.toolStrip_project.Location = new System.Drawing.Point(0, 24);
+            this.toolStripButton_remove,
+            this.toolStripButton_update});
+            this.toolStrip_project.Location = new System.Drawing.Point(0, 28);
             this.toolStrip_project.Name = "toolStrip_project";
-            this.toolStrip_project.Size = new System.Drawing.Size(249, 27);
+            this.toolStrip_project.Size = new System.Drawing.Size(332, 27);
             this.toolStrip_project.TabIndex = 0;
             this.toolStrip_project.Text = "toolStrip1";
             // 
@@ -3242,7 +3282,7 @@
             this.toolStripButton_wizard.Image = global::Pexel.Properties.Resources.visart;
             this.toolStripButton_wizard.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_wizard.Name = "toolStripButton_wizard";
-            this.toolStripButton_wizard.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton_wizard.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton_wizard.Text = "create a new";
             this.toolStripButton_wizard.Click += new System.EventHandler(this.toolStripButton_wizard_Click);
             // 
@@ -3252,7 +3292,7 @@
             this.toolStripButton_add.Image = global::Pexel.Properties.Resources.Add;
             this.toolStripButton_add.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_add.Name = "toolStripButton_add";
-            this.toolStripButton_add.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton_add.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton_add.Text = "import an existing";
             this.toolStripButton_add.Click += new System.EventHandler(this.toolStripButton_add_Click);
             // 
@@ -3262,7 +3302,7 @@
             this.toolStripButton_add_child.Image = global::Pexel.Properties.Resources.Folder_Add_01;
             this.toolStripButton_add_child.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_add_child.Name = "toolStripButton_add_child";
-            this.toolStripButton_add_child.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton_add_child.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton_add_child.Text = "create on the existing";
             this.toolStripButton_add_child.Click += new System.EventHandler(this.toolStripButton_add_child_Click);
             // 
@@ -3272,18 +3312,28 @@
             this.toolStripButton_remove.Image = global::Pexel.Properties.Resources.deletered;
             this.toolStripButton_remove.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_remove.Name = "toolStripButton_remove";
-            this.toolStripButton_remove.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton_remove.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton_remove.Text = "remove";
             this.toolStripButton_remove.Click += new System.EventHandler(this.toolStripButton_remove_Click);
+            // 
+            // toolStripButton_update
+            // 
+            this.toolStripButton_update.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_update.Image = global::Pexel.Properties.Resources.external_content_duckduckgo1;
+            this.toolStripButton_update.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_update.Name = "toolStripButton_update";
+            this.toolStripButton_update.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton_update.Text = "update";
+            this.toolStripButton_update.Click += new System.EventHandler(this.toolStripButton_update_Click);
             // 
             // toolStrip
             // 
             this.toolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton_refrash});
-            this.toolStrip.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip.Location = new System.Drawing.Point(0, 30);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(1155, 27);
+            this.toolStrip.Size = new System.Drawing.Size(1540, 33);
             this.toolStrip.TabIndex = 5;
             this.toolStrip.Text = "toolStrip1";
             this.toolStrip.Visible = false;
@@ -3294,22 +3344,22 @@
             this.toolStripButton_refrash.Image = global::Pexel.Properties.Resources.external_content_duckduckgo_com;
             this.toolStripButton_refrash.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_refrash.Name = "toolStripButton_refrash";
-            this.toolStripButton_refrash.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton_refrash.Size = new System.Drawing.Size(29, 30);
             this.toolStripButton_refrash.Text = "Refrash";
             this.toolStripButton_refrash.Click += new System.EventHandler(this.toolStripButton_refrash_Click);
             // 
             // ResultsViewTreeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1155, 687);
+            this.ClientSize = new System.Drawing.Size(1540, 846);
             this.Controls.Add(this.splitContainer3);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.statusStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ResultsViewTreeForm";
             this.Text = "PEXEL History Matching Results Viewer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_FormClosing);
@@ -3630,5 +3680,7 @@
         private System.Windows.Forms.ToolStripMenuItem fRAnalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem wizardToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton toolStripButton_update;
     }
 }
