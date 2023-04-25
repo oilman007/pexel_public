@@ -290,7 +290,7 @@
     <Compile Include="Geometry2D\WellsLink.cs" />
     <Compile Include="Geometry3D\Actnum.cs" />
     <Compile Include="Geometry3D\GridPlaneOpt.cs" />
-    <Compile Include="HM\FR\ColumnNode.cs" />
+    <Compile Include="HM\FDM\ColumnNode.cs" />
     <Compile Include="HM\ResultsViewTreeDataDownloader2.cs" />
     <Compile Include="HM\WellTable.cs" />
     <Compile Include="HM\WellTablePeriod.cs" />
@@ -315,36 +315,36 @@
     <Compile Include="HM\HistMatchingCriteria.cs" />
     <Compile Include="HM\HistMatchingCriteriaTable.cs" />
     <Compile Include="HM\CrossPlotTag.cs" />
-    <Compile Include="private\HM\FR\AqPillar.cs" />
-    <Compile Include="private\HM\FR\FDModel.cs" />
-    <Compile Include="private\HM\FR\FDModelCase.cs" />
-    <Compile Include="private\HM\FR\FDModelLink.cs" />
-    <Compile Include="private\HM\FR\FDModelRegion.cs" />
-    <Compile Include="private\HM\FR\FRPeriod.cs" />
-    <Compile Include="private\HM\FR\FRRegion.cs" />
-    <Compile Include="private\HM\FR\FRLink.cs" />
+    <Compile Include="private\HM\FDM\AqPillar.cs" />
+    <Compile Include="private\HM\FDM\FDModel.cs" />
+    <Compile Include="private\HM\FDM\FDModelCase.cs" />
+    <Compile Include="private\HM\FDM\FDModelLink.cs" />
+    <Compile Include="private\HM\FDM\FDModelRegion.cs" />
+    <Compile Include="private\HM\FDM\FRPeriod.cs" />
+    <Compile Include="private\HM\FDM\FRRegion.cs" />
+    <Compile Include="private\HM\FDM\FRLink.cs" />
     <Compile Include="private\HM\HistMatching.cs" />
     <Compile Include="HM\HistMatchingKeyValues.cs" />
     <Compile Include="HM\HistMatchingProject.cs" />
-    <None Include="private\HM\FR\FRCase.cs" />
-    <Compile Include="private\HM\FR\FRProject.cs" />
-    <Compile Include="HM\FR\FRForm.cs">
+    <None Include="private\HM\FDM\FRCase.cs" />
+    <Compile Include="private\HM\FDM\FRProject.cs" />
+    <Compile Include="HM\FDM\FRForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HM\FR\FRForm.designer.cs">
+    <Compile Include="HM\FDM\FRForm.designer.cs">
       <DependentUpon>FRForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="private\HM\FR\InjeGroup.cs" />
-    <Compile Include="HM\FR\NewFRForm.cs">
+    <Compile Include="private\HM\FDM\InjeGroup.cs" />
+    <Compile Include="HM\FDM\NewFRForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HM\FR\NewFRForm.Designer.cs">
+    <Compile Include="HM\FDM\NewFRForm.Designer.cs">
       <DependentUpon>NewFRForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="HM\FR\WellsStatusForm.cs">
+    <Compile Include="HM\FDM\WellsStatusForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HM\FR\WellsStatusForm.designer.cs">
+    <Compile Include="HM\FDM\WellsStatusForm.designer.cs">
       <DependentUpon>WellsStatusForm.cs</DependentUpon>
     </Compile>
     <Compile Include="private\HM\Iteration.cs" />
@@ -392,8 +392,8 @@
     <Compile Include="HM\FileCombinerForm.Designer.cs">
       <DependentUpon>FileCombinerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="private\HM\WellData.cs" />
-    <Compile Include="private\HM\WellDataAnalyzer2.cs" />
+    <Compile Include="private\HM\WD\WellData.cs" />
+    <Compile Include="private\HM\WD\WellDataAnalyzer2.cs" />
     <Compile Include="private\UnlockForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -401,13 +401,13 @@
       <DependentUpon>UnlockForm.cs</DependentUpon>
     </Compile>
     <Compile Include="HM\UparamExpression.cs" />
-    <Compile Include="private\HM\WellDataAnalyzerInput.cs" />
-    <Compile Include="private\HM\WellDataAnalyzer.cs" />
-    <Compile Include="private\HM\WellDataAnalyzerSettings.cs" />
+    <Compile Include="private\HM\WD\WellDataAnalyzerInput.cs" />
+    <Compile Include="private\HM\WD\WellDataAnalyzer.cs" />
+    <Compile Include="private\HM\WD\WellDataAnalyzerSettings.cs" />
     <Compile Include="private\HM\WellModifiers.cs" />
     <Compile Include="private\HM\WellPerfPeriod.cs" />
-    <Compile Include="private\HM\WellDataPeriod.cs" />
-    <Compile Include="private\HM\WellDataStep.cs" />
+    <Compile Include="private\HM\WD\WellDataPeriod.cs" />
+    <Compile Include="private\HM\WD\WellDataStep.cs" />
     <Compile Include="HM\WizardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -714,13 +714,13 @@
     <EmbeddedResource Include="HM\CreateDataTreeForm.resx">
       <DependentUpon>CreateDataTreeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HM\FR\FRForm.resx">
+    <EmbeddedResource Include="HM\FDM\FRForm.resx">
       <DependentUpon>FRForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HM\FR\NewFRForm.resx">
+    <EmbeddedResource Include="HM\FDM\NewFRForm.resx">
       <DependentUpon>NewFRForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HM\FR\WellsStatusForm.resx">
+    <EmbeddedResource Include="HM\FDM\WellsStatusForm.resx">
       <DependentUpon>WellsStatusForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HM\QueueForm.resx">
