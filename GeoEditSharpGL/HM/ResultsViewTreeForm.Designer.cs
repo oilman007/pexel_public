@@ -255,6 +255,7 @@
             this.toolStripButton_update = new System.Windows.Forms.ToolStripButton();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripButton_refrash = new System.Windows.Forms.ToolStripButton();
+            this.createGridToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -3149,7 +3150,8 @@
             this.wizardToolStripMenuItem,
             this.coreyToolStripMenuItem,
             this.hFileToolStripMenuItem,
-            this.fRAnalToolStripMenuItem});
+            this.fRAnalToolStripMenuItem,
+            this.createGridToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             this.toolsToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
             this.toolsToolStripMenuItem.Text = "&Tools";
@@ -3157,28 +3159,28 @@
             // wizardToolStripMenuItem
             // 
             this.wizardToolStripMenuItem.Name = "wizardToolStripMenuItem";
-            this.wizardToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
+            this.wizardToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.wizardToolStripMenuItem.Text = "&Wizard";
             this.wizardToolStripMenuItem.Click += new System.EventHandler(this.toolStripButton_wizard_Click);
             // 
             // coreyToolStripMenuItem
             // 
             this.coreyToolStripMenuItem.Name = "coreyToolStripMenuItem";
-            this.coreyToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
+            this.coreyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.coreyToolStripMenuItem.Text = "&Corey...";
             this.coreyToolStripMenuItem.Click += new System.EventHandler(this.coreyToolStripMenuItem_Click);
             // 
             // hFileToolStripMenuItem
             // 
             this.hFileToolStripMenuItem.Name = "hFileToolStripMenuItem";
-            this.hFileToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
+            this.hFileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.hFileToolStripMenuItem.Text = "&HFile...";
             this.hFileToolStripMenuItem.Click += new System.EventHandler(this.hFileToolStripMenuItem_Click);
             // 
             // fRAnalToolStripMenuItem
             // 
             this.fRAnalToolStripMenuItem.Name = "fRAnalToolStripMenuItem";
-            this.fRAnalToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
+            this.fRAnalToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.fRAnalToolStripMenuItem.Text = "&FR Analyzer...";
             this.fRAnalToolStripMenuItem.Click += new System.EventHandler(this.fRAnalToolStripMenuItem_Click);
             // 
@@ -3347,6 +3349,13 @@
             this.toolStripButton_refrash.Size = new System.Drawing.Size(29, 30);
             this.toolStripButton_refrash.Text = "Refrash";
             this.toolStripButton_refrash.Click += new System.EventHandler(this.toolStripButton_refrash_Click);
+            // 
+            // createGridToolStripMenuItem
+            // 
+            this.createGridToolStripMenuItem.Name = "createGridToolStripMenuItem";
+            this.createGridToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.createGridToolStripMenuItem.Text = "Create &Grid...";
+            this.createGridToolStripMenuItem.Click += new System.EventHandler(this.createGridToolStripMenuItem_Click);
             // 
             // ResultsViewTreeForm
             // 
@@ -3682,5 +3691,6 @@
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem wizardToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton toolStripButton_update;
+        private System.Windows.Forms.ToolStripMenuItem createGridToolStripMenuItem;
     }
 }

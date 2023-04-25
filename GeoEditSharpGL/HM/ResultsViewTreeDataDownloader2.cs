@@ -66,23 +66,10 @@ namespace Pexel.HM
                                 Settings = view_settings
                             });
                         }
-            }).Start();
-
-            Update();
-        }
-
-
-
-        public void Update()
-        {
-            new Task(() =>
-            {
-                UpdateData();
-                UpdateTree();
-                BinDownloader();
+                //update_data_sleep_token.Cancel();
+                //refrash_delay = 0;                
             }).Start();
         }
-
 
 
         public void RemoveFiles(params string[] pxlhm_files)
@@ -104,6 +91,124 @@ namespace Pexel.HM
 
 
 
+
+        private void UpdateTree_DoWork(object sender, DoWorkEventArgs e)
+        {
+            while (true)
+            {
+                Thread.Sleep(refrash_delay_normal);
+                UpdateTree();
+            }
+        }
+
+        private void UpdateData_DoWork(object sender, DoWorkEventArgs e)
+        {
+            while (true)
+            {
+                Thread.Sleep(refrash_delay_normal);
+                UpdateData();
+            }
+        }
+
+        private void BinDownloader_DoWork(object sender, DoWorkEventArgs e)
+        {
+            while (true)
+            {
+                Thread.Sleep(refrash_delay_normal);
+                BinDownloader();
+            }
+        }
+
+
+
+        Thread UpdateTree_Thread;
+        Thread UpdateData_Thread;
+        Thread BinDownloader_Thread;
+
+
+
+
+
+
+
+
+
+
+        public async void Start()
+        {
+            FileSystemWatcher startup_path_watcher = new FileSystemWatcher();
+            startup_path_watcher.Path = Application.StartupPath;
+            startup_path_watcher.Filter = "*" + ext;
+            startup_path_watcher.EnableRaisingEvents = true;
+            startup_path_watcher.NotifyFilter = NotifyFilters.LastWrite;
+            startup_path_watcher.Changed += startup_path_watcher_Changed;
+
+
+
+            UpdateTree_Thread = new Thread(() =>
+            {
+                while (true)
+                {
+                    Thread.Sleep(refrash_delay_normal);
+                    UpdateTree();
+                }
+            });
+
+            UpdateData_Thread = new Thread(() =>
+            {
+                while (true)
+                {
+                    UpdateData();
+                    Thread.Sleep(refrash_delay_normal);
+                }
+            });
+
+            BinDownloader_Thread = new Thread(() =>
+            {
+                while (true)
+                {
+                    BinDownloader();
+                    Thread.Sleep(refrash_delay_normal);
+                }
+            });
+
+            UpdateTree_Thread.Start();
+            UpdateData_Thread.Start();
+            BinDownloader_Thread.Start();
+        }
+
+        private void startup_path_watcher_Changed(object sender, FileSystemEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+
+
+        public void Stop()
+        {
+            UpdateTree_Thread?.Abort();
+            UpdateData_Thread?.Abort();
+            BinDownloader_Thread?.Abort();
+        }
+
+
+
+
+
+        public void Start2()
+        {
+            BackgroundWorker background_tree = new BackgroundWorker();
+            BackgroundWorker background_data = new BackgroundWorker();
+            BackgroundWorker background_bins = new BackgroundWorker();
+
+            background_tree.DoWork += UpdateTree_DoWork;
+            background_data.DoWork += UpdateData_DoWork;
+            background_bins.DoWork += BinDownloader_DoWork;
+
+            background_tree.RunWorkerAsync();
+            background_data.RunWorkerAsync();
+            background_bins.RunWorkerAsync();
+        }
 
 
 

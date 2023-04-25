@@ -358,7 +358,7 @@ namespace Pexel.HM.FR
 
 
 
-        const string defaultExt = "PXLFR";
+        const string defaultExt = "PXLFDM";
 
 
 

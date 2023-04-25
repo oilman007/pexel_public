@@ -4635,6 +4635,12 @@ namespace Pexel.HM
             Downloader.UpdateTree();
         }
 
+        private void createGridToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GridCreateForm gridCreateForm = new GridCreateForm();
+            gridCreateForm.ShowDialog(this);
+        }
+
 
 
 

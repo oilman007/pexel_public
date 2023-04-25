@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pexel.HM;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,9 +20,23 @@ namespace Pexel
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            if (AddGrid != null)
-                AddGrid(sender, e);
-            this.Close();
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = string.Format("GRDECL Files (*.{0})|*.{0}|All Files (*.*)|*.*", "GRDECL");
+            dialog.FilterIndex = 1;
+            dialog.RestoreDirectory = true;
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Grid grid = new Grid("", NX, NY, NZ, XSize, YSize, ZSize, Depth, XShift, YShift, XAngle, YAngle);
+                    grid.Write(dialog.FileName, FileType.GRDECL_ASCII);
+                    MessageBox.Show("Grid file completed successfully!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Grid file export error: \n {ex.Message}");
+                }
+            }
         }
 
 
@@ -68,11 +83,6 @@ namespace Pexel
         {
             set { this.textBox_depth.Text = value.ToString(); }
             get { return Helper.ParseDouble(this.textBox_depth.Text); }
-        }
-        public string Title
-        {
-            set { this.textBox_title.Text = value; }
-            get { return this.textBox_title.Text; }
         }
         public double XShift
         {
