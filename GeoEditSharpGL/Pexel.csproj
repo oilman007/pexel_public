@@ -320,6 +320,7 @@
     <Compile Include="private\HM\FDM\FDModelCase.cs" />
     <Compile Include="private\HM\FDM\FDModelLink.cs" />
     <Compile Include="private\HM\FDM\FDModelRegion.cs" />
+    <Compile Include="private\HM\FDM\FRGrid.cs" />
     <Compile Include="private\HM\FDM\FRPeriod.cs" />
     <Compile Include="private\HM\FDM\FRRegion.cs" />
     <Compile Include="private\HM\FDM\FRLink.cs" />

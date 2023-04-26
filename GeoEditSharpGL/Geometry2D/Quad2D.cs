@@ -20,7 +20,7 @@ namespace Pexel
         public Point2D[] Corners { get; set; } = new Point2D[4];
 
         public Color Color { set; get; } = Color.Black;
-        public string Title { set; get; } = string.Empty;
+
         public Point2D Center()
         {
             return new Point2D((Corners[0].X + Corners[1].X + Corners[2].X + Corners[3].X) / 4, 

@@ -33,6 +33,8 @@ namespace Pexel.HM.FR
             CreateFileMenuItems();
         }
 
+        public const string EXT = "PXLFDM";
+
         View2D View2D = new View2D();
         void Init()
         {
@@ -346,7 +348,7 @@ namespace Pexel.HM.FR
             if (OkToContinue())
             {
                 OpenFileDialog dialog = new OpenFileDialog();
-                dialog.Filter = string.Format("Project Files (*.{0})|*.{0}", defaultExt);
+                dialog.Filter = string.Format("Project Files (*.{0})|*.{0}", EXT);
                 //dialog.Filter = String.Format("Project Files (*.{0})|*.{0}|All Files (*.*)|*.*", defaultExt);
                 dialog.Multiselect = false;
                 dialog.ShowDialog();
@@ -358,7 +360,6 @@ namespace Pexel.HM.FR
 
 
 
-        const string defaultExt = "PXLFDM";
 
 
 
@@ -376,8 +377,8 @@ namespace Pexel.HM.FR
         bool SaveAs()
         {
             SaveFileDialog dialog = new SaveFileDialog();
-            dialog.Filter = string.Format("Project Files (*.{0})|*.{0}", defaultExt);
-            dialog.DefaultExt = defaultExt;
+            dialog.Filter = string.Format("Project Files (*.{0})|*.{0}", EXT);
+            dialog.DefaultExt = EXT;
             dialog.ShowDialog();
             string filename = dialog.FileName;
             if (string.IsNullOrEmpty(filename))
@@ -390,8 +391,8 @@ namespace Pexel.HM.FR
         bool Export()
         {
             SaveFileDialog dialog = new SaveFileDialog();
-            dialog.Filter = string.Format("Flow Direction Model Files (*.{0})|*.{0}", FR.FDModel.EXT);
-            dialog.DefaultExt = defaultExt;
+            dialog.Filter = string.Format("Flow Direction Model Files (*.{0})|*.{0}", EXT);
+            dialog.DefaultExt = EXT;
             dialog.ShowDialog();
             string filename = dialog.FileName;
             if (string.IsNullOrEmpty(filename))

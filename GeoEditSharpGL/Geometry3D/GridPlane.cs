@@ -24,7 +24,7 @@ namespace Pexel
         public int NX { get; protected set; }
         public int NY { get; protected set; }
 
-        public const double UndefValue = 0f;
+        public const double UndefValue = 0;
 
 
 

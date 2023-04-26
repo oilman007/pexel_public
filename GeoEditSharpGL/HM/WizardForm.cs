@@ -13,6 +13,7 @@ using System.Management;
 using Pexel.SCAL;
 using Google.Protobuf.WellKnownTypes;
 using DynamicExpresso;
+using Pexel.HM.FR;
 
 
 
@@ -3786,7 +3787,7 @@ namespace Pexel.HM
         private void button_fdm_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = string.Format("Flow Direction Model Files (*.{0})|*.{0}|All Files (*.*)|*.*", Pexel.HM.FR.FDModel.EXT);
+            dialog.Filter = string.Format("Flow Direction Model Files (*.{0})|*.{0}|All Files (*.*)|*.*", FRForm.EXT);
             dialog.Multiselect = false;
             dialog.ShowDialog();
             string filename = dialog.FileName;
