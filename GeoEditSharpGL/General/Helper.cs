@@ -359,5 +359,14 @@ namespace Pexel
 
 
 
+
+        static public string WellSetTitle(params string[] well_set)
+        {
+            return string.Join("+", well_set.OrderBy(x => x));
+        }
+
+
+
+
     }
 }
