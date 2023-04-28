@@ -239,6 +239,7 @@
             this.coreyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fRAnalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createGridToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -255,7 +256,6 @@
             this.toolStripButton_update = new System.Windows.Forms.ToolStripButton();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripButton_refrash = new System.Windows.Forms.ToolStripButton();
-            this.createGridToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -3160,7 +3160,7 @@
             // 
             this.wizardToolStripMenuItem.Name = "wizardToolStripMenuItem";
             this.wizardToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.wizardToolStripMenuItem.Text = "&Wizard";
+            this.wizardToolStripMenuItem.Text = "&Wizard...";
             this.wizardToolStripMenuItem.Click += new System.EventHandler(this.toolStripButton_wizard_Click);
             // 
             // coreyToolStripMenuItem
@@ -3181,8 +3181,15 @@
             // 
             this.fRAnalToolStripMenuItem.Name = "fRAnalToolStripMenuItem";
             this.fRAnalToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.fRAnalToolStripMenuItem.Text = "&FR Analyzer...";
+            this.fRAnalToolStripMenuItem.Text = "&FDM...";
             this.fRAnalToolStripMenuItem.Click += new System.EventHandler(this.fRAnalToolStripMenuItem_Click);
+            // 
+            // createGridToolStripMenuItem
+            // 
+            this.createGridToolStripMenuItem.Name = "createGridToolStripMenuItem";
+            this.createGridToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.createGridToolStripMenuItem.Text = "&Grid...";
+            this.createGridToolStripMenuItem.Click += new System.EventHandler(this.createGridToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -3349,13 +3356,6 @@
             this.toolStripButton_refrash.Size = new System.Drawing.Size(29, 30);
             this.toolStripButton_refrash.Text = "Refrash";
             this.toolStripButton_refrash.Click += new System.EventHandler(this.toolStripButton_refrash_Click);
-            // 
-            // createGridToolStripMenuItem
-            // 
-            this.createGridToolStripMenuItem.Name = "createGridToolStripMenuItem";
-            this.createGridToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.createGridToolStripMenuItem.Text = "Create &Grid...";
-            this.createGridToolStripMenuItem.Click += new System.EventHandler(this.createGridToolStripMenuItem_Click);
             // 
             // ResultsViewTreeForm
             // 

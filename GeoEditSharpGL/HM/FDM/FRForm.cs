@@ -114,6 +114,8 @@ namespace Pexel.HM.FR
 
 
 
+
+
         void UpdateProject(FRProject project)
         {
             Project = project;
@@ -157,7 +159,6 @@ namespace Pexel.HM.FR
             UpdateLinksColor();
             View2D.HomePosition();
         }
-
 
 
 
@@ -576,6 +577,7 @@ namespace Pexel.HM.FR
 
         const int maxRecentFiles = 5;
         ToolStripMenuItem[] recentFilesFileMenu;
+
         //ToolStripMenuItem wellsMenu, addWellsMenu, removeWellsMenu, renameWellsMenu;
 
 
@@ -787,7 +789,10 @@ namespace Pexel.HM.FR
 
         private void treeViewAdv_MouseClick(object sender, MouseEventArgs e)
         {
-            NodeControlInfo info = treeViewAdv.GetNodeControlInfoAt(e.Location);
+            NodeControlInfo info = (e is null) ? 
+                                    new NodeControlInfo(null, new Rectangle(0, 0, 0, 0), null) : 
+                                    treeViewAdv.GetNodeControlInfoAt(e.Location);
+
             if (info.Control is NodeCheckBox)
             {
                 //NodeCheckBox nodeCheckBox = (NodeCheckBox)info.Control;
@@ -878,6 +883,97 @@ namespace Pexel.HM.FR
         }
 
 
- 
+        void SetVisibleRegions(bool visible)
+        {
+            ColumnNode node = this.treeViewAdv.AllNodes.First().Tag as ColumnNode;
+            while (node != null)
+            {                
+                node.NodeControl1 = visible;
+                IViewable2D item = node.Tag as IViewable2D;
+                item.Visible = visible;
+                //
+                node = node.NextNode as ColumnNode;
+            }
+            treeViewAdv.Refresh();
+        }
+
+
+        void SetVisibleBounds(bool visible)
+        {
+            SetVisibleItem(visible, 0);
+        }
+
+        void SetVisibleWells(bool visible)
+        {
+            SetVisibleItem(visible, 1);
+        }
+
+        void SetVisibleLinks(bool visible)
+        {
+            SetVisibleItem(visible, 2);
+        }
+
+
+        void SetVisibleItem(bool visible, int item)
+        {
+            ColumnNode node = this.treeViewAdv.AllNodes.First().Tag as ColumnNode;
+            int i = 0;
+            while (node != null)
+            {
+                ColumnNode child = node.Parent.Nodes[i++].Nodes[item] as ColumnNode;
+                child.NodeControl1 = visible;
+                IViewable2D tag = child.Tag as IViewable2D;
+                tag.Visible = visible;
+                //
+                node = node.NextNode as ColumnNode;
+            }
+            treeViewAdv.Refresh();
+        }
+
+
+
+        private void button_show_all_regions_Click(object sender, EventArgs e)
+        {
+            SetVisibleRegions(true);
+        }
+
+        private void button_hide_all_regions_Click(object sender, EventArgs e)
+        {
+            SetVisibleRegions(false);
+        }
+
+        private void button_show_all_bouns_Click(object sender, EventArgs e)
+        {
+            SetVisibleBounds(true);
+        }
+
+        private void button_hide_all_bouns_Click(object sender, EventArgs e)
+        {
+            SetVisibleBounds(false);
+        }
+
+        private void button_show_all_wells_Click(object sender, EventArgs e)
+        {
+            SetVisibleWells(true);
+        }
+
+        private void button_hide_all_wells_Click(object sender, EventArgs e)
+        {
+            SetVisibleWells(false);
+        }
+
+        private void button_show_all_links_Click(object sender, EventArgs e)
+        {
+            SetVisibleLinks(true);
+        }
+
+        private void button_hide_all_links_Click(object sender, EventArgs e)
+        {
+            SetVisibleLinks(false);
+        }
+
+
+
+
     }
 }
