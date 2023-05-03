@@ -543,35 +543,6 @@ namespace Pexel.HM.FR
 
 
 
-        private void comboBox_dates_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (Periods.Length > 0)
-                UpdateDate(Periods[comboBox_dates.SelectedIndex].I);
-        }
-
-
-        int prev_date = -999;
-        void UpdateDate(int date)
-        {
-            //if (comboBox_dates.SelectedIndex != date)
-            //    comboBox_dates.SelectedIndex = date;
-            //if ((int)numericUpDown_dates.Value != date)
-            //    numericUpDown_dates.Value = date;
-            //if (trackBar_dates.Value != date)
-            //    trackBar_dates.Value = date;
-
-            if (prev_date != date)
-            {
-                prev_date = date;
-                UpdateCases(date);
-            }
-        }
-
-
-
-
-
-
         ToolStripSeparator separatorUpFileMenu, separatorDownFileMenu;
         ToolStripMenuItem newMenu, openMenu, saveMenu, saveAsMenu, exitMenu, exportMenu;
 
@@ -898,6 +869,21 @@ namespace Pexel.HM.FR
         }
 
 
+        void SetUsedRegions(bool used)
+        {
+            ColumnNode node = this.treeViewAdv.AllNodes.First().Tag as ColumnNode;
+            while (node != null)
+            {
+                node.NodeControl2 = used;
+                IViewable2D item = node.Tag as IViewable2D;
+                item.Used = used;
+                //
+                node = node.NextNode as ColumnNode;
+            }
+            treeViewAdv.Refresh();
+        }
+
+
         void SetVisibleBounds(bool visible)
         {
             SetVisibleItem(visible, 0);
@@ -929,6 +915,42 @@ namespace Pexel.HM.FR
             }
             treeViewAdv.Refresh();
         }
+
+        void SetUsedItem(bool used, int item)
+        {
+            ColumnNode node = this.treeViewAdv.AllNodes.First().Tag as ColumnNode;
+            int i = 0;
+            while (node != null)
+            {
+                ColumnNode child = node.Parent.Nodes[i++].Nodes[item] as ColumnNode;
+                child.NodeControl2 = used;
+                IViewable2D tag = child.Tag as IViewable2D;
+                tag.Used = used;
+                //
+                node = node.NextNode as ColumnNode;
+            }
+            treeViewAdv.Refresh();
+        }
+
+
+
+
+        void SetUsedBounds(bool used)
+        {
+            SetUsedItem(used, 0);
+        }
+
+        void SetUsedWells(bool used)
+        {
+            SetUsedItem(used, 1);
+        }
+
+        void SetUsedLinks(bool used)
+        {
+            SetUsedItem(used, 2);
+        }
+
+
 
 
 
@@ -971,6 +993,107 @@ namespace Pexel.HM.FR
         {
             SetVisibleLinks(false);
         }
+
+        private void button_use_all_regions_Click(object sender, EventArgs e)
+        {
+            SetUsedRegions(true);
+        }
+
+        private void button_unuse_all_regions_Click(object sender, EventArgs e)
+        {
+            SetUsedRegions(false);
+        }
+
+        private void button_use_all_boundaries_Click(object sender, EventArgs e)
+        {
+            SetUsedBounds(true);
+        }
+
+        private void button_unuse_all_boundaries_Click(object sender, EventArgs e)
+        {
+            SetUsedBounds(false);
+        }
+
+        private void button_use_all_wells_Click(object sender, EventArgs e)
+        {
+            SetUsedWells(true);
+        }
+
+        private void button_unuse_all_wells_Click(object sender, EventArgs e)
+        {
+            SetUsedWells(false);
+        }
+
+        private void button_use_all_links_Click(object sender, EventArgs e)
+        {
+            SetUsedLinks(true);
+        }
+
+        private void button_unuse_all_links_Click(object sender, EventArgs e)
+        {
+            SetUsedLinks(false);
+        }
+
+        private void button_first_dt_Click(object sender, EventArgs e)
+        {
+            UpdateDate(Periods.First().I);
+        }
+
+        private void button_prev_dt_Click(object sender, EventArgs e)
+        {
+            int i = comboBox_dates.SelectedIndex - 1;
+            UpdateDate(Periods[i].I);
+        }
+
+        private void button_next_dt_Click(object sender, EventArgs e)
+        {
+            int i = comboBox_dates.SelectedIndex + 1;
+            UpdateDate(Periods[i].I);
+        }
+
+        private void button_last_dt_Click(object sender, EventArgs e)
+        {
+            UpdateDate(Periods.Last().I);
+        }
+
+
+
+
+
+        private void comboBox_dates_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateDate(Periods[comboBox_dates.SelectedIndex].I);
+        }
+
+
+        int prev_date = -999;
+        void UpdateDate(int date)
+        {
+            //if (comboBox_dates.SelectedIndex != date)
+            //    comboBox_dates.SelectedIndex = date;
+            //if ((int)numericUpDown_dates.Value != date)
+            //    numericUpDown_dates.Value = date;
+            //if (trackBar_dates.Value != date)
+            //    trackBar_dates.Value = date;
+            if (Periods.Length > 0)
+            {
+                if (prev_date != date)
+                {
+                    prev_date = date;
+                    UpdateCases(date);
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
 
 
 
