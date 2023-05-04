@@ -1036,7 +1036,7 @@ namespace Pexel.HM.FR
 
         private void button_first_dt_Click(object sender, EventArgs e)
         {
-            UpdateDate(Periods.First().I);
+            UpdateDate(Periods.FirstOrDefault().I);
         }
 
         private void button_prev_dt_Click(object sender, EventArgs e)
@@ -1053,7 +1053,7 @@ namespace Pexel.HM.FR
 
         private void button_last_dt_Click(object sender, EventArgs e)
         {
-            UpdateDate(Periods.Last().I);
+            UpdateDate(Periods.LastOrDefault().I);
         }
 
 
